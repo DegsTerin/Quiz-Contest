@@ -5,7 +5,7 @@ const ACTIVE_THEME_KEY = "static-quiz-system-theme";
 const STORAGE_KEY_PREFIX = "static-quiz-system-state-v2";
 const DEFAULT_PROFILE_ID = "bruno";
 const DEFAULT_LANGUAGE_ID = "pt";
-const DEFAULT_THEME_ID = "light";
+const DEFAULT_THEME_ID = "dark";
 const REVIEW_MASTERY_STREAK = 2;
 const ANSWER_LETTERS = ["A", "B", "C", "D", "E"];
 
@@ -189,7 +189,7 @@ function getInitialThemeId() {
     return savedThemeId;
   }
 
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : DEFAULT_THEME_ID;
+  return DEFAULT_THEME_ID;
 }
 
 function t(key, replacements = {}) {
