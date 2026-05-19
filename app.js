@@ -1,9 +1,11 @@
 const LEGACY_STORAGE_KEY = "static-quiz-system-state-v1";
 const ACTIVE_PROFILE_KEY = "static-quiz-system-active-profile";
 const ACTIVE_LANGUAGE_KEY = "static-quiz-system-active-language";
+const ACTIVE_THEME_KEY = "static-quiz-system-theme";
 const STORAGE_KEY_PREFIX = "static-quiz-system-state-v2";
 const DEFAULT_PROFILE_ID = "bruno";
 const DEFAULT_LANGUAGE_ID = "pt";
+const DEFAULT_THEME_ID = "light";
 const REVIEW_MASTERY_STREAK = 2;
 const ANSWER_LETTERS = ["A", "B", "C", "D", "E"];
 
@@ -14,6 +16,8 @@ const I18N = {
     eyebrow: "Treinador de estudos no navegador",
     profileSwitchLabel: "Selecionar perfil do quiz",
     languageSwitchLabel: "Selecionar idioma",
+    themeToggleLabel: "Alternar modo escuro",
+    themeToggle: "Tema escuro",
     startAll: "Iniciar Quiz Completo",
     reviewWrong: "Revisar Erros",
     resetProgress: "Zerar Progresso",
@@ -75,6 +79,8 @@ const I18N = {
     eyebrow: "Browser-based study trainer",
     profileSwitchLabel: "Select quiz profile",
     languageSwitchLabel: "Select language",
+    themeToggleLabel: "Toggle dark mode",
+    themeToggle: "Dark theme",
     startAll: "Start Full Quiz",
     reviewWrong: "Review Mistakes",
     resetProgress: "Reset Progress",
@@ -137,6 +143,7 @@ const elements = {
   appSubtitle: document.getElementById("app-subtitle"),
   profileButtons: document.querySelectorAll("[data-profile]"),
   languageButtons: document.querySelectorAll("[data-language]"),
+  themeToggleBtn: document.getElementById("theme-toggle-btn"),
   translatedText: document.querySelectorAll("[data-i18n]"),
   translatedAriaLabels: document.querySelectorAll("[data-i18n-aria-label]"),
   startAllBtn: document.getElementById("start-all-btn"),
@@ -159,6 +166,7 @@ const elements = {
 
 let activeLanguageId = getInitialLanguageId();
 let activeProfileId = getInitialProfileId();
+let activeThemeId = getInitialThemeId();
 let activeQuestionSet = QUESTION_SETS[activeProfileId];
 let questions = activeQuestionSet.questions;
 let questionMap = createQuestionMap();
@@ -173,6 +181,15 @@ function getInitialLanguageId() {
 function getInitialProfileId() {
   const savedProfileId = localStorage.getItem(ACTIVE_PROFILE_KEY);
   return QUESTION_SETS[savedProfileId] ? savedProfileId : DEFAULT_PROFILE_ID;
+}
+
+function getInitialThemeId() {
+  const savedThemeId = localStorage.getItem(ACTIVE_THEME_KEY);
+  if (savedThemeId === "dark" || savedThemeId === "light") {
+    return savedThemeId;
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : DEFAULT_THEME_ID;
 }
 
 function t(key, replacements = {}) {
@@ -730,16 +747,30 @@ function updateLanguageUi() {
   });
 }
 
+function updateThemeUi() {
+  const isDark = activeThemeId === "dark";
+  document.documentElement.dataset.theme = activeThemeId;
+  elements.themeToggleBtn.setAttribute("aria-pressed", String(isDark));
+}
+
+function switchTheme() {
+  activeThemeId = activeThemeId === "dark" ? "light" : "dark";
+  localStorage.setItem(ACTIVE_THEME_KEY, activeThemeId);
+  updateThemeUi();
+}
+
 function applyLanguage() {
   applyStaticTranslations();
   updateProfileUi();
   updateLanguageUi();
+  updateThemeUi();
 }
 
 elements.startAllBtn.addEventListener("click", () => startSession("all"));
 elements.reviewModeBtn.addEventListener("click", () => startSession("review"));
 elements.resetProgressBtn.addEventListener("click", resetProgress);
 elements.nextBtn.addEventListener("click", showNextQuestion);
+elements.themeToggleBtn.addEventListener("click", switchTheme);
 elements.profileButtons.forEach((button) => {
   button.addEventListener("click", () => switchProfile(button.dataset.profile));
 });

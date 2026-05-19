@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema de Quiz Estático</title>
+  <script>
+    const savedTheme = localStorage.getItem("static-quiz-system-theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +25,10 @@
             <button class="language-btn active" type="button" data-language="pt" aria-pressed="true">PT</button>
             <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
           </div>
+          <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-pressed="false" data-i18n-aria-label="themeToggleLabel">
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+            <span data-i18n="themeToggle">Tema escuro</span>
+          </button>
         </div>
         <h1 id="app-title">Quiz Analista de Informática</h1>
         <p id="app-subtitle" class="subtitle">
