@@ -9,6 +9,7 @@
   --accent: #1d6f5f;
   --accent-soft: #d7efe9;
   --danger: #a84432;
+  --danger-action: #2b2f31;
   --danger-soft: #f8ddd7;
   --success: #206246;
   --success-soft: #dcf4e5;
@@ -27,6 +28,7 @@ html[data-theme="dark"] {
   --accent: #4ec3a6;
   --accent-soft: #18372f;
   --danger: #ff9b85;
+  --danger-action: #8f3328;
   --danger-soft: #3b211f;
   --success: #84d9a9;
   --success-soft: #183225;
@@ -313,7 +315,7 @@ button:disabled {
 }
 
 .danger-btn {
-  background: color-mix(in srgb, var(--ink) 92%, var(--danger));
+  background: var(--danger-action);
   color: #fff;
 }
 
