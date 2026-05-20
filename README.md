@@ -37,7 +37,7 @@ The content is tailored to Brazilian public contest preparation, while the inter
 ## How It Works
 
 1. The user selects a profile: Bruno or Maria.
-2. The app loads the matching question bank from `questions.js`.
+2. The app loads the matching question bank from the static question files.
 3. A full quiz session shuffles all questions.
 4. Each question shows one prompt and five randomized alternatives.
 5. When the user answers, the app displays immediate feedback.
@@ -75,7 +75,7 @@ The app supports two languages:
 | Portuguese | Default language for the complete quiz experience. |
 | English | Portfolio-friendly translation for the interface, question prompts, answer alternatives, and feedback explanations. |
 
-The English question bank is stored statically in `questions-en.js`, so the deployed app does not depend on any external translation service at runtime.
+The English question bank is stored statically in JavaScript translation files, so the deployed app does not depend on any external translation service at runtime.
 
 ## Architecture
 
@@ -85,7 +85,11 @@ quiz-contest/
   style.css        Responsive styling and visual system
   app.js           Quiz engine, i18n, LocalStorage, review logic
   questions.js     Question banks and profile metadata
+  bruno-hard-questions.js
+                   Hard-mode IT Analyst question override
   questions-en.js  English translations for prompts, answers, and explanations
+  bruno-hard-questions-en.js
+                   English translations for the hard IT Analyst bank
   docs/
     screenshot.png README screenshot
 ```
@@ -104,12 +108,12 @@ No backend is required. The browser loads JavaScript directly, renders the curre
 
 | Profile | Target |
 | --- | --- |
-| Bruno | IT Analyst exam preparation based on SED/SC 794/2026. |
+| Bruno | Hard-mode IT Analyst exam preparation based on SED/SC 794/2026. |
 | Maria | Hard-mode AEE/Mixed and Libras Interpreter teacher roles based on SED/SC 793/2026. |
 
 The project currently includes 50 questions per profile, for 100 total questions.
 
-The questions are original simulated items. They were redesigned to follow the structure commonly seen in FURB-style exams, including assertion analysis, true/false sequences, column matching, scenario-based prompts, and closely related distractors. Maria's profile is intentionally calibrated as a harder set, with all items marked as difficult and more subtle alternatives. They are not verbatim copies of previous exams.
+The questions are original simulated items. They were redesigned to follow the structure commonly seen in FURB-style exams, including assertion analysis, true/false sequences, column matching, scenario-based prompts, and closely related distractors. Both profiles are calibrated as harder sets, with all active items marked as difficult and more subtle alternatives. They are not verbatim copies of previous exams.
 
 ## LocalStorage Model
 

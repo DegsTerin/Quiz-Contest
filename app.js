@@ -221,8 +221,10 @@ function createEmptySession() {
     currentAnswers: [],
     currentQueueSource: "main",
     answeredCurrent: false,
+    currentSelectedAnswer: null,
     currentIndex: 0,
     totalPlanned: 0,
+    reviewPlanned: 0,
     sessionCorrect: 0,
     sessionAnswered: 0,
     reviewStep: 0,
@@ -378,6 +380,7 @@ function showIdleState(message) {
   session.currentQuestionId = null;
   session.currentAnswers = [];
   session.answeredCurrent = false;
+  session.currentSelectedAnswer = null;
   session.isComplete = true;
 
   elements.questionCategory.textContent = activeQuestionSet.owner;
@@ -412,6 +415,7 @@ function showNextQuestion() {
   session.currentQuestionId = session.queue.shift();
   session.currentAnswers = randomizeAnswers(questionMap.get(session.currentQuestionId));
   session.answeredCurrent = false;
+  session.currentSelectedAnswer = null;
   session.currentIndex += 1;
 
   renderQuestion();
@@ -487,11 +491,12 @@ function renderQuestion() {
   });
 
   updateDashboard();
+  elements.questionText.focus({ preventScroll: true });
 }
 
 function updateCurrentQuestionChrome() {
   const question = questionMap.get(session.currentQuestionId);
-  const progressTotal = session.totalPlanned + session.reviewQueue.length + session.queue.length + 1;
+  const progressTotal = session.totalPlanned + session.reviewPlanned;
 
   elements.modeLabel.textContent = session.mode === "review" ? t("reviewMode") : t("allMode");
   elements.questionCategory.textContent = question.difficulty
@@ -509,6 +514,7 @@ function handleAnswer(selectedAnswer) {
   }
 
   session.answeredCurrent = true;
+  session.currentSelectedAnswer = selectedAnswer;
   session.sessionAnswered += 1;
   session.reviewStep += 1;
 
@@ -536,6 +542,7 @@ function handleAnswer(selectedAnswer) {
         id: sourceQuestion.id,
         dueStep: session.reviewStep + delay
       });
+      session.reviewPlanned += 1;
       stat.timesReviewed += 1;
     }
   } else {
@@ -549,12 +556,14 @@ function handleAnswer(selectedAnswer) {
       id: sourceQuestion.id,
       dueStep: session.reviewStep + 1
     });
+    session.reviewPlanned += 1;
   }
 
   saveState();
   decorateAnswerButtons(selectedAnswer);
   showFeedback(isCorrect, question, selectedAnswer);
   elements.nextBtn.disabled = false;
+  updateCurrentQuestionChrome();
   updateDashboard();
 }
 
@@ -624,6 +633,7 @@ function finishSession() {
   });
 
   updateDashboard();
+  elements.questionText.focus({ preventScroll: true });
 }
 
 function updateDashboard() {
@@ -634,7 +644,7 @@ function updateDashboard() {
     : Math.round((appState.totalCorrect / answered) * 100);
   const reviewCount = questions.filter((question) => getQuestionStat(question.id).needsReview).length;
   const trackedCount = questions.filter((question) => getQuestionStat(question.id).incorrect > 0).length;
-  const progressTotal = session.totalPlanned + session.reviewQueue.length;
+  const progressTotal = session.totalPlanned + session.reviewPlanned;
   const progressCurrent = Math.min(session.currentIndex, progressTotal);
 
   elements.modeLabel.textContent = session.mode === "review" ? t("reviewMode") : t("allMode");
@@ -712,6 +722,10 @@ function rerenderCurrentQuestionAfterLanguageChange() {
       label.textContent = localizedAnswer;
     }
   });
+
+  if (session.answeredCurrent && session.currentSelectedAnswer) {
+    showFeedback(session.currentSelectedAnswer.isCorrect, localizedQuestion, session.currentSelectedAnswer);
+  }
 }
 
 function applyStaticTranslations() {

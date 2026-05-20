@@ -8,7 +8,7 @@
     const savedTheme = localStorage.getItem("static-quiz-system-theme");
     document.documentElement.dataset.theme = savedTheme || "dark";
   </script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260520-hard3">
 </head>
 <body>
   <main class="app-shell">
@@ -17,8 +17,8 @@
         <p class="eyebrow" data-i18n="eyebrow">Treinador de estudos no navegador</p>
         <div class="switch-row">
           <div class="profile-switch" role="group" aria-label="Selecionar perfil do quiz" data-i18n-aria-label="profileSwitchLabel">
-          <button class="profile-btn active" type="button" data-profile="bruno" aria-pressed="true">Bruno</button>
-          <button class="profile-btn" type="button" data-profile="maria" aria-pressed="false">Maria</button>
+            <button class="profile-btn active" type="button" data-profile="bruno" aria-pressed="true">Bruno</button>
+            <button class="profile-btn" type="button" data-profile="maria" aria-pressed="false">Maria</button>
           </div>
           <div class="language-switch" role="group" aria-label="Selecionar idioma" data-i18n-aria-label="languageSwitchLabel">
             <button class="language-btn active" type="button" data-language="pt" aria-pressed="true">PT</button>
@@ -66,7 +66,7 @@
         <span id="question-position">Questão 1</span>
       </div>
 
-      <h2 id="question-text">Clique em “Iniciar Quiz Completo” para começar.</h2>
+      <h2 id="question-text" tabindex="-1" aria-live="polite">Clique em “Iniciar Quiz Completo” para começar.</h2>
 
       <div id="answer-buttons" class="answer-grid"></div>
 
@@ -106,10 +106,12 @@
     </section>
   </main>
 
-  <script src="questions.js"></script>
-  <script src="maria-hard-questions.js"></script>
-  <script src="questions-en.js"></script>
-  <script src="maria-hard-questions-en.js"></script>
-  <script src="app.js"></script>
+  <script src="questions.js?v=20260520-hard3"></script>
+  <script src="bruno-hard-questions.js?v=20260520-hard3"></script>
+  <script src="maria-hard-questions.js?v=20260520-hard3"></script>
+  <script src="questions-en.js?v=20260520-hard3"></script>
+  <script src="bruno-hard-questions-en.js?v=20260520-hard3"></script>
+  <script src="maria-hard-questions-en.js?v=20260520-hard3"></script>
+  <script src="app.js?v=20260520-hard3"></script>
 </body>
 </html>

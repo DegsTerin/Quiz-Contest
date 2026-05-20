@@ -25,7 +25,8 @@ html[data-theme="dark"] {
   --ink: #eef4f2;
   --muted: #a8b4ba;
   --line: #344149;
-  --accent: #4ec3a6;
+  --accent: #7ee0c5;
+  --accent-strong: #0f5f52;
   --accent-soft: #18372f;
   --danger: #ff9b85;
   --danger-action: #8f3328;
@@ -157,7 +158,7 @@ html[data-theme="dark"] .theme-toggle-icon::after {
 
 .profile-btn.active,
 .language-btn.active {
-  background: var(--accent);
+  background: var(--accent-strong, var(--accent));
   color: #fff;
   box-shadow: 0 8px 18px rgba(29, 111, 95, 0.18);
 }
@@ -246,6 +247,12 @@ button {
   border-radius: 14px;
   cursor: pointer;
   transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+button:focus-visible,
+#question-text:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 button:hover:not(:disabled) {
@@ -388,5 +395,35 @@ button:disabled {
 
   .hero-actions {
     min-width: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    width: min(100% - 20px, 960px);
+    margin: 16px auto 32px;
+  }
+
+  .hero,
+  .card {
+    border-radius: 14px;
+  }
+
+  .hero,
+  .card {
+    padding: 18px;
+  }
+
+  .question-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .answer-btn,
+  .primary-btn,
+  .secondary-btn,
+  .danger-btn {
+    width: 100%;
   }
 }
