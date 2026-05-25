@@ -22,7 +22,7 @@ const EN_QUESTION_TRANSLATIONS = {
     "explanation": "The notice provides for a minimum grade of 6.00 in the objective test."
   },
   "cg-03": {
-    "prompt": "Analyze the statements about ethics and performance in public service: I. The public agent must avoid situations in which private interests can influence functional decisions. II. Impersonality allows favored treatment when there is good intention. III. The publicity of administrative acts coexists with legal hypotheses of secrecy. What is stated in:",
+    "prompt": "Analyse the statements about ethics and performance in public service: I. The public agent must avoid situations in which private interests can influence functional decisions. II. Impersonality allows favored treatment when there is good intention. III. The publicity of administrative acts coexists with legal hypotheses of secrecy. What is stated in:",
     "options": [
       "I, just.",
       "II, only.",
@@ -38,7 +38,7 @@ const EN_QUESTION_TRANSLATIONS = {
       "Deny access because every internal document is confidential.",
       "Require detailed justification from the citizen before filing.",
       "Provide or guide access, unless there is a specific legal restriction.",
-      "Release only if there is judicial authorization.",
+      "Release only if there is judicial authorisation.",
       "Respond verbally, without recording the service."
     ],
     "explanation": "The LAI starts with publicity as a rule and secrecy as a legally justified exception."
@@ -52,7 +52,7 @@ const EN_QUESTION_TRANSLATIONS = {
       "V - V - V - F.",
       "F - F - V - F."
     ],
-    "explanation": "Educational data may be sensitive; purpose and security are central principles; Minimization does not authorize excess."
+    "explanation": "Educational data may be sensitive; purpose and security are central principles; Minimization does not authorise excess."
   },
   "cg-06": {
     "prompt": "In risk management, a team identifies the possibility of unavailability of the registration system during a critical period. The technically most appropriate answer is:",
@@ -96,10 +96,10 @@ const EN_QUESTION_TRANSLATIONS = {
       "Prohibition of cooperation between federative entities.",
       "Only private competence for school management."
     ],
-    "explanation": "The Constitution organizes common, private and competing powers between federative entities."
+    "explanation": "The Constitution organises common, private and competing powers between federative entities."
   },
   "cg-10": {
-    "prompt": "In the continuity of digital public services, consider: I. Continuity plan must prioritize essential services. II. Backup is only valid if it is never tested, to preserve integrity. III. Communication with users and managers helps reduce the impact of unavailability. That's correct:",
+    "prompt": "In the continuity of digital public services, consider: I. Continuity plan must prioritise essential services. II. Backup is only valid if it is never tested, to preserve integrity. III. Communication with users and managers helps reduce the impact of unavailability. That's correct:",
     "options": [
       "I, just.",
       "II, only.",
@@ -107,12 +107,12 @@ const EN_QUESTION_TRANSLATIONS = {
       "II and III only.",
       "I, II and III."
     ],
-    "explanation": "Backups need to be tested; prioritization and communication are continuity practices."
+    "explanation": "Backups need to be tested; prioritisation and communication are continuity practices."
   },
   "ni-01": {
     "prompt": "In an administrative environment, an intranet is characterized by:",
     "options": [
-      "An organization's private network, with controlled access and internal services.",
+      "An organisation's private network, with controlled access and internal services.",
       "Public worldwide network without any access control.",
       "Exclusive application for editing images.",
       "Physical device used to replace RAM memory.",
@@ -209,15 +209,15 @@ const EN_QUESTION_TRANSLATIONS = {
     "explanation": "Quotation marks indicate a search for an exact expression in search engines."
   },
   "ni-10": {
-    "prompt": "When managing files as a team, a good practice is:",
+    "prompt": "When manageing files as a team, a good practice is:",
     "options": [
       "Use descriptive names, versioning and appropriate permissions.",
       "Save everything to a user's desktop.",
       "Delete old documents without retention rule.",
       "Give public edition to sensitive documents.",
-      "Avoid any organization by folders."
+      "Avoid any organisation by folders."
     ],
-    "explanation": "Organization, versioning and access control reduce loss and confusion."
+    "explanation": "Organisation, versioning and access control reduce loss and confusion."
   },
   "ce-01": {
     "prompt": "In computer architecture, cache memory's main purpose is:",
@@ -231,7 +231,7 @@ const EN_QUESTION_TRANSLATIONS = {
     "explanation": "Cache reduces average access time between CPU and main memory."
   },
   "ce-02": {
-    "prompt": "Regarding operating systems, analyze: I. Scheduling decides the order of CPU usage by processes. II. Deadlock involves circular waiting and retained resources. III. Virtual memory completely prevents physical memory shortages. That's correct:",
+    "prompt": "Regarding operating systems, analyse: I. Scheduling decides the order of CPU usage by processes. II. Deadlock involves circular waiting and retained resources. III. Virtual memory completely prevents physical memory shortages. That's correct:",
     "options": [
       "I and II only.",
       "I and III only.",
@@ -437,7 +437,7 @@ const EN_QUESTION_TRANSLATIONS = {
       "Supplier names only.",
       "Public list of unaddressed vulnerabilities."
     ],
-    "explanation": "Catalog organizes the offer of services and service expectations."
+    "explanation": "Catalog organises the offer of services and service expectations."
   },
   "ce-21": {
     "prompt": "In interoperability of educational systems, the following are central concerns:",
@@ -464,7 +464,7 @@ const EN_QUESTION_TRANSLATIONS = {
   "ce-23": {
     "prompt": "In data science, overfitting occurs when a model:",
     "options": [
-      "It overfits training data and generalizes poorly to new data.",
+      "It overfits training data and generalises poorly to new data.",
       "Does not use any input variables.",
       "Automatically encrypts the base.",
       "Performs incremental backup only.",
@@ -486,7 +486,7 @@ const EN_QUESTION_TRANSLATIONS = {
   "ce-25": {
     "prompt": "For compliance with the LGPD in an educational system, it is most appropriate:",
     "options": [
-      "Apply access control, purpose, minimization, registration and security in processing.",
+      "Apply access control, purpose, minimisation, registration and security in processing.",
       "Release all data to any server.",
       "Collect data without a defined purpose.",
       "Use public links for reports with personal data.",
@@ -531,7 +531,7 @@ const EN_QUESTION_TRANSLATIONS = {
     "prompt": "In databases, an index tends to:",
     "options": [
       "Speed up read queries on indexed columns, with additional cost in writing and storage.",
-      "Eliminate need for modeling.",
+      "Eliminate need for modelling.",
       "Ensure complete encryption.",
       "Prevent any deadlock.",
       "Replace transactions."
@@ -572,7 +572,7 @@ const EN_QUESTION_TRANSLATIONS = {
     "explanation": "The notice requires a minimum grade of 6.00."
   },
   "m-cg-03": {
-    "prompt": "In the tiebreaker criteria for Professor, after applicable legal hypotheses, Errata nº 01 prioritizes:",
+    "prompt": "In the tiebreaker criteria for Professor, after applicable legal hypotheses, Errata nº 01 prioritises:",
     "options": [
       "Higher score in Specific Knowledge.",
       "Older age in any situation.",
@@ -624,7 +624,7 @@ const EN_QUESTION_TRANSLATIONS = {
       "V - V - V - F.",
       "F - F - V - V."
     ],
-    "explanation": "Transparency does not authorize undue exposure of personal or sensitive data."
+    "explanation": "Transparency does not authorise undue exposure of personal or sensitive data."
   },
   "m-cg-08": {
     "prompt": "The Political-Pedagogical Project is related to democratic management because:",
@@ -693,7 +693,7 @@ const EN_QUESTION_TRANSLATIONS = {
     "explanation": "DUA seeks to reduce barriers through different forms of access and expression."
   },
   "m-md-04": {
-    "prompt": "Regarding curriculum adaptation, analyze: I. It must reduce barriers to accessing the curriculum. II. It may involve resources, time, language and form of response. III. You should always eliminate learning objectives. That's correct:",
+    "prompt": "Regarding curriculum adaptation, analyse: I. It must reduce barriers to accessing the curriculum. II. It may involve resources, time, language and form of response. III. You should always eliminate learning objectives. That's correct:",
     "options": [
       "I and II only.",
       "I and III only.",
@@ -765,9 +765,9 @@ const EN_QUESTION_TRANSLATIONS = {
       "Isolation of students who require support.",
       "Absence of agreed classroom routines.",
       "Disciplinary control without pedagogical dimension.",
-      "Strict standardization without considering barriers."
+      "Strict standardisation without considering barriers."
     ],
-    "explanation": "Inclusive environments articulate organization, welcoming and participation."
+    "explanation": "Inclusive environments articulate organisation, welcoming and participation."
   },
   "m-aee-01": {
     "prompt": "According to the perspective of inclusive education, AEE’s main purpose is to:",
@@ -792,7 +792,7 @@ const EN_QUESTION_TRANSLATIONS = {
     "explanation": "The Santa Catarina regulations include disabilities, ASD, ADHD and AH/SD."
   },
   "m-aee-03": {
-    "prompt": "Regarding the PDI, analyze: I. It must record evaluation, objectives, strategies, resources and monitoring. II. It is a living document, subject to monitoring and adjustments. III. It is mandatory only for intellectual disabilities. That's correct:",
+    "prompt": "Regarding the PDI, analyse: I. It must record evaluation, objectives, strategies, resources and monitoring. II. It is a living document, subject to monitoring and adjustments. III. It is mandatory only for intellectual disabilities. That's correct:",
     "options": [
       "I and II only.",
       "I and III only.",
@@ -919,7 +919,7 @@ const EN_QUESTION_TRANSLATIONS = {
       "Distant oral exposure only.",
       "Exclusively visual material without adaptation.",
       "Lack of communicative mediation.",
-      "Unsupported standardized assessment."
+      "Unsupported standardised assessment."
     ],
     "explanation": "Deafblindness requires individualized sensory and communicative planning."
   },
@@ -963,7 +963,7 @@ const EN_QUESTION_TRANSLATIONS = {
       "Spell all proper nouns.",
       "Copy the order of Portuguese word for word.",
       "Eliminate facial expressions.",
-      "Universally standardize signals."
+      "Universally standardise signals."
     ],
     "explanation": "Classifiers explore the visual-spatial modality."
   },
@@ -979,9 +979,9 @@ const EN_QUESTION_TRANSLATIONS = {
     "explanation": "Libras is a natural language with grammar, variation and partial iconicity."
   },
   "m-lib-05": {
-    "prompt": "The spatial organization of speech in Libras allows:",
+    "prompt": "The spatial organisation of speech in Libras allows:",
     "options": [
-      "Establish referents, mark relationships and organize cohesion in the signaling space.",
+      "Establish referents, mark relationships and organise cohesion in the signalling space.",
       "Delete referencing.",
       "Always translate Portuguese literally.",
       "Use isolated signals without context.",
@@ -998,7 +998,7 @@ const EN_QUESTION_TRANSLATIONS = {
       "Exclusion of written Portuguese.",
       "Lack of linguistic planning."
     ],
-    "explanation": "The bilingual approach recognizes Libras as the first language and written Portuguese as the second."
+    "explanation": "The bilingual approach recognises Libras as the first language and written Portuguese as the second."
   },
   "m-lib-07": {
     "prompt": "In educational interpreting, the interpreter must:",
@@ -1020,7 +1020,7 @@ const EN_QUESTION_TRANSLATIONS = {
       "Defines Libras as universal mimicry.",
       "Only regulates school transport."
     ],
-    "explanation": "The law officially recognizes Libras in Brazil."
+    "explanation": "The law officially recognises Libras in Brazil."
   },
   "m-lib-09": {
     "prompt": "Decree No. 5,626/2005 deals, among other aspects, with:",
@@ -1045,7 +1045,7 @@ const EN_QUESTION_TRANSLATIONS = {
     "explanation": "Comparing languages avoids mechanical translation."
   },
   "m-lib-11": {
-    "prompt": "In the bilingual context, UDL favors deaf students when:",
+    "prompt": "In the bilingual context, UDL favours deaf students when:",
     "options": [
       "It offers visual resources, Libras, accessible written Portuguese and multiple forms of participation.",
       "Remove Libras from class.",

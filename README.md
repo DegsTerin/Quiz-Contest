@@ -31,7 +31,7 @@ The content is tailored to Brazilian public contest preparation, while the inter
 | Review queue | Missed questions are saved and repeated after the main round. |
 | Basic spaced repetition | Correct streaks reduce how often a question appears again. |
 | Local persistence | Progress, accuracy, streaks, and review status are stored in LocalStorage. |
-| Bilingual experience | Portuguese is default; English translates the interface while the original exam questions remain in Portuguese. |
+| Bilingual experience | Portuguese is default; English translates the interface, questions, alternatives, and feedback into British English. |
 | GitHub Pages ready | No build step, no server, no external libraries. |
 
 ## How It Works
@@ -73,9 +73,9 @@ The app supports two languages:
 | Language | Behavior |
 | --- | --- |
 | Portuguese | Default language for the complete quiz experience. |
-| English | Portfolio-friendly translation for the interface. Original exam questions remain in Portuguese to preserve the source wording. |
+| English | British English translation for the interface, question prompts, alternatives, and feedback. |
 
-The deployed app does not depend on any external translation service at runtime.
+The English question bank is stored statically in JavaScript translation files, so the deployed app does not depend on any external translation service at runtime.
 
 ## Architecture
 
@@ -91,9 +91,9 @@ quiz-contest/
                    Original AEE/Mixed and Libras FURB exam questions
   questions-en.js  English interface support and legacy fallback translations
   bruno-hard-questions-en.js
-                   No-op for original Portuguese question wording
+                   British English translations for the original IT Analyst bank
   maria-hard-questions-en.js
-                   No-op for original Portuguese question wording
+                   British English translations for the original AEE/Mixed and Libras bank
   docs/
     screenshot.png README screenshot
 ```

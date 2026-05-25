@@ -116,11 +116,11 @@ const I18N = {
     profiles: {
       bruno: {
         title: "IT Analyst Quiz",
-        description: "Original Portuguese FURB objective-test questions from Notice 794/SED/2026 for IT Analyst, with the preliminary answer key and mistake review."
+        description: "Original FURB objective-test questions from Notice 794/SED/2026 for IT Analyst, translated into British English with the preliminary answer key and mistake review."
       },
       maria: {
         title: "AEE/Mixed and Libras Teacher Quiz",
-        description: "Original Portuguese FURB objective-test questions from Notice 793/SED/2026 for AEE/Mixed and Libras Interpreter teacher roles, with the preliminary answer key and mistake review."
+        description: "Original FURB objective-test questions from Notice 793/SED/2026 for AEE/Mixed and Libras Interpreter teacher roles, translated into British English with the preliminary answer key and mistake review."
       }
     },
     categories: {
@@ -387,7 +387,7 @@ function showIdleState(message) {
 
   elements.questionCategory.textContent = activeQuestionSet.owner;
   elements.questionPosition.textContent = t("readyPosition");
-  elements.questionText.textContent = message;
+  renderReadableText(elements.questionText, message);
   elements.answerButtons.innerHTML = "";
   elements.nextBtn.disabled = true;
   hideFeedback();
@@ -465,12 +465,75 @@ function getLocalizedQuestion(question) {
   };
 }
 
+function normalizeExamText(text) {
+  return String(text)
+    .replace(/\s+/g, " ")
+    .replace(/([^\s])\(__\)/g, "$1 (__)")
+    .replace(/\(__\)(?=\S)/g, "(__) ")
+    .replace(/\b([1-5])\.([A-ZÁÉÍÓÚÂÊÔÃÕÇ])/g, "$1. $2")
+    .replace(/\b(I|II|III|IV|V)\.([A-ZÁÉÍÓÚÂÊÔÃÕÇ])/g, "$1. $2")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .trim();
+}
+
+function getReadableTextParts(text, isCompact = false) {
+  const normalized = normalizeExamText(text);
+
+  if (isCompact) {
+    return [normalized];
+  }
+
+  return normalized
+    .replace(/\s+(Primeira coluna:)/g, "\n$1")
+    .replace(/\s+(Segunda coluna:)/g, "\n$1")
+    .replace(/\s+(First column:)/g, "\n$1")
+    .replace(/\s+(Second column:)/g, "\n$1")
+    .replace(/\s+(Assinale a alternativa)/g, "\n$1")
+    .replace(/\s+(Select the alternative)/g, "\n$1")
+    .replace(/\s+(É correto o que se afirma em:)/g, "\n$1")
+    .replace(/\s+(What is stated in:)/g, "\n$1")
+    .replace(/\s+(\(__\))/g, "\n$1")
+    .replace(/\s+(\b[1-5]\.\s)/g, "\n$1")
+    .replace(/\s+(\b(?:I|II|III|IV|V)\.\s)/g, "\n$1")
+    .split("\n")
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+function getReadableTextClassName(text) {
+  if (/^(Primeira coluna|Segunda coluna|First column|Second column|Assinale a alternativa|Select the alternative|É correto o que se afirma em|What is stated in)/.test(text)) {
+    return "text-block text-block-heading";
+  }
+
+  if (/^(\(__\)|[1-5]\.|I\.|II\.|III\.|IV\.|V\.)/.test(text)) {
+    return "text-block text-block-item";
+  }
+
+  return "text-block";
+}
+
+function renderReadableText(element, text, options = {}) {
+  const parts = getReadableTextParts(text, options.compact);
+  element.textContent = "";
+
+  parts.forEach((part) => {
+    const node = document.createElement(options.compact ? "span" : "p");
+    node.className = options.compact ? "text-inline" : getReadableTextClassName(part);
+    node.textContent = part;
+    element.appendChild(node);
+
+    if (!options.compact) {
+      element.appendChild(document.createTextNode("\n"));
+    }
+  });
+}
+
 function renderQuestion() {
   const sourceQuestion = questionMap.get(session.currentQuestionId);
   const question = getLocalizedQuestion(sourceQuestion);
 
   updateCurrentQuestionChrome();
-  elements.questionText.textContent = question.prompt;
+  renderReadableText(elements.questionText, question.prompt);
   elements.answerButtons.innerHTML = "";
   elements.nextBtn.disabled = true;
   hideFeedback();
@@ -485,7 +548,7 @@ function renderQuestion() {
     letter.className = "answer-letter";
     letter.textContent = ANSWER_LETTERS[index];
     label.className = "answer-label";
-    label.textContent = question.options[answer.sourceIndex];
+    renderReadableText(label, question.options[answer.sourceIndex], { compact: true });
 
     button.append(letter, label);
     button.addEventListener("click", () => handleAnswer(answer));
@@ -622,9 +685,10 @@ function finishSession() {
 
   elements.questionCategory.textContent = t("completedCategory");
   elements.questionPosition.textContent = t("completedPosition");
-  elements.questionText.textContent = session.mode === "review"
-    ? t("completedReviewMessage")
-    : t("completedAllMessage");
+  renderReadableText(
+    elements.questionText,
+    session.mode === "review" ? t("completedReviewMessage") : t("completedAllMessage")
+  );
 
   elements.feedbackBox.classList.remove("hidden", "success", "error");
   elements.feedbackBox.classList.add("success");
@@ -713,7 +777,7 @@ function rerenderCurrentQuestionAfterLanguageChange() {
   const localizedQuestion = getLocalizedQuestion(sourceQuestion);
 
   updateCurrentQuestionChrome();
-  elements.questionText.textContent = localizedQuestion.prompt;
+  renderReadableText(elements.questionText, localizedQuestion.prompt);
 
   Array.from(elements.answerButtons.children).forEach((button, index) => {
     const label = button.querySelector(".answer-label");
@@ -721,7 +785,7 @@ function rerenderCurrentQuestionAfterLanguageChange() {
     const localizedAnswer = localizedQuestion.options[answer.sourceIndex];
 
     if (label && localizedAnswer) {
-      label.textContent = localizedAnswer;
+      renderReadableText(label, localizedAnswer, { compact: true });
     }
   });
 
