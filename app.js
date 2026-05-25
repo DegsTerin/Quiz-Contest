@@ -52,11 +52,11 @@ const I18N = {
     profiles: {
       bruno: {
         title: "Quiz Analista de Informática",
-        description: "Questões alinhadas ao edital SED/SC 794/2026 para Analista de Informática, com revisão de erros e repetição espaçada simples."
+        description: "Questões originais da prova objetiva FURB do Edital 794/SED/2026 para Analista de Informática, com gabarito preliminar e revisão de erros."
       },
       maria: {
         title: "Quiz Professora AEE/Misto e Libras",
-        description: "Questões alinhadas ao edital SED/SC 793/2026 para AEE/Misto e Intérprete da Libras, com foco no nível da prova."
+        description: "Questões originais da prova objetiva FURB do Edital 793/SED/2026 para AEE/Misto e Intérprete da Libras, com gabarito preliminar e revisão de erros."
       }
     },
     categories: {
@@ -70,7 +70,8 @@ const I18N = {
     difficulties: {
       "Fácil": "Fácil",
       "Média": "Média",
-      "Difícil": "Difícil"
+      "Difícil": "Difícil",
+      "Original": "Original"
     }
   },
   en: {
@@ -115,11 +116,11 @@ const I18N = {
     profiles: {
       bruno: {
         title: "IT Analyst Quiz",
-        description: "Questions aligned with the SED/SC 794/2026 notice for IT Analyst, featuring mistake review and a simple spaced repetition flow."
+        description: "Original Portuguese FURB objective-test questions from Notice 794/SED/2026 for IT Analyst, with the preliminary answer key and mistake review."
       },
       maria: {
         title: "AEE/Mixed and Libras Teacher Quiz",
-        description: "Questions aligned with the SED/SC 793/2026 notice for AEE/Mixed and Libras Interpreter teacher roles, tuned to the exam level."
+        description: "Original Portuguese FURB objective-test questions from Notice 793/SED/2026 for AEE/Mixed and Libras Interpreter teacher roles, with the preliminary answer key and mistake review."
       }
     },
     categories: {
@@ -133,7 +134,8 @@ const I18N = {
     difficulties: {
       "Fácil": "Easy",
       "Média": "Medium",
-      "Difícil": "Hard"
+      "Difícil": "Hard",
+      "Original": "Original"
     }
   }
 };

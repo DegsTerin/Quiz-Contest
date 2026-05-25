@@ -232,13 +232,14 @@ html[data-theme="dark"] .theme-toggle-icon::after {
 
 #question-text {
   margin: 0 0 24px;
-  font-size: clamp(1.3rem, 2vw, 1.75rem);
-  line-height: 1.45;
+  font-size: 1.08rem;
+  line-height: 1.58;
+  overflow-wrap: anywhere;
 }
 
 .answer-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 14px;
 }
 
@@ -269,7 +270,7 @@ button:disabled {
 .secondary-btn,
 .danger-btn {
   padding: 14px 16px;
-  font-size: 1rem;
+  font-size: 0.98rem;
 }
 
 .answer-btn {
@@ -293,6 +294,12 @@ button:disabled {
   background: color-mix(in srgb, var(--line) 52%, var(--panel-strong));
   color: var(--ink);
   font-weight: 800;
+}
+
+.answer-label {
+  min-width: 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .answer-btn:hover:not(:disabled) {

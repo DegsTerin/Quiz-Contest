@@ -24,14 +24,14 @@ The content is tailored to Brazilian public contest preparation, while the inter
 | Feature | Description |
 | --- | --- |
 | Multiple profiles | Switch between two independent study profiles without mixing progress. |
-| Question bank | 100 total sample questions split across two contest profiles. |
+| Question bank | 100 original FURB objective-test questions split across two contest profiles. |
 | Randomization | Questions and answer alternatives are shuffled every session. |
 | Paper-style alternatives | Answers are displayed as A, B, C, D, and E, like a printed exam. |
 | Immediate feedback | Users see whether the answer is correct and get an explanation. |
 | Review queue | Missed questions are saved and repeated after the main round. |
 | Basic spaced repetition | Correct streaks reduce how often a question appears again. |
 | Local persistence | Progress, accuracy, streaks, and review status are stored in LocalStorage. |
-| Bilingual experience | Portuguese is default; English translates the interface, questions, alternatives, and feedback explanations. |
+| Bilingual experience | Portuguese is default; English translates the interface while the original exam questions remain in Portuguese. |
 | GitHub Pages ready | No build step, no server, no external libraries. |
 
 ## How It Works
@@ -73,9 +73,9 @@ The app supports two languages:
 | Language | Behavior |
 | --- | --- |
 | Portuguese | Default language for the complete quiz experience. |
-| English | Portfolio-friendly translation for the interface, question prompts, answer alternatives, and feedback explanations. |
+| English | Portfolio-friendly translation for the interface. Original exam questions remain in Portuguese to preserve the source wording. |
 
-The English question bank is stored statically in JavaScript translation files, so the deployed app does not depend on any external translation service at runtime.
+The deployed app does not depend on any external translation service at runtime.
 
 ## Architecture
 
@@ -86,10 +86,14 @@ quiz-contest/
   app.js           Quiz engine, i18n, LocalStorage, review logic
   questions.js     Question banks and profile metadata
   bruno-hard-questions.js
-                   Hard-mode IT Analyst question override
-  questions-en.js  English translations for prompts, answers, and explanations
+                   Original IT Analyst FURB exam questions
+  maria-hard-questions.js
+                   Original AEE/Mixed and Libras FURB exam questions
+  questions-en.js  English interface support and legacy fallback translations
   bruno-hard-questions-en.js
-                   English translations for the hard IT Analyst bank
+                   No-op for original Portuguese question wording
+  maria-hard-questions-en.js
+                   No-op for original Portuguese question wording
   docs/
     screenshot.png README screenshot
 ```
@@ -108,12 +112,12 @@ No backend is required. The browser loads JavaScript directly, renders the curre
 
 | Profile | Target |
 | --- | --- |
-| Bruno | Hard-mode IT Analyst exam preparation based on SED/SC 794/2026. |
-| Maria | Hard-mode AEE/Mixed and Libras Interpreter teacher roles based on SED/SC 793/2026. |
+| Bruno | Original FURB objective test for IT Analyst, SED/SC 794/2026. |
+| Maria | Original FURB objective test for AEE/Mixed and Libras Interpreter teacher roles, SED/SC 793/2026. |
 
-The project currently includes 50 questions per profile, for 100 total questions.
+The project currently includes 40 questions for Bruno and 60 questions for Maria, for 100 total questions.
 
-The questions are original simulated items. They were redesigned to follow the structure commonly seen in FURB-style exams, including assertion analysis, true/false sequences, column matching, scenario-based prompts, and closely related distractors. Both profiles are calibrated as harder sets, with all active items marked as difficult and more subtle alternatives. They are not verbatim copies of previous exams.
+The active question banks use the original wording from the preliminary FURB objective-test PDFs and the preliminary answer key as feedback. They are marked as `Original` in the quiz UI.
 
 ## LocalStorage Model
 

@@ -123,13 +123,13 @@ const QUESTION_SETS = {
   bruno: {
     owner: "Bruno",
     title: "Quiz Analista de Informática",
-    description: "Questões alinhadas ao edital SED/SC 794/2026 para Analista de Informática, com revisão de erros e repetição espaçada simples.",
+    description: "Questões originais da prova objetiva FURB do Edital 794/SED/2026 para Analista de Informática, com gabarito preliminar e revisão de erros.",
     questions: BRUNO_QUESTIONS
   },
   maria: {
     owner: "Maria",
     title: "Quiz Professora AEE/Misto e Libras",
-    description: "Questões alinhadas ao edital SED/SC 793/2026 para AEE/Misto e Intérprete da Libras, com foco no nível da prova.",
+    description: "Questões originais da prova objetiva FURB do Edital 793/SED/2026 para AEE/Misto e Intérprete da Libras, com gabarito preliminar e revisão de erros.",
     questions: MARIA_QUESTIONS
   }
 };
