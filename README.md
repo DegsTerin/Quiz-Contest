@@ -1,5 +1,7 @@
 # Quiz Contest
 
+[![Quality](https://github.com/DegsTerin/quiz-contest/actions/workflows/quality.yml/badge.svg)](https://github.com/DegsTerin/quiz-contest/actions/workflows/quality.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Static Site](https://img.shields.io/badge/static-HTML%20%2B%20CSS%20%2B%20JS-1d6f5f)](#tech-stack)
 [![No Backend](https://img.shields.io/badge/backend-none-a84432)](#architecture)
 [![Storage](https://img.shields.io/badge/storage-LocalStorage-206246)](#how-it-works)
@@ -178,3 +180,7 @@ Folder: /
 - Add full question-bank translation support.
 - Add charts for accuracy by subject.
 - Add keyboard shortcuts for A-E answers.
+
+## License
+
+This project is released under the [MIT License](LICENSE).
