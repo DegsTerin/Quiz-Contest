@@ -26,9 +26,9 @@ The product deliberately keeps its runtime boundary small: the browser renders t
 | Area | Implementation |
 | --- | --- |
 | Runtime | Browser-only HTML, CSS and vanilla JavaScript |
-| Content | Two profiles and 100 active questions |
+| Content | Two profiles and 240 active questions: 120 for Bruno and 120 for Maria |
 | Session strategies | Written-exam sequence for Bruno; study-oriented randomisation for Maria and review queues |
-| Persistence | Versioned LocalStorage state, isolated by profile |
+| Persistence | Versioned LocalStorage state, isolated by profile and difficulty |
 | Localisation | pt-BR by default, with an en-GB experience |
 | Delivery | Static hosting through GitHub Pages; no build step |
 
@@ -37,11 +37,12 @@ The product deliberately keeps its runtime boundary small: the browser renders t
 | Capability | Behaviour |
 | --- | --- |
 | Independent profiles | Bruno and Maria use separate question banks, progress records and session policies. |
+| Three difficulty modes | One top-level button cycles both profiles through Easy → Medium → Hard, with 40 questions in each mode. |
 | Written-exam fidelity | Bruno's full quiz follows the notice subject order and keeps a deterministic A–E answer layout. |
 | Study variation | Maria's full quiz and mistake-review queues randomise questions and alternatives. |
 | Immediate feedback | Every answer is evaluated in the browser and followed by an explanation. |
 | Adaptive mistake review | Incorrect answers are scheduled to reappear; consecutive correct answers clear the review requirement. |
-| Durable local progress | Totals, per-question history, selected profile, language and theme survive page reloads. |
+| Durable local progress | Totals, per-question history, selected profile, each profile's difficulty, language and theme survive page reloads. |
 | Bilingual interface | Controls, questions, alternatives and explanations are available in pt-BR and en-GB. |
 | Responsive themes | The interface supports light and dark themes across desktop and narrow viewports. |
 | Zero-install delivery | There are no runtime packages, server processes or environment variables to configure. |
@@ -52,7 +53,7 @@ The product deliberately keeps its runtime boundary small: the browser renders t
 
 A session policy is selected from the active profile:
 
-- Bruno's main queue preserves the authored 1–40 written-exam sequence.
+- Bruno's selected difficulty preserves its authored 1–40 written-exam sequence.
 - Bruno's A–E alternatives use a seeded deterministic permutation derived from the question ID. This keeps the layout stable without exposing the answer-key pattern.
 - Maria's main queue is randomised and gives greater priority to questions with a lower correct-answer streak.
 - Review queues can randomise alternatives so that study recall does not depend on a memorised position.
@@ -73,8 +74,8 @@ This is a focused in-session learning loop rather than a time-based spaced-repet
 
 | Profile | Active bank | Main-session behaviour |
 | --- | --- | --- |
-| Bruno | 40 author-created, non-official practice questions aligned with Massaranduba Municipal Public Competition Notice 001/2026 for IT Technician | Fixed written-exam order with stable alternatives |
-| Maria | 60 original FURB objective-test questions for AEE/Mixed and Libras Interpreter roles, SED/SC Notice 793/2026, with the preliminary answer key | Randomised, streak-aware study order |
+| Bruno | Three 40-question, author-created and non-official practice banks aligned with Massaranduba Municipal Public Competition Notice 001/2026 for IT Technician | Easy, Medium or Hard; fixed written-exam order with stable alternatives and isolated progress |
+| Maria | Three 40-question banks covering General Knowledge, Teaching Practice Methodology, AEE/Mixed and Libras Interpreting | Easy, Medium or Hard; randomised, streak-aware study order with isolated progress |
 
 ### Bruno written-exam sequence
 
@@ -86,9 +87,15 @@ This is a focused in-session learning loop rather than a time-based spaced-repet
 | 21–40 | Role-Specific Knowledge | 20 | 3 | 60 |
 | **Total** |  | **40** |  | **100** |
 
-Every active question has five alternatives and one designated answer. Bruno's questions and explanations are independent study material; they are not copied from an official test and do not constitute an official answer key.
+Every question has five alternatives and one designated answer. Each Bruno difficulty follows the same 8/8/4/20 subject distribution and balances the displayed answer key across A–E. Bruno's questions and explanations are independent study material; they are not copied from an official test and do not constitute an official answer key.
 
 The dashboard intentionally reports raw correct-answer counts and accuracy. It does not calculate the notice-weighted score or determine whether an official pass threshold has been met.
+
+### Maria mixed-profile sequence
+
+Each Maria mode contains 10 General Knowledge, 10 Teaching Practice Methodology, 10 AEE/Mixed and 10 Libras Interpreter questions. This is a mixed study profile spanning two specialist tracks, not the distribution of a single official paper.
+
+The Easy and Medium modes contain author-created practice material. The Hard mode selects 40 questions from the preserved 60-question FURB source corpus for SED/SC Notice 793/2026 and retains references to the preliminary answer key.
 
 ## Architecture
 
@@ -123,15 +130,23 @@ The application stores only study state and interface preferences in the current
 
 | LocalStorage key | Purpose |
 | --- | --- |
-| <code>static-quiz-system-state-v3-bruno</code> | Bruno's totals and per-question progress |
-| <code>static-quiz-system-state-v2-maria</code> | Maria's totals and per-question progress |
+| <code>static-quiz-system-state-v4-bruno-easy</code> | Bruno's Easy totals and per-question progress |
+| <code>static-quiz-system-state-v4-bruno-medium</code> | Bruno's Medium totals and per-question progress |
+| <code>static-quiz-system-state-v4-bruno-hard</code> | Bruno's Hard totals and per-question progress |
+| <code>static-quiz-system-state-v3-maria-easy</code> | Maria's Easy totals and per-question progress |
+| <code>static-quiz-system-state-v3-maria-medium</code> | Maria's Medium totals and per-question progress |
+| <code>static-quiz-system-state-v3-maria-hard</code> | Maria's Hard totals and per-question progress |
 | <code>static-quiz-system-active-profile</code> | Last selected profile |
+| <code>static-quiz-system-active-difficulty-bruno</code> | Last selected Bruno difficulty |
+| <code>static-quiz-system-active-difficulty-maria</code> | Last selected Maria difficulty |
 | <code>static-quiz-system-active-language</code> | Last selected language |
 | <code>static-quiz-system-theme</code> | Last selected theme |
 
 Per-question state records correct and incorrect totals, the current streak, the last result, whether review is required and the number of review attempts.
 
-<code>Reset Progress</code> removes only the active profile's versioned progress record. The other profile and interface preferences remain available.
+<code>Reset Progress</code> removes only the active profile and difficulty's versioned progress record. Every other mode and the interface preferences remain available.
+
+Compatible Bruno v3 progress is copied once into Medium. Compatible records from Maria's former 60-question v2 bank are filtered to the selected Hard questions and copied once; migration markers prevent a later reset from importing legacy progress again.
 
 LocalStorage is browser-local, unencrypted and removable through browser settings. The application does not request sensitive personal data, and progress should not be treated as a portable backup.
 
@@ -141,7 +156,8 @@ pt-BR is the default experience. The en-GB mode is implemented with static, ID-b
 
 - interface copy and category labels live in <code>app.js</code>;
 - shared and legacy question translations live in <code>questions-en.js</code>;
-- active profile translations live in <code>bruno-hard-questions-en.js</code> and <code>maria-hard-questions-en.js</code>.
+- active profile translations live in the difficulty-specific Bruno and Maria files;
+- <code>maria-mode-translations-en.js</code> applies narrow en-GB spelling normalisation without modifying the preserved source corpus.
 
 Questions, alternatives and explanations switch without restarting the session. Portuguese source passages may remain in Portuguese where the language itself is the subject being assessed.
 
@@ -151,6 +167,7 @@ The interface includes practical accessibility and responsive behaviours:
 
 - native button controls for primary actions and alternatives;
 - <code>aria-pressed</code> state for profile, language and theme controls;
+- a dynamic accessible label on the three-state difficulty button, including the current and next modes;
 - polite <code>aria-live</code> announcements for questions and feedback;
 - programmatic focus movement when a new question or completion state is rendered;
 - visible keyboard focus styling;
@@ -166,11 +183,21 @@ These implementation details are not a formal WCAG conformance claim.
 | <code>style.css</code> | Responsive layout, design tokens, themes and component states |
 | <code>app.js</code> | Rendering, localisation, session scheduling, review logic and persistence |
 | <code>questions.js</code> | Question factory, base banks, profile metadata and registry |
-| <code>bruno-hard-questions.js</code> | Active Massaranduba IT Technician practice bank |
-| <code>maria-hard-questions.js</code> | Active FURB AEE/Mixed and Libras bank |
+| <code>bruno-easy-questions.js</code> | Bruno's Easy Massaranduba IT Technician practice bank |
+| <code>bruno-hard-questions.js</code> | Bruno's original bank, normalised as Medium by the registry |
+| <code>bruno-difficult-questions.js</code> | Bruno's Hard Massaranduba IT Technician practice bank |
+| <code>bruno-question-banks.js</code> | Bruno difficulty registry and Medium metadata normalisation |
+| <code>maria-easy-questions.js</code> | Maria's author-created Easy practice bank |
+| <code>maria-hard-questions.js</code> | Preserved 60-question FURB source corpus |
+| <code>maria-question-banks.js</code> | Maria difficulty registry and 40-question Medium/Hard selections |
 | <code>questions-en.js</code> | Shared and legacy en-GB question translations |
-| <code>bruno-hard-questions-en.js</code> | en-GB translations for Bruno's active bank |
-| <code>maria-hard-questions-en.js</code> | en-GB translations for Maria's active bank |
+| <code>bruno-easy-questions-en.js</code> | en-GB translations for Bruno's Easy bank |
+| <code>bruno-hard-questions-en.js</code> | en-GB translations for Bruno's Medium bank |
+| <code>bruno-difficult-questions-en.js</code> | en-GB translations for Bruno's Hard bank |
+| <code>maria-easy-questions-en.js</code> | en-GB translations for Maria's Easy bank |
+| <code>maria-hard-questions-en.js</code> | Preserved translations for Maria's FURB source corpus |
+| <code>maria-mode-translations-en.js</code> | Runtime en-GB spelling normalisation for selected Maria questions |
+| <code>scripts/validate-question-banks.js</code> | Dependency-free regression checks for bank, translation, ordering and preservation invariants |
 | <code>docs/quiz-contest-dark-en-gb.gif</code> | Animated README demonstration |
 | <code>LICENSE</code> | MIT licence terms and copyright notice |
 
@@ -200,25 +227,31 @@ The repository keeps <code>index.html</code> and all runtime assets at the root,
 | --- | --- | --- |
 | Static browser-only architecture | Minimises deployment and operational complexity | No accounts, server validation or cross-device synchronisation |
 | Versioned per-profile LocalStorage | Prevents unrelated profiles and incompatible bank revisions from sharing state | Progress remains tied to one browser and breaking revisions may start with fresh state |
+| Difficulty-isolated state | Switching difficulty preserves independent totals and review history for both profiles | Each profile and difficulty has its own browser-local record |
 | Profile-specific session policies | Preserves written-exam fidelity for Bruno while retaining study variation for Maria | The engine must maintain both deterministic and randomised paths |
 | Seeded Bruno answer ordering | Produces a stable paper-style A–E layout without exposing the source-key sequence | Deliberate reshuffling requires a seed or question-ID change |
 | Static localisation dictionaries | Removes runtime translation dependencies and keeps copy reviewable in source control | Translation parity must be maintained when content changes |
 
 ## Development Quality Gate
 
-The repository does not currently include a package manifest, automated test suite or CI workflow. A safe content or engine change should therefore include, at minimum:
+The repository includes a dependency-free question-bank regression script but does not require a package manifest or build pipeline. Run it with:
+
+~~~bash
+node scripts/validate-question-banks.js
+~~~
+
+A safe content or engine change should also include:
 
 - JavaScript syntax checks for every script;
 - a browser smoke test in pt-BR and en-GB;
 - a full-session check for both profiles;
-- verification of question counts, five-option shape and translation coverage;
-- a LocalStorage compatibility check for both versioned profile keys.
+- the checked-in bank validation, which covers all six modes, counts, order, answer balance, five-option shape, IDs, translation coverage and Maria source preservation;
+- a LocalStorage isolation and legacy-migration check across both profiles and all difficulties.
 
-Automating these checks is the highest-priority engineering improvement.
+Running these checks through CI is the highest-priority engineering improvement.
 
 ## Roadmap
 
-- Add a checked-in regression suite for question-bank, ordering and storage invariants.
 - Run the regression suite through GitHub Actions.
 - Add progress export and import.
 - Add notice-weighted score calculation as a clearly separate result.
@@ -232,7 +265,7 @@ Copyright (c) 2026 Bruno Araújo - DegsTerin.
 
 ## Disclaimer
 
-Quiz Contest is an independent educational project. Bruno's profile is author-created and non-official. Maria's profile preserves source exam wording and a preliminary answer key. Candidates should always consult the applicable notice, amendments and final official answer key as the authoritative sources.
+Quiz Contest is an independent educational project. Bruno's profile and Maria's Easy/Medium modes are author-created and non-official. Maria's Hard mode selects preserved source-exam wording and a preliminary answer key. Candidates should always consult the applicable notice, amendments and final official answer key as the authoritative sources.
 
 ## Maintainer
 

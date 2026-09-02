@@ -1,14 +1,20 @@
 const ACTIVE_PROFILE_KEY = "static-quiz-system-active-profile";
 const ACTIVE_LANGUAGE_KEY = "static-quiz-system-active-language";
 const ACTIVE_THEME_KEY = "static-quiz-system-theme";
+const ACTIVE_DIFFICULTY_KEY_PREFIX = "static-quiz-system-active-difficulty";
 const STORAGE_KEY_PREFIX = "static-quiz-system-state";
+const LEGACY_BRUNO_MEDIUM_STORAGE_KEY = "static-quiz-system-state-v3-bruno";
+const LEGACY_MARIA_HARD_STORAGE_KEY = "static-quiz-system-state-v2-maria";
+const BRUNO_MEDIUM_MIGRATION_KEY = "static-quiz-system-migrated-v4-bruno-medium";
+const MARIA_HARD_MIGRATION_KEY = "static-quiz-system-migrated-v3-maria-hard";
 const PROFILE_STORAGE_VERSIONS = {
-  bruno: "v3",
-  maria: "v2"
+  bruno: "v4",
+  maria: "v3"
 };
 const DEFAULT_PROFILE_ID = "bruno";
 const DEFAULT_LANGUAGE_ID = "pt";
 const DEFAULT_THEME_ID = "dark";
+const DEFAULT_DIFFICULTY_ID = "easy";
 const REVIEW_MASTERY_STREAK = 2;
 const ANSWER_LETTERS = ["A", "B", "C", "D", "E"];
 
@@ -19,6 +25,9 @@ const I18N = {
     eyebrow: "Treinador de estudos no navegador",
     profileSwitchLabel: "Selecionar perfil do quiz",
     languageSwitchLabel: "Selecionar idioma",
+    difficultyToggleLabel: "Dificuldade:",
+    difficultyToggleAriaLabel: "Dificuldade atual: {current}. Ativar {next}.",
+    difficultySelectedMessage: "Dificuldade alterada para {difficulty}. Clique em “Iniciar Quiz Completo” para começar.",
     themeToggleLabel: "Alternar modo escuro",
     themeToggle: "Tema escuro",
     startAll: "Iniciar Quiz Completo",
@@ -55,11 +64,11 @@ const I18N = {
     profiles: {
       bruno: {
         title: "Quiz Técnico em Informática",
-        description: "Simulado autoral e não oficial para Técnico em Informática, adaptado ao conteúdo e à distribuição de 40 questões por disciplina do Edital de Concurso Público 001/2026 do Município de Massaranduba, com revisão de erros."
+        description: "Simulado autoral e não oficial para Técnico em Informática, com 40 questões em cada nível — fácil, médio e difícil — adaptadas ao conteúdo e à distribuição por disciplina do Edital de Concurso Público 001/2026 do Município de Massaranduba."
       },
       maria: {
         title: "Quiz Professora AEE/Misto e Libras",
-        description: "Questões originais da prova objetiva FURB do Edital 793/SED/2026 para AEE/Misto e Intérprete da Libras, com gabarito preliminar e revisão de erros."
+        description: "Simulado para Professora AEE/Misto e Intérprete da Libras, com 40 questões em cada nível — fácil, médio e difícil — e progresso independente por dificuldade."
       }
     },
     categories: {
@@ -77,14 +86,22 @@ const I18N = {
       "Média": "Média",
       "Difícil": "Difícil",
       "Original": "Original"
+    },
+    difficultyModes: {
+      easy: "Fácil",
+      medium: "Médio",
+      hard: "Difícil"
     }
   },
   en: {
-    htmlLang: "en",
+    htmlLang: "en-GB",
     pageTitle: "Static Quiz System",
     eyebrow: "Browser-based study trainer",
     profileSwitchLabel: "Select quiz profile",
     languageSwitchLabel: "Select language",
+    difficultyToggleLabel: "Difficulty:",
+    difficultyToggleAriaLabel: "Current difficulty: {current}. Switch to {next}.",
+    difficultySelectedMessage: "Difficulty changed to {difficulty}. Click “Start Full Quiz” to begin.",
     themeToggleLabel: "Toggle dark mode",
     themeToggle: "Dark theme",
     startAll: "Start Full Quiz",
@@ -121,11 +138,11 @@ const I18N = {
     profiles: {
       bruno: {
         title: "IT Technician Quiz",
-        description: "An author-created, non-official practice set for IT Technician, aligned with the syllabus and 40-question subject distribution of Massaranduba Municipal Public Competition Notice 001/2026, with mistake review."
+        description: "An author-created, non-official IT Technician practice set with 40 questions at each difficulty — easy, medium and hard — aligned with the syllabus and subject distribution of Massaranduba Municipal Public Competition Notice 001/2026."
       },
       maria: {
         title: "AEE/Mixed and Libras Teacher Quiz",
-        description: "Original FURB objective-test questions from Notice 793/SED/2026 for AEE/Mixed and Libras Interpreter teacher roles, translated into British English with the preliminary answer key and mistake review."
+        description: "A practice quiz for AEE/Mixed and Libras Interpreter teaching roles, with 40 questions at each difficulty — easy, medium and hard — and separate progress for each mode."
       }
     },
     categories: {
@@ -143,6 +160,11 @@ const I18N = {
       "Média": "Medium",
       "Difícil": "Hard",
       "Original": "Original"
+    },
+    difficultyModes: {
+      easy: "Easy",
+      medium: "Medium",
+      hard: "Hard"
     }
   }
 };
@@ -152,6 +174,8 @@ const elements = {
   appSubtitle: document.getElementById("app-subtitle"),
   profileButtons: document.querySelectorAll("[data-profile]"),
   languageButtons: document.querySelectorAll("[data-language]"),
+  difficultyToggleBtn: document.getElementById("difficulty-toggle-btn"),
+  difficultyToggleValue: document.getElementById("difficulty-toggle-value"),
   themeToggleBtn: document.getElementById("theme-toggle-btn"),
   translatedText: document.querySelectorAll("[data-i18n]"),
   translatedAriaLabels: document.querySelectorAll("[data-i18n-aria-label]"),
@@ -175,9 +199,10 @@ const elements = {
 
 let activeLanguageId = getInitialLanguageId();
 let activeProfileId = getInitialProfileId();
+let activeDifficultyId = getInitialDifficultyId(activeProfileId);
 let activeThemeId = getInitialThemeId();
 let activeQuestionSet = QUESTION_SETS[activeProfileId];
-let questions = activeQuestionSet.questions;
+let questions = getQuestionsForSelection();
 let questionMap = createQuestionMap();
 let appState = loadState();
 let session = createEmptySession();
@@ -190,6 +215,45 @@ function getInitialLanguageId() {
 function getInitialProfileId() {
   const savedProfileId = localStorage.getItem(ACTIVE_PROFILE_KEY);
   return QUESTION_SETS[savedProfileId] ? savedProfileId : DEFAULT_PROFILE_ID;
+}
+
+function supportsDifficultyModes(questionSet) {
+  return Boolean(
+    questionSet
+    && questionSet.questionsByDifficulty
+    && Array.isArray(questionSet.difficultySequence)
+    && questionSet.difficultySequence.length > 0
+  );
+}
+
+function getDifficultyPreferenceKey(profileId) {
+  return `${ACTIVE_DIFFICULTY_KEY_PREFIX}-${profileId}`;
+}
+
+function getInitialDifficultyId(profileId) {
+  const questionSet = QUESTION_SETS[profileId];
+  const savedDifficultyId = localStorage.getItem(getDifficultyPreferenceKey(profileId));
+
+  if (supportsDifficultyModes(questionSet) && questionSet.difficultySequence.includes(savedDifficultyId)) {
+    return savedDifficultyId;
+  }
+
+  return questionSet.defaultDifficulty || DEFAULT_DIFFICULTY_ID;
+}
+
+function getQuestionsForSelection(
+  profileId = activeProfileId,
+  difficultyId = activeDifficultyId
+) {
+  const questionSet = QUESTION_SETS[profileId];
+
+  if (supportsDifficultyModes(questionSet)) {
+    return questionSet.questionsByDifficulty[difficultyId]
+      || questionSet.questionsByDifficulty[questionSet.defaultDifficulty]
+      || [];
+  }
+
+  return questionSet.questions;
 }
 
 function getInitialThemeId() {
@@ -213,9 +277,11 @@ function t(key, replacements = {}) {
   );
 }
 
-function getStorageKey(profileId = activeProfileId) {
+function getStorageKey(profileId = activeProfileId, difficultyId = activeDifficultyId) {
   const storageVersion = PROFILE_STORAGE_VERSIONS[profileId] || "v2";
-  return `${STORAGE_KEY_PREFIX}-${storageVersion}-${profileId}`;
+  const questionSet = QUESTION_SETS[profileId];
+  const difficultySuffix = supportsDifficultyModes(questionSet) ? `-${difficultyId}` : "";
+  return `${STORAGE_KEY_PREFIX}-${storageVersion}-${profileId}${difficultySuffix}`;
 }
 
 function createQuestionMap() {
@@ -262,6 +328,24 @@ function createDefaultState() {
   };
 }
 
+function selectStateForQuestions(sourceState, selectedQuestions) {
+  const questionStats = Object.fromEntries(
+    selectedQuestions
+      .filter((question) => sourceState.questionStats[question.id])
+      .map((question) => [question.id, sourceState.questionStats[question.id]])
+  );
+  const totals = Object.values(questionStats).reduce(
+    (result, stat) => ({
+      totalAnswered: result.totalAnswered + (Number(stat.correct) || 0) + (Number(stat.incorrect) || 0),
+      totalCorrect: result.totalCorrect + (Number(stat.correct) || 0),
+      totalIncorrect: result.totalIncorrect + (Number(stat.incorrect) || 0)
+    }),
+    { totalAnswered: 0, totalCorrect: 0, totalIncorrect: 0 }
+  );
+
+  return { ...totals, questionStats };
+}
+
 function parseSavedState(storageKey) {
   try {
     const savedState = JSON.parse(localStorage.getItem(storageKey));
@@ -284,7 +368,44 @@ function loadState() {
   const currentState = parseSavedState(getStorageKey());
 
   if (currentState) {
+    if (activeProfileId === "bruno" && activeDifficultyId === "medium") {
+      localStorage.setItem(BRUNO_MEDIUM_MIGRATION_KEY, "1");
+    }
+
+    if (activeProfileId === "maria" && activeDifficultyId === "hard") {
+      localStorage.setItem(MARIA_HARD_MIGRATION_KEY, "1");
+    }
+
     return currentState;
+  }
+
+  if (
+    activeProfileId === "bruno"
+    && activeDifficultyId === "medium"
+    && !localStorage.getItem(BRUNO_MEDIUM_MIGRATION_KEY)
+  ) {
+    const legacyState = parseSavedState(LEGACY_BRUNO_MEDIUM_STORAGE_KEY);
+
+    if (legacyState) {
+      localStorage.setItem(getStorageKey(), JSON.stringify(legacyState));
+      localStorage.setItem(BRUNO_MEDIUM_MIGRATION_KEY, "1");
+      return legacyState;
+    }
+  }
+
+  if (
+    activeProfileId === "maria"
+    && activeDifficultyId === "hard"
+    && !localStorage.getItem(MARIA_HARD_MIGRATION_KEY)
+  ) {
+    const legacyState = parseSavedState(LEGACY_MARIA_HARD_STORAGE_KEY);
+
+    if (legacyState) {
+      const migratedState = selectStateForQuestions(legacyState, questions);
+      localStorage.setItem(getStorageKey(), JSON.stringify(migratedState));
+      localStorage.setItem(MARIA_HARD_MIGRATION_KEY, "1");
+      return migratedState;
+    }
   }
 
   return createDefaultState();
@@ -772,6 +893,29 @@ function resetProgress() {
   updateDashboard();
 }
 
+function refreshQuestionContext() {
+  questions = getQuestionsForSelection();
+  questionMap = createQuestionMap();
+  appState = loadState();
+  session = createEmptySession();
+}
+
+function switchDifficulty() {
+  if (!supportsDifficultyModes(activeQuestionSet)) {
+    return;
+  }
+
+  const currentIndex = activeQuestionSet.difficultySequence.indexOf(activeDifficultyId);
+  const nextIndex = (currentIndex + 1) % activeQuestionSet.difficultySequence.length;
+  activeDifficultyId = activeQuestionSet.difficultySequence[nextIndex];
+  localStorage.setItem(getDifficultyPreferenceKey(activeProfileId), activeDifficultyId);
+
+  refreshQuestionContext();
+  updateDifficultyUi();
+  showIdleState(t("difficultySelectedMessage", { difficulty: getDifficultyModeLabel(activeDifficultyId) }));
+  updateDashboard();
+}
+
 function switchProfile(profileId) {
   if (!QUESTION_SETS[profileId] || profileId === activeProfileId) {
     return;
@@ -779,13 +923,12 @@ function switchProfile(profileId) {
 
   activeProfileId = profileId;
   activeQuestionSet = QUESTION_SETS[activeProfileId];
-  questions = activeQuestionSet.questions;
-  questionMap = createQuestionMap();
+  activeDifficultyId = getInitialDifficultyId(activeProfileId);
   localStorage.setItem(ACTIVE_PROFILE_KEY, activeProfileId);
 
-  appState = loadState();
-  session = createEmptySession();
+  refreshQuestionContext();
   updateProfileUi();
+  updateDifficultyUi();
   showIdleState(t("profileSelectedMessage", { owner: activeQuestionSet.owner }));
   updateDashboard();
 }
@@ -843,6 +986,32 @@ function applyStaticTranslations() {
   });
 }
 
+function getDifficultyModeLabel(difficultyId) {
+  return I18N[activeLanguageId].difficultyModes[difficultyId] || difficultyId;
+}
+
+function updateDifficultyUi() {
+  const isAvailable = supportsDifficultyModes(activeQuestionSet);
+  elements.difficultyToggleBtn.hidden = !isAvailable;
+  elements.difficultyToggleBtn.disabled = !isAvailable;
+
+  if (!isAvailable) {
+    return;
+  }
+
+  const currentIndex = activeQuestionSet.difficultySequence.indexOf(activeDifficultyId);
+  const nextIndex = (currentIndex + 1) % activeQuestionSet.difficultySequence.length;
+  const nextDifficultyId = activeQuestionSet.difficultySequence[nextIndex];
+  const currentLabel = getDifficultyModeLabel(activeDifficultyId);
+  const nextLabel = getDifficultyModeLabel(nextDifficultyId);
+
+  elements.difficultyToggleValue.textContent = currentLabel;
+  elements.difficultyToggleBtn.setAttribute("aria-label", t("difficultyToggleAriaLabel", {
+    current: currentLabel,
+    next: nextLabel
+  }));
+}
+
 function updateProfileUi() {
   const profileCopy = I18N[activeLanguageId].profiles[activeProfileId];
   elements.appTitle.textContent = profileCopy.title;
@@ -879,6 +1048,7 @@ function applyLanguage() {
   applyStaticTranslations();
   updateProfileUi();
   updateLanguageUi();
+  updateDifficultyUi();
   updateThemeUi();
 }
 
@@ -886,6 +1056,7 @@ elements.startAllBtn.addEventListener("click", () => startSession("all"));
 elements.reviewModeBtn.addEventListener("click", () => startSession("review"));
 elements.resetProgressBtn.addEventListener("click", resetProgress);
 elements.nextBtn.addEventListener("click", showNextQuestion);
+elements.difficultyToggleBtn.addEventListener("click", switchDifficulty);
 elements.themeToggleBtn.addEventListener("click", switchTheme);
 elements.profileButtons.forEach((button) => {
   button.addEventListener("click", () => switchProfile(button.dataset.profile));

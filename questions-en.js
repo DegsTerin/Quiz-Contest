@@ -772,7 +772,7 @@ const EN_QUESTION_TRANSLATIONS = {
   "m-aee-01": {
     "prompt": "According to the perspective of inclusive education, AEE’s main purpose is to:",
     "options": [
-      "Complement or supplement the student's training, favoring access, participation and learning.",
+      "Complement or supplement the student's training, favouring access, participation and learning.",
       "Completely replace schooling in the common classroom.",
       "Act only as reinforcement of Portuguese Language and Mathematics.",
       "Evaluate the performance of common room teachers.",

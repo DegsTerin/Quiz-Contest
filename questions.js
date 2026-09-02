@@ -125,12 +125,18 @@ const QUESTION_SETS = {
     title: "Quiz Técnico em Informática",
     description: "Simulado autoral e não oficial para Técnico em Informática, adaptado ao conteúdo e à distribuição de 40 questões por disciplina do Edital de Concurso Público 001/2026 do Município de Massaranduba, com revisão de erros.",
     fullQuizPresentation: "written-exam",
+    defaultDifficulty: "easy",
+    difficultySequence: ["easy", "medium", "hard"],
+    questionsByDifficulty: {},
     questions: BRUNO_QUESTIONS
   },
   maria: {
     owner: "Maria",
     title: "Quiz Professora AEE/Misto e Libras",
-    description: "Questões originais da prova objetiva FURB do Edital 793/SED/2026 para AEE/Misto e Intérprete da Libras, com gabarito preliminar e revisão de erros.",
+    description: "Simulado para Professora AEE/Misto e Intérprete da Libras, com 40 questões nos níveis fácil, médio e difícil e progresso independente por modo.",
+    defaultDifficulty: "easy",
+    difficultySequence: ["easy", "medium", "hard"],
+    questionsByDifficulty: {},
     questions: MARIA_QUESTIONS
   }
 };

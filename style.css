@@ -112,6 +112,7 @@ html[data-theme="dark"] body {
 
 .profile-btn,
 .language-btn,
+.difficulty-toggle-btn,
 .theme-toggle-btn {
   padding: 9px 16px;
   border-radius: 999px;
@@ -124,12 +125,27 @@ html[data-theme="dark"] body {
   min-width: 48px;
 }
 
+.difficulty-toggle-btn,
 .theme-toggle-btn {
   display: inline-flex;
   align-items: center;
   gap: 9px;
   border: 1px solid color-mix(in srgb, var(--line) 90%, transparent);
   background: color-mix(in srgb, var(--panel-strong) 72%, var(--line));
+}
+
+.difficulty-toggle-btn {
+  border-color: color-mix(in srgb, var(--accent) 48%, var(--line));
+  background: color-mix(in srgb, var(--accent-soft) 68%, var(--panel-strong));
+  color: var(--ink);
+}
+
+.difficulty-toggle-btn strong {
+  color: var(--ink);
+}
+
+.difficulty-toggle-btn[hidden] {
+  display: none;
 }
 
 .theme-toggle-icon {
@@ -454,5 +470,10 @@ button:disabled {
   .secondary-btn,
   .danger-btn {
     width: 100%;
+  }
+
+  .difficulty-toggle-btn {
+    width: 100%;
+    justify-content: center;
   }
 }

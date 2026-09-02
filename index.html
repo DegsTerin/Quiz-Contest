@@ -8,7 +8,7 @@
     const savedTheme = localStorage.getItem("static-quiz-system-theme");
     document.documentElement.dataset.theme = savedTheme || "dark";
   </script>
-  <link rel="stylesheet" href="style.css?v=20260525-original2">
+  <link rel="stylesheet" href="style.css?v=20260902-difficulty1">
 </head>
 <body>
   <main class="app-shell">
@@ -24,6 +24,10 @@
             <button class="language-btn active" type="button" data-language="pt" aria-pressed="true">PT</button>
             <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
           </div>
+          <button id="difficulty-toggle-btn" class="difficulty-toggle-btn" type="button" aria-label="Dificuldade atual: Fácil. Ativar Médio.">
+            <span data-i18n="difficultyToggleLabel">Dificuldade:</span>
+            <strong id="difficulty-toggle-value">Fácil</strong>
+          </button>
           <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-pressed="false" data-i18n-aria-label="themeToggleLabel">
             <span class="theme-toggle-icon" aria-hidden="true"></span>
             <span data-i18n="themeToggle">Tema escuro</span>
@@ -31,7 +35,7 @@
         </div>
         <h1 id="app-title">Quiz Técnico em Informática</h1>
         <p id="app-subtitle" class="subtitle">
-          Simulado autoral e não oficial adaptado ao Edital 001/2026 de Massaranduba, com progresso salvo e revisão de erros.
+          Simulado autoral e não oficial com 40 questões nos níveis fácil, médio e difícil, progresso salvo e revisão de erros.
         </p>
       </div>
       <div class="hero-actions">
@@ -108,12 +112,21 @@
     </section>
   </main>
 
-  <script src="questions.js?v=20260901-massaranduba3"></script>
-  <script src="bruno-hard-questions.js?v=20260901-massaranduba1"></script>
-  <script src="maria-hard-questions.js?v=20260525-original2"></script>
-  <script src="questions-en.js?v=20260525-original2"></script>
-  <script src="bruno-hard-questions-en.js?v=20260901-massaranduba1"></script>
-  <script src="maria-hard-questions-en.js?v=20260525-original2"></script>
-  <script src="app.js?v=20260901-massaranduba3"></script>
+  <script src="questions.js?v=20260902-difficulty1"></script>
+  <script src="bruno-hard-questions.js?v=20260902-difficulty1"></script>
+  <script src="bruno-easy-questions.js?v=20260902-difficulty1"></script>
+  <script src="bruno-difficult-questions.js?v=20260902-difficulty1"></script>
+  <script src="bruno-question-banks.js?v=20260902-difficulty1"></script>
+  <script src="maria-hard-questions.js?v=20260902-difficulty2"></script>
+  <script src="maria-easy-questions.js?v=20260902-difficulty2"></script>
+  <script src="maria-question-banks.js?v=20260902-difficulty2"></script>
+  <script src="questions-en.js?v=20260902-difficulty2"></script>
+  <script src="bruno-hard-questions-en.js?v=20260902-difficulty1"></script>
+  <script src="bruno-easy-questions-en.js?v=20260902-difficulty1"></script>
+  <script src="bruno-difficult-questions-en.js?v=20260902-difficulty1"></script>
+  <script src="maria-hard-questions-en.js?v=20260902-difficulty2"></script>
+  <script src="maria-easy-questions-en.js?v=20260902-difficulty2"></script>
+  <script src="maria-mode-translations-en.js?v=20260902-difficulty2"></script>
+  <script src="app.js?v=20260902-difficulty2"></script>
 </body>
 </html>
