@@ -8,7 +8,7 @@
     const savedTheme = localStorage.getItem("static-quiz-system-theme");
     document.documentElement.dataset.theme = savedTheme || "dark";
   </script>
-  <link rel="stylesheet" href="style.css?v=20260902-difficulty-ui1">
+  <link rel="stylesheet" href="style.css?v=20260902-theme-row1">
 </head>
 <body>
   <main class="app-shell">
@@ -24,15 +24,17 @@
             <button class="language-btn active" type="button" data-language="pt" aria-pressed="true">PT</button>
             <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
           </div>
-          <button id="difficulty-toggle-btn" class="difficulty-toggle-btn" type="button" aria-label="Dificuldade atual: Fácil. Ativar Médio.">
-            <span data-i18n="difficultyToggleLabel">Dificuldade:</span>
-            <strong id="difficulty-toggle-value">Fácil</strong>
-            <span class="difficulty-toggle-chevron" aria-hidden="true">›</span>
-          </button>
-          <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-pressed="false" data-i18n-aria-label="themeToggleLabel">
-            <span class="theme-toggle-icon" aria-hidden="true"></span>
-            <span data-i18n="themeToggle">Tema escuro</span>
-          </button>
+          <div class="mode-controls">
+            <button id="difficulty-toggle-btn" class="difficulty-toggle-btn" type="button" aria-label="Dificuldade atual: Fácil. Ativar Médio.">
+              <span data-i18n="difficultyToggleLabel">Dificuldade:</span>
+              <strong id="difficulty-toggle-value">Fácil</strong>
+              <span class="difficulty-toggle-chevron" aria-hidden="true">›</span>
+            </button>
+            <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-pressed="false" data-i18n-aria-label="themeToggleLabel">
+              <span class="theme-toggle-icon" aria-hidden="true"></span>
+              <span class="theme-toggle-label" data-i18n="themeToggle">Tema escuro</span>
+            </button>
+          </div>
         </div>
         <h1 id="app-title">Quiz Técnico em Informática</h1>
         <p id="app-subtitle" class="subtitle">

@@ -100,6 +100,14 @@ html[data-theme="dark"] body {
   margin-bottom: 14px;
 }
 
+.mode-controls {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
 .profile-switch,
 .language-switch {
   display: inline-flex;
@@ -132,6 +140,12 @@ html[data-theme="dark"] body {
   gap: 9px;
   border: 1px solid color-mix(in srgb, var(--line) 90%, transparent);
   background: color-mix(in srgb, var(--panel-strong) 72%, var(--line));
+}
+
+.theme-toggle-btn {
+  flex: 0 0 auto;
+  min-height: 44px;
+  white-space: nowrap;
 }
 
 .difficulty-toggle-btn {
@@ -493,8 +507,36 @@ button:disabled {
     width: 100%;
   }
 
-  .difficulty-toggle-btn {
+  .mode-controls {
+    flex: 1 0 100%;
     width: 100%;
+  }
+
+  .mode-controls .difficulty-toggle-btn {
+    flex: 1 1 auto;
+    min-width: 0;
     justify-content: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .mode-controls .theme-toggle-btn {
+    flex: 0 0 44px;
+    width: 44px;
+    padding: 8px;
+    justify-content: center;
+  }
+
+  .theme-toggle-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
   }
 }
