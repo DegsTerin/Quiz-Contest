@@ -3,600 +3,600 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "bruno-massaranduba-2026-difficult-01",
     "Língua Portuguesa",
     "Difícil",
-    "Leia o trecho: \"A indisponibilidade cessou após a troca do switch. A latência elevada, porém, permaneceu até a correção de uma rota. Por isso, a equipe registrou os eventos como incidentes relacionados, mas de causas distintas.\" Qual conclusão preserva a coerência do texto?",
+    "Leia o trecho: \"Às 9h, o sistema ficou lento. Reiniciar o serviço não alterou o quadro. Às 10h, a ativação do enlace secundário reduziu a latência, embora a carga do servidor permanecesse igual.\" Qual inferência é sustentada pelas informações, sem extrapolá-las?",
     [
-      "A proximidade temporal dos eventos não impediu que a equipe identificasse causas diferentes para eles.",
-      "A rota defeituosa foi a única causa comprovada de todos os sintomas.",
-      "A troca do switch eliminou simultaneamente a indisponibilidade e a latência.",
-      "Os eventos foram registrados como independentes porque ocorreram em meses distintos.",
-      "A equipe concluiu que não havia relação alguma entre os incidentes."
+      "O caminho de rede contribuía para a latência, mas o trecho não demonstra que fosse a única causa possível.",
+      "A estabilidade da carga prova que o servidor continuou sendo a causa principal, e a troca de enlace apenas mascarou o problema.",
+      "A reinicialização produziu melhora temporária, embora o trecho registre que ela não alterou o quadro antes das 10h.",
+      "A ativação do enlace secundário reduziu a carga do servidor, porque menor latência implica necessariamente menor uso de CPU.",
+      "A queda da latência comprova resolução definitiva, mesmo sem medições posteriores ou investigação de outras causas."
     ],
     0,
-    "O trecho distingue as causas, embora reconheça relação entre os eventos; também atribui soluções diferentes à indisponibilidade e à latência."
+    "A única mudança associada à redução da latência foi o caminho de rede. Isso sustenta sua contribuição para o problema, mas não prova exclusividade causal nem resolução total."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-02",
     "Língua Portuguesa",
     "Difícil",
-    "A frase \"Marina entregou o relatório à analista depois que ela revisou o servidor\" permite duas leituras sobre quem realizou a revisão. Qual reescrita elimina a ambiguidade e atribui inequivocamente a revisão à analista?",
+    "Leia: \"O diagnóstico de 2026 retomou as metas do plano de 2024. Esse plano previa revisão anual. 'Sem medir resultados, não há política sustentável', registrava ainda um parecer de 2022. Por isso, a equipe manteve indicadores comparáveis.\" Assinale a análise correta dos mecanismos de construção textual.",
     [
-      "Depois que ela revisou o servidor, Marina entregou o relatório à analista.",
-      "Depois de revisar o servidor, a analista recebeu de Marina o relatório.",
-      "Marina, depois que ela revisou o servidor, entregou o relatório à analista.",
-      "A analista recebeu o relatório de Marina depois que ela revisou o servidor.",
-      "Ela revisou o servidor, e Marina entregou o relatório à analista."
+      "A expressão \"Esse plano\" antecipa o parecer de 2022, a citação constitui discurso indireto e \"Por isso\" introduz oposição ao diagnóstico.",
+      "A expressão \"Esse plano\" retoma o plano de 2024; a citação cria intertextualidade explícita; e \"Por isso\" introduz uma conclusão.",
+      "A expressão \"Esse plano\" retoma as metas, mas a citação elimina a voz atual e \"Por isso\" apenas ordena cronologicamente as datas.",
+      "As datas estabelecem sequência temporal suficiente para dispensar coesão referencial e transformar a citação em simples paráfrase.",
+      "A expressão \"ainda\" substitui \"equipe\" como pronome anafórico, e \"Por isso\" retoma somente a expressão \"revisão anual\"."
     ],
     1,
-    "Na reescrita correta, o sujeito expresso \"a analista\" controla a oração reduzida \"depois de revisar\", eliminando a dupla referência do pronome."
+    "O demonstrativo retoma o plano já mencionado; a reprodução identificada de outro parecer cria relação intertextual; e a locução conclusiva liga a decisão às premissas anteriores."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-03",
     "Língua Portuguesa",
     "Difícil",
-    "Um relatório descreve a sequência de uma falha e, em seguida, defende a substituição de um equipamento com base nos riscos observados. Nesse relatório, predominam, respectivamente, quais modos de organização discursiva?",
+    "Um guia municipal contém dois trechos. No primeiro, explica como a impermeabilização do solo aumenta o escoamento superficial. No segundo, sob o título \"Procedimentos obrigatórios\", determina: \"Desligue a energia, procure um local elevado e aguarde o aviso da Defesa Civil.\" Qual classificação articula corretamente modo de organização e tipo textual?",
     [
-      "Descrição e injunção.",
-      "Exposição e descrição.",
-      "Injunção e narração.",
-      "Narração e argumentação.",
-      "Argumentação e narração."
+      "O primeiro é narrativo, em relato histórico; o segundo é descritivo, em comunicado informativo.",
+      "O primeiro é injuntivo, em texto normativo; o segundo é argumentativo, em texto didático que defende uma tese.",
+      "O primeiro é descritivo, em verbete técnico; o segundo é expositivo, em norma que apenas explica um fenômeno.",
+      "O primeiro é expositivo, em texto didático; o segundo é injuntivo, em texto normativo de orientação.",
+      "Os dois são narrativos, porque a relação causal e os verbos no imperativo organizam eventos em sequência temporal."
     ],
     3,
-    "Relatar uma sequência de acontecimentos caracteriza narração; sustentar uma decisão mediante razões e evidências caracteriza argumentação."
+    "Explicar uma relação causal caracteriza exposição com finalidade didática; ordenar condutas ao leitor caracteriza injunção em uma orientação de caráter normativo."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-04",
     "Língua Portuguesa",
     "Difícil",
-    "Compare: I. \"Os computadores que estavam sem atualização foram isolados.\" II. \"Os computadores, que estavam sem atualização, foram isolados.\" Assinale a interpretação correta.",
+    "Na frase \"Somente após a auditoria os técnicos que haviam alterado a rota apresentaram os registros ao gestor\", a expressão inicial restringe o momento da apresentação, e a oração relativa restringe o grupo de técnicos. Qual reordenação preserva simultaneamente esses dois sentidos?",
     [
-      "Em I, a oração restringe o conjunto aos computadores sem atualização; em II, as vírgulas apresentam a falta de atualização como explicação aplicável ao conjunto mencionado.",
-      "As duas frases afirmam necessariamente que apenas um computador estava sem atualização.",
-      "Em I, todos os computadores estavam sem atualização; em II, apenas alguns estavam.",
-      "As vírgulas de II transformam a oração em coordenada adversativa.",
-      "A retirada das vírgulas altera apenas a pronúncia, sem efeito de sentido."
+      "Os técnicos que haviam alterado a rota apresentaram os registros ao gestor somente após a auditoria.",
+      "Somente os técnicos, que haviam alterado a rota, apresentaram após a auditoria os registros ao gestor.",
+      "Após a auditoria, os técnicos apresentaram somente os registros que haviam alterado a rota ao gestor.",
+      "Os técnicos, que haviam alterado a rota, somente apresentaram os registros após a auditoria ao gestor.",
+      "Os registros somente após a auditoria apresentaram ao gestor os técnicos que haviam alterado a rota."
     ],
     0,
-    "A oração relativa sem vírgulas é restritiva; entre vírgulas, é explicativa e apresenta a informação como referente a todo o antecedente contextualizado."
+    "A redação preserva \"somente\" junto ao adjunto temporal e conserva a oração relativa sem vírgulas, restringindo o antecedente \"técnicos\"."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-05",
     "Língua Portuguesa",
     "Difícil",
-    "No aviso \"Somente o técnico informou ontem ao gestor a indisponibilidade\", o deslocamento de \"somente\" pode mudar o elemento focalizado. Qual versão afirma que a única informação transmitida foi a indisponibilidade, sem excluir outros informantes ou outros momentos?",
+    "Em um relatório formal, deve-se converter para discurso indireto a declaração: O técnico afirmou: \"Não reiniciarei o servidor antes da cópia.\" Qual versão preserva o sentido, emprega pontuação adequada e mantém registro formal e função referencial?",
     [
-      "Somente ontem o técnico informou ao gestor a indisponibilidade.",
-      "O técnico somente informou ontem ao gestor a indisponibilidade.",
-      "O técnico informou somente ao gestor ontem a indisponibilidade.",
-      "O técnico informou ontem ao gestor somente a indisponibilidade.",
-      "O técnico informou ontem somente ao gestor a indisponibilidade."
+      "O técnico afirmou, \"que não reiniciará o servidor antes da cópia\".",
+      "O técnico afirmou: que não reiniciaria o servidor antes da cópia.",
+      "O técnico falou que não vai reiniciar o servidor antes da cópia, beleza?",
+      "O técnico afirmou que não reiniciaria o servidor antes da cópia.",
+      "O técnico afirmou que: não reiniciaria, o servidor antes da cópia."
     ],
     3,
-    "Anteposto ao sintagma \"a indisponibilidade\", o advérbio focaliza o conteúdo informado, e não o agente, o tempo, o destinatário ou a própria ação."
+    "No discurso indireto, a conjunção \"que\" introduz a oração sem dois-pontos ou aspas; com o verbo declarativo no passado, o futuro passa adequadamente a futuro do pretérito."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-06",
     "Língua Portuguesa",
     "Difícil",
-    "Em \"Provavelmente, a falha decorreu da atualização\", o modalizador \"provavelmente\" produz qual efeito de sentido?",
+    "Analise: \"Infelizmente, a desconfiguração talvez tenha tornado o serviço inutilizável.\" Qual alternativa identifica corretamente classes, formação vocabular e modalização?",
     [
-      "Transforma a hipótese em ordem dirigida ao leitor.",
-      "Indica certeza absoluta e encerra a investigação.",
-      "Expressa avaliação de possibilidade, reduzindo o grau de compromisso do enunciador com a conclusão.",
-      "Marca oposição entre duas causas já comprovadas.",
-      "Retoma anaforicamente o substantivo \"falha\"."
+      "\"Infelizmente\" é substantivo abstrato; \"talvez\" expressa certeza; \"desconfiguração\" é forma verbal; e \"inutilizável\" atua como advérbio.",
+      "\"Desconfiguração\" é palavra primitiva; \"infelizmente\" e \"talvez\" são adjetivos; \"inutilizável\" modaliza certeza, e não há avaliação na frase.",
+      "\"Infelizmente\" é advérbio avaliativo; \"talvez\" modaliza possibilidade; \"desconfiguração\" é substantivo derivado; e \"inutilizável\" é adjetivo.",
+      "\"Talvez\" é conjunção causal; \"desconfiguração\" é pronome derivado; e os prefixos de \"infelizmente\" e \"inutilizável\" indicam repetição.",
+      "\"Infelizmente\" e \"talvez\" são advérbios de tempo ligados a \"tenha tornado\", enquanto \"inutilizável\" nomeia o processo como substantivo."
     ],
     2,
-    "O advérbio modalizador apresenta a causa como provável, e não como fato definitivamente comprovado."
+    "Os advérbios marcam, respectivamente, avaliação e possibilidade. \"Desconfiguração\" resulta de derivação e nomeia um processo; \"inutilizável\" atribui uma propriedade ao serviço."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-07",
     "Língua Portuguesa",
     "Difícil",
-    "Assinale a alternativa inteiramente adequada à norma-padrão quanto à regência e ao emprego da crase.",
+    "Um dicionário geral registra dois sentidos de \"nuvem\": o meteorológico e, sob a rubrica \"Informática\", o de recursos computacionais remotos. Considere: I. A rubrica delimita um uso especializado. II. O contexto resolve a polissemia no aviso \"Os arquivos serão mantidos na nuvem\". III. Nesse aviso, substituir \"nuvem\" por \"Internet\" preservaria necessariamente a mesma precisão. Está correto o que se afirma em:",
     [
-      "O técnico informou à todos que chegaria à partir das oito horas.",
-      "A equipe preferiu restaurar o serviço do que recorrer à uma solução provisória.",
-      "O gestor referiu-se àquela ocorrência e entregou o relatório à servidora responsável.",
-      "Os analistas assistiram à um treinamento e obedeceram as orientações.",
-      "A manutenção visava à reduzir falhas e implicava em novas despesas."
+      "I, apenas.",
+      "III, apenas.",
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
     ],
     2,
-    "Há crase em \"àquela\" e \"à servidora\" pela fusão da preposição exigida com o artigo ou com o início do demonstrativo; as demais opções contêm regência ou crase inadequada."
+    "A rubrica marca o domínio técnico, e o contexto seleciona esse sentido polissêmico. \"Internet\" e \"nuvem\" não são equivalentes necessários: serviços em nuvem usam redes, mas designam uma arquitetura de recursos específica."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-08",
     "Língua Portuguesa",
     "Difícil",
-    "Um comunicado afirma: \"Como estabelece a Política de Segurança, 'credenciais são pessoais e intransferíveis'; por isso, o compartilhamento de senhas será bloqueado.\" A citação cumpre principalmente qual função textual?",
+    "Considere as frases: I. \"À medida que avançava, o técnico pôde concluir que o defeito não se devia à instalação.\" II. \"Daqui a duas horas, a equipe retornará à sala e entregará o relatório àquela gestora.\" III. \"Os itens permanecem à disposição de quem vier a revisá-los.\" Está correto quanto à ortografia, à acentuação e ao emprego da crase o que se apresenta em:",
     [
-      "Criar ambiguidade lexical para ocultar a regra aplicável.",
-      "Converter o comunicado em texto literário de caráter ficcional.",
-      "Estabelecer intertextualidade e conferir fundamento normativo à medida anunciada.",
-      "Eliminar a coesão ao inserir uma voz externa no enunciado.",
-      "Substituir a argumentação por uma sequência exclusivamente narrativa."
+      "I, apenas.",
+      "II, apenas.",
+      "I, II e III.",
+      "I e III, apenas.",
+      "II e III, apenas."
     ],
     2,
-    "A referência explícita a outro texto cria relação intertextual e funciona como argumento de autoridade normativa para justificar a medida."
+    "As três frases estão corretas: há crase na locução \"à medida que\", nas regências com \"instalação\" e \"sala\", diante de \"aquela\" e em \"à disposição\"; não há crase em \"daqui a\" nem antes do infinitivo."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-09",
     "Matemática e Raciocínio Lógico",
     "Difícil",
-    "Quatro técnicos configuram 72 estações em 6 horas, mantendo produtividade constante e igual entre si. Em outra unidade, cinco técnicos trabalharão por 4 horas, mas uma restrição operacional reduzirá a produtividade de cada um em 20%. Quantas estações serão configuradas?",
+    "Um armazenamento de 2,4 TB, em unidades decimais, estava com 5/8 da capacidade ocupada. Foram removidos 180 GB e, depois, copiados 135 GB. Qual é a ocupação final em gigabytes e como fração irredutível da capacidade total?",
     [
-      "36 estações.",
-      "48 estações.",
-      "45 estações.",
-      "40 estações.",
-      "60 estações."
+      "1.365 GB e 91/160.",
+      "1.455 GB e 97/160.",
+      "1.455 GB e 97/100.",
+      "1.635 GB e 109/160.",
+      "1.275 GB e 17/32."
     ],
     1,
-    "A produtividade original é 72 ÷ (4 × 6) = 3 estações por técnico-hora. Assim, 5 × 4 × 3 × 0,8 = 48."
+    "Como 2,4 TB correspondem a 2.400 GB, a ocupação inicial era 2.400 × 5/8 = 1.500 GB. Depois das operações: 1.500 − 180 + 135 = 1.455 GB; 1.455/2.400 simplifica para 97/160."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-10",
     "Matemática e Raciocínio Lógico",
     "Difícil",
-    "Um orçamento de R$ 10.000,00 é corrigido por juros compostos de 2% ao mês durante três meses, sem aportes ou retiradas. Qual será o valor ao final do período?",
+    "Seis técnicos configuram 180 computadores em 5 horas, com produtividade igual e constante. Um novo procedimento reduz em 20% a produtividade individual. Quantos técnicos serão necessários para configurar 288 computadores em 6 horas sob o novo procedimento?",
     [
-      "R$ 10.612,08.",
-      "R$ 10.600,00.",
-      "R$ 10.620,00.",
-      "R$ 10.800,00.",
-      "R$ 11.200,00."
+      "10 técnicos.",
+      "8 técnicos.",
+      "9 técnicos.",
+      "12 técnicos.",
+      "15 técnicos."
     ],
     0,
-    "Em juros compostos, o valor é 10.000 × 1,02³ = 10.612,08."
+    "A produtividade original é 180 ÷ (6 × 5) = 6 computadores por técnico-hora. Com redução de 20%, passa a 4,8. Logo, 288 ÷ (6 × 4,8) = 10 técnicos."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-11",
     "Matemática e Raciocínio Lógico",
     "Difícil",
-    "Um laboratório possui 18 equipamentos entre servidores e estações. Cada servidor consome 4 unidades de energia e cada estação, 2 unidades. O consumo total é 52 unidades. Quantos servidores e quantas estações há no laboratório?",
+    "Uma reserva de R$ 10.000,00 rende juros compostos de 10% ao período durante três períodos. Ao final, são retiradas três despesas que formam a progressão aritmética R$ 200,00, R$ 300,00 e R$ 400,00. Qual saldo resta?",
     [
-      "6 servidores e 12 estações.",
-      "7 servidores e 11 estações.",
-      "9 servidores e 9 estações.",
-      "8 servidores e 10 estações.",
-      "10 servidores e 8 estações."
+      "R$ 12.100,00.",
+      "R$ 12.310,00.",
+      "R$ 13.410,00.",
+      "R$ 12.410,00.",
+      "R$ 14.210,00."
     ],
     3,
-    "Do sistema x + y = 18 e 4x + 2y = 52, obtém-se 2x + y = 26; subtraindo a primeira equação, x = 8 e y = 10."
+    "O montante é 10.000 × 1,10³ = R$ 13.310,00. A soma da progressão é R$ 900,00; portanto, restam R$ 12.410,00."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-12",
     "Matemática e Raciocínio Lógico",
     "Difícil",
-    "Em uma caixa há 6 módulos funcionais e 4 defeituosos. Dois módulos são retirados ao acaso, sem reposição. Qual é a probabilidade de exatamente um deles ser defeituoso?",
+    "No domínio real, resolva a equação log₂(x − 1) + log₂(x + 1) = 3.",
     [
-      "2/15.",
-      "4/15.",
-      "7/15.",
-      "1/2.",
-      "8/15."
+      "x = −3.",
+      "x = −1.",
+      "x = 1.",
+      "x = √8.",
+      "x = 3."
     ],
     4,
-    "Há 6 × 4 = 24 pares com um módulo de cada tipo e C(10,2) = 45 pares possíveis; portanto, 24/45 = 8/15."
+    "O domínio exige x > 1. Pela propriedade dos logaritmos, log₂[(x − 1)(x + 1)] = 3, então x² − 1 = 8 e x = ±3. Apenas x = 3 pertence ao domínio."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-13",
     "Matemática e Raciocínio Lógico",
     "Difícil",
-    "De sete servidores distintos, uma equipe escolherá três para um cluster e, entre os escolhidos, designará exatamente um como nó primário. Quantas configurações diferentes são possíveis?",
+    "Uma tabela relaciona usuários simultâneos x e latência f(x): (20, 35 ms), (50, 50 ms) e (80, 65 ms). Admitindo que o gráfico seja uma reta, qual função modela os dados e qual é o maior número de usuários para manter a latência em até 60 ms?",
     [
-      "35.",
-      "70.",
-      "105.",
-      "140.",
-      "210."
+      "f(x) = x + 15; no máximo 45 usuários.",
+      "f(x) = 0,5x + 15; no máximo 90 usuários.",
+      "f(x) = 0,5x + 25; no máximo 70 usuários.",
+      "f(x) = 2x − 5; no máximo 32 usuários.",
+      "f(x) = 25x + 0,5; no máximo 2 usuários."
     ],
     2,
-    "Escolhem-se três servidores de sete em C(7,3) = 35 formas e, depois, um dos três como primário: 35 × 3 = 105."
+    "A variação é 15 ms para 30 usuários, logo a inclinação é 0,5. Usando (20, 35), obtém-se o intercepto 25. De 0,5x + 25 ≤ 60 resulta x ≤ 70."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-14",
     "Matemática e Raciocínio Lógico",
     "Difícil",
-    "Em uma planta cartesiana, dois pontos de rede estão em A(2, 3) e B(8, 11). Qual alternativa apresenta, respectivamente, a distância entre A e B e o ponto médio do segmento AB?",
+    "Considere o sistema parametrizado (k − 1)x + 2y = 4 e 2x + 4y = 8. Qual classificação relaciona corretamente o parâmetro k ao número de soluções?",
     [
-      "8 e (4, 6).",
-      "10 e (5, 7).",
-      "10 e (6, 8).",
-      "12 e (5, 7).",
-      "14 e (10, 14)."
+      "Para k = 2, o sistema é impossível; para k ≠ 2, possui infinitas soluções.",
+      "Para k = 2, possui infinitas soluções; para k ≠ 2, possui solução única.",
+      "Para todo k real, o sistema possui exatamente uma solução.",
+      "Para k = 1, possui infinitas soluções; para os demais valores, é impossível.",
+      "Para k = 2, possui solução única; para k ≠ 2, é impossível."
     ],
     1,
-    "A distância é √[(8 - 2)² + (11 - 3)²] = √100 = 10, e o ponto médio é ((2 + 8)/2, (3 + 11)/2) = (5, 7)."
+    "O determinante da matriz [[k − 1, 2], [2, 4]] é 4(k − 2). Para k ≠ 2, ele é não nulo e há solução única. Para k = 2, a primeira equação é metade da segunda, produzindo infinitas soluções."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-15",
     "Matemática e Raciocínio Lógico",
     "Difícil",
-    "Os tempos de resolução de seis chamados, em minutos, foram 12, 15, 15, 18, 20 e 90. Qual análise é correta?",
+    "Um cabo seguirá em linha reta entre cantos opostos de uma sala de 8 m por 6 m e ainda vencerá um desnível vertical de 2,4 m. Considerando o percurso tridimensional e acrescentando 5% de folga, qual comprimento mínimo aproximado deve ser adquirido?",
     [
-      "A média é 16,5 e representa melhor o conjunto do que a mediana.",
-      "A mediana é 28,3 e não sofre influência do valor 90.",
-      "Média e mediana são iguais porque há seis observações.",
-      "A média é aproximadamente 28,3 e a mediana é 16,5; a mediana descreve melhor o valor típico porque 90 é um valor extremo.",
-      "A exclusão do valor 90 aumentaria simultaneamente a média e a mediana."
+      "10,3 m.",
+      "10,5 m.",
+      "10,6 m.",
+      "10,8 m.",
+      "12,4 m."
     ],
     3,
-    "A média é 170/6 ≈ 28,3, enquanto a mediana é (15 + 18)/2 = 16,5. O valor 90 eleva fortemente a média."
+    "A diagonal espacial mede √(8² + 6² + 2,4²) = √105,76 ≈ 10,284 m. Com 5% de folga: 10,284 × 1,05 ≈ 10,8 m."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-16",
     "Matemática e Raciocínio Lógico",
     "Difícil",
-    "Considere a afirmação: \"Todos os servidores possuem cópia de segurança e pelo menos uma cópia foi testada.\" Qual é a negação lógica dessa afirmação?",
+    "Entre oito equipamentos distintos, três são servidores e cinco são estações. Selecionam-se ao acaso três equipamentos, sem reposição. Qual é a probabilidade de a seleção conter exatamente dois servidores e uma estação?",
     [
-      "Nenhum servidor possui cópia de segurança e nenhuma cópia foi testada.",
-      "Todos os servidores não possuem cópia de segurança ou todas as cópias foram testadas.",
-      "Existe pelo menos um servidor sem cópia de segurança ou nenhuma cópia foi testada.",
-      "Existe exatamente um servidor com cópia de segurança e uma cópia não foi testada.",
-      "Alguns servidores possuem cópia de segurança, mas todas as cópias foram testadas."
+      "12/56.",
+      "5/28.",
+      "15/56.",
+      "5/14.",
+      "3/8."
     ],
     2,
-    "A negação de uma conjunção é a disjunção das negações: nem todos possuem cópia equivale a existir ao menos um sem cópia; negar \"pelo menos uma foi testada\" equivale a \"nenhuma foi testada\"."
+    "Há C(8,3) = 56 seleções possíveis. As favoráveis são C(3,2) × C(5,1) = 3 × 5 = 15; portanto, a probabilidade é 15/56."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-17",
     "Conhecimentos Gerais",
     "Difícil",
-    "Considere as afirmações sobre a formação histórica e econômica de Massaranduba: I. A presença indígena na região antecedeu a chegada dos grupos europeus. II. Imigrantes alemães, italianos, poloneses e luso-brasileiros estabeleceram-se na região por volta de 1870. III. O cultivo irrigado do arroz tornou-se uma referência municipal, ao lado de uma atividade industrial diversificada. De acordo com a história oficial do município, está correto o que se afirma em:",
+    "Uma exposição sobre Massaranduba apresenta, nesta ordem, vestígios da presença indígena, documentos da chegada de grupos alemães, italianos, poloneses e luso-brasileiros por volta de 1870 e registros posteriores da consolidação do cultivo de arroz irrigado. Qual interpretação respeita as evidências e evita anacronismos?",
     [
-      "I, apenas.",
-      "II, apenas.",
-      "I e II, apenas.",
-      "I, II e III.",
-      "II e III, apenas."
+      "Os vestígios indígenas podem ser datados apenas pelos documentos de 1870 e, portanto, não indicam presença anterior ao povoamento europeu registrado.",
+      "A chegada de grupos diversos no século XIX explica a presença indígena como consequência direta da imigração e inaugura toda a ocupação regional.",
+      "O destaque posterior do arroz permite atribuir a todos os grupos a mesma atividade desde a chegada, embora a exposição separe os períodos.",
+      "A história local combina presença indígena anterior, povoamento posterior por grupos diversos e transformação econômica em que o arroz irrigado ganhou destaque.",
+      "A consolidação do arroz encerrou as demais atividades econômicas, conclusão comprovada pela ordem dos registros sem necessidade de outras evidências."
     ],
     3,
-    "As três afirmações correspondem à história oficial: povos indígenas já ocupavam a região, os grupos de imigrantes citados chegaram por volta de 1870 e a economia passou a combinar o destaque do arroz irrigado com atividades industriais diversificadas."
+    "A interpretação conserva a sequência documentada e distingue presença anterior, povoamento plural e desenvolvimento econômico posterior, sem inverter causas nem excluir outras atividades."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-18",
     "Conhecimentos Gerais",
     "Difícil",
-    "Analise as afirmações sobre a Bacia Hidrográfica do Rio Itapocu: I. Sua área aproximada é de 3.160 km² e ela integra a Região Hidrográfica RH06. II. O território de Massaranduba está parcialmente inserido nessa bacia. III. A nascente mais distante é a do Rio Vermelho, em São Bento do Sul, e a foz do Itapocu fica em Barra Velha. Está correto o que se afirma em:",
+    "Massaranduba integra o Vale do Itapocu, tem áreas ligadas à bacia do rio Itapocu e combina a relevância do arroz irrigado com atividades industriais e de serviços. Qual diagnóstico territorial relaciona adequadamente geografia e economia?",
     [
-      "I, apenas.",
-      "I, II e III.",
-      "II e III, apenas.",
-      "I e III, apenas.",
-      "III, apenas."
+      "A diversificação reduz a dependência do arroz e, por isso, a gestão hídrica pode restringir-se às propriedades irrigadas, sem considerar cidades ou vias.",
+      "A gestão da água e do solo deve considerar a bacia: irrigação, áreas urbanas, indústria, vias e municípios compartilham riscos e recursos a montante e a jusante.",
+      "Como a irrigação depende da bacia, basta administrar captações no município, pois usos a montante e a jusante não alteram disponibilidade ou cheias.",
+      "A coordenação intermunicipal deve limitar-se à indústria, já que agricultura, drenagem urbana e estradas produzem efeitos somente locais.",
+      "A expansão industrial substituiu a função econômica do espaço rural; assim, estiagens afetam a lavoura, mas não a logística nem os serviços."
     ],
     1,
-    "As três afirmações estão corretas: a bacia possui cerca de 3.160 km², integra a RH06, abrange parte de Massaranduba e se estende da nascente mais distante do Rio Vermelho, em São Bento do Sul, até a foz em Barra Velha."
+    "Água, drenagem, ocupação territorial e circulação econômica ultrapassam limites municipais. A análise de bacia conecta produção rural, atividades urbanas, infraestrutura e prevenção de riscos."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-19",
     "Conhecimentos Gerais",
     "Difícil",
-    "Um relatório destaca a elevada participação de fontes renováveis na matriz elétrica brasileira e propõe ampliar a geração eólica e solar. Qual avaliação interpreta corretamente esse cenário sem confundir matriz elétrica com matriz energética?",
+    "Um painel público registra aumento do emprego formal, frequência escolar estável e queda da cobertura de uma ação preventiva de saúde. Qual conclusão orienta uma decisão responsável sobre esse cenário social e econômico?",
     [
-      "A participação renovável na geração de eletricidade demonstra, por si só, que todos os usos de energia em transportes, indústria e residências já foram descarbonizados.",
-      "Como eólica e solar são renováveis, sua expansão dispensa planejamento de transmissão, flexibilidade operativa e análise dos impactos territoriais dos projetos.",
-      "A matriz elétrica trata das fontes usadas para gerar eletricidade, enquanto a matriz energética abrange também outros usos de energia; ampliar renováveis deve vir acompanhado de rede, armazenamento ou outras formas de flexibilidade, resiliência e avaliação socioambiental.",
-      "A elevada participação renovável torna desnecessária a diversificação das fontes elétricas, pois todas oferecem disponibilidade contínua e o mesmo perfil de geração.",
-      "Matriz elétrica e matriz energética são indicadores equivalentes; a única diferença entre eles é a unidade estatística empregada."
+      "A simultaneidade autoriza concluir que o emprego causou a queda preventiva; como a frequência não variou, a educação dispensa investigação adicional.",
+      "A frequência estável basta para comprovar aprendizagem; assim, recursos de avaliação podem ser transferidos integralmente para a saúde preventiva.",
+      "Os indicadores medem dimensões distintas; é preciso desagregar dados, investigar causas e responder à queda preventiva sem inferir causalidade nem abandonar o acompanhamento educacional.",
+      "O ganho de emprego compensa a piora preventiva e permite reduzir ações de saúde, desde que a frequência escolar permaneça sem variação no painel.",
+      "A divergência entre dimensões torna o painel metodologicamente inválido; ele deve ser descartado sem conferir séries, recortes, definições ou fontes responsáveis."
     ],
     2,
-    "A matriz elétrica é um subconjunto da matriz energética. Uma transição robusta combina expansão renovável com transmissão, flexibilidade, armazenamento quando adequado, adaptação a eventos extremos e avaliação dos efeitos sociais e ambientais."
+    "Correlação temporal não prova causalidade. Emprego, frequência e prevenção medem dimensões diferentes e exigem dados complementares, análise distributiva e respostas específicas."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-20",
     "Conhecimentos Gerais",
     "Difícil",
-    "Após episódios de chuva intensa, municípios de uma mesma bacia registram alagamentos urbanos, erosão a montante e elevação rápida do rio a jusante. Qual plano oferece a resposta pública mais consistente para reduzir o risco sem apenas transferi-lo entre localidades?",
+    "Um consórcio pretende ampliar geração solar e armazenamento por baterias, mas parte dos minerais e componentes vem de cadeias internacionais concentradas. Qual estratégia integra tecnologia, energia, geopolítica, sustentabilidade e ecologia?",
     [
-      "Priorizar a retificação do canal no município a jusante, deixando a ocupação do solo e o aumento da vazão a montante para uma etapa independente.",
-      "Manter alertas municipais separados, com critérios próprios, para evitar que dados hidrológicos de localidades diferentes sejam combinados.",
-      "Ampliar exclusivamente a microdrenagem urbana, tratando erosão, áreas de inundação e preparação da defesa civil em programas posteriores.",
-      "Suspender novas licenças apenas nas semanas seguintes a cada evento e retomar o padrão anterior quando o nível do rio se normalizar.",
-      "Compartilhar dados e limiares de alerta, mapear riscos na escala da bacia e integrar uso do solo, conservação a montante, drenagem, obras avaliadas tecnicamente e planos intermunicipais de defesa civil."
+      "Priorizar menor custo inicial e garantia do fabricante, deixando origem dos minerais, manutenção e descarte para análise somente após a compra.",
+      "Suspender baterias e manter somente geração solar, pois eliminar o armazenamento removeria impactos minerais sem criar riscos operacionais para a rede.",
+      "Concentrar compras em um fornecedor internacional com contrato longo, usando escala e preço como substitutos da diversificação logística.",
+      "Comparar eficiência e emissões na operação, mas excluir mineração, fabricação, transporte e fim de vida por ocorrerem fora do território consumidor.",
+      "Planejar rede e armazenamento, diversificar fornecedores, avaliar o ciclo de vida, exigir rastreabilidade e reciclagem e mitigar impactos sobre água, solo e biodiversidade."
     ],
     4,
-    "A gestão integrada considera como intervenções a montante alteram vazões e impactos a jusante. Monitoramento comum, ordenamento territorial, conservação, drenagem, obras justificadas por estudos e defesa civil coordenada formam uma estratégia complementar."
+    "A transição energética exige confiabilidade técnica e análise de toda a cadeia. Diversificação, circularidade, rastreabilidade e proteção ambiental reduzem riscos geopolíticos e socioambientais."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-21",
     "Conhecimentos Específicos",
     "Difícil",
-    "Após a instalação de um novo módulo de memória, um computador liga, não exibe vídeo e emite uma sequência de bipes documentada pelo fabricante como falha de RAM. Qual procedimento inicial é tecnicamente mais adequado?",
+    "Um scanner USB liga normalmente, mas o Windows o identifica como dispositivo desconhecido. O mesmo cabo e a mesma porta reconhecem outro periférico, e o aplicativo de digitalização informa que não há fonte disponível. Qual diagnóstico inicial integra corretamente hardware, periférico e software?",
     [
-      "Redefinir o CMOS e atualizar o firmware da placa-mãe antes de verificar fisicamente o módulo recém-instalado.",
-      "Substituir primeiro a placa de vídeo e manter os módulos de memória na configuração atual durante o teste.",
-      "Desligar e desconectar o equipamento, adotar proteção contra descarga eletrostática, reassentar os módulos e testá-los individualmente ou com um módulo compatível conhecido como bom.",
-      "Reinstalar o sistema operacional para excluir falha de driver antes de abrir o gabinete.",
-      "Substituir a fonte de alimentação com base apenas na ausência de vídeo, sem isolar o componente indicado pelos bipes."
+      "A enumeração como dispositivo desconhecido confirma defeito interno; deve-se substituir o scanner antes de consultar identificadores ou drivers disponíveis.",
+      "Como outro periférico funciona, cabo e porta estão validados para qualquer classe USB; deve-se reinstalar apenas o aplicativo de digitalização.",
+      "Porta e cabo têm indícios de funcionamento; deve-se verificar e instalar o driver compatível e, depois, selecionar e testar o scanner no aplicativo.",
+      "Deve-se configurar o scanner como dispositivo de saída e reinstalar o serviço de impressão, pois a digitalização envia dados ao computador.",
+      "A primeira etapa é recriar o perfil do usuário e o cache do aplicativo, mesmo que o Windows ainda não reconheça corretamente o dispositivo."
     ],
     2,
-    "A falha ocorre no POST, antes do carregamento do sistema operacional. Depois de remover a alimentação e controlar a descarga eletrostática, reassentar e testar a RAM de forma isolada verifica primeiro o componente indicado pelo código de bipes."
+    "Os testes reduzem a probabilidade de falha no cabo ou na porta. A identificação genérica e a ausência de fonte no aplicativo apontam primeiro para driver ou integração de software."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-22",
     "Conhecimentos Específicos",
     "Difícil",
-    "Um servidor usa RAID 1. Um usuário apaga acidentalmente uma pasta, e a exclusão é replicada nos dois discos. Qual conclusão e medida são corretas?",
+    "Analise as afirmações sobre arquitetura de computadores. I. O barramento de endereços identifica posições de memória ou dispositivos, enquanto o barramento de dados transporta os valores. II. A RAM é volátil, e níveis de cache próximos ao processador reduzem o tempo médio de acesso a dados frequentes. III. Todo conector PCI Express fisicamente x16 fornece obrigatoriamente dezesseis pistas elétricas. Está correto o que se afirma em:",
     [
-      "RAID 1 substitui qualquer backup; basta reiniciar o servidor.",
-      "O espelhamento melhora tolerância à falha de disco, mas não protege contra exclusão lógica; é necessário restaurar de backup versionado e testado.",
-      "A exclusão prova que os dois discos falharam fisicamente ao mesmo tempo.",
-      "RAID 1 impede que alterações sejam gravadas no segundo disco.",
-      "A única prevenção possível é remover permanentemente as permissões de leitura."
+      "I, apenas.",
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I e III, apenas.",
+      "I, II e III."
     ],
     1,
-    "O RAID 1 replica o estado dos dados, inclusive exclusões. Backups independentes, versionados e restauráveis cobrem esse tipo de perda lógica."
+    "I e II descrevem funções e propriedades corretas. Um slot com formato x16 pode ser eletricamente ligado com menos pistas, portanto a afirmação III é absoluta e falsa."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-23",
     "Conhecimentos Específicos",
     "Difícil",
-    "Um nobreak é especificado em 1.000 VA, com fator de potência de saída 0,7, portanto suporta até 700 W. Os equipamentos ligados consomem 760 W. Qual avaliação está correta?",
+    "Após instalar um SSD NVMe novo, o firmware UEFI o lista com capacidade correta, mas o Windows 10 não o mostra no Explorador de Arquivos. O Gerenciamento de Disco exibe o dispositivo como \"Não inicializado\" e todo o espaço como \"Não alocado\". Supondo que não haja dados a preservar, qual ação é adequada?",
     [
-      "A carga efetiva é 532 W, pois se deve multiplicar os 760 W dos equipamentos por 0,7, restando margem de 168 W.",
-      "A carga excede a capacidade em watts; deve-se reduzir a carga ou dimensionar nobreak com potência ativa e autonomia adequadas.",
-      "O excedente é de 60 VA e pode ser compensado apenas com baterias de maior capacidade, sem alterar a potência do nobreak.",
-      "A potência ativa disponível é aproximadamente 1.428 W, obtida por 1.000 ÷ 0,7, portanto há ampla margem.",
-      "A carga corresponde necessariamente a 760 VA e deixa 240 VA de margem, pois watts e volt-amperes são intercambiáveis nesse cálculo."
+      "Atualizar o UEFI antes de preparar o disco, embora o firmware e o Windows já detectem o dispositivo e sua capacidade.",
+      "Inicializar o disco, criar um volume, formatá-lo com sistema de arquivos adequado e atribuir uma letra de unidade.",
+      "Reinstalar apenas o driver do controlador e aguardar que o espaço não alocado se transforme automaticamente em volume.",
+      "Ativar RAID, converter o disco e criar um arranjo, mesmo sem outro dispositivo e sem requisito de redundância.",
+      "Regravar o firmware do SSD antes de verificar a tabela de partições, apesar de o hardware estar enumerado corretamente."
     ],
     1,
-    "A capacidade ativa é 1.000 × 0,7 = 700 W. Uma carga de 760 W excede esse limite, mesmo que o valor numérico seja inferior a 1.000 VA."
+    "O UEFI e o Gerenciamento de Disco já detectam o hardware. Falta preparar logicamente o armazenamento para que o sistema de arquivos seja montado e apareça no Explorador."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-24",
     "Conhecimentos Específicos",
     "Difícil",
-    "Dispositivos da VLAN 10 comunicam-se normalmente com o roteador. Dispositivos da VLAN 20 comunicam-se entre si no switch, mas não alcançam o roteador. A porta de uplink transporta apenas a VLAN 10. Qual correção é mais provável?",
+    "Uma estação conectada a um nobreak desliga apenas durante testes intensivos de CPU. O nobreak indica 35% de carga, suas medições de saída permanecem estáveis, a CPU alcança 98 °C e o ventilador do processador registra 0 RPM. Qual procedimento é tecnicamente mais fundamentado?",
     [
-      "Transformar todas as portas de usuário em hubs passivos.",
-      "Remover os endereços IP dos dispositivos da VLAN 20.",
-      "Configurar o uplink como tronco permitindo a VLAN 20 e garantir a interface de camada 3 correspondente no roteador ou switch de camada 3.",
-      "Trocar o DNS, pois ele define quais VLANs atravessam o enlace.",
-      "Desativar o protocolo Ethernet na VLAN 10."
+      "Substituir primeiro o nobreak, pois a leitura média de 35% pode ocultar picos, sem investigar o ventilador parado nem a temperatura de 98 °C.",
+      "Atualizar o firmware e elevar o limite térmico antes de abrir o gabinete, mantendo o teste de carga para verificar se a proteção deixa de atuar.",
+      "Desligar a estação; inspecionar alimentação e fixação do ventilador, dissipador, fluxo de ar e pasta térmica; corrigir e repetir o teste monitorado.",
+      "Trocar somente a pasta térmica e repetir a carga, mesmo que o ventilador continue indicando 0 RPM e sua alimentação não tenha sido verificada.",
+      "Substituir a fonte interna com base no desligamento, sem testar a refrigeração, porque a saída estável do nobreak não informa a temperatura da CPU."
     ],
     2,
-    "Sem transportar a VLAN 20 até a função de roteamento, os quadros dessa VLAN não chegam ao gateway. O tronco e a interface de camada 3 resolvem o caminho."
+    "As evidências afastam sobrecarga do nobreak e apontam para falha de refrigeração. A proteção térmica não deve ser contornada; o conjunto de ventilação e dissipação precisa ser corrigido com o equipamento desligado."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-25",
     "Conhecimentos Específicos",
     "Difícil",
-    "A sub-rede 192.168.10.64/27 será usada em um setor. Qual alternativa apresenta corretamente o intervalo de hosts utilizáveis e o endereço de broadcast?",
+    "No Windows 10, uma pasta NTFS concede \"Modificar\" ao grupo Técnicos. O mesmo usuário pertence também ao grupo Temporários, que possui uma permissão explícita de negação de \"Gravar\" nessa pasta. Não há outra regra aplicável. Qual será o acesso efetivo?",
     [
-      "Hosts 192.168.10.64 a 192.168.10.95; broadcast 192.168.10.96.",
-      "Hosts 192.168.10.65 a 192.168.10.94; broadcast 192.168.10.95.",
-      "Hosts 192.168.10.66 a 192.168.10.96; broadcast 192.168.10.64.",
-      "Hosts 192.168.10.1 a 192.168.10.30; broadcast 192.168.10.31.",
-      "Hosts 192.168.10.65 a 192.168.10.126; broadcast 192.168.10.127."
+      "Somar as permissões dos grupos e conceder gravação, pois \"Modificar\" inclui esse direito e foi atribuído por um grupo técnico.",
+      "O usuário poderá ler o conteúdo permitido, mas não poderá gravar, pois a negação explícita aplicável prevalece nesse direito.",
+      "Aplicar a negação somente se estiver diretamente no usuário, pois uma negação atribuída a grupo não participaria do cálculo do acesso efetivo.",
+      "Escolher a regra do grupo listado primeiro na ACL e ignorar as demais associações do usuário durante a verificação do direito de gravação.",
+      "Negar também leitura e execução, porque a proibição de gravar herdada de um grupo removeria automaticamente todos os outros direitos concedidos."
     ],
     1,
-    "Uma máscara /27 cria blocos de 32 endereços. O bloco iniciado em .64 termina em .95; .64 é rede, .95 é broadcast e .65 a .94 são hosts."
+    "As permissões efetivas combinam as concessões aplicáveis, mas uma negação explícita prevalece para o direito negado. Isso não elimina automaticamente direitos distintos, como leitura."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-26",
     "Conhecimentos Específicos",
     "Difícil",
-    "Uma estação comunica-se com pares da mesma sub-rede, mas não com o gateway. Uma captura mostra solicitações ARP repetidas pelo IP do gateway, sem resposta. O que essa evidência indica prioritariamente?",
+    "Um manual no Microsoft Word precisa de capítulos numerados, cabeçalhos distintos por seção, legendas de figuras, referências cruzadas e sumário atualizável. Após inserir páginas, toda a numeração deve permanecer coerente. Qual fluxo atende ao conjunto?",
     [
-      "Falha de resolução DNS, pois ARP traduz nomes de domínio.",
-      "Problema anterior ao roteamento IP, no alcance de camada 2 ao gateway, na VLAN ou na disponibilidade da interface do gateway.",
-      "Erro obrigatório no aplicativo de correio eletrônico.",
-      "Defeito comprovado no disco da estação.",
-      "Funcionamento normal, porque gateways nunca respondem a ARP."
+      "Usar formatação direta nos títulos, quebras de página entre capítulos e textos digitados para legendas e referências, atualizando números manualmente ao final.",
+      "Vincular lista multinível aos estilos de título, usar quebras de seção, desvincular cada cabeçalho do anterior, inserir legendas e referências cruzadas como campos e atualizar todos os campos e o sumário.",
+      "Aplicar estilos de título e gerar o sumário, mas manter uma única seção, inserir legendas sem rótulo automático e digitar referências e números; depois regenerar apenas o sumário a cada alteração.",
+      "Separar capítulos por quebras de seção, porém formatar títulos como corpo de texto, bloquear campos e usar caixas de texto independentes para todas as referências.",
+      "Criar uma tabela para simular o sumário, usar notas de rodapé como legendas e reiniciar a numeração das figuras sempre que uma página for acrescentada."
     ],
     1,
-    "Sem resolver o endereço MAC do gateway por ARP, a estação não consegue entregar-lhe quadros. A investigação deve começar no domínio de camada 2 e na interface do gateway."
+    "Estilos vinculados à lista estruturam e numeram capítulos; a quebra cria seções, e desativar Vincular ao Anterior permite cabeçalhos distintos. Legendas e referências cruzadas usam campos, cuja atualização propaga mudanças de texto, ordem e paginação."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-27",
     "Conhecimentos Específicos",
     "Difícil",
-    "A tabela de roteamento contém 10.20.0.0/16 via gateway A, 10.20.30.0/24 via gateway B e uma rota padrão via gateway C. Desconsiderando métricas entre rotas de mesmo prefixo, por qual gateway será encaminhado um pacote destinado a 10.20.30.45?",
+    "No Excel em português-Brasil, a coluna A contém o setor, a B contém a situação e a C contém o custo. Qual fórmula soma os custos das linhas em que o setor é \"TI\" e a situação é \"Ativo\"?",
     [
-      "Pelo gateway A, porque a rota /16 foi apresentada antes da rota /24.",
-      "Pelo gateway C, porque a rota padrão é examinada antes das rotas específicas.",
-      "Pelos gateways A e B em balanceamento, porque as duas redes incluem o destino.",
-      "Pelo gateway B, porque o prefixo /24 é a correspondência mais específica para o destino.",
-      "Por nenhum gateway, porque 10.20.30.45 é um endereço de host e não aparece literalmente na tabela."
+      "=SOMASE(A2:A100;\"TI\";B2:B100;\"Ativo\";C2:C100)",
+      "=SOMA(A2:A100=\"TI\";B2:B100=\"Ativo\";C2:C100)",
+      "=CONT.SES(A2:A100;\"TI\";B2:B100;\"Ativo\";C2:C100)",
+      "=SOMASES(C2:C100;A2:A100;\"TI\";B2:B100;\"Ativo\")",
+      "=SOMASES(A2:A100;C2:C100;\"TI\";B2:B100;\"Ativo\")"
     ],
     3,
-    "As rotas /16 e /24 correspondem ao endereço, mas o roteador escolhe a correspondência de prefixo mais longo. Como /24 é mais específico que /16, o pacote segue pelo gateway B; a rota padrão só seria usada sem correspondência mais específica."
+    "SOMASES recebe primeiro o intervalo a somar e, depois, pares de intervalo de critério e critério. Assim, soma C quando A é \"TI\" e B é \"Ativo\"."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-28",
     "Conhecimentos Específicos",
     "Difícil",
-    "Uma chamada VoIP é estabelecida pelo protocolo de sinalização, mas não há áudio em nenhuma direção. No SDP, cada ponta anuncia um endereço privado inalcançável pela outra rede, e o firewall não possui regra para a faixa RTP. Qual ação trata a causa mais provável?",
+    "Uma equipe prepara uma apresentação restrita. Autores devem alterar o arquivo, revisores apenas comentar e convidados externos somente visualizar. O resultado será conferido no PowerPoint e distribuído por convite do Outlook. Qual fluxo configura e comprova o acesso corretamente?",
     [
-      "Aumentar a resolução de vídeo e reduzir o espaço em disco.",
-      "Trocar apenas o nome DNS do servidor de sinalização.",
-      "Corrigir o tratamento de NAT e os endereços de mídia anunciados, permitir de forma controlada os fluxos RTP necessários e validar os pacotes nos dois sentidos.",
-      "Forçar o áudio a usar difusão em camada 2 entre redes distintas.",
-      "Desativar todos os mecanismos de segurança sem capturar tráfego."
+      "Dar papel Editor aos três grupos, usar a orientação por e-mail para restringir revisores e convidados e validar no PowerPoint somente com a conta do proprietário, sem simular as outras identidades.",
+      "Definir autores como Comentadores, revisores como Leitores e convidados como Editores; depois validar o link apenas na sessão já autenticada de um autor.",
+      "Atribuir a função Editor aos autores, Comentador aos revisores e Leitor aos convidados; testar cada função com contas representativas, conferir o arquivo no PowerPoint e enviar pelo Outlook o link validado.",
+      "Publicar o arquivo na Web sem restrição e usar a função Leitor apenas para os autores; considerar a abertura anônima equivalente ao teste das três funções.",
+      "Manter o arquivo privado ao proprietário, anexar cópias no Outlook e testar a aparência no navegador, sem verificar se comentários e edições são efetivamente bloqueados."
     ],
     2,
-    "A sinalização pode completar enquanto o fluxo de mídia RTP falha. Endereços privados anunciados e bloqueio da faixa de mídia apontam para NAT, SDP e firewall, que devem ser corrigidos e validados."
+    "Os papéis aplicam o menor privilégio exigido. Testes com identidades representativas comprovam o comportamento real, enquanto PowerPoint, Outlook e navegador validam conteúdo, distribuição e acesso."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-29",
     "Conhecimentos Específicos",
     "Difícil",
-    "Uma rede Wi-Fi de 2,4 GHz tem vários pontos de acesso próximos, todos no mesmo canal e com potência máxima. A análise mostra muitas retransmissões, embora o sinal seja forte. Qual intervenção é mais adequada?",
+    "Há um backup completo íntegro de domingo e incrementais de segunda, terça e quarta-feira. O incremental de terça está corrompido; os demais arquivos estão íntegros, e não existe outra cópia das alterações de terça. Qual é o ponto mais recente cuja recuperação pode ser garantida pela cadeia disponível?",
     [
-      "Aumentar ainda mais a potência de todos os pontos de acesso.",
-      "Desativar a autenticação para reduzir quadros de gestão.",
-      "Executar levantamento de espectro, planejar canais não sobrepostos e potências, manter segurança adequada e validar cobertura e roaming.",
-      "Configurar SSIDs diferentes para cada usuário.",
-      "Substituir os endereços IPv4 por nomes DNS sem medir o rádio."
+      "Domingo, porque qualquer corrupção em um incremental invalida também todos os incrementais anteriores da mesma cadeia.",
+      "Quarta-feira, aplicando ao completo apenas o incremental de quarta, que contém todas as mudanças desde domingo.",
+      "Segunda-feira, restaurando o completo de domingo e o incremental de segunda; a corrupção de terça impede garantir os estados posteriores.",
+      "Quarta-feira, aplicando segunda e quarta em sequência, como se cada incremental fosse cumulativo desde o completo e recompusesse automaticamente o arquivo ausente.",
+      "Terça-feira, porque o catálogo do backup basta para reconstruir os blocos corrompidos mesmo sem outra cópia dos dados."
     ],
     2,
-    "Sinal forte não elimina contenção e interferência co-canal. Planejamento de canais e potência, baseado em medições, reduz sobreposição e retransmissões."
+    "Cada incremental depende do estado produzido pelo anterior. O completo mais o incremental de segunda formam uma cadeia íntegra; sem as mudanças válidas de terça, não se garantem terça nem quarta."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-30",
     "Conhecimentos Específicos",
     "Difícil",
-    "Clientes de uma nova VLAN recebem endereços 169.254.x.x. O servidor DHCP funciona em outra VLAN, e as VLANs existentes recebem endereços normalmente. A nova interface de roteamento não possui relay DHCP. Qual correção atende ao diagnóstico?",
+    "Após abrir um anexo, uma estação executa um processo desconhecido, inicia conexões externas incomuns e tenta ler credenciais salvas. Qual resposta inicial reduz o risco sem destruir evidências úteis?",
     [
-      "Criar um registro DNS para cada cliente antes de ligar o cabo.",
-      "Configurar relay DHCP na interface da nova VLAN e confirmar a existência de um escopo correspondente no servidor.",
-      "Desativar o roteamento entre todas as VLANs.",
-      "Fixar o endereço 169.254.x.x como gateway padrão.",
-      "Alterar apenas o nome do grupo de trabalho do Windows."
+      "Manter a estação conectada para capturar mais tráfego e executar tarefas comuns, adiando a contenção até identificar com certeza a família da ameaça.",
+      "Isolar a estação da rede, preservar registros, acionar o procedimento de resposta, analisar com mecanismos atualizados e trocar credenciais expostas a partir de dispositivo confiável.",
+      "Reiniciar imediatamente em modo de segurança e remover o processo antes de registrar conexões, processos, horários e demais evidências voláteis.",
+      "Trocar as credenciais na própria estação suspeita e manter a sessão de rede ativa, usando a alteração de senha como única medida de contenção.",
+      "Encerrar o processo e apagar o anexo sem isolar a estação, preservando apenas o alerta do antivírus e dispensando a análise de persistência."
     ],
     1,
-    "As mensagens iniciais de DHCP são broadcast e não atravessam roteadores sem relay. O escopo também deve fornecer parâmetros válidos para a nova rede."
+    "O comportamento é compatível com malware. O isolamento limita comunicação e propagação; a preservação de registros apoia a análise. A contenção deve seguir o processo de resposta e a troca de credenciais deve ocorrer em ambiente confiável."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-31",
     "Conhecimentos Específicos",
     "Difícil",
-    "Um IDS gera alerta de varredura a partir de uma estação de administração durante uma janela de inventário autorizada. Antes de classificar o evento como ataque, qual abordagem é mais robusta?",
+    "Uma rede em estrela estendida possui dois switches interligados por dois enlaces Ethernet redundantes. Após ativar o segundo enlace sem agregação, surgem tempestade de broadcast e oscilação da tabela MAC. Qual ação preserva redundância sem manter o loop de camada 2?",
     [
-      "Encerrar o alerta como falso positivo somente porque o horário coincide com a janela autorizada, sem verificar o ativo ou o padrão observado.",
-      "Bloquear a estação de forma permanente antes de conferir a autorização, preservando apenas o pacote que originou o alerta.",
-      "Correlacionar horário, ativo de origem, autorização da mudança, padrão de tráfego e outros logs; documentar a decisão e ajustar a regra apenas se a evidência justificar.",
-      "Desabilitar globalmente a assinatura de varredura durante todas as janelas futuras, independentemente das redes e dos ativos autorizados.",
-      "Aumentar o limiar da regra com base apenas neste evento e manter a classificação original sem registrar a justificativa."
+      "Desativar STP e manter ambos os enlaces encaminhando, usando controle de tempestade e uma rota padrão para limitar os sintomas sem remover o ciclo lógico.",
+      "Remover definitivamente um dos enlaces interrompe o loop, mas elimina o caminho redundante solicitado para contingência entre os switches.",
+      "Habilitar e verificar STP para bloquear logicamente um caminho redundante e liberá-lo se o enlace ativo falhar.",
+      "Separar os endereços de gerenciamento em sub-redes distintas, mantendo os dois enlaces na mesma camada 2 e sem mecanismo de prevenção de loop.",
+      "Reduzir o TTL dos hosts e aplicar uma ACL IP nas portas, embora tempestades de broadcast Ethernet não dependam desses campos de camada 3."
     ],
     2,
-    "A correlação contextual distingue atividade autorizada de comportamento malicioso e permite calibrar a detecção sem eliminar evidências ou cobertura."
+    "STP calcula uma árvore lógica sem ciclos, mantendo um enlace redundante bloqueado. Diante de falha, a topologia pode convergir e liberar o caminho alternativo sem tempestade de broadcast."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-32",
     "Conhecimentos Específicos",
     "Difícil",
-    "Uma estação apresenta processo suspeito, conexões para destino desconhecido e tentativas de acesso lateral. Qual sequência inicial preserva investigação e reduz o risco?",
+    "Dois switches em prédios distintos serão interligados por 180 m de fibra. Um lado possui transceptor 1000BASE-SX para fibra multimodo a 850 nm; o outro ainda será especificado. O que deve ser validado para formar um enlace Ethernet interoperável?",
     [
-      "Reiniciar a estação para interromper o processo e somente depois coletar memória, conexões e demais evidências voláteis.",
-      "Cortar imediatamente a alimentação em qualquer situação, sem avaliar a necessidade de preservar dados voláteis ou seguir o procedimento de resposta.",
-      "Isolar a estação da rede de forma controlada, preservar evidências conforme o procedimento, identificar o alcance, proteger credenciais a partir de sistema confiável e só então erradicar e recuperar.",
-      "Alterar as credenciais a partir da própria estação suspeita antes de isolá-la, para manter acesso aos serviços durante a análise.",
-      "Recriar imediatamente a estação a partir de uma imagem limpa e investigar o alcance somente se o comportamento reaparecer."
+      "Validar conector e potência recebida; se os módulos couberem nas portas, padrões, comprimentos de onda e tipos de fibra distintos negociarão automaticamente.",
+      "Um transceptor 1000BASE-LX monomodo na outra ponta, mantendo SX multimodo na primeira, já que ambos operam a 1 Gbit/s.",
+      "Nas duas pontas, padrão Ethernet, velocidade, comprimento de onda, tipo de fibra, conectores, orçamento óptico, distância e suporte das portas dos switches.",
+      "Somente a distância nominal da fibra, pois potência óptica, padrão dos módulos e compatibilidade das portas não afetam a negociação.",
+      "Um conversor para cobre em apenas uma extremidade, preservando o transceptor óptico sem par compatível na extremidade oposta."
     ],
     2,
-    "A contenção limita movimento lateral; a preservação e análise de evidências sustentam o diagnóstico antes da erradicação e recuperação controladas."
+    "Um enlace exige meios e ópticas compatíveis nas duas extremidades. Mesmo velocidade ou conector não bastam: padrão, comprimento de onda, fibra, potência, alcance e suporte do switch precisam coincidir."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-33",
     "Conhecimentos Específicos",
     "Difícil",
-    "No Windows 10, uma pasta compartilhada concede Controle Total nas permissões de compartilhamento. No NTFS, o grupo Suporte possui Permitir Modificar, enquanto o grupo Temporários possui uma entrada explícita Negar Gravação. Um usuário pertence aos dois grupos e acessa a pasta pela rede. Qual será o resultado para uma tentativa de gravar um arquivo?",
+    "No modelo TCP/IP, o host 192.168.10.20/24 envia um pacote ao servidor 203.0.113.50 por meio do gateway 192.168.10.1. Sem NAT, o que ocorre com os endereços ao atravessar o primeiro roteador?",
     [
-      "A gravação será permitida, pois Controle Total no compartilhamento substitui qualquer restrição configurada no NTFS.",
-      "A gravação será permitida, pois Permitir Modificar em um grupo cancela a negação recebida de outro grupo.",
-      "Todo acesso será negado, inclusive leitura e execução, porque uma negação de Gravação equivale a Negar Controle Total.",
-      "A gravação será negada: o acesso pela rede combina os limites do compartilhamento e do NTFS, e a negação explícita de Gravação prevalece sobre a permissão conflitante.",
-      "O resultado dependerá da ordem em que os grupos foram criados, pois o Windows aplica apenas a última entrada de grupo."
+      "O host usa ARP para descobrir o MAC do servidor remoto e envia o quadro diretamente a esse MAC através do roteador.",
+      "O gateway troca o IP de destino pelo próprio endereço a cada salto e preserva os MACs de origem e destino do primeiro quadro até o servidor remoto.",
+      "O host transmite um broadcast IP até localizar o servidor; o roteador preserva o quadro Ethernet no próximo enlace.",
+      "O host resolve por ARP o MAC do gateway; a cada salto roteado, o roteador reencapsula o pacote para o enlace seguinte, mas o IP final permanece 203.0.113.50.",
+      "O DNS fornece ao host o MAC do gateway e substitui o IP do servidor pelo endereço de broadcast da rede local."
     ],
     3,
-    "Controle Total no compartilhamento não amplia o que o NTFS permite. Ao combinar as associações de grupo, a negação explícita do direito de gravação prevalece sobre a permissão conflitante; os demais direitos não negados devem ser avaliados separadamente."
+    "Como o destino está fora da sub-rede, o host encapsula o pacote para o MAC do gateway obtido por ARP. A cada salto roteado, o roteador reencapsula o pacote para o enlace seguinte; sem NAT, o IP de destino não muda."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-34",
     "Conhecimentos Específicos",
     "Difícil",
-    "Uma transação transfere saldo entre duas contas com dois comandos UPDATE. O primeiro é executado, mas o segundo falha. Qual desenho preserva a atomicidade?",
+    "Um roteador possui as rotas 172.16.0.0/12 via A, 172.20.0.0/16 via B, 172.20.8.0/21 via C e uma rota padrão via D. Para qual próximo salto será enviado um pacote destinado a 172.20.15.200?",
     [
-      "Executar cada UPDATE em uma transação própria e registrar uma compensação para processamento posterior caso o segundo falhe.",
-      "Executar ambos na mesma transação, aplicar COMMIT somente após os dois terem sucesso e ROLLBACK se qualquer etapa falhar.",
-      "Criar um SAVEPOINT após o primeiro UPDATE e confirmar a transação mesmo quando o segundo falhar, mantendo o primeiro resultado.",
-      "Usar nível de isolamento SERIALIZABLE, mas deixar o autocommit ativo para cada UPDATE executado.",
-      "Adiar a verificação das restrições até o final, mantendo cada UPDATE confirmado separadamente."
+      "Via A, porque a rota agregada /12 cobre o destino e sua abrangência seria avaliada antes da extensão do prefixo.",
+      "Via C, porque 172.20.15.200 pertence ao intervalo de 172.20.8.0/21 e essa é a correspondência mais específica.",
+      "Via B, porque /16 é mais específico que /12, mas a rota /21 seria usada apenas para endereços até 172.20.15.127.",
+      "Via D, porque a rota /21 termina em 172.20.14.255 e as rotas privadas não podem encaminhar o host informado.",
+      "O pacote será descartado como endereço de broadcast da sub-rede /21, apesar de o broadcast desse bloco ser 172.20.15.255."
     ],
     1,
-    "A atomicidade exige que a unidade de trabalho seja totalmente confirmada ou totalmente desfeita; COMMIT e ROLLBACK controlam esses resultados."
+    "O prefixo /21 cobre de 172.20.8.0 a 172.20.15.255. Como o destino corresponde a /12, /16 e /21, o roteador escolhe o prefixo mais longo, via C."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-35",
     "Conhecimentos Específicos",
     "Difícil",
-    "Uma equipe precisa consultar nome e situação de equipamentos, mas não pode ver custos nem alterar registros. Qual solução aplica melhor o menor privilégio em um SGBD relacional?",
+    "Dois pontos de acesso de 2,4 GHz usam o mesmo SSID e a mesma política de segurança. Estão próximos, operam no mesmo canal largo e com potência máxima; clientes permanecem ligados ao ponto mais distante e sofrem retransmissões. Qual ajuste inicial é mais coerente?",
     [
-      "Conceder SELECT diretamente na tabela completa e ocultar a coluna de custos somente na interface da aplicação.",
-      "Criar uma rotina executada com privilégios administrativos e compartilhar suas credenciais com a equipe de consulta.",
-      "Criar uma visão apenas com as colunas autorizadas e conceder SELECT nessa visão, sem privilégios diretos desnecessários nas tabelas-base.",
-      "Conceder SELECT e UPDATE na tabela-base, restringindo as alterações por uma orientação documentada aos usuários.",
-      "Criar uma cópia periódica da tabela com todas as colunas e conceder acesso de leitura irrestrito a essa cópia."
+      "Reduzir a potência dos dois pontos, mas mantê-los no mesmo canal largo, avaliando apenas intensidade de sinal e não a interferência cocanal.",
+      "Escolher canais não sobrepostos, mas conservar potência máxima e posicionamento atual, sem medir sobreposição de células nem comportamento dos clientes.",
+      "Planejar canais não sobrepostos, ajustar potência e posicionamento para cobertura adequada e validar roaming e interferência com medições.",
+      "Usar canais de 40 MHz em todos os pontos e reduzir potência, pressupondo que maior largura sempre diminua a interferência no espectro de 2,4 GHz.",
+      "Criar SSIDs distintos para forçar escolha manual do ponto mais próximo, aceitando interromper o roaming sem diagnosticar canais ou cobertura."
     ],
     2,
-    "A visão limita a projeção dos dados, e a concessão restrita de SELECT reduz a superfície de acesso às operações e colunas necessárias."
+    "Canal, largura, potência e posicionamento afetam interferência e tamanho das células. A correção deve ser medida; SSIDs distintos interrompem o roaming e canais largos podem aumentar a sobreposição."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-36",
     "Conhecimentos Específicos",
     "Difícil",
-    "Toda alteração de situação de um equipamento deve gerar automaticamente um registro de auditoria, mesmo quando a alteração vier de aplicações diferentes. Qual objeto do banco é mais diretamente apropriado?",
+    "Um computador grava áudio e vídeo localmente sem falhas e reproduz streaming HTTPS. Em uma chamada VoIP, a sinalização estabelece a chamada e o interlocutor ouve o usuário local, mas nenhum pacote RTP de retorno chega ao computador. Qual hipótese deve ser investigada primeiro?",
     [
-      "Uma tarefa agendada que consulta a tabela a cada hora e infere alterações comparando o estado mais recente.",
-      "Um trigger associado ao evento UPDATE da tabela, cuidadosamente definido para registrar a mudança.",
-      "Um procedimento armazenado de atualização, sem impedir que as aplicações continuem executando UPDATE diretamente na tabela.",
-      "Uma visão com WITH CHECK OPTION que apresente somente os equipamentos alterados no dia.",
-      "Uma coluna calculada que derive a situação atual, sem registrar os valores anteriores."
+      "Falha do dispositivo de captura ou de seu driver, embora a gravação local demonstre que o áudio é entregue corretamente à aplicação.",
+      "Bloqueio ou tradução incorreta do RTP de retorno no firewall/NAT, considerando portas e endereços de mídia anunciados.",
+      "Incompatibilidade de codec como causa de nenhum pacote chegar, embora uma falha de decodificação pressupusesse tráfego RTP recebido para processar.",
+      "Liberação comprovada de todo UDP pelo teste HTTPS, inferindo que conectividade TCP de aplicação valida também as portas dinâmicas de mídia.",
+      "Falha de DNS para o servidor de sinalização, mesmo que a chamada já tenha sido estabelecida e o fluxo RTP de saída alcance o interlocutor."
     ],
     1,
-    "Triggers são executados automaticamente em eventos definidos e podem centralizar auditoria de alterações feitas por diferentes clientes."
+    "A captura e a reprodução locais têm evidência de funcionamento, e a sinalização foi concluída. A ausência de RTP em apenas um sentido aponta para o caminho de mídia, frequentemente afetado por firewall ou NAT."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-37",
     "Conhecimentos Específicos",
     "Difícil",
-    "Um projeto de banco de dados requer, nesta ordem: I. uma abstração reutilizável baseada em SELECT; II. uma rotina parametrizada capaz de agrupar comandos; III. execução automática quando ocorrer UPDATE em uma tabela; IV. um cálculo reutilizável que retorne um valor. Quais objetos atendem, respectivamente, aos requisitos I, II, III e IV?",
+    "Um equipamento não inventariado é conectado a uma tomada de rede em armário destrancado. Logo depois, o monitoramento registra varredura interna a partir dessa porta. Qual resposta combina análise de tráfego, política e segurança física e lógica?",
     [
-      "View, procedimento armazenado, trigger e função.",
-      "Função, view, procedimento armazenado e trigger.",
-      "Procedimento armazenado, função, view e trigger.",
-      "View, trigger, função e procedimento armazenado.",
-      "Trigger, procedimento armazenado, função e view."
+      "Quarentenar ou desativar a porta, preservar e analisar registros, identificar o equipamento, controlar o armário e aplicar autenticação de rede e política de dispositivos autorizados.",
+      "Quarentenar a porta e reformatar imediatamente o equipamento antes de preservar registros ou identificar seu responsável, usando a reinstalação como prova suficiente do escopo.",
+      "Trancar o armário e cadastrar o MAC observado na lista permitida, mantendo o dispositivo conectado e dispensando análise dos registros já produzidos.",
+      "Aplicar uma ACL contra a sub-rede varrida, mas manter o equipamento não inventariado na porta e não revisar acesso físico, identidade ou outros destinos.",
+      "Desativar a porta até cessarem os alertas e depois reativá-la com o mesmo acesso, sem identificar o dispositivo nem estabelecer política de admissão."
     ],
     0,
-    "A view encapsula uma consulta; o procedimento armazenado agrupa comandos e pode receber parâmetros; o trigger reage automaticamente ao UPDATE; e a função encapsula um cálculo que retorna valor."
+    "A contenção limita o risco; registros e tráfego preservados permitem determinar escopo. Controle físico, autenticação de acesso e política de inventário formam camadas complementares."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-38",
     "Conhecimentos Específicos",
     "Difícil",
-    "Considere Setor(id, nome) e Equipamento(id, setor_id, status). É necessário listar todos os setores, inclusive os que têm zero equipamentos ativos, com a respectiva contagem. Qual consulta expressa corretamente essa intenção?",
+    "Em um banco relacional, Setor(id, nome) possui chave primária id, e Equipamento(id, setor_id, numero_patrimonio) possui chave estrangeira setor_id referenciando Setor.id. Há equipamentos vinculados ao setor 7. Qual comportamento preserva a integridade referencial ao excluir esse setor?",
     [
-      "SELECT s.nome, COUNT(*) FROM Setor s INNER JOIN Equipamento e ON e.setor_id = s.id WHERE e.status = 'ativo';",
-      "SELECT s.nome, COUNT(e.id) FROM Setor s LEFT JOIN Equipamento e ON e.setor_id = s.id AND e.status = 'ativo' GROUP BY s.id, s.nome;",
-      "SELECT s.nome FROM Setor s WHERE COUNT(e.id) = 0;",
-      "DELETE FROM Equipamento WHERE status <> 'ativo' GROUP BY setor_id;",
-      "SELECT COUNT(*) FROM Setor, Equipamento;"
+      "Executar a exclusão com NO ACTION e manter setor_id = 7, pois a unicidade de numero_patrimonio validaria também a existência do setor referenciado.",
+      "Rejeitar a exclusão enquanto houver referências, salvo se uma ação configurada, como CASCADE ou SET NULL válido, tratar as linhas dependentes.",
+      "Aplicar CASCADE obrigatoriamente em toda chave estrangeira, ainda que a regra de negócio exija preservar equipamentos e seus números de patrimônio.",
+      "Criar um índice único em numero_patrimonio, pois índices substituem a validação da relação entre setor_id e Setor.id.",
+      "Usar maior nível de isolamento na transação, que converte automaticamente setor_id em NULL sem ação referencial definida."
     ],
     1,
-    "O LEFT JOIN preserva todos os setores; filtrar o estado na cláusula ON mantém os setores sem correspondência, e COUNT(e.id) devolve zero quando não há equipamento ativo."
+    "A chave estrangeira impede referências órfãs. A exclusão só pode ocorrer após tratar as linhas dependentes ou mediante ação referencial previamente definida e compatível com o modelo."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-39",
     "Conhecimentos Específicos",
     "Difícil",
-    "Uma gravação de vídeo usa taxa constante de 8 Mbit/s durante 90 minutos. Desconsiderando cabeçalhos e usando unidades decimais, qual espaço aproximado será necessário?",
+    "Uma conta começa com saldo 100. Executam-se: BEGIN; UPDATE Conta SET saldo = saldo - 20; SAVEPOINT s1; UPDATE Conta SET saldo = saldo - 30; ROLLBACK TO s1; COMMIT. Qual é o saldo persistido e como se classificam UPDATE e os comandos de controle da transação?",
     [
-      "0,9 GB.",
-      "1,8 GB.",
-      "5,4 GB.",
-      "8,0 GB.",
-      "43,2 GB."
+      "Saldo 50; UPDATE é DDL, e SAVEPOINT e COMMIT são DCL.",
+      "Saldo 70; UPDATE é DML, e somente COMMIT pertence à TCL.",
+      "Saldo 80; UPDATE é DML, e BEGIN, SAVEPOINT, ROLLBACK TO e COMMIT são TCL.",
+      "Saldo 100; UPDATE é DQL, e ROLLBACK TO desfaz também a alteração anterior ao savepoint.",
+      "Saldo 80; UPDATE é DCL, e os demais comandos pertencem à DDL."
     ],
     2,
-    "Em 5.400 segundos, são 8 × 5.400 = 43.200 megabits. Dividindo por 8, resultam 5.400 megabytes, ou aproximadamente 5,4 GB."
+    "O primeiro UPDATE reduz o saldo para 80. O segundo leva a 50, mas ROLLBACK TO s1 o desfaz; COMMIT persiste 80. UPDATE é DML, enquanto os demais controlam a transação (TCL)."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-40",
     "Conhecimentos Específicos",
     "Difícil",
-    "Uma aquisição exige que cada computador opere simultaneamente dois monitores 4K a 60 Hz e um aplicativo com aceleração por hardware. Qual especificação técnica reduz melhor o risco de incompatibilidade?",
+    "Uma view de inventário baseada em Setor(id, nome) e Equipamento(id, setor_id) deve listar cada setor e a quantidade de equipamentos, incluindo zero para setores sem equipamentos. Qual consulta atende ao requisito sem transformar a junção externa em interna?",
     [
-      "Exigir duas saídas DisplayPort 1.2, sem verificar se o controlador gráfico mantém simultaneamente 4K a 60 Hz nas duas portas.",
-      "Definir apenas a memória de vídeo mínima, deixando interfaces, largura de banda e suporte dos drivers para a etapa de instalação.",
-      "Definir quantidade e versão das saídas, resolução e frequência simultâneas suportadas, capacidade gráfica, memória, sistema e drivers compatíveis, e exigir comprovação antes da aceitação.",
-      "Aceitar dois conectores fisicamente compatíveis como prova suficiente, mesmo sem garantia de operação simultânea na resolução exigida.",
-      "Homologar qualquer estação com um adaptador USB-C duplo, verificando apenas o formato do conector e não o modo alternativo ou a largura de banda."
+      "SELECT s.id, s.nome, COUNT(*) FROM Setor s INNER JOIN Equipamento e ON e.setor_id = s.id GROUP BY s.id, s.nome;",
+      "SELECT s.id, s.nome, COUNT(e.id) FROM Equipamento e LEFT JOIN Setor s ON s.id = e.setor_id GROUP BY s.id, s.nome;",
+      "SELECT s.id, s.nome, COUNT(e.id) FROM Setor s LEFT JOIN Equipamento e ON e.setor_id = s.id GROUP BY s.id, s.nome;",
+      "SELECT s.id, s.nome, COUNT(*) FROM Setor s LEFT JOIN Equipamento e ON e.setor_id = s.id WHERE e.id IS NOT NULL GROUP BY s.id, s.nome;",
+      "SELECT s.id, s.nome, COUNT(e.id) FROM Setor s RIGHT JOIN Equipamento e ON e.setor_id = s.id GROUP BY s.id, s.nome;"
     ],
     2,
-    "Requisitos mensuráveis de interfaces, largura de banda, controlador, software e validação de aceitação permitem verificar a compatibilidade com a carga real."
+    "Partir de Setor e usar LEFT JOIN preserva todos os setores. COUNT(e.id) ignora o NULL produzido quando não há equipamento, retornando zero, e o GROUP BY mantém uma linha por setor."
   ])
 ];

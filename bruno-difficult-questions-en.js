@@ -1,442 +1,442 @@
 Object.assign(EN_QUESTION_TRANSLATIONS, {
   "bruno-massaranduba-2026-difficult-01": {
-    prompt: "Read the passage: \"The outage ended after the switch was replaced. The high latency, however, remained until a route was corrected. The team therefore recorded the events as related incidents with different causes.\" Which conclusion preserves the coherence of the passage?",
+    prompt: "Read the passage: \"At 9 a.m., the system became slow. Restarting the service did not change the situation. At 10 a.m., enabling the secondary link reduced latency, although the server load remained unchanged.\" Which inference is supported by the information without going beyond it?",
     options: [
-      "The events being close in time did not prevent the team from identifying different causes for them.",
-      "The faulty route was the only proven cause of every symptom.",
-      "Replacing the switch eliminated both the outage and the latency at the same time.",
-      "The events were recorded as independent because they occurred in different months.",
-      "The team concluded that there was no relationship whatsoever between the incidents."
+      "The network path contributed to the latency, but the passage does not show that it was the only possible cause.",
+      "The stable load proves that the server remained the main cause and that changing the link merely masked the problem.",
+      "The restart produced a temporary improvement, although the passage states that it did not change the situation before 10 a.m.",
+      "Enabling the secondary link reduced server load because lower latency necessarily implies lower CPU usage.",
+      "The fall in latency proves a permanent resolution, even without later measurements or investigation of other causes."
     ],
-    explanation: "The passage distinguishes the causes while acknowledging a relationship between the events; it also attributes different solutions to the outage and the latency."
+    explanation: "The only change associated with lower latency was the network path. This supports its contribution to the problem, but does not prove an exclusive cause or complete resolution."
   },
   "bruno-massaranduba-2026-difficult-02": {
-    prompt: "The Portuguese sentence \"Marina entregou o relatório à analista depois que ela revisou o servidor\" permits two readings as to who carried out the review. Which rewrite removes the ambiguity and unequivocally attributes the review to the analyst?",
+    prompt: "Read this Portuguese passage: \"O diagnóstico de 2026 retomou as metas do plano de 2024. Esse plano previa revisão anual. 'Sem medir resultados, não há política sustentável', registrava ainda um parecer de 2022. Por isso, a equipe manteve indicadores comparáveis.\" Select the correct analysis of its textual construction.",
     options: [
-      "Depois que ela revisou o servidor, Marina entregou o relatório à analista.",
-      "Depois de revisar o servidor, a analista recebeu de Marina o relatório.",
-      "Marina, depois que ela revisou o servidor, entregou o relatório à analista.",
-      "A analista recebeu o relatório de Marina depois que ela revisou o servidor.",
-      "Ela revisou o servidor, e Marina entregou o relatório à analista."
+      "The expression \"Esse plano\" anticipates the 2022 opinion, the quotation is indirect speech, and \"Por isso\" opposes the diagnosis.",
+      "The expression \"Esse plano\" refers back to the 2024 plan; the quotation creates explicit intertextuality; and \"Por isso\" introduces a conclusion.",
+      "The expression \"Esse plano\" refers to the targets, but the quotation removes the current voice and \"Por isso\" merely orders the dates chronologically.",
+      "The dates provide enough temporal sequence to dispense with referential cohesion and turn the quotation into a simple paraphrase.",
+      "The expression \"ainda\" replaces \"equipe\" as an anaphoric pronoun, and \"Por isso\" refers only to the expression \"revisão anual\"."
     ],
-    explanation: "In the correct rewrite, the explicit subject \"a analista\" controls the reduced clause \"depois de revisar\", removing the pronoun's dual reference."
+    explanation: "The demonstrative refers back to the plan already mentioned; the identified reproduction of another opinion creates an intertextual relationship; and the conclusive expression connects the decision to the preceding premises."
   },
   "bruno-massaranduba-2026-difficult-03": {
-    prompt: "A report describes the sequence of a failure and then argues for replacing a device on the basis of the observed risks. Which modes of discourse organisation predominate in these respective parts of the report?",
+    prompt: "A municipal guide contains two passages. The first explains how soil sealing increases surface run-off. Under the heading \"Procedimentos obrigatórios\", the second states: \"Desligue a energia, procure um local elevado e aguarde o aviso da Defesa Civil.\" Which classification correctly combines discourse organisation and text type?",
     options: [
-      "Description and injunction.",
-      "Exposition and description.",
-      "Injunction and narration.",
-      "Narration and argumentation.",
-      "Argumentation and narration."
+      "The first is narrative in a historical account; the second is descriptive in an informative notice.",
+      "The first is injunctive in a normative text; the second is argumentative in a didactic text that defends a thesis.",
+      "The first is descriptive in a technical entry; the second is expository in a rule that merely explains a phenomenon.",
+      "The first is expository in a didactic text; the second is injunctive in a normative guidance text.",
+      "Both are narrative because the causal relationship and imperative verbs arrange events in chronological sequence."
     ],
-    explanation: "Recounting a sequence of events is narration; supporting a decision with reasons and evidence is argumentation."
+    explanation: "Explaining a causal relationship is exposition with a didactic purpose; directing the reader's conduct is injunction in guidance of a normative nature."
   },
   "bruno-massaranduba-2026-difficult-04": {
-    prompt: "Compare these Portuguese sentences: I. \"Os computadores que estavam sem atualização foram isolados.\" II. \"Os computadores, que estavam sem atualização, foram isolados.\" Select the correct interpretation.",
+    prompt: "In the Portuguese sentence \"Somente após a auditoria os técnicos que haviam alterado a rota apresentaram os registros ao gestor\", the initial expression restricts the time of presentation, and the relative clause restricts the group of technicians. Which reordering preserves both meanings?",
     options: [
-      "In I, the clause restricts the set to computers without an update; in II, the commas present the lack of an update as an explanation applying to the set mentioned.",
-      "Both sentences necessarily state that only one computer lacked an update.",
-      "In I, all the computers lacked an update; in II, only some of them did.",
-      "The commas in II turn the clause into an adversative coordinate clause.",
-      "Removing the commas changes only the pronunciation, with no effect on meaning."
+      "Os técnicos que haviam alterado a rota apresentaram os registros ao gestor somente após a auditoria.",
+      "Somente os técnicos, que haviam alterado a rota, apresentaram após a auditoria os registros ao gestor.",
+      "Após a auditoria, os técnicos apresentaram somente os registros que haviam alterado a rota ao gestor.",
+      "Os técnicos, que haviam alterado a rota, somente apresentaram os registros após a auditoria ao gestor.",
+      "Os registros somente após a auditoria apresentaram ao gestor os técnicos que haviam alterado a rota."
     ],
-    explanation: "A relative clause without commas is restrictive; between commas it is explanatory and presents the information as applying to the entire antecedent in context."
+    explanation: "The wording keeps \"somente\" next to the temporal adjunct and retains the relative clause without commas, restricting the antecedent \"técnicos\"."
   },
   "bruno-massaranduba-2026-difficult-05": {
-    prompt: "In the Portuguese notice \"Somente o técnico informou ontem ao gestor a indisponibilidade\", moving \"somente\" can change the focused element. Which version states that the outage was the only information conveyed, without excluding other informants or other times?",
+    prompt: "In a formal report, the statement O técnico afirmou: \"Não reiniciarei o servidor antes da cópia.\" must be converted into indirect speech. Which version preserves the meaning, uses appropriate punctuation, and maintains a formal register and referential function?",
     options: [
-      "Somente ontem o técnico informou ao gestor a indisponibilidade.",
-      "O técnico somente informou ontem ao gestor a indisponibilidade.",
-      "O técnico informou somente ao gestor ontem a indisponibilidade.",
-      "O técnico informou ontem ao gestor somente a indisponibilidade.",
-      "O técnico informou ontem somente ao gestor a indisponibilidade."
+      "O técnico afirmou, \"que não reiniciará o servidor antes da cópia\".",
+      "O técnico afirmou: que não reiniciaria o servidor antes da cópia.",
+      "O técnico falou que não vai reiniciar o servidor antes da cópia, beleza?",
+      "O técnico afirmou que não reiniciaria o servidor antes da cópia.",
+      "O técnico afirmou que: não reiniciaria, o servidor antes da cópia."
     ],
-    explanation: "Placed before the phrase \"a indisponibilidade\", the adverb focuses on the content reported rather than the agent, time, recipient or action itself."
+    explanation: "In indirect speech, the conjunction \"que\" introduces the clause without a colon or quotation marks; with the reporting verb in the past, the future is appropriately shifted to the conditional form in Portuguese."
   },
   "bruno-massaranduba-2026-difficult-06": {
-    prompt: "In the Portuguese sentence \"Provavelmente, a falha decorreu da atualização\", what meaning does the modaliser \"provavelmente\" convey?",
+    prompt: "Analyse the Portuguese sentence: \"Infelizmente, a desconfiguração talvez tenha tornado o serviço inutilizável.\" Which statement correctly identifies word classes, word formation, and modality?",
     options: [
-      "It turns the hypothesis into an instruction to the reader.",
-      "It indicates absolute certainty and ends the investigation.",
-      "It expresses an assessment of possibility, reducing the speaker's commitment to the conclusion.",
-      "It marks opposition between two causes that have already been proven.",
-      "It refers anaphorically to the noun \"falha\"."
+      "\"Infelizmente\" is an abstract noun; \"talvez\" expresses certainty; \"desconfiguração\" is a verb form; and \"inutilizável\" acts as an adverb.",
+      "\"Desconfiguração\" is a primitive word; \"infelizmente\" and \"talvez\" are adjectives; \"inutilizável\" marks certainty, and the sentence contains no evaluation.",
+      "\"Infelizmente\" is an evaluative adverb; \"talvez\" marks possibility; \"desconfiguração\" is a derived noun; and \"inutilizável\" is an adjective.",
+      "\"Talvez\" is a causal conjunction; \"desconfiguração\" is a derived pronoun; and the prefixes in \"infelizmente\" and \"inutilizável\" indicate repetition.",
+      "\"Infelizmente\" and \"talvez\" are time adverbs linked to \"tenha tornado\", whilst \"inutilizável\" names the process as a noun."
     ],
-    explanation: "The modal adverb presents the cause as probable rather than as a conclusively proven fact."
+    explanation: "The adverbs mark evaluation and possibility respectively. \"Desconfiguração\" is formed by derivation and names a process; \"inutilizável\" attributes a property to the service."
   },
   "bruno-massaranduba-2026-difficult-07": {
-    prompt: "Select the Portuguese option that fully complies with the standard language in its government and use of the grave accent indicating crasis.",
+    prompt: "A general dictionary records two senses of the Portuguese word \"nuvem\": the meteorological sense and, under the domain label \"Informática\", remote computing resources. Consider: I. The label delimits a specialist use. II. Context resolves the polysemy in \"Os arquivos serão mantidos na nuvem\". III. In that notice, replacing \"nuvem\" with \"Internet\" would necessarily preserve the same precision. Which statements are correct?",
     options: [
-      "O técnico informou à todos que chegaria à partir das oito horas.",
-      "A equipe preferiu restaurar o serviço do que recorrer à uma solução provisória.",
-      "O gestor referiu-se àquela ocorrência e entregou o relatório à servidora responsável.",
-      "Os analistas assistiram à um treinamento e obedeceram as orientações.",
-      "A manutenção visava à reduzir falhas e implicava em novas despesas."
+      "I only.",
+      "III only.",
+      "I and II only.",
+      "II and III only.",
+      "I, II, and III."
     ],
-    explanation: "Crasis occurs in \"àquela\" and \"à servidora\" because the required preposition merges with the article or the beginning of the demonstrative; the other options contain errors of government or crasis."
+    explanation: "The label marks the technical domain, and context selects that polysemous sense. \"Internet\" and \"nuvem\" are not necessarily equivalent: cloud services use networks but designate a particular resource architecture."
   },
   "bruno-massaranduba-2026-difficult-08": {
-    prompt: "A notice states: \"As established by the Security Policy, 'credentials are personal and non-transferable'; password sharing will therefore be blocked.\" What is the quotation's main textual function?",
-    options: [
-      "To create lexical ambiguity in order to conceal the applicable rule.",
-      "To turn the notice into a fictional literary text.",
-      "To establish intertextuality and provide a normative basis for the announced measure.",
-      "To eliminate cohesion by introducing an external voice into the statement.",
-      "To replace argumentation with an exclusively narrative sequence."
-    ],
-    explanation: "The explicit reference to another text creates an intertextual relationship and functions as an argument from normative authority to justify the measure."
-  },
-  "bruno-massaranduba-2026-difficult-09": {
-    prompt: "Four technicians configure 72 workstations in six hours, with constant and equal productivity. At another site, five technicians will work for four hours, but an operational constraint will reduce each technician's productivity by 20%. How many workstations will they configure?",
-    options: [
-      "36 workstations.",
-      "48 workstations.",
-      "45 workstations.",
-      "40 workstations.",
-      "60 workstations."
-    ],
-    explanation: "The original productivity is 72 ÷ (4 × 6) = 3 workstations per technician-hour. Therefore, 5 × 4 × 3 × 0.8 = 48."
-  },
-  "bruno-massaranduba-2026-difficult-10": {
-    prompt: "A budget of R$10,000.00 is adjusted by compound interest of 2% per month for three months, with no deposits or withdrawals. What will its value be at the end of the period?",
-    options: [
-      "R$10,612.08.",
-      "R$10,600.00.",
-      "R$10,620.00.",
-      "R$10,800.00.",
-      "R$11,200.00."
-    ],
-    explanation: "With compound interest, the value is 10,000 × 1.02³ = 10,612.08."
-  },
-  "bruno-massaranduba-2026-difficult-11": {
-    prompt: "A laboratory has 18 devices consisting of servers and workstations. Each server consumes four energy units and each workstation consumes two units. Total consumption is 52 units. How many servers and workstations are there?",
-    options: [
-      "6 servers and 12 workstations.",
-      "7 servers and 11 workstations.",
-      "9 servers and 9 workstations.",
-      "8 servers and 10 workstations.",
-      "10 servers and 8 workstations."
-    ],
-    explanation: "From the system x + y = 18 and 4x + 2y = 52, we obtain 2x + y = 26; subtracting the first equation gives x = 8 and y = 10."
-  },
-  "bruno-massaranduba-2026-difficult-12": {
-    prompt: "A box contains six working modules and four defective ones. Two modules are selected at random without replacement. What is the probability that exactly one is defective?",
-    options: [
-      "2/15.",
-      "4/15.",
-      "7/15.",
-      "1/2.",
-      "8/15."
-    ],
-    explanation: "There are 6 × 4 = 24 pairs containing one module of each type and C(10,2) = 45 possible pairs; therefore, 24/45 = 8/15."
-  },
-  "bruno-massaranduba-2026-difficult-13": {
-    prompt: "From seven distinct servers, a team will choose three for a cluster and designate exactly one of those selected as the primary node. How many different configurations are possible?",
-    options: [
-      "35.",
-      "70.",
-      "105.",
-      "140.",
-      "210."
-    ],
-    explanation: "Three servers can be selected from seven in C(7,3) = 35 ways, after which one of the three is made primary: 35 × 3 = 105."
-  },
-  "bruno-massaranduba-2026-difficult-14": {
-    prompt: "On a Cartesian plan, two network points are at A(2, 3) and B(8, 11). Which option gives, respectively, the distance between A and B and the midpoint of line segment AB?",
-    options: [
-      "8 and (4, 6).",
-      "10 and (5, 7).",
-      "10 and (6, 8).",
-      "12 and (5, 7).",
-      "14 and (10, 14)."
-    ],
-    explanation: "The distance is √[(8 - 2)² + (11 - 3)²] = √100 = 10, and the midpoint is ((2 + 8)/2, (3 + 11)/2) = (5, 7)."
-  },
-  "bruno-massaranduba-2026-difficult-15": {
-    prompt: "The resolution times for six service requests, in minutes, were 12, 15, 15, 18, 20 and 90. Which analysis is correct?",
-    options: [
-      "The mean is 16.5 and represents the set better than the median.",
-      "The median is 28.3 and is not affected by the value 90.",
-      "The mean and median are equal because there are six observations.",
-      "The mean is approximately 28.3 and the median is 16.5; the median better describes the typical value because 90 is an extreme value.",
-      "Removing the value 90 would increase both the mean and the median."
-    ],
-    explanation: "The mean is 170/6 ≈ 28.3, while the median is (15 + 18)/2 = 16.5. The value 90 substantially increases the mean."
-  },
-  "bruno-massaranduba-2026-difficult-16": {
-    prompt: "Consider the statement: \"Every server has a backup, and at least one backup has been tested.\" What is the logical negation of this statement?",
-    options: [
-      "No server has a backup, and no backup has been tested.",
-      "Every server does not have a backup, or every backup has been tested.",
-      "At least one server has no backup, or no backup has been tested.",
-      "Exactly one server has a backup, and one backup has not been tested.",
-      "Some servers have a backup, but every backup has been tested."
-    ],
-    explanation: "The negation of a conjunction is the disjunction of the negations: not every server having a backup means that at least one lacks one; negating \"at least one has been tested\" means \"none has been tested\"."
-  },
-  "bruno-massaranduba-2026-difficult-17": {
-    prompt: "Consider the statements about Massaranduba's historical and economic development: I. Indigenous peoples were present in the region before European groups arrived. II. German, Italian, Polish and Luso-Brazilian immigrants settled in the region around 1870. III. Irrigated rice cultivation became a defining feature of the municipality alongside diversified industrial activity. According to the municipality's official history, which statements are correct?",
+    prompt: "Consider the Portuguese sentences: I. \"À medida que avançava, o técnico pôde concluir que o defeito não se devia à instalação.\" II. \"Daqui a duas horas, a equipe retornará à sala e entregará o relatório àquela gestora.\" III. \"Os itens permanecem à disposição de quem vier a revisá-los.\" Which are correct in spelling, accentuation, and use of the grave accent indicating crasis?",
     options: [
       "I only.",
       "II only.",
-      "I and II only.",
-      "I, II and III.",
+      "I, II, and III.",
+      "I and III only.",
       "II and III only."
     ],
-    explanation: "All three statements accord with the official history: Indigenous peoples already occupied the region, the listed immigrant groups arrived around 1870, and the economy came to combine the prominence of irrigated rice with diversified industrial activities."
+    explanation: "All three are correct: crasis occurs in \"à medida que\", in the constructions with \"instalação\" and \"sala\", before \"aquela\", and in \"à disposição\"; it does not occur in \"daqui a\" or before an infinitive."
+  },
+  "bruno-massaranduba-2026-difficult-09": {
+    prompt: "A 2.4 TB storage device, using decimal units, was 5/8 full. A total of 180 GB was removed and then 135 GB was copied to it. What is the final usage in gigabytes and as an irreducible fraction of total capacity?",
+    options: [
+      "1,365 GB and 91/160.",
+      "1,455 GB and 97/160.",
+      "1,455 GB and 97/100.",
+      "1,635 GB and 109/160.",
+      "1,275 GB and 17/32."
+    ],
+    explanation: "As 2.4 TB is 2,400 GB, initial usage was 2,400 × 5/8 = 1,500 GB. After the operations: 1,500 − 180 + 135 = 1,455 GB; 1,455/2,400 reduces to 97/160."
+  },
+  "bruno-massaranduba-2026-difficult-10": {
+    prompt: "Six technicians configure 180 computers in 5 hours with equal and constant productivity. A new procedure reduces each technician's productivity by 20%. How many technicians are required to configure 288 computers in 6 hours under the new procedure?",
+    options: [
+      "10 technicians.",
+      "8 technicians.",
+      "9 technicians.",
+      "12 technicians.",
+      "15 technicians."
+    ],
+    explanation: "Original productivity is 180 ÷ (6 × 5) = 6 computers per technician-hour. After a 20% reduction, it is 4.8. Therefore, 288 ÷ (6 × 4.8) = 10 technicians."
+  },
+  "bruno-massaranduba-2026-difficult-11": {
+    prompt: "A reserve of R$10,000.00 earns compound interest of 10% per period for three periods. At the end, three expenses forming the arithmetic progression R$200.00, R$300.00, and R$400.00 are withdrawn. What balance remains?",
+    options: [
+      "R$12,100.00.",
+      "R$12,310.00.",
+      "R$13,410.00.",
+      "R$12,410.00.",
+      "R$14,210.00."
+    ],
+    explanation: "The amount is 10,000 × 1.10³ = R$13,310.00. The progression totals R$900.00, leaving R$12,410.00."
+  },
+  "bruno-massaranduba-2026-difficult-12": {
+    prompt: "Over the real numbers, solve log₂(x − 1) + log₂(x + 1) = 3.",
+    options: [
+      "x = −3.",
+      "x = −1.",
+      "x = 1.",
+      "x = √8.",
+      "x = 3."
+    ],
+    explanation: "The domain requires x > 1. By the logarithm product rule, log₂[(x − 1)(x + 1)] = 3, so x² − 1 = 8 and x = ±3. Only x = 3 is in the domain."
+  },
+  "bruno-massaranduba-2026-difficult-13": {
+    prompt: "A table relates concurrent users x to latency f(x): (20, 35 ms), (50, 50 ms), and (80, 65 ms). Assuming the graph is a straight line, which function models the data and what is the greatest number of users that keeps latency at no more than 60 ms?",
+    options: [
+      "f(x) = x + 15; no more than 45 users.",
+      "f(x) = 0.5x + 15; no more than 90 users.",
+      "f(x) = 0.5x + 25; no more than 70 users.",
+      "f(x) = 2x − 5; no more than 32 users.",
+      "f(x) = 25x + 0.5; no more than 2 users."
+    ],
+    explanation: "The change is 15 ms for 30 users, giving a slope of 0.5. Using (20, 35) gives an intercept of 25. Solving 0.5x + 25 ≤ 60 gives x ≤ 70."
+  },
+  "bruno-massaranduba-2026-difficult-14": {
+    prompt: "Consider the parametric system (k − 1)x + 2y = 4 and 2x + 4y = 8. Which classification correctly relates parameter k to the number of solutions?",
+    options: [
+      "For k = 2, the system is inconsistent; for k ≠ 2, it has infinitely many solutions.",
+      "For k = 2, it has infinitely many solutions; for k ≠ 2, it has a unique solution.",
+      "For every real k, the system has exactly one solution.",
+      "For k = 1, it has infinitely many solutions; for every other value, it is inconsistent.",
+      "For k = 2, it has a unique solution; for k ≠ 2, it is inconsistent."
+    ],
+    explanation: "The determinant of [[k − 1, 2], [2, 4]] is 4(k − 2). For k ≠ 2, it is non-zero and there is a unique solution. For k = 2, the first equation is half the second, giving infinitely many solutions."
+  },
+  "bruno-massaranduba-2026-difficult-15": {
+    prompt: "A cable will run in a straight line between opposite corners of an 8 m by 6 m room and must also cover a vertical difference of 2.4 m. Allowing for the three-dimensional route and adding 5% slack, approximately what minimum length should be purchased?",
+    options: [
+      "10.3 m.",
+      "10.5 m.",
+      "10.6 m.",
+      "10.8 m.",
+      "12.4 m."
+    ],
+    explanation: "The spatial diagonal is √(8² + 6² + 2.4²) = √105.76 ≈ 10.284 m. Including 5% slack gives 10.284 × 1.05 ≈ 10.8 m."
+  },
+  "bruno-massaranduba-2026-difficult-16": {
+    prompt: "Of eight distinct devices, three are servers and five are workstations. Three devices are selected at random without replacement. What is the probability that the selection contains exactly two servers and one workstation?",
+    options: [
+      "12/56.",
+      "5/28.",
+      "15/56.",
+      "5/14.",
+      "3/8."
+    ],
+    explanation: "There are C(8,3) = 56 possible selections. The favourable selections are C(3,2) × C(5,1) = 3 × 5 = 15, so the probability is 15/56."
+  },
+  "bruno-massaranduba-2026-difficult-17": {
+    prompt: "An exhibition about Massaranduba presents, in order, evidence of Indigenous presence, documents recording the arrival of German, Italian, Polish, and Luso-Brazilian groups around 1870, and later records of the consolidation of irrigated rice cultivation. Which interpretation respects the evidence and avoids anachronism?",
+    options: [
+      "The Indigenous evidence can be dated only from the 1870 documents and therefore does not indicate a presence before the recorded European settlement.",
+      "The arrival of different groups in the nineteenth century explains Indigenous presence as a direct result of immigration and begins all regional occupation.",
+      "The later prominence of rice allows the same activity to be assigned to every group from arrival, although the exhibition separates the periods.",
+      "Local history combines earlier Indigenous presence, later settlement by different groups, and an economic transformation in which irrigated rice became prominent.",
+      "The consolidation of rice ended all other economic activities, a conclusion proved by the order of the records without requiring further evidence."
+    ],
+    explanation: "This interpretation preserves the documented sequence and distinguishes earlier presence, plural settlement, and later economic development without reversing causes or excluding other activities."
   },
   "bruno-massaranduba-2026-difficult-18": {
-    prompt: "Analyse the statements about the Itapocu River Basin: I. Its approximate area is 3,160 km² and it belongs to Hydrographic Region RH06. II. Massaranduba's territory lies partly within this basin. III. The most distant source is that of the Rio Vermelho in São Bento do Sul, and the Itapocu reaches the sea in Barra Velha. Which statements are correct?",
+    prompt: "Massaranduba is part of the Itapocu Valley, includes areas within the Itapocu River basin, and combines the importance of irrigated rice with industrial and service activities. Which territorial diagnosis properly relates geography and the economy?",
     options: [
-      "I only.",
-      "I, II and III.",
-      "II and III only.",
-      "I and III only.",
-      "III only."
+      "Diversification reduces dependence on rice, so water management can be restricted to irrigated holdings without considering towns or roads.",
+      "Water and land management must consider the basin: irrigation, urban areas, industry, roads, and municipalities share upstream and downstream risks and resources.",
+      "Because irrigation depends on the basin, managing abstraction within the municipality is sufficient, as upstream and downstream uses do not affect supply or floods.",
+      "Intermunicipal coordination should be limited to industry because farming, urban drainage, and roads produce effects only within each locality.",
+      "Industrial growth replaced the economic role of rural areas, so drought affects farming but has no consequences for logistics or services."
     ],
-    explanation: "All three statements are correct: the basin covers approximately 3,160 km², belongs to RH06, includes part of Massaranduba, and extends from the most distant source of the Rio Vermelho in São Bento do Sul to the river mouth in Barra Velha."
+    explanation: "Water, drainage, land occupation, and economic circulation cross municipal boundaries. Basin analysis connects rural production, urban activities, infrastructure, and risk prevention."
   },
   "bruno-massaranduba-2026-difficult-19": {
-    prompt: "A report highlights the high share of renewable sources in Brazil's electricity mix and proposes expanding wind and solar generation. Which assessment correctly interprets this situation without confusing the electricity mix with the wider energy mix?",
+    prompt: "A public dashboard reports growth in formal employment, stable school attendance, and a fall in the coverage of a preventive health measure. Which conclusion supports a responsible decision about this social and economic situation?",
     options: [
-      "The renewable share of electricity generation demonstrates by itself that every use of energy in transport, industry and homes has already been decarbonised.",
-      "Because wind and solar are renewable, expanding them requires no transmission planning, operational flexibility or assessment of projects' territorial effects.",
-      "The electricity mix concerns the sources used to generate electricity, whilst the energy mix also covers other energy uses; expanding renewables should be accompanied by grids, storage or other forms of flexibility, resilience and socio-environmental assessment.",
-      "The high renewable share makes source diversification unnecessary because every electricity source offers continuous availability and the same generation profile.",
-      "The electricity mix and energy mix are equivalent indicators; their only difference is the statistical unit used."
+      "The timing permits the conclusion that employment caused the preventive decline; because attendance did not change, education needs no further investigation.",
+      "Stable attendance is sufficient to prove learning, so assessment resources can be transferred entirely to preventive health services.",
+      "The indicators measure different dimensions; data must be disaggregated, causes investigated, and the preventive decline addressed without inferring causality or abandoning education monitoring.",
+      "The employment gain offsets the preventive decline and permits reduced health measures provided that school attendance remains unchanged in the dashboard.",
+      "Differences between dimensions make the dashboard methodologically invalid; it should be discarded without checking series, segments, definitions, or responsible sources."
     ],
-    explanation: "The electricity mix is a subset of the energy mix. A robust transition combines renewable expansion with transmission, flexibility, storage where appropriate, adaptation to extreme events, and assessment of social and environmental effects."
+    explanation: "Temporal correlation does not prove causation. Employment, attendance, and prevention measure different dimensions and require complementary data, distributional analysis, and specific responses."
   },
   "bruno-massaranduba-2026-difficult-20": {
-    prompt: "After periods of heavy rainfall, municipalities in the same river basin record urban flooding, upstream erosion and a rapid rise in the river downstream. Which plan offers the most consistent public response for reducing risk without merely transferring it between places?",
+    prompt: "A consortium intends to expand solar generation and battery storage, but some minerals and components come from concentrated international supply chains. Which strategy integrates technology, energy, geopolitics, sustainability, and ecology?",
     options: [
-      "Prioritise straightening the channel in the downstream municipality, leaving land use and increased upstream flow to a separate phase.",
-      "Maintain separate municipal alerts with their own criteria so that hydrological data from different places are not combined.",
-      "Expand only urban local drainage, addressing erosion, flood areas and civil-defence preparedness in later programmes.",
-      "Suspend new planning permissions only for the weeks following each event and resume the previous approach when the river level returns to normal.",
-      "Share data and alert thresholds, map risk at basin level, and integrate land use, upstream conservation, drainage, technically assessed works and intermunicipal civil-defence plans."
+      "Prioritise the lowest initial cost and the manufacturer's warranty, leaving mineral origin, maintenance, and disposal for assessment only after purchase.",
+      "Suspend batteries and retain solar generation alone because removing storage would eliminate mineral impacts without creating operational risks for the grid.",
+      "Concentrate purchases with one international supplier under a long contract, treating scale and price as substitutes for logistical diversification.",
+      "Compare efficiency and operational emissions but exclude mining, manufacture, transport, and end of life because they occur outside the consuming territory.",
+      "Plan the grid and storage, diversify suppliers, assess the life cycle, require traceability and recycling, and mitigate impacts on water, soil, and biodiversity."
     ],
-    explanation: "Integrated management considers how upstream interventions change flows and downstream effects. Shared monitoring, land-use planning, conservation, drainage, evidence-based works and co-ordinated civil defence form a complementary strategy."
+    explanation: "The energy transition requires technical reliability and analysis of the whole supply chain. Diversification, circularity, traceability, and environmental protection reduce geopolitical and socio-environmental risks."
   },
   "bruno-massaranduba-2026-difficult-21": {
-    prompt: "After a new memory module is installed, a computer powers on, displays no video and emits a beep sequence that the manufacturer documents as a RAM fault. What is the most appropriate initial procedure?",
+    prompt: "A USB scanner powers on normally, but Windows identifies it as an unknown device. The same cable and port recognise another peripheral, and the scanning application reports that no source is available. Which initial diagnosis correctly integrates hardware, peripheral, and software evidence?",
     options: [
-      "Reset CMOS and update the motherboard firmware before physically checking the newly installed module.",
-      "Replace the graphics card first and leave the memory modules in their current configuration during the test.",
-      "Switch off and disconnect the device, apply electrostatic-discharge protection, reseat the modules, and test them individually or with a compatible known-good module.",
-      "Reinstall the operating system to exclude a driver fault before opening the case.",
-      "Replace the power supply on the basis of the missing video alone, without isolating the component identified by the beep code."
+      "Enumeration as an unknown device confirms an internal fault, so the scanner should be replaced before available identifiers or drivers are checked.",
+      "Because another peripheral works, the cable and port are validated for every USB class; only the scanning application should be reinstalled.",
+      "The port and cable show signs of working; the compatible driver should be checked and installed, then the scanner selected and tested in the application.",
+      "The scanner should be configured as an output device and the print service reinstalled because scanning sends data to the computer.",
+      "The first step is to recreate the user profile and application cache even though Windows has not yet identified the device correctly."
     ],
-    explanation: "The fault occurs during the POST, before the operating system loads. After removing power and controlling electrostatic discharge, reseating and testing the RAM in isolation checks the component identified by the beep code first."
+    explanation: "The tests reduce the likelihood of a cable or port fault. Generic identification and the missing source in the application point first to a driver or software integration issue."
   },
   "bruno-massaranduba-2026-difficult-22": {
-    prompt: "A server uses RAID 1. A user accidentally deletes a folder, and the deletion is replicated to both disks. Which conclusion and measure are correct?",
+    prompt: "Analyse the statements about computer architecture. I. The address bus identifies memory or device locations, whilst the data bus carries values. II. RAM is volatile, and cache levels close to the processor reduce average access time for frequently used data. III. Every physically x16 PCI Express connector necessarily provides sixteen electrical lanes. Which statements are correct?",
     options: [
-      "RAID 1 replaces every form of backup; simply restart the server.",
-      "Mirroring improves tolerance of disk failure but does not protect against logical deletion; the folder must be restored from a tested, versioned backup.",
-      "The deletion proves that both disks failed physically at the same time.",
-      "RAID 1 prevents changes from being written to the second disk.",
-      "The only possible preventive measure is to remove read permissions permanently."
+      "I only.",
+      "I and II only.",
+      "II and III only.",
+      "I and III only.",
+      "I, II, and III."
     ],
-    explanation: "RAID 1 replicates the state of the data, including deletions. Independent, versioned and restorable backups cover this type of logical loss."
+    explanation: "I and II correctly describe functions and properties. A slot with an x16 physical form may be electrically wired with fewer lanes, so statement III is absolute and false."
   },
   "bruno-massaranduba-2026-difficult-23": {
-    prompt: "A UPS is rated at 1,000 VA with an output power factor of 0.7, so it supports up to 700 W. The connected equipment consumes 760 W. Which assessment is correct?",
+    prompt: "After a new NVMe SSD is installed, UEFI firmware lists it with the correct capacity, but Windows 10 does not show it in File Explorer. Disk Management shows the device as \"Not initialised\" and all its space as \"Unallocated\". Assuming there is no data to preserve, what action is appropriate?",
     options: [
-      "The effective load is 532 W because the equipment's 760 W must be multiplied by 0.7, leaving 168 W of headroom.",
-      "The load exceeds the watt capacity; the load must be reduced or a UPS with suitable active power and runtime must be specified.",
-      "The excess is 60 VA and can be offset solely with higher-capacity batteries, without changing the UPS power rating.",
-      "The available active power is approximately 1,428 W, calculated as 1,000 ÷ 0.7, so there is ample headroom.",
-      "The load necessarily equals 760 VA and leaves 240 VA of headroom because watts and volt-amperes are interchangeable in this calculation."
+      "Update UEFI before preparing the disk, although both firmware and Windows already detect the device and its capacity.",
+      "Initialise the disk, create a volume, format it with an appropriate file system, and assign a drive letter.",
+      "Reinstall only the controller driver and wait for unallocated space to turn into a volume automatically.",
+      "Enable RAID, convert the disk, and create an array despite there being no second device or redundancy requirement.",
+      "Reflash the SSD firmware before checking its partition table even though the hardware is enumerated correctly."
     ],
-    explanation: "The active power capacity is 1,000 × 0.7 = 700 W. A 760 W load exceeds this limit even though its number is lower than 1,000 VA."
+    explanation: "UEFI and Disk Management already detect the hardware. The storage must still be prepared logically so that a file system can be mounted and shown in File Explorer."
   },
   "bruno-massaranduba-2026-difficult-24": {
-    prompt: "Devices in VLAN 10 communicate normally with the router. Devices in VLAN 20 communicate with one another on the switch but cannot reach the router. The uplink carries only VLAN 10. What is the most likely correction?",
+    prompt: "A workstation connected to a UPS shuts down only during CPU-intensive tests. The UPS shows a 35% load and stable output readings, whilst the CPU reaches 98 °C and the processor fan reports 0 RPM. Which procedure is best supported by the evidence?",
     options: [
-      "Turn every user port into a passive hub.",
-      "Remove the IP addresses from devices in VLAN 20.",
-      "Configure the uplink as a trunk allowing VLAN 20 and ensure that the corresponding layer 3 interface exists on the router or layer 3 switch.",
-      "Change DNS because it defines which VLANs cross the link.",
-      "Disable Ethernet on VLAN 10."
+      "Replace the UPS first because its 35% average reading might conceal peaks, without investigating the stopped fan or the 98 °C reading.",
+      "Update firmware and raise the thermal limit before opening the case, keeping the load test running to see whether protection stops operating.",
+      "Power down the workstation; inspect fan power and mounting, the heat sink, airflow, and thermal compound; correct faults and repeat a monitored test.",
+      "Replace only the thermal compound and repeat the load test even if the fan still reports 0 RPM and its power has not been checked.",
+      "Replace the internal power supply based on the shutdown without testing cooling because stable UPS output does not report CPU temperature."
     ],
-    explanation: "Without carrying VLAN 20 to the routing function, frames from that VLAN cannot reach the gateway. The trunk and layer 3 interface provide the required path."
+    explanation: "The evidence weighs against UPS overload and points to a cooling fault. Thermal protection must not be bypassed; ventilation and heat dissipation must be corrected with the equipment powered down."
   },
   "bruno-massaranduba-2026-difficult-25": {
-    prompt: "The 192.168.10.64/27 subnet will be used by a department. Which option correctly gives the usable host range and broadcast address?",
+    prompt: "In Windows 10, an NTFS folder grants Modify to the Technicians group. The same user also belongs to the Temporary group, which has an explicit Deny Write permission on that folder. No other rule applies. What is the effective access?",
     options: [
-      "Hosts 192.168.10.64 to 192.168.10.95; broadcast 192.168.10.96.",
-      "Hosts 192.168.10.65 to 192.168.10.94; broadcast 192.168.10.95.",
-      "Hosts 192.168.10.66 to 192.168.10.96; broadcast 192.168.10.64.",
-      "Hosts 192.168.10.1 to 192.168.10.30; broadcast 192.168.10.31.",
-      "Hosts 192.168.10.65 to 192.168.10.126; broadcast 192.168.10.127."
+      "Combine the groups' permissions and allow writing because Modify includes that right and was granted through a technical group.",
+      "The user can read the permitted content but cannot write because an applicable explicit denial takes precedence for that right.",
+      "Apply the denial only when it is assigned directly to the user because a denial inherited through group membership would not enter the effective-access calculation.",
+      "Select the rule belonging to the group listed first in the ACL and ignore the user's other memberships when checking the write right.",
+      "Deny read and execute as well because a write denial inherited through one group would automatically remove every other granted right."
     ],
-    explanation: "A /27 mask creates blocks of 32 addresses. The block beginning at .64 ends at .95; .64 is the network, .95 is the broadcast address and .65 to .94 are hosts."
+    explanation: "Effective permissions combine applicable grants, but an explicit denial takes precedence for the denied right. It does not automatically remove distinct rights such as reading."
   },
   "bruno-massaranduba-2026-difficult-26": {
-    prompt: "A workstation communicates with peers on its own subnet but not with the gateway. A capture shows repeated ARP requests for the gateway's IP address with no reply. What does this evidence primarily indicate?",
+    prompt: "A Microsoft Word manual needs numbered chapters, different headers by section, figure captions, cross-references, and an updateable table of contents. After pages are inserted, all numbering must remain coherent. Which workflow meets the complete requirement?",
     options: [
-      "A DNS resolution fault, because ARP translates domain names.",
-      "A problem before IP routing, involving layer 2 reachability to the gateway, the VLAN or the availability of the gateway interface.",
-      "A mandatory fault in the email application.",
-      "A proven defect in the workstation's disk.",
-      "Normal operation, because gateways never respond to ARP."
+      "Use direct formatting for headings, page breaks between chapters, and typed text for captions and references, updating numbers manually at the end.",
+      "Link a multilevel list to heading styles, use section breaks, unlink each header from the previous section, insert captions and cross-references as fields, and update all fields and the table of contents.",
+      "Apply heading styles and generate the table of contents, but keep one section, insert captions without automatic labels, and type references and numbers; then regenerate only the contents after each change.",
+      "Separate chapters with section breaks, but format headings as body text, lock fields, and use independent text boxes for every reference.",
+      "Create a table to imitate the contents page, use footnotes as captions, and restart figure numbering whenever a page is inserted."
     ],
-    explanation: "Without resolving the gateway's MAC address through ARP, the workstation cannot deliver frames to it. Investigation should begin in the layer 2 domain and at the gateway interface."
+    explanation: "Styles linked to the list structure and number chapters; a break creates sections, and turning off Link to Previous allows different headers. Captions and cross-references use fields, whose update propagates changes in text, order, and pagination."
   },
   "bruno-massaranduba-2026-difficult-27": {
-    prompt: "A routing table contains 10.20.0.0/16 via gateway A, 10.20.30.0/24 via gateway B, and a default route via gateway C. Ignoring metrics between routes with the same prefix length, through which gateway will a packet for 10.20.30.45 be forwarded?",
+    prompt: "In Brazilian Portuguese Excel, column A contains the department, B the status, and C the cost. Which formula sums costs for rows where the department is \"TI\" and the status is \"Ativo\"?",
     options: [
-      "Through gateway A because the /16 route was presented before the /24 route.",
-      "Through gateway C because the default route is examined before specific routes.",
-      "Through gateways A and B with load balancing because both networks contain the destination.",
-      "Through gateway B because the /24 prefix is the most specific match for the destination.",
-      "Through no gateway because 10.20.30.45 is a host address and does not appear literally in the table."
+      "=SOMASE(A2:A100;\"TI\";B2:B100;\"Ativo\";C2:C100)",
+      "=SOMA(A2:A100=\"TI\";B2:B100=\"Ativo\";C2:C100)",
+      "=CONT.SES(A2:A100;\"TI\";B2:B100;\"Ativo\";C2:C100)",
+      "=SOMASES(C2:C100;A2:A100;\"TI\";B2:B100;\"Ativo\")",
+      "=SOMASES(A2:A100;C2:C100;\"TI\";B2:B100;\"Ativo\")"
     ],
-    explanation: "The /16 and /24 routes both match the address, but the router selects the longest-prefix match. Because /24 is more specific than /16, the packet follows gateway B; the default route would be used only if there were no more specific match."
+    explanation: "SOMASES takes the range to sum first, followed by range-and-criterion pairs. It therefore sums C where A is \"TI\" and B is \"Ativo\"."
   },
   "bruno-massaranduba-2026-difficult-28": {
-    prompt: "A VoIP call is established by the signalling protocol, but there is no audio in either direction. In the SDP, each endpoint announces a private address that the other network cannot reach, and the firewall has no rule for the RTP range. Which action addresses the most likely cause?",
+    prompt: "A team is preparing a restricted presentation. Authors must alter the file, reviewers may only comment, and external guests may only view it. The result will be checked in PowerPoint and distributed through an Outlook invitation. Which workflow configures and proves access correctly?",
     options: [
-      "Increase the video resolution and reduce the available disk space.",
-      "Change only the DNS name of the signalling server.",
-      "Correct NAT handling and the advertised media addresses, allow the required RTP flows in a controlled manner, and validate packets in both directions.",
-      "Force audio to use layer 2 broadcast between separate networks.",
-      "Disable every security control without capturing traffic."
+      "Give all three groups the Editor role, rely on email guidance to restrict reviewers and guests, and validate in PowerPoint only with the owner's account without simulating the other identities.",
+      "Set authors as Commenters, reviewers as Viewers, and guests as Editors, then validate the link only in an author's existing authenticated session.",
+      "Set authors as Editors, reviewers as Commenters, and guests as Viewers; test each role with representative accounts, check the file in PowerPoint, and send the validated link through Outlook.",
+      "Publish the file on the Web without restriction and give only authors the Viewer role; treat anonymous opening as equivalent to testing all three roles.",
+      "Keep the file private to its owner, attach copies in Outlook, and test appearance in a browser without verifying that commenting and editing are actually blocked."
     ],
-    explanation: "Signalling can complete while the RTP media stream fails. Advertised private addresses and a blocked media range point to NAT, SDP and firewall handling, which must be corrected and validated."
+    explanation: "The roles apply the required least privilege. Tests with representative identities prove actual behaviour, whilst PowerPoint, Outlook, and the browser validate content, distribution, and access."
   },
   "bruno-massaranduba-2026-difficult-29": {
-    prompt: "A 2.4 GHz Wi-Fi network has several nearby access points, all on the same channel and at maximum power. Analysis shows many retransmissions even though the signal is strong. Which intervention is most appropriate?",
+    prompt: "There is an intact full backup from Sunday and incremental backups from Monday, Tuesday, and Wednesday. Tuesday's incremental is corrupt; the other files are intact, and there is no other copy of Tuesday's changes. What is the latest point whose recovery can be guaranteed by the available chain?",
     options: [
-      "Increase the power of every access point further.",
-      "Disable authentication to reduce management frames.",
-      "Carry out a spectrum survey, plan non-overlapping channels and power levels, retain appropriate security, and validate coverage and roaming.",
-      "Configure a different SSID for every user.",
-      "Replace IPv4 addresses with DNS names without measuring the radio environment."
+      "Sunday, because corruption in one incremental also invalidates all earlier incrementals in the same chain.",
+      "Wednesday, by applying only Wednesday's incremental to the full backup because it contains every change since Sunday.",
+      "Monday, by restoring Sunday's full backup and Monday's incremental; Tuesday's corruption prevents guaranteed later states.",
+      "Wednesday, by applying Monday and Wednesday in sequence as though each incremental were cumulative from the full backup and automatically reconstructed the missing file.",
+      "Tuesday, because the backup catalogue can reconstruct corrupt blocks even when there is no other copy of the data."
     ],
-    explanation: "A strong signal does not eliminate contention and co-channel interference. Measurement-based channel and power planning reduces overlap and retransmissions."
+    explanation: "Each incremental depends on the state produced by its predecessor. The full backup plus Monday's incremental form an intact chain; without valid Tuesday changes, neither Tuesday nor Wednesday is guaranteed."
   },
   "bruno-massaranduba-2026-difficult-30": {
-    prompt: "Clients on a new VLAN receive 169.254.x.x addresses. The DHCP server works on another VLAN, and existing VLANs receive addresses normally. The new routing interface has no DHCP relay. Which correction fits the diagnosis?",
+    prompt: "After an attachment is opened, a workstation runs an unknown process, starts unusual external connections, and tries to read saved credentials. Which initial response reduces risk without destroying useful evidence?",
     options: [
-      "Create a DNS record for each client before connecting its cable.",
-      "Configure DHCP relay on the new VLAN interface and confirm that the server has a corresponding scope.",
-      "Disable routing between every VLAN.",
-      "Set the 169.254.x.x address as the default gateway.",
-      "Change only the Windows workgroup name."
+      "Keep the workstation connected to capture more traffic and perform ordinary tasks, postponing containment until the threat family is identified with certainty.",
+      "Isolate the workstation from the network, preserve logs, invoke the response procedure, analyse it with updated safeguards, and change exposed credentials from a trusted device.",
+      "Restart immediately in safe mode and remove the process before recording connections, processes, times, and other volatile evidence.",
+      "Change credentials on the suspected workstation itself and keep its network session active, using the password change as the sole containment measure.",
+      "Terminate the process and delete the attachment without isolating the workstation, retaining only the antivirus alert and omitting persistence analysis."
     ],
-    explanation: "Initial DHCP messages are broadcasts and do not cross routers without a relay. The scope must also provide valid parameters for the new network."
+    explanation: "The behaviour is consistent with malware. Isolation limits communication and propagation, whilst preserved logs support analysis. Containment should follow the response process, and credentials should be changed from a trusted environment."
   },
   "bruno-massaranduba-2026-difficult-31": {
-    prompt: "An IDS raises a scanning alert from an administration workstation during an authorised inventory window. Before classifying the event as an attack, which approach is most robust?",
+    prompt: "An extended-star network has two switches connected by two redundant Ethernet links. After the second, non-aggregated link is enabled, a broadcast storm and MAC-table instability appear. Which action preserves redundancy without retaining the Layer 2 loop?",
     options: [
-      "Close the alert as a false positive solely because its time matches the authorised window, without checking the asset or observed pattern.",
-      "Block the workstation permanently before checking the authorisation, retaining only the packet that generated the alert.",
-      "Correlate the time, source asset, change authorisation, traffic pattern and other logs; document the decision and adjust the rule only if the evidence justifies doing so.",
-      "Disable the scanning signature globally during every future window, regardless of the authorised networks and assets.",
-      "Increase the rule threshold on the basis of this event alone and retain the original classification without recording the rationale."
+      "Disable STP and keep both links forwarding, using storm control and a default route to limit symptoms without removing the logical cycle.",
+      "Permanently removing one link stops the loop but eliminates the requested redundant contingency path between the switches.",
+      "Enable and verify STP so that one redundant path is logically blocked and released if the active link fails.",
+      "Place the management addresses in different subnets whilst leaving both links in the same layer 2 domain without a loop-prevention mechanism.",
+      "Reduce host TTL values and apply an IP ACL to the ports even though Ethernet broadcast storms do not depend on these layer 3 fields."
     ],
-    explanation: "Contextual correlation distinguishes authorised activity from malicious behaviour and allows detection to be calibrated without removing evidence or coverage."
+    explanation: "STP calculates a loop-free logical tree whilst keeping a redundant link blocked. Following a failure, the topology can converge and release the alternate path without a broadcast storm."
   },
   "bruno-massaranduba-2026-difficult-32": {
-    prompt: "A workstation shows a suspicious process, connections to an unknown destination and lateral access attempts. Which initial sequence preserves the investigation and reduces risk?",
+    prompt: "Two switches in separate buildings will be linked by 180 m of fibre. One end has a 1000BASE-SX transceiver for 850 nm multimode fibre; the other end has not yet been specified. What must be validated to form an interoperable Ethernet link?",
     options: [
-      "Restart the workstation to stop the process and only then collect memory, connections and other volatile evidence.",
-      "Immediately cut power in every situation without assessing whether volatile data must be preserved or following the incident-response procedure.",
-      "Isolate the workstation from the network in a controlled manner, preserve evidence according to procedure, identify the extent, protect credentials from a trusted system, and only then eradicate and recover.",
-      "Change credentials from the suspicious workstation before isolating it so that service access is retained during analysis.",
-      "Immediately rebuild the workstation from a clean image and investigate the extent only if the behaviour reappears."
+      "Validate connector fit and received power; if the modules fit the ports, different standards, wavelengths, and fibre types will negotiate automatically.",
+      "A single-mode 1000BASE-LX transceiver at the other end whilst retaining multimode SX at the first because both operate at 1 Gbit/s.",
+      "At both ends, Ethernet standard, speed, wavelength, fibre type, connectors, optical budget, distance, and switch-port support.",
+      "Only the fibre's nominal distance because optical power, module standard, and port compatibility do not affect negotiation.",
+      "A copper converter at only one end whilst retaining an optical transceiver with no compatible peer at the other end."
     ],
-    explanation: "Containment limits lateral movement; preserving and analysing evidence supports the diagnosis before controlled eradication and recovery."
+    explanation: "A link requires compatible media and optics at both ends. Matching speed or connector alone is insufficient: standard, wavelength, fibre, power, reach, and switch support must align."
   },
   "bruno-massaranduba-2026-difficult-33": {
-    prompt: "In Windows 10, a shared folder grants Full Control in its share permissions. In NTFS, the Support group has an Allow Modify entry, whilst the Temporary Staff group has an explicit Deny Write entry. A user belongs to both groups and accesses the folder over the network. What happens when the user attempts to write a file?",
+    prompt: "In the TCP/IP model, host 192.168.10.20/24 sends a packet to server 203.0.113.50 through gateway 192.168.10.1. With no NAT, what happens to the addresses as the packet crosses the first router?",
     options: [
-      "Writing is allowed because Full Control on the share overrides any restriction configured in NTFS.",
-      "Writing is allowed because Allow Modify from one group cancels the denial received from another group.",
-      "All access is denied, including read and execute, because Deny Write is equivalent to Deny Full Control.",
-      "Writing is denied: network access combines the limits of share and NTFS permissions, and the explicit Deny Write entry prevails over the conflicting allow entry.",
-      "The result depends on the order in which the groups were created because Windows applies only the last group entry."
+      "The host uses ARP to discover the remote server's MAC and sends the frame directly to that MAC through the router.",
+      "The gateway replaces the destination IP with its own address at each hop and retains the source and destination MACs of the first frame until the remote server.",
+      "The host sends an IP broadcast until it locates the server; the router preserves the Ethernet frame on the next link.",
+      "The host uses ARP to resolve the gateway's MAC; at each routed hop, the router re-encapsulates the packet for the next link, whilst the final IP remains 203.0.113.50.",
+      "DNS supplies the gateway's MAC and replaces the server IP with the local network's broadcast address."
     ],
-    explanation: "Full Control on the share cannot expand what NTFS permits. When group memberships are combined, the explicit denial of the write right prevails over the conflicting allow entry; other rights that are not denied must be assessed separately."
+    explanation: "Because the destination is outside the subnet, the host encapsulates the packet for the gateway MAC obtained through ARP. At each routed hop, the router re-encapsulates the packet for the next link; without NAT, the destination IP does not change."
   },
   "bruno-massaranduba-2026-difficult-34": {
-    prompt: "A transaction transfers a balance between two accounts by using two UPDATE commands. The first executes, but the second fails. Which design preserves atomicity?",
+    prompt: "A router has routes 172.16.0.0/12 via A, 172.20.0.0/16 via B, 172.20.8.0/21 via C, and a default route via D. To which next hop will a packet addressed to 172.20.15.200 be sent?",
     options: [
-      "Run each UPDATE in its own transaction and record a compensation for later processing if the second one fails.",
-      "Execute both in the same transaction, apply COMMIT only after both succeed, and use ROLLBACK if either step fails.",
-      "Create a SAVEPOINT after the first UPDATE and commit the transaction even if the second fails, retaining the first result.",
-      "Use the SERIALIZABLE isolation level but leave autocommit enabled for each UPDATE.",
-      "Defer constraint checking until the end whilst keeping each UPDATE committed separately."
+      "Via A because the aggregate /12 route covers the destination and its breadth would be evaluated before prefix length.",
+      "Via C because 172.20.15.200 is in the 172.20.8.0/21 range and this is the most specific match.",
+      "Via B because /16 is more specific than /12, but the /21 route would apply only to addresses up to 172.20.15.127.",
+      "Via D because the /21 route ends at 172.20.14.255 and private routes cannot forward the specified host.",
+      "The packet is discarded as the /21 subnet's broadcast address even though the broadcast for that block is 172.20.15.255."
     ],
-    explanation: "Atomicity requires the unit of work to be either fully committed or fully undone; COMMIT and ROLLBACK control these outcomes."
+    explanation: "The /21 prefix covers 172.20.8.0 through 172.20.15.255. As the destination matches /12, /16, and /21, the router selects the longest prefix, via C."
   },
   "bruno-massaranduba-2026-difficult-35": {
-    prompt: "A team needs to query equipment names and states but must not see costs or alter records. Which solution best applies least privilege in a relational DBMS?",
+    prompt: "Two 2.4 GHz access points use the same SSID and security policy. They are close together, operate on the same wide channel at maximum power, and clients remain associated with the more distant point and suffer retransmissions. Which initial adjustment is most appropriate?",
     options: [
-      "Grant SELECT directly on the complete table and hide the cost column only in the application interface.",
-      "Create a routine that runs with administrative privileges and share its credentials with the query team.",
-      "Create a view containing only the authorised columns and grant SELECT on that view, without unnecessary direct privileges on the base tables.",
-      "Grant SELECT and UPDATE on the base table, restricting changes through documented guidance to users.",
-      "Create a periodic copy of the table containing every column and grant unrestricted read access to that copy."
+      "Reduce the power of both access points but retain the same wide channel, assessing signal strength without measuring co-channel interference.",
+      "Choose non-overlapping channels but retain maximum power and the current placement without measuring cell overlap or client behaviour.",
+      "Plan non-overlapping channels, adjust power and placement for suitable coverage, and validate roaming and interference with measurements.",
+      "Use 40 MHz channels on every access point and lower power on the assumption that greater width always reduces interference in the 2.4 GHz band.",
+      "Create different SSIDs to force manual selection of the nearest access point, accepting broken roaming without diagnosing channels or coverage."
     ],
-    explanation: "The view limits the projected data, and the restricted SELECT grant reduces access to the required operations and columns."
+    explanation: "Channel, width, power, and placement affect interference and cell size. The correction must be measured; distinct SSIDs interrupt roaming, and wide channels can increase overlap."
   },
   "bruno-massaranduba-2026-difficult-36": {
-    prompt: "Every change to an equipment item's state must automatically create an audit record, even when the change comes from different applications. Which database object is most directly appropriate?",
+    prompt: "A computer records audio and video locally without faults and plays HTTPS streams. During a VoIP call, signalling successfully establishes the call and the other party hears the local user, but no returning RTP packets reach the computer. Which hypothesis should be investigated first?",
     options: [
-      "A scheduled task that queries the table hourly and infers changes by comparing the latest state.",
-      "A trigger associated with the table's UPDATE event and carefully defined to record the change.",
-      "An update stored procedure, without preventing applications from continuing to issue UPDATE directly against the table.",
-      "A view with WITH CHECK OPTION that presents only equipment changed during the day.",
-      "A generated column that derives the current state without recording previous values."
+      "A capture-device or driver fault even though local recording demonstrates that audio is delivered correctly to the application.",
+      "Blocking or incorrect translation of returning RTP at the firewall/NAT, including advertised media ports and addresses.",
+      "Codec incompatibility as the cause of no arriving packets, although a decoding failure would presuppose received RTP traffic to process.",
+      "Proof that all UDP is allowed from the HTTPS test, inferring that application-level TCP connectivity also validates dynamic media ports.",
+      "A DNS failure for the signalling server even though the call is established and the outgoing RTP stream reaches the other party."
     ],
-    explanation: "Triggers execute automatically on defined events and can centralise the auditing of changes made by different clients."
+    explanation: "Local capture and playback have evidence of working, and signalling completed. RTP missing in only one direction points to the media path, which is often affected by a firewall or NAT."
   },
   "bruno-massaranduba-2026-difficult-37": {
-    prompt: "A database project requires, in this order: I. a reusable abstraction based on SELECT; II. a parameterised routine that can group commands; III. automatic execution when an UPDATE occurs on a table; IV. a reusable calculation that returns a value. Which objects meet requirements I, II, III and IV respectively?",
+    prompt: "An unregistered device is connected to a network socket in an unlocked cabinet. Soon afterwards, monitoring records an internal scan originating from that port. Which response combines traffic analysis, policy, and physical and logical security?",
     options: [
-      "View, stored procedure, trigger and function.",
-      "Function, view, stored procedure and trigger.",
-      "Stored procedure, function, view and trigger.",
-      "View, trigger, function and stored procedure.",
-      "Trigger, stored procedure, function and view."
+      "Quarantine or disable the port, preserve and analyse logs, identify the device, control the cabinet, and apply network authentication and an authorised-device policy.",
+      "Quarantine the port and immediately reimage the device before preserving logs or identifying its owner, treating reinstallation as sufficient proof of scope.",
+      "Lock the cabinet and add the observed MAC to the allowed list, leaving the device connected and omitting analysis of the logs already produced.",
+      "Apply an ACL against the scanned subnet but keep the unrecorded device on the port and do not review physical access, identity, or other targets.",
+      "Disable the port until alerts stop, then restore the same access without identifying the device or establishing an admission policy."
     ],
-    explanation: "A view encapsulates a query; a stored procedure groups commands and can accept parameters; a trigger reacts automatically to an UPDATE; and a function encapsulates a calculation that returns a value."
+    explanation: "Containment limits risk, whilst preserved logs and traffic support scope analysis. Physical control, access authentication, and inventory policy provide complementary layers."
   },
   "bruno-massaranduba-2026-difficult-38": {
-    prompt: "Consider Setor(id, nome) and Equipamento(id, setor_id, status). Every department, including those with no active equipment, must be listed with its respective count. Which query correctly expresses this intention?",
+    prompt: "In a relational database, Department(id, name) has primary key id, and Device(id, department_id, asset_number) has foreign key department_id referencing Department.id. Devices are linked to department 7. Which behaviour preserves referential integrity when that department is deleted?",
     options: [
-      "SELECT s.nome, COUNT(*) FROM Setor s INNER JOIN Equipamento e ON e.setor_id = s.id WHERE e.status = 'ativo';",
-      "SELECT s.nome, COUNT(e.id) FROM Setor s LEFT JOIN Equipamento e ON e.setor_id = s.id AND e.status = 'ativo' GROUP BY s.id, s.nome;",
-      "SELECT s.nome FROM Setor s WHERE COUNT(e.id) = 0;",
-      "DELETE FROM Equipamento WHERE status <> 'ativo' GROUP BY setor_id;",
-      "SELECT COUNT(*) FROM Setor, Equipamento;"
+      "Use NO ACTION and retain department_id = 7 because uniqueness of asset_number would also validate the existence of the referenced department.",
+      "Reject deletion whilst references exist unless a configured action, such as CASCADE or valid SET NULL, handles dependent rows.",
+      "Apply CASCADE to every foreign key even when the business rule requires device records and their asset numbers to be retained.",
+      "Create a unique index on asset_number because indexes replace validation between department_id and Department.id.",
+      "Use a higher transaction-isolation level, which automatically sets department_id to NULL without a referential action."
     ],
-    explanation: "The LEFT JOIN preserves every department; filtering the state in the ON clause retains departments with no match, and COUNT(e.id) returns zero where there is no active equipment."
+    explanation: "The foreign key prevents orphaned references. Deletion can occur only after dependent rows are handled or through a predefined referential action that is compatible with the model."
   },
   "bruno-massaranduba-2026-difficult-39": {
-    prompt: "A video recording uses a constant rate of 8 Mbit/s for 90 minutes. Ignoring headers and using decimal units, approximately how much space will be required?",
+    prompt: "An account starts with a balance of 100. These commands run: BEGIN; UPDATE Account SET balance = balance - 20; SAVEPOINT s1; UPDATE Account SET balance = balance - 30; ROLLBACK TO s1; COMMIT. What balance is persisted, and how are UPDATE and the transaction-control commands classified?",
     options: [
-      "0.9 GB.",
-      "1.8 GB.",
-      "5.4 GB.",
-      "8.0 GB.",
-      "43.2 GB."
+      "Balance 50; UPDATE is DDL, whilst SAVEPOINT and COMMIT are DCL.",
+      "Balance 70; UPDATE is DML, and only COMMIT belongs to TCL.",
+      "Balance 80; UPDATE is DML, whilst BEGIN, SAVEPOINT, ROLLBACK TO, and COMMIT are TCL.",
+      "Balance 100; UPDATE is DQL, and ROLLBACK TO also reverses the change made before the savepoint.",
+      "Balance 80; UPDATE is DCL, whilst the remaining commands belong to DDL."
     ],
-    explanation: "Over 5,400 seconds, the recording contains 8 × 5,400 = 43,200 megabits. Dividing by 8 gives 5,400 megabytes, or approximately 5.4 GB."
+    explanation: "The first UPDATE reduces the balance to 80. The second takes it to 50, but ROLLBACK TO s1 reverses it; COMMIT persists 80. UPDATE is DML, whilst the other commands control the transaction (TCL)."
   },
   "bruno-massaranduba-2026-difficult-40": {
-    prompt: "A procurement requires each computer to drive two 4K monitors at 60 Hz simultaneously and run an application with hardware acceleration. Which technical specification best reduces the risk of incompatibility?",
+    prompt: "An inventory view based on Department(id, name) and Device(id, department_id) must list every department and its device count, including zero for departments with no devices. Which query meets the requirement without turning the outer join into an inner join?",
     options: [
-      "Require two DisplayPort 1.2 outputs without verifying that the graphics controller can sustain 4K at 60 Hz on both ports simultaneously.",
-      "Specify only a minimum amount of video memory, leaving interfaces, bandwidth and driver support until installation.",
-      "Define the number and version of outputs, supported simultaneous resolution and refresh rate, graphics capability, memory, compatible system and drivers, and require evidence before acceptance.",
-      "Accept two physically compatible connectors as sufficient evidence even without a guarantee of simultaneous operation at the required resolution.",
-      "Approve any workstation with a dual USB-C adaptor, checking only the connector shape rather than alternate-mode support or bandwidth."
+      "SELECT d.id, d.name, COUNT(*) FROM Department d INNER JOIN Device e ON e.department_id = d.id GROUP BY d.id, d.name;",
+      "SELECT d.id, d.name, COUNT(e.id) FROM Device e LEFT JOIN Department d ON d.id = e.department_id GROUP BY d.id, d.name;",
+      "SELECT d.id, d.name, COUNT(e.id) FROM Department d LEFT JOIN Device e ON e.department_id = d.id GROUP BY d.id, d.name;",
+      "SELECT d.id, d.name, COUNT(*) FROM Department d LEFT JOIN Device e ON e.department_id = d.id WHERE e.id IS NOT NULL GROUP BY d.id, d.name;",
+      "SELECT d.id, d.name, COUNT(e.id) FROM Department d RIGHT JOIN Device e ON e.department_id = d.id GROUP BY d.id, d.name;"
     ],
-    explanation: "Measurable requirements for interfaces, bandwidth, controller, software and acceptance validation make compatibility with the real workload verifiable."
+    explanation: "Starting from Department and using LEFT JOIN preserves every department. COUNT(e.id) ignores the NULL produced where there is no device, returning zero, and GROUP BY keeps one row per department."
   }
 });

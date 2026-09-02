@@ -1,442 +1,442 @@
 Object.assign(EN_QUESTION_TRANSLATIONS, {
   "bruno-massaranduba-2026-easy-01": {
-    prompt: "Read the passage: \"The team updated the computers during the night. In the morning, every department started work normally.\" According to the passage, which statement is correct?",
+    prompt: "Read the Portuguese passage: \"Após a troca do cabo, a impressora voltou a funcionar. O atendimento ao público foi retomado cinco minutos depois.\" According to the passage, which statement is correct?",
     options: [
-      "The update prevented the departments from operating in the morning.",
-      "Only one department managed to start work.",
-      "The computers were replaced during the morning.",
-      "The team stopped the update before completing it.",
-      "The update was carried out at night, and the departments operated normally in the morning."
+      "A impressora permaneceu sem funcionar após a troca do cabo.",
+      "O atendimento foi encerrado definitivamente.",
+      "A troca do cabo ocorreu depois da retomada do atendimento.",
+      "A impressora foi substituída por outro equipamento.",
+      "A impressora voltou a funcionar após a troca do cabo."
     ],
-    explanation: "The passage directly states when the update took place and that work started normally the following morning."
+    explanation: "The passage expressly states that the printer started working again after the cable was replaced and that public service resumed afterwards."
   },
   "bruno-massaranduba-2026-easy-02": {
-    prompt: "In the Portuguese sentence \"O técnico verificou preventivamente os cabos\", the word \"preventivamente\" indicates that the check was carried out:",
+    prompt: "In the Portuguese sentence \"O servidor salvou o relatório e o enviou por e-mail\", what does the pronoun \"o\" in \"o enviou\" refer back to?",
     options: [
-      "In advance, to avoid possible problems.",
-      "Without any defined purpose.",
-      "After the equipment had been discarded.",
-      "In a necessarily improvised manner.",
-      "Only after a permanent failure."
+      "O relatório.",
+      "O servidor.",
+      "O e-mail.",
+      "O salvamento.",
+      "O destinatário."
     ],
-    explanation: "Acting preventively means acting before a problem occurs, with the aim of avoiding it or reducing its effects."
+    explanation: "The pronoun \"o\" avoids repeating \"relatório\" and provides cohesion between the actions in the sentence."
   },
   "bruno-massaranduba-2026-easy-03": {
-    prompt: "Select the antonym of the Portuguese word \"temporário\":",
+    prompt: "A manual contains the Portuguese instruction \"Clique em Salvar e feche o documento\". Which mode of organisation predominates in this passage?",
     options: [
-      "Breve.",
-      "Provisório.",
-      "Permanente.",
-      "Passageiro.",
-      "Momentâneo."
+      "Narrative, because it reports a sequence that happened in the past.",
+      "Descriptive, because it describes an object in detail.",
+      "Injunctive, because it directs the reader to perform actions.",
+      "Argumentative, because it defends an opinion.",
+      "Expository, because it develops a theory without directing actions."
     ],
-    explanation: "In Portuguese, something permanent is not temporary or provisional."
+    explanation: "The injunctive mode uses directions or commands to tell the reader what to do."
   },
   "bruno-massaranduba-2026-easy-04": {
-    prompt: "Select the option in which all the Portuguese words are spelt correctly:",
+    prompt: "In the Portuguese clause \"Os técnicos instalaram o programa\", which term is the subject?",
     options: [
-      "Manuntenção, excessão e análize.",
-      "Manutenção, excessão e análise.",
-      "Manuntenção, exceção e análise.",
-      "Manutenção, exceção e análize.",
-      "Manutenção, exceção e análise."
+      "Instalaram.",
+      "O programa.",
+      "Programa.",
+      "Instalaram o programa.",
+      "Os técnicos."
     ],
-    explanation: "The correct Portuguese spellings are \"manutenção\", \"exceção\" and \"análise\"."
+    explanation: "\"Os técnicos\" is the subject because it identifies who performed the action of installing."
   },
   "bruno-massaranduba-2026-easy-05": {
-    prompt: "Select the option in which all the Portuguese words have the correct accents:",
-    options: [
-      "Tecnico, memória e possivel.",
-      "Técnico, memoria e possível.",
-      "Tecnico, memória e possível.",
-      "Técnico, memória e possivel.",
-      "Técnico, memória e possível."
-    ],
-    explanation: "All three Portuguese words require written accents: \"técnico\", \"memória\" and \"possível\"."
-  },
-  "bruno-massaranduba-2026-easy-06": {
-    prompt: "Select the Portuguese sentence that follows standard agreement rules:",
-    options: [
-      "Os relatório foi enviado ontem.",
-      "As senha precisa ser alterada.",
-      "Os relatórios foram enviados ontem.",
-      "A impressoras estão configurada.",
-      "Os cabo permanece conectado."
-    ],
-    explanation: "In \"Os relatórios foram enviados\", the article, noun, verb and participle agree in the masculine plural."
-  },
-  "bruno-massaranduba-2026-easy-07": {
     prompt: "Select the correctly punctuated Portuguese sentence:",
     options: [
-      "Após a manutenção o técnico, ligou o computador.",
-      "Após, a manutenção o técnico ligou o computador.",
-      "Após a manutenção o técnico ligou, o computador.",
-      "Após a manutenção o, técnico ligou o computador.",
-      "Após a manutenção, o técnico ligou o computador."
+      "Bruno desligue, o computador antes da limpeza.",
+      "Bruno desligue o computador, antes da limpeza.",
+      "Bruno, desligue, o computador antes da limpeza.",
+      "Bruno desligue o computador antes, da limpeza.",
+      "Bruno, desligue o computador antes da limpeza."
     ],
-    explanation: "The comma separates the fronted adverbial expression \"Após a manutenção\" from the remainder of the clause."
+    explanation: "The comma separates the vocative \"Bruno\" from the rest of the sentence."
+  },
+  "bruno-massaranduba-2026-easy-06": {
+    prompt: "In the Portuguese sentence \"A atualização provavelmente terminará hoje\", what does the word \"provavelmente\" express?",
+    options: [
+      "Absolute certainty.",
+      "An instruction to the reader.",
+      "An assessment of possibility.",
+      "A denial of the update.",
+      "An indication of place."
+    ],
+    explanation: "\"Provavelmente\" acts as a modal expression and shows that the speaker considers completion possible, but not certain."
+  },
+  "bruno-massaranduba-2026-easy-07": {
+    prompt: "Select the appropriate synonym for \"rápido\" in the Portuguese sentence \"O reparo foi rápido\":",
+    options: [
+      "Demorado.",
+      "Incompleto.",
+      "Silencioso.",
+      "Distante.",
+      "Veloz."
+    ],
+    explanation: "In this context, the Portuguese word \"veloz\" retains the meaning of something completed in a short time."
   },
   "bruno-massaranduba-2026-easy-08": {
-    prompt: "In the sentence \"A impressora estava sem papel, por isso ela parou de imprimir\", the Portuguese pronoun \"ela\" refers to:",
+    prompt: "Select the Portuguese option that follows the standard written form:",
     options: [
-      "Ao papel.",
-      "Ao período.",
-      "À impressora.",
-      "À impressão.",
-      "Ao motivo."
+      "O técnico entregou o relatório à diretoria e iniciou a manutensão.",
+      "O técnico entregou o relatorio a diretoria e iniciou a manutenção.",
+      "O técnico entregou o relatório à diretoria e iniciou a manutenção.",
+      "O técnico entregou o relatório à diretoria e iniciou a manuntenção.",
+      "O técnico entregou o relátorio a diretoria e iniciou a manutenção."
     ],
-    explanation: "The feminine singular pronoun \"ela\" refers back to the noun \"impressora\"."
+    explanation: "\"Relatório\" and \"manutenção\" are spelt correctly, and \"à diretoria\" takes a grave accent because the preposition \"a\" combines with the feminine article \"a\"."
   },
   "bruno-massaranduba-2026-easy-09": {
-    prompt: "A department has 80 computers. If 25% of them are to be replaced, how many computers will be replaced?",
+    prompt: "A department had 18 keyboards and received 7 more. How many keyboards did it then have?",
     options: [
+      "25.",
+      "11.",
+      "18.",
+      "24.",
+      "26."
+    ],
+    explanation: "The final quantity is found by adding 18 + 7 = 25."
+  },
+  "bruno-massaranduba-2026-easy-10": {
+    prompt: "A team completed 25% of 80 support requests. How many requests were completed?",
+    options: [
+      "10.",
       "20.",
-      "15.",
       "25.",
       "40.",
       "60."
     ],
-    explanation: "Twenty-five per cent is one quarter; 80 ÷ 4 = 20."
-  },
-  "bruno-massaranduba-2026-easy-10": {
-    prompt: "The storeroom had 125 cables, received another 47 and issued 32. How many cables remained?",
-    options: [
-      "108.",
-      "140.",
-      "154.",
-      "172.",
-      "204."
-    ],
-    explanation: "The remaining stock is 125 + 47 - 32 = 140 cables."
+    explanation: "Twenty-five per cent is one quarter, so 80 ÷ 4 = 20."
   },
   "bruno-massaranduba-2026-easy-11": {
-    prompt: "Three identical cables cost R$45.00. At the same unit price, how much do five cables cost?",
+    prompt: "An investment of R$1,000.00 earns simple interest of 2% in one month. How much interest is earned that month?",
     options: [
-      "R$75.00.",
-      "R$60.00.",
-      "R$70.00.",
-      "R$80.00.",
-      "R$90.00."
+      "R$20.00.",
+      "R$2.00.",
+      "R$10.00.",
+      "R$100.00.",
+      "R$200.00."
     ],
-    explanation: "Each cable costs R$45.00 ÷ 3 = R$15.00; five cables cost R$75.00."
+    explanation: "Two per cent of R$1,000.00 is 0.02 × 1,000 = R$20.00."
   },
   "bruno-massaranduba-2026-easy-12": {
-    prompt: "A technician completed 6 support requests on Monday, 8 on Tuesday and 10 on Wednesday. What was the daily average over those three days?",
+    prompt: "Solve the equation x + 6 = 14. What is the value of x?",
     options: [
       "8.",
       "6.",
-      "7.",
-      "9.",
-      "10."
+      "14.",
+      "20.",
+      "84."
     ],
-    explanation: "The average is (6 + 8 + 10) ÷ 3 = 24 ÷ 3 = 8."
+    explanation: "Subtracting 6 from both sides gives x = 14 - 6 = 8."
   },
   "bruno-massaranduba-2026-easy-13": {
-    prompt: "A rectangular room is 6 metres long and 4 metres wide. What is its perimeter?",
+    prompt: "Consider the function y = 2x. What is the value of y when x = 3?",
     options: [
-      "20 metres.",
-      "10 metres.",
-      "24 metres.",
-      "28 metres.",
-      "48 metres."
+      "6.",
+      "2.",
+      "3.",
+      "5.",
+      "9."
     ],
-    explanation: "The perimeter of the rectangle is 2 × (6 + 4) = 20 metres."
+    explanation: "Substituting 3 for x gives y = 2 × 3 = 6."
   },
   "bruno-massaranduba-2026-easy-14": {
-    prompt: "The sequence 5, 9, 13, 17, ... forms an arithmetic progression. What is its 8th term?",
+    prompt: "In the system x + y = 10 and x = 4, what is the value of y?",
     options: [
-      "29.",
-      "33.",
-      "31.",
-      "35.",
-      "37."
+      "4.",
+      "6.",
+      "10.",
+      "14.",
+      "40."
     ],
-    explanation: "The common difference is 4. Therefore, the 8th term is 5 + 7 × 4 = 33."
+    explanation: "Substituting 4 for x in x + y = 10 gives 4 + y = 10, so y = 6."
   },
   "bruno-massaranduba-2026-easy-15": {
-    prompt: "The logical negation of \"All computers are switched on\" is:",
+    prompt: "A rectangular room is 5 metres long and 4 metres wide. What is its area?",
     options: [
-      "All computers are switched off.",
-      "No computer is switched on.",
-      "At least one computer is not switched on.",
-      "At least one computer is switched on.",
-      "The computers may be switched on."
+      "9 m².",
+      "18 m².",
+      "20 m².",
+      "25 m².",
+      "40 m²."
     ],
-    explanation: "Negating a universal statement requires at least one exception: there is at least one computer that is not switched on."
+    explanation: "The area of a rectangle is length × width: 5 × 4 = 20 m²."
   },
   "bruno-massaranduba-2026-easy-16": {
-    prompt: "Solve the equation x + 7 = 19. The value of x is:",
+    prompt: "A box contains 3 blue cables and 1 red cable. If one cable is selected at random, what is the probability that it is red?",
     options: [
-      "10.",
-      "12.",
-      "14.",
-      "19.",
-      "26."
+      "1/2.",
+      "1/4.",
+      "1/3.",
+      "3/4.",
+      "1."
     ],
-    explanation: "Subtracting 7 from both sides gives x = 19 - 7 = 12."
+    explanation: "There is 1 red cable amongst 4 cables in total, so the probability is 1/4."
   },
   "bruno-massaranduba-2026-easy-17": {
-    prompt: "Given that Massaranduba first became a municipality in 1948, which option correctly matches the origin of its name with the definitive restoration of its municipal status?",
+    prompt: "The origin of the name of the municipality of Massaranduba is associated with:",
     options: [
-      "The name came from the Itapocu River, and its restored municipal administration was formally inaugurated on 11 November 1951.",
-      "The name came from the abundance of Paraná pine trees, and its restored municipal administration was formally inaugurated on 21 April 1961.",
-      "The name came from the abundance of maçaranduba trees, and its restored municipal administration was formally inaugurated on 11 November 1961.",
-      "The name came from Italian immigration, and its restored municipal administration was formally inaugurated on 7 September 1962.",
-      "The name came from rice cultivation, and its restored municipal administration was formally inaugurated on 1 January 1960."
+      "The large number of Paraná pine trees on the coast.",
+      "The surname of the municipality's first mayor.",
+      "The abundance of the tree known as maçaranduba.",
+      "The name of a river located outside Santa Catarina.",
+      "The main variety of rice grown in the region."
     ],
-    explanation: "After an initial period as a municipality in 1948, its municipal status was restored in 1961 and formally inaugurated on 11 November; the name Massaranduba refers to the abundance of maçaranduba trees."
+    explanation: "The name Massaranduba is linked to the abundance of the maçaranduba tree in the region."
   },
   "bruno-massaranduba-2026-easy-18": {
-    prompt: "Which option correctly connects Massaranduba's economy with one of its best-known titles?",
+    prompt: "The Itapocu Valley is so named primarily because of its geographical relationship with:",
     options: [
-      "Irrigated rice cultivation explains the title of Santa Catarina Rice Capital, and this activity coexists with a diversified industrial sector.",
-      "Maize cultivation explains the title of Santa Catarina Rice Capital, and the local economy is exclusively agricultural.",
-      "Banana farming explains the title of Santa Catarina Rice Capital, and the municipality has no industrial activity.",
-      "Rice cultivation explains the title, but the local economy is limited to the textile industry.",
-      "The title is unrelated to agriculture because the municipality's economy depends exclusively on tourism."
+      "The Itapocu River and its drainage basin.",
+      "The Uruguay River and the border with Argentina.",
+      "Lagoa dos Patos in Rio Grande do Sul.",
+      "The Amazon River and Brazil's North Region.",
+      "The Mato Grosso wetlands."
     ],
-    explanation: "Irrigated rice is linked to the title of Santa Catarina Rice Capital, whilst several industrial sectors also form part of the municipal economy."
+    explanation: "The Itapocu Valley is geographically organised around the Itapocu River and its drainage basin."
   },
   "bruno-massaranduba-2026-easy-19": {
-    prompt: "Regarding Massaranduba's position within the Itapocu River Basin, select the correct option:",
+    prompt: "In economics, the term \"inflation\" means:",
     options: [
-      "The municipality lies entirely outside the basin, so water planning should be solely local.",
-      "The basin is confined to Massaranduba and belongs to Hydrographic Region RH01.",
-      "The Itapocu River forms an ocean basin unrelated to the municipalities of the Itapocu Valley.",
-      "The basin's water resources require no integrated planning amongst the municipalities concerned.",
-      "The municipality lies partly within the Itapocu Basin, which belongs to RH06, supporting integrated water-resource planning."
+      "A permanent reduction in all salaries.",
+      "The end of money in circulation.",
+      "An increase in production by only one company.",
+      "An isolated fall in the price of a single product.",
+      "A general and persistent rise in prices."
     ],
-    explanation: "Massaranduba lies partly within the Itapocu Basin, which belongs to Hydrographic Region RH06; water management therefore requires coordination amongst the basin's municipalities."
+    explanation: "Inflation is a general and persistent rise in the prices of goods and services in an economy."
   },
   "bruno-massaranduba-2026-easy-20": {
-    prompt: "When a social media message reports a measure taken by the public administration, the most appropriate action is to:",
+    prompt: "Which action is consistent with sustainable development?",
     options: [
-      "Check the source, date and official channels before sharing it.",
-      "Share it immediately because it was sent by someone you know.",
-      "Assume that every message containing a photograph is true.",
-      "Ignore the date because old news always remains current.",
-      "Change the message before confirming its origin."
+      "Meeting present needs without compromising future generations.",
+      "Consuming natural resources without considering their replacement.",
+      "Disposing of waste in rivers to reduce costs.",
+      "Replacing every green area with paving.",
+      "Ignoring the environmental effects of economic activities."
     ],
-    explanation: "Checking the source, date and official channels reduces the spread of false or outdated information."
+    explanation: "Sustainable development seeks to reconcile present needs, environmental protection and suitable conditions for future generations."
   },
   "bruno-massaranduba-2026-easy-21": {
-    prompt: "Which component executes instructions and performs the main calculations in a computer?",
+    prompt: "Which of the following items is software?",
     options: [
-      "The monitor.",
-      "The CPU.",
-      "The keyboard.",
-      "The printer.",
-      "The network cable."
+      "Keyboard device.",
+      "Windows 10.",
+      "Computer monitor.",
+      "RAM module.",
+      "Laser printer."
     ],
-    explanation: "The central processing unit (CPU) executes the computer's instructions and operations."
+    explanation: "Windows 10 is an operating system and therefore software; the other items are physical components or peripherals."
   },
   "bruno-massaranduba-2026-easy-22": {
-    prompt: "RAM is mainly used to:",
+    prompt: "What is RAM mainly used for?",
     options: [
-      "Temporarily store data and programs that are in use.",
-      "Print documents on paper.",
-      "Connect the computer directly to the mains supply.",
-      "Keep files permanently even without power.",
-      "Project images onto a wall."
+      "Temporarily holding data and programs that are in use.",
+      "Printing documents on paper.",
+      "Supplying electrical power to the computer.",
+      "Keeping data permanently without relying on power.",
+      "Physically connecting two buildings by optical fibre."
     ],
-    explanation: "RAM temporarily holds data needed by running programs and loses its contents when power is removed."
+    explanation: "RAM is volatile working memory: it temporarily stores data used by the processor."
   },
   "bruno-massaranduba-2026-easy-23": {
-    prompt: "A common characteristic of a solid-state drive (SSD) is that it:",
+    prompt: "During computer start-up, which is a basic function of BIOS or UEFI?",
     options: [
-      "Has no moving mechanical parts for storing data.",
-      "Operates exclusively as RAM.",
-      "Works only when connected to the internet.",
-      "Must replace the processor.",
-      "Prints files without another device."
+      "Checking hardware before loading the operating system.",
+      "Permanently storing all the user's documents.",
+      "Replacing the operating system during every start-up.",
+      "Automatically removing all malware from storage.",
+      "Providing internet access without a network interface."
     ],
-    explanation: "SSDs use electronic memory and do not have the moving platters and heads found in HDDs."
+    explanation: "BIOS or UEFI firmware initialises the hardware and prepares the computer to load the operating system from storage."
   },
   "bruno-massaranduba-2026-easy-24": {
-    prompt: "Which of the following is an input device?",
-    options: [
-      "Monitor.",
-      "Loudspeaker.",
-      "Keyboard.",
-      "Printer.",
-      "Projector."
-    ],
-    explanation: "The keyboard sends data typed by the user to the computer, so it is an input device."
-  },
-  "bruno-massaranduba-2026-easy-25": {
-    prompt: "Which is a basic function of an operating system?",
-    options: [
-      "Managing computer resources and allowing programs to run.",
-      "Physically replacing every hardware component.",
-      "Eliminating the need to store files.",
-      "Automatically converting any computer into a public server.",
-      "Preventing the installation of every application."
-    ],
-    explanation: "The operating system manages hardware, files, memory and processes, and provides services to applications."
-  },
-  "bruno-massaranduba-2026-easy-26": {
-    prompt: "Which extension normally identifies a Portable Document Format file?",
-    options: [
-      ".mp3",
-      ".jpg",
-      ".exe",
-      ".xlsx",
-      ".pdf"
-    ],
-    explanation: "Portable Document Format files normally use the .pdf extension."
-  },
-  "bruno-massaranduba-2026-easy-27": {
-    prompt: "In the Brazilian Portuguese localisation of Microsoft Word 2010, which keyboard shortcut saves the current document?",
-    options: [
-      "Ctrl + P.",
-      "Ctrl + X.",
-      "Ctrl + Z.",
-      "Ctrl + B.",
-      "Ctrl + F."
-    ],
-    explanation: "In the Brazilian Portuguese localisation of Word 2010, Ctrl + B runs the Save command."
-  },
-  "bruno-massaranduba-2026-easy-28": {
-    prompt: "In a Portuguese-language spreadsheet, which formula adds the values from cells A1 to A5?",
-    options: [
-      "=MÉDIA(A1:A5)",
-      "=CONTAR(A1:A5)",
-      "=A1-A5",
-      "=MÁXIMO(A1:A5)",
-      "=SOMA(A1:A5)"
-    ],
-    explanation: "The Portuguese SOMA function adds every value in the specified range, from A1 to A5."
-  },
-  "bruno-massaranduba-2026-easy-29": {
-    prompt: "Microsoft PowerPoint is mainly used to create:",
-    options: [
-      "Relational databases.",
-      "Device drivers.",
-      "Operating systems.",
-      "Slide presentations.",
-      "Network cables."
-    ],
-    explanation: "PowerPoint is an application for creating and displaying slide presentations."
-  },
-  "bruno-massaranduba-2026-easy-30": {
-    prompt: "When sending an email, which field hides the address of a copied recipient from the other recipients?",
-    options: [
-      "Subject.",
-      "Bcc (blind carbon copy).",
-      "To.",
-      "Attachment.",
-      "Signature."
-    ],
-    explanation: "The Bcc field sends a copy without revealing that recipient to the other people included in the message."
-  },
-  "bruno-massaranduba-2026-easy-31": {
-    prompt: "What characterises a full backup?",
-    options: [
-      "Copying all data selected for that backup run.",
-      "Deleting the original files after copying them.",
-      "Copying only files changed since the previous backup.",
-      "Storing only shortcuts to the files.",
-      "Replacing antivirus software with a local copy."
-    ],
-    explanation: "A full backup copies all data defined in the backup set."
-  },
-  "bruno-massaranduba-2026-easy-32": {
-    prompt: "To enable antivirus software to recognise recent threats, it is important to:",
-    options: [
-      "Permanently disable updates.",
-      "Keep the program and its threat definitions up to date.",
-      "Open every attachment received by email.",
-      "Always use an account with administrative privileges.",
-      "Delete detection logs without analysing them."
-    ],
-    explanation: "Updates provide fixes and information required to detect recently identified threats."
-  },
-  "bruno-massaranduba-2026-easy-33": {
-    prompt: "Which device can temporarily supply power to a computer during a mains power cut?",
+    prompt: "Which device can temporarily supply power to a computer during a mains power interruption?",
     options: [
       "Switch.",
+      "Heat sink.",
+      "UPS.",
       "Scanner.",
-      "Router.",
-      "Keyboard.",
-      "Uninterruptible power supply (UPS)."
+      "Router."
     ],
     explanation: "A UPS uses a battery to keep equipment running for a period during a power interruption."
   },
-  "bruno-massaranduba-2026-easy-34": {
-    prompt: "A network connecting computers within the same building is normally classified as a:",
+  "bruno-massaranduba-2026-easy-25": {
+    prompt: "In the Brazilian Portuguese version of Windows 10, which tool is used to browse folders and files?",
     options: [
-      "WAN.",
-      "LAN.",
-      "Intercontinental PAN.",
-      "Satellite network.",
-      "Public mobile network."
+      "Explorador de Arquivos.",
+      "Gerenciador de Tarefas.",
+      "Painel de Controle.",
+      "Visualizador de Eventos.",
+      "Windows PowerShell."
     ],
-    explanation: "A LAN connects devices within a limited local area, such as a room, school or building."
+    explanation: "Explorador de Arquivos lets users view, create, copy, move, rename and organise folders and files."
+  },
+  "bruno-massaranduba-2026-easy-26": {
+    prompt: "What is Microsoft Word mainly used for?",
+    options: [
+      "Configuring network routing.",
+      "Managing database tables.",
+      "Monitoring processor temperature.",
+      "Editing audio files.",
+      "Creating and formatting documents."
+    ],
+    explanation: "Word is a word processor used to create, edit and format documents."
+  },
+  "bruno-massaranduba-2026-easy-27": {
+    prompt: "In the Brazilian Portuguese version of Microsoft Excel, which formula adds the values in cells A1 to A5?",
+    options: [
+      "=MÉDIA(A1:A5)",
+      "=MÁXIMO(A1:A5)",
+      "=A1-A5",
+      "=SOMA(A1:A5)",
+      "=CONTAR(A1:A5)"
+    ],
+    explanation: "The Portuguese SOMA function adds the values in every cell in the A1:A5 range."
+  },
+  "bruno-massaranduba-2026-easy-28": {
+    prompt: "Select the correct association between an application or service and its purpose:",
+    options: [
+      "PowerPoint — manage email; Outlook — create presentations; Google Workspace — browse the Web; Chrome — collaborate on documents.",
+      "PowerPoint — browse the Web; Outlook — collaborate on documents; Google Workspace — create presentations; Chrome — manage email.",
+      "PowerPoint — collaborate on spreadsheets; Outlook — browse the Web; Google Workspace — manage firmware; Chrome — create presentations.",
+      "PowerPoint — organise files; Outlook — edit spreadsheets; Google Workspace — configure Windows; Chrome — manage calendars.",
+      "PowerPoint — create presentations; Outlook — manage email; Google Workspace — collaborate on documents; Chrome — browse the Web."
+    ],
+    explanation: "PowerPoint creates presentations, Outlook manages email, Google Workspace supports collaboration on documents and Chrome is a Web browser."
+  },
+  "bruno-massaranduba-2026-easy-29": {
+    prompt: "What characterises a full backup?",
+    options: [
+      "Copying only file shortcuts.",
+      "Deleting the original files after the operation.",
+      "Copying only files changed since the previous backup.",
+      "Copying all data selected for that backup run.",
+      "Removing the need to test restoration."
+    ],
+    explanation: "A full backup copies all data included in the set defined for that run."
+  },
+  "bruno-massaranduba-2026-easy-30": {
+    prompt: "Which practice helps protect a computer against malware, meaning malicious programs?",
+    options: [
+      "Opening every attachment received by email.",
+      "Keeping the system and antivirus software up to date.",
+      "Permanently disabling security patches.",
+      "Using the same password for every service.",
+      "Installing programs from any source without checking them."
+    ],
+    explanation: "Updates correct known vulnerabilities and prepare protection mechanisms for recent threats."
+  },
+  "bruno-massaranduba-2026-easy-31": {
+    prompt: "In a star topology, network devices connect directly to:",
+    options: [
+      "A central device, such as a switch.",
+      "Exactly two neighbouring devices, forming a ring.",
+      "One shared main cable, forming a bus.",
+      "Every other device directly, forming a full mesh.",
+      "A linear sequence with no central connection point."
+    ],
+    explanation: "In a star topology, each device has a link to a central point, normally a switch."
+  },
+  "bruno-massaranduba-2026-easy-32": {
+    prompt: "Which device uses MAC addresses to forward frames to the appropriate port on an Ethernet local area network?",
+    options: [
+      "Router.",
+      "Switch.",
+      "Hub.",
+      "Modem.",
+      "Repeater."
+    ],
+    explanation: "A switch connects devices on a LAN and forwards frames to the appropriate ports."
+  },
+  "bruno-massaranduba-2026-easy-33": {
+    prompt: "How many layers are defined by the OSI model?",
+    options: [
+      "Two.",
+      "Three.",
+      "Four.",
+      "Five.",
+      "Seven."
+    ],
+    explanation: "The OSI reference model organises network communication into seven layers."
+  },
+  "bruno-massaranduba-2026-easy-34": {
+    prompt: "On a TCP/IP network, what is an IP address used for?",
+    options: [
+      "Translating domain names into numerical addresses.",
+      "Logically identifying a network interface.",
+      "Physically identifying a network card through its MAC address.",
+      "Necessarily encrypting every transmitted packet.",
+      "Defining the rated speed of an Ethernet cable."
+    ],
+    explanation: "An IP address gives an interface a logical identity and enables packets to be routed across a network."
   },
   "bruno-massaranduba-2026-easy-35": {
-    prompt: "On a TCP/IP network, an IP address is used to:",
+    prompt: "Which technology connects devices to a local network without using data cables?",
     options: [
-      "Define the physical size of the monitor.",
-      "Measure battery capacity.",
-      "Choose cable colours.",
-      "Identify the keyboard model.",
-      "Logically identify a network interface."
+      "SATA.",
+      "HDMI.",
+      "VGA.",
+      "USB.",
+      "Wi-Fi."
     ],
-    explanation: "An IP address logically identifies an interface and enables network communication to be routed."
+    explanation: "Wi-Fi is a wireless networking technology used to connect devices to a WLAN."
   },
   "bruno-massaranduba-2026-easy-36": {
-    prompt: "Which service converts domain names, such as example.gov.br, into IP addresses?",
+    prompt: "What does VoIP technology primarily allow?",
     options: [
-      "DNS.",
-      "USB.",
-      "HDMI.",
-      "PDF.",
-      "BIOS."
+      "Voice transmission over networks that use the Internet Protocol.",
+      "Automatic assignment of IP addresses to computers.",
+      "Translation of domain names into IP addresses.",
+      "Filtering network connections through firewall rules.",
+      "Synchronisation of backup files between storage drives."
     ],
-    explanation: "The Domain Name System (DNS) resolves domain names to IP addresses."
+    explanation: "VoIP carries voice communication over networks based on the Internet Protocol."
   },
   "bruno-massaranduba-2026-easy-37": {
-    prompt: "When accessing a website, the use of HTTPS normally indicates that:",
+    prompt: "Which measure is an example of physical security for IT equipment?",
     options: [
-      "The website does not use any network.",
-      "Communication between the browser and server is protected by encryption.",
-      "Every file on the internet is public.",
-      "The computer does not require updates.",
-      "The page is stored only on the local computer."
+      "Installing antivirus software on the computers.",
+      "Restricting access to the server room.",
+      "Requiring strong passwords for user accounts.",
+      "Configuring a firewall to block improper connections.",
+      "Encrypting backup files."
     ],
-    explanation: "HTTPS uses TLS to protect communication between the browser and the server."
+    explanation: "Entry control prevents unauthorised people from gaining physical access to the servers."
   },
   "bruno-massaranduba-2026-easy-38": {
-    prompt: "In a relational database, a table mainly organises data into:",
+    prompt: "In a relational database, a table organises data into:",
     options: [
       "Folders and shortcuts.",
-      "Images and videos.",
+      "Audio and video files.",
       "Cables and connectors.",
       "Processors and memory modules.",
       "Rows and columns."
     ],
-    explanation: "Relational tables represent records in rows and attributes in columns."
+    explanation: "In a relational table, rows represent records and columns represent attributes."
   },
   "bruno-massaranduba-2026-easy-39": {
-    prompt: "Which SQL command is used to query data stored in a table?",
+    prompt: "In SQL, which command belongs to the data query language and retrieves records from a table?",
     options: [
       "SELECT.",
-      "DROP.",
-      "DELETE.",
-      "UPDATE.",
-      "GRANT."
+      "GRANT.",
+      "COMMIT.",
+      "CREATE.",
+      "DROP."
     ],
-    explanation: "SELECT retrieves data from one or more tables according to the query."
+    explanation: "SELECT is the command used to query and retrieve data stored in tables."
   },
   "bruno-massaranduba-2026-easy-40": {
-    prompt: "In a database table, the primary key must:",
+    prompt: "Which database object is a stored query that can be treated as a virtual table?",
     options: [
-      "Contain the same value in every row.",
-      "Exist only in tables without records.",
-      "Be used solely to define interface colours.",
-      "Identify each record uniquely.",
-      "Always allow null and duplicate values."
+      "Trigger.",
+      "Index.",
+      "Stored procedure.",
+      "View.",
+      "Function."
     ],
-    explanation: "A primary key uniquely identifies each record and does not allow duplicate or null values."
+    explanation: "A view is defined by a query and presents its result as a virtual table."
   }
 });

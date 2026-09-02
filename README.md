@@ -38,7 +38,7 @@ The product deliberately keeps its runtime boundary small: the browser renders t
 | --- | --- |
 | Independent profiles | Bruno and Maria use separate question banks, progress records and session policies. |
 | Three difficulty modes | One top-level button cycles both profiles through Easy → Medium → Hard, with 40 questions in each mode. |
-| Written-exam fidelity | Bruno's full quiz follows the notice subject order and keeps a deterministic A–E answer layout. |
+| Written-exam fidelity | Bruno's full quiz follows the order in which subjects appear in the notice matrix and keeps a deterministic A–E answer layout. |
 | Study variation | Maria's full quiz and mistake-review queues randomise questions and alternatives. |
 | Immediate feedback | Every answer is evaluated in the browser and followed by an explanation. |
 | Adaptive mistake review | Incorrect answers are scheduled to reappear; consecutive correct answers clear the review requirement. |
@@ -89,19 +89,35 @@ This is a focused in-session learning loop rather than a time-based spaced-repet
 
 Every question has five alternatives and one designated answer. Each Bruno difficulty follows the same 8/8/4/20 subject distribution, balances the displayed answer key across A–E and avoids runs longer than two identical answer letters. Bruno's questions and explanations are independent study material; they are not copied from an official test and do not constitute an official answer key.
 
+The 1–8, 9–16, 17–20 and 21–40 sequence is an editorial simulation based on the order of subjects in Notice Table 06 and the requested conventional written-exam flow. The notice defines the composition, quantities and weights, but does not guarantee the physical order of questions in the official booklet.
+
 The dashboard intentionally reports raw correct-answer counts and accuracy. It does not calculate the notice-weighted score or determine whether an official pass threshold has been met.
 
 ### Bruno editorial method
 
-The 120-question corpus was reviewed with official evidence as the authority and preserved papers as secondary editorial references:
+The 120-question corpus was reviewed through an evidence hierarchy. The notice controls eligibility and structure; previous papers identify recurring topics and editorial patterns but never override the current programme:
 
-- the [current Massaranduba notice and organiser page](https://portal.institutotupy.com.br/edital/ver/97) define the binding 8/8/4/20 matrix, programme, five-option format, scoring and subject order;
+- the [current Massaranduba notice and organiser page](https://portal.institutotupy.com.br/edital/ver/97) define the binding 8/8/4/20 composition, programme, five-option format and scoring;
 - the [Massaranduba 2020 competition archive](https://concursos.furb.br/informacoes/52/) and a [preserved copy of its complete IT Technician paper](https://www.pciconcursos.com.br/provas/download/tecnico-em-informatica-prefeitura-massaranduba-sc-furb-2020) provide the closest municipal precedent for the same role;
 - the complete [Massaranduba 2015 IT Technician paper](https://www.pciconcursos.com.br/provas/download/tecnico-em-informatica-prefeitura-massaranduba-sc-nubes-2015) provides an older local precedent for municipal context and question forms, but its four-option 5/5/5/25 structure is not used as the 2026 matrix;
-- the Instituto Tupy archives for [Massaranduba 2023](https://portal.institutotupy.com.br/edital/ver/30), [São Bento do Sul 2026](https://portal.institutotupy.com.br/edital/ver/79), [Jaraguá do Sul City Council 2024](https://portal.institutotupy.com.br/edital/ver/34) and [ISSEM Jaraguá do Sul 2024](https://portal.institutotupy.com.br/edital/ver/37) were used to compare paper structures, final answer keys and recurring IT topics;
+- the complete [ISSEM Jaraguá do Sul 2024 IT Technician paper](https://www.pciconcursos.com.br/provas/download/tecnico-em-informatica-prefeitura-jaragua-do-sul-sc-issem-instituto-tupy-2024) is the closest preserved same-organiser reference and was used to study Instituto Tupy's concise prompts, statement sets and adjacent technical distractors;
+- eight further preserved IT Technician papers formed a broader recurrence panel with the ISSEM paper: Timbó 2024, SAMAE Blumenau 2024, Guabiruba 2024, SAMAE Jaraguá do Sul 2023, Nova Trento 2023 and Doutor Pedrinho 2023 (FURB), plus Dionísio Cerqueira 2025 and Belmonte 2024 (AMEOSC). Across this panel, hardware and networks were the strongest recurring themes, followed by security and Windows/software. Office/web and database topics appeared less often but remain represented because the 2026 notice names them expressly;
+- the Instituto Tupy archives for [Massaranduba 2023](https://portal.institutotupy.com.br/edital/ver/30), [São Bento do Sul 2026](https://portal.institutotupy.com.br/edital/ver/79), [Jaraguá do Sul City Council 2024](https://portal.institutotupy.com.br/edital/ver/34) and [ISSEM Jaraguá do Sul 2024](https://portal.institutotupy.com.br/edital/ver/37) were used to compare organiser structures and published decisions;
 - local-history and regional-geography statements were checked against the [official Massaranduba tourism history](https://turismo.massaranduba.sc.gov.br/pagina-185/), the municipality's [record of its first and restored administrations](https://servicos.massaranduba.sc.gov.br/pagina-7514/) and [AMVALI's Itapocu watershed overview](https://amvali.org.br/pagina-6747/).
 
-The [Instituto Tupy FAQ](https://portal.institutotupy.com.br/faq) explains that completed question booklets remain available to candidates for only a limited period. Where an official booklet had expired, preserved copies — including the complete [ISSEM 2024 IT Technician paper](https://www.pciconcursos.com.br/provas/download/tecnico-em-informatica-prefeitura-jaragua-do-sul-sc-issem-instituto-tupy-2024) and the [Massaranduba 2023 Administrative Assistant paper](https://www.passeidireto.com/arquivo/130514966/auxiliar-administrativo-massaranduba-banca-instituto-tupy-2023) — were consulted only to study editorial form, such as shared source texts, concise scenarios, statement sets, exceptions and technically adjacent distractors. Official notices, appeal decisions and final answer keys remained authoritative for structure and answer-quality checks. No source wording was copied, and the project has no affiliation with or endorsement from the organiser or the Municipality of Massaranduba.
+The [Instituto Tupy FAQ](https://portal.institutotupy.com.br/faq) explains that completed question booklets remain available to candidates for only a limited period. Where an official booklet had expired, preserved copies were consulted only to study editorial form and topic recurrence. Source answer letters were not reused: some historical booklets omit the answer key, and repeated common questions can place the same answer in different positions. Every active Bruno item is independently authored, has one reviewed answer and does not reproduce source wording. The project has no affiliation with or endorsement from the organiser or the Municipality of Massaranduba.
+
+Each Bruno bank assigns questions 21–40 to the same primary editorial domains while changing the cognitive demand rather than introducing off-programme content. The subtopics below describe the sampling envelope across the complete 120-question corpus; not every listed subtopic appears separately in every difficulty bank:
+
+| Specific-question range | Primary editorial domain and corpus-level sampling envelope |
+| --- | --- |
+| 21–24 | Components, buses, memory, processors, interfaces, firmware, storage, assembly, maintenance, cooling, power and UPS equipment |
+| 25–28 | Windows 10, file management, Word, Excel, PowerPoint, Outlook, Google Workspace, internet services and browsers |
+| 29–30 | Backup, recovery, malware and protective mechanisms |
+| 31–37 | Topologies, network equipment and media, OSI/TCP-IP, addressing, protocols, routing, wireless, VoIP, streaming, traffic and security controls |
+| 38–40 | DBMS principles, relational concepts, SQL language classes and database objects |
+
+Easy questions test direct recognition and routine operations; Medium questions require practical application and association of concepts; Hard questions combine evidence, calculations or diagnostic decisions. This separation is a study feature, not an official difficulty classification or a guarantee of what will appear in the examination.
 
 ### Maria mixed-profile sequence
 
@@ -142,9 +158,9 @@ The application stores only study state and interface preferences in the current
 
 | LocalStorage key | Purpose |
 | --- | --- |
-| <code>static-quiz-system-state-v5-bruno-easy</code> | Bruno's Easy totals and per-question progress |
-| <code>static-quiz-system-state-v5-bruno-medium</code> | Bruno's Medium totals and per-question progress |
-| <code>static-quiz-system-state-v5-bruno-hard</code> | Bruno's Hard totals and per-question progress |
+| <code>static-quiz-system-state-v6-bruno-easy</code> | Bruno's Easy totals and per-question progress |
+| <code>static-quiz-system-state-v6-bruno-medium</code> | Bruno's Medium totals and per-question progress |
+| <code>static-quiz-system-state-v6-bruno-hard</code> | Bruno's Hard totals and per-question progress |
 | <code>static-quiz-system-state-v3-maria-easy</code> | Maria's Easy totals and per-question progress |
 | <code>static-quiz-system-state-v3-maria-medium</code> | Maria's Medium totals and per-question progress |
 | <code>static-quiz-system-state-v3-maria-hard</code> | Maria's Hard totals and per-question progress |
@@ -158,7 +174,7 @@ Per-question state records correct and incorrect totals, the current streak, the
 
 <code>Reset Progress</code> removes only the active profile and difficulty's versioned progress record. Every other mode and the interface preferences remain available.
 
-Bruno v5 deliberately starts with fresh progress because the evidence-led revision materially changes questions and alternatives; earlier Bruno records remain browser-local but are not imported into the revised banks. Compatible records from Maria's former 60-question v2 bank are filtered to the selected Hard questions and copied once; a migration marker prevents a later reset from importing that legacy progress again.
+Bruno v6 deliberately starts with fresh progress because the notice-first, cross-paper revision materially changes questions and alternatives; earlier Bruno records remain browser-local but are not imported into the revised banks. Compatible records from Maria's former 60-question v2 bank are filtered to the selected Hard questions and copied once; a migration marker prevents a later reset from importing that legacy progress again.
 
 LocalStorage is browser-local, unencrypted and removable through browser settings. The application does not request sensitive personal data, and progress should not be treated as a portable backup.
 
@@ -196,7 +212,7 @@ These implementation details are not a formal WCAG conformance claim.
 | <code>app.js</code> | Rendering, localisation, session scheduling, review logic and persistence |
 | <code>questions.js</code> | Question factory, base banks, profile metadata and registry |
 | <code>bruno-easy-questions.js</code> | Bruno's Easy Massaranduba IT Technician practice bank |
-| <code>bruno-hard-questions.js</code> | Bruno's original bank, normalised as Medium by the registry |
+| <code>bruno-hard-questions.js</code> | Bruno's Medium Massaranduba IT Technician practice bank |
 | <code>bruno-difficult-questions.js</code> | Bruno's Hard Massaranduba IT Technician practice bank |
 | <code>bruno-question-banks.js</code> | Bruno difficulty registry and Medium metadata normalisation |
 | <code>maria-easy-questions.js</code> | Maria's author-created Easy practice bank |

@@ -103,6 +103,12 @@ function validateQuestion(question, bankName) {
   }
   check(Number.isInteger(question.answerIndex) && question.answerIndex >= 0 && question.answerIndex < 5, `${question.id}: invalid answerIndex`);
   check(typeof question.explanation === "string" && question.explanation.trim().length > 0, `${question.id}: missing explanation`);
+  if (bankName.startsWith("Bruno")) {
+    check(
+      !/\b(?:primeira|segunda|terceira|quarta|quinta|[uú]ltima)\s+(?:alternativa|op[cç][aã]o)\b|\b(?:alternativa|op[cç][aã]o)\s+[A-E]\b/iu.test(question.explanation),
+      `${question.id}: explanation depends on a source answer position that is shuffled at runtime`
+    );
+  }
 }
 
 const expectedBrunoCategories = {
@@ -127,6 +133,28 @@ const expectedBrunoId = {
   medium: (index) => `bruno-massaranduba-2026-${String(index + 1).padStart(2, "0")}`,
   hard: (index) => `bruno-massaranduba-2026-difficult-${String(index + 1).padStart(2, "0")}`
 };
+const expectedBrunoSpecificCoverage = [
+  /component|perif[eé]ric|entrada|sa[ií]da|software/iu,
+  /barramento|mem[oó]ria|processador|interface/iu,
+  /bios|uefi|firmware|armazenamento|ssd|raid/iu,
+  /montagem|manuten[cç][aã]o|refrigera[cç][aã]o|energia|alimenta[cç][aã]o|nobreak/iu,
+  /windows\s*10|arquivo|explorador/iu,
+  /word|documento|sum[aá]rio|mala direta|estilo/iu,
+  /excel|planilha|f[oó]rmula|procv|somase/iu,
+  /powerpoint|outlook|google workspace|chrome|edge|firefox|e-mail|navegador|apresenta[cç][aã]o/iu,
+  /backup|c[oó]pia de seguran[cç]a|recupera|restaura/iu,
+  /malware|v[ií]rus|antiv[ií]rus|ransomware|phishing|programa malicioso/iu,
+  /topologia|switch|hub|estrela|anel|rede/iu,
+  /cabo|cabeamento|fibra|par tran[cç]ado|r[aá]dio|gateway|modem|roteador|switch/iu,
+  /osi|tcp\/ip|camada/iu,
+  /endere[cç]o|ipv4|ipv6|dhcp|dns|protocolo|rota|gateway|sub-rede/iu,
+  /wi-?fi|wireless|sem fio|802\.11|ssid|ponto de acesso|roaming/iu,
+  /voip|streaming|[aá]udio|v[ií]deo|multim[ií]dia|jitter|codec|bitrate/iu,
+  /tr[aá]fego|pol[ií]tica|seguran[cç]a f[ií]sica|seguran[cç]a l[oó]gica|ids|firewall|ataque|intrus[aã]o/iu,
+  /sgbd|banco de dados|relacional|tabela|entidade/iu,
+  /dql|dcl|ddl|dml|tcl|sql/iu,
+  /view|stored procedure|procedimento armazenado|trigger|gatilho|function|fun[cç][aã]o/iu
+];
 const expectedMariaIds = {
   easy: Array.from({ length: 40 }, (_, index) => `maria-2026-easy-${String(index + 1).padStart(2, "0")}`),
   medium: [
@@ -191,7 +219,18 @@ for (const [difficultyId, questions] of Object.entries(brunoBanks)) {
   );
   check(displayedAnswerCounts.every((count) => count === 8), `Bruno ${difficultyId}: displayed answer-position distribution ${displayedAnswerCounts.join("/")}`);
   check(getLongestRun(displayedAnswerPositions) <= 2, `Bruno ${difficultyId}: displayed answer key contains a run longer than two`);
+
+  expectedBrunoSpecificCoverage.forEach((pattern, index) => {
+    const question = questions[index + 20];
+    const searchableText = `${question?.prompt || ""} ${question?.explanation || ""}`;
+    check(pattern.test(searchableText), `Bruno ${difficultyId}: question ${index + 21} does not match the notice-first editorial sampling map`);
+  });
 }
+
+const brunoPromptFingerprints = Object.values(brunoBanks)
+  .flat()
+  .map((question) => getOptionFingerprint(question.prompt));
+check(new Set(brunoPromptFingerprints).size === brunoPromptFingerprints.length, "Bruno: duplicate prompts found across difficulty banks");
 
 for (const [difficultyId, questions] of Object.entries(mariaBanks)) {
   check(
@@ -220,6 +259,12 @@ for (const question of activeQuestions) {
     check(translation.options.every((option) => typeof option === "string" && option.trim().length > 0), `${question.id}: blank English option`);
     check(new Set(translation.options.map(getOptionFingerprint)).size === 5, `${question.id}: duplicate English options`);
     check(typeof translation.explanation === "string" && translation.explanation.trim().length > 0, `${question.id}: blank English explanation`);
+    if (question.id.startsWith("bruno-massaranduba-2026-")) {
+      check(
+        !/\b(?:first|second|third|fourth|fifth|last)\s+(?:alternative|option)\b|\b(?:alternative|option)\s+[A-E]\b/iu.test(translation.explanation),
+        `${question.id}: English explanation depends on a source answer position that is shuffled at runtime`
+      );
+    }
   }
 }
 
@@ -233,15 +278,37 @@ check(!JSON.stringify(translations["maria-original-16"]).includes("Recognize"), 
 
 const appSource = fs.readFileSync(path.join(repository, "app.js"), "utf8");
 const indexSource = fs.readFileSync(path.join(repository, "index.html"), "utf8");
-check(/bruno:\s*"v5"/.test(appSource), "Bruno storage is not versioned to v5");
+check(/bruno:\s*"v6"/.test(appSource), "Bruno storage is not versioned to v6");
 check(/maria:\s*"v3"/.test(appSource), "Maria storage is not versioned to v3");
 check(appSource.includes("static-quiz-system-active-difficulty"), "Difficulty preferences are not persisted by profile");
 check(!appSource.includes("static-quiz-system-state-v4-bruno"), "Incompatible Bruno v4 progress must not be migrated into the revised banks");
+check(!appSource.includes("static-quiz-system-state-v5-bruno"), "Incompatible Bruno v5 progress must not be migrated into the revised banks");
 check(appSource.includes("static-quiz-system-state-v2-maria"), "Compatible Maria v2 progress is not migrated to Hard");
 check(appSource.includes('htmlLang: "en-GB"'), "The British English document language is not en-GB");
 check(indexSource.match(/id="difficulty-toggle-btn"/g)?.length === 1, "The page must expose exactly one difficulty button");
-const loadedScripts = Array.from(indexSource.matchAll(/<script src="([^"?]+)(?:\?[^"}]*)?">/g), (match) => match[1]);
+const scriptSources = Array.from(indexSource.matchAll(/<script src="([^"]+)"><\/script>/g), (match) => match[1]);
+const loadedScripts = scriptSources.map((source) => source.split("?")[0]);
 check(JSON.stringify(loadedScripts) === JSON.stringify([...scripts, "app.js"]), `index.html: script order changed (${loadedScripts.join(", ")})`);
+const revisedAssetNames = new Set([
+  "bruno-hard-questions.js",
+  "bruno-easy-questions.js",
+  "bruno-difficult-questions.js",
+  "bruno-hard-questions-en.js",
+  "bruno-easy-questions-en.js",
+  "bruno-difficult-questions-en.js",
+  "app.js"
+]);
+const expectedRevisionToken = "v=20260902-evidence2";
+for (const source of scriptSources) {
+  const [assetName, query = ""] = source.split("?");
+  if (revisedAssetNames.has(assetName)) {
+    check(query === expectedRevisionToken, `index.html: ${assetName} must use the ${expectedRevisionToken} cache token`);
+  }
+}
+check(
+  scriptSources.filter((source) => revisedAssetNames.has(source.split("?")[0])).length === revisedAssetNames.size,
+  "index.html: one or more revised Bruno assets are missing"
+);
 
 const mariaPtSource = fs.readFileSync(path.join(repository, "maria-hard-questions.js"));
 const mariaEnSource = fs.readFileSync(path.join(repository, "maria-hard-questions-en.js"));
@@ -258,5 +325,5 @@ if (failures.length > 0) {
   console.log("PASS: every Bruno bank has complete en-GB translations, an 8/8/8/8/8 displayed answer key and no answer run longer than two");
   console.log("PASS: Maria has 40 easy, 40 medium and 40 hard questions in 10/10/10/10 subject order");
   console.log("PASS: Maria's 60-question original source remains byte-for-byte and semantically unchanged");
-  console.log("PASS: per-profile difficulty state uses Bruno v5 and Maria v3, preserving only Maria's compatible legacy migration");
+  console.log("PASS: per-profile difficulty state uses Bruno v6 and Maria v3, preserving only Maria's compatible legacy migration");
 }

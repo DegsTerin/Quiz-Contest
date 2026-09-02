@@ -6,7 +6,7 @@ const STORAGE_KEY_PREFIX = "static-quiz-system-state";
 const LEGACY_MARIA_HARD_STORAGE_KEY = "static-quiz-system-state-v2-maria";
 const MARIA_HARD_MIGRATION_KEY = "static-quiz-system-migrated-v3-maria-hard";
 const PROFILE_STORAGE_VERSIONS = {
-  bruno: "v5",
+  bruno: "v6",
   maria: "v3"
 };
 const DEFAULT_PROFILE_ID = "bruno";

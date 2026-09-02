@@ -1,388 +1,412 @@
 Object.assign(EN_QUESTION_TRANSLATIONS, {
   "bruno-massaranduba-2026-01": {
-    prompt: "Read the passage: \"Depois de identificar falhas recorrentes, a equipe passou a registrar cada incidente, sua causa e a ação corretiva. Em três meses, o tempo médio de restauração caiu, embora o número de chamados não tenha diminuído.\" Which conclusion is consistent with the passage?",
+    prompt: "Read the passage: \"Após a implantação do monitoramento, o número de alertas aumentou 30%, enquanto as interrupções percebidas pelos usuários diminuíram. A análise mostrou que anomalias antes silenciosas passaram a ser registradas e tratadas preventivamente.\" Which inference is consistent with the passage?",
     options: [
-      "Systematic record-keeping helped restore services more efficiently, with no evidence of a reduction in the number of incidents.",
-      "The reduction in restoration time proves that incidents stopped occurring.",
-      "The number of support requests fell because the team eliminated every recurring cause.",
-      "Documentation increased service time but reduced the number of failures.",
-      "The records were abandoned after the service became stable."
+      "More alerts may result from greater anomaly visibility without indicating poorer availability.",
+      "The reduction in interruptions shows that monitoring stopped detecting genuine faults throughout every period assessed.",
+      "The growth in alerts proves that the infrastructure began to fail 30% more often.",
+      "Silent anomalies only appeared after monitoring was implemented.",
+      "Preventive treatment permanently removed every possibility of interruption."
     ],
-    explanation: "The passage links record-keeping to the reduction in restoration time and expressly states that the number of support requests did not fall."
+    explanation: "The passage links the rise in alerts to the detection of previously invisible anomalies while also reporting fewer user-perceived interruptions."
   },
   "bruno-massaranduba-2026-02": {
-    prompt: "In the sentence \"Para reduzir a perda de dados, a equipe adotou backup incremental diário. Essa medida também diminuiu o volume transferido em cada execução\", what does the expression \"Essa medida\" refer to?",
+    prompt: "Read: \"Na revisão do plano, a equipe retomou o princípio 'é melhor prevenir do que remediar'. Esse princípio orientou a criação de uma rotina de manutenção preventiva.\" Which statement correctly analyses how the passage is constructed?",
     options: [
-      "The loss of data.",
-      "The adoption of daily incremental backups.",
-      "The total storage volume.",
-      "Each transferred file.",
-      "The execution of the operating system."
+      "The expression \"Esse princípio\" introduces an idea with no previous referent and breaks coherence.",
+      "\"Esse princípio\" refers back and creates cohesion; the proverb establishes intertextuality.",
+      "Repeating the word \"princípio\" removes every relationship between the two sentences.",
+      "The proverb turns the passage into fictional narration with no argumentative function.",
+      "The second sentence contradicts the first because prevention and maintenance are incompatible concepts within any technical plan."
     ],
-    explanation: "The demonstrative \"essa\" establishes referential cohesion with the action mentioned in the previous sentence: adopting daily incremental backups."
+    explanation: "The demonstrative refers back to the proverb and provides referential cohesion; incorporating a familiar saying establishes intertextuality."
   },
   "bruno-massaranduba-2026-03": {
-    prompt: "Consider this excerpt from a procedure: \"Desligue o equipamento, aguarde trinta segundos e reconecte o cabo de alimentação.\" Which mode of discourse organisation predominates?",
+    prompt: "Consider this excerpt from an internal rule: \"Para solicitar a restauração, preencha o formulário, identifique o arquivo, informe a data da última versão válida e aguarde a confirmação da equipe.\" Which discourse mode and communicative purpose predominate?",
     options: [
-      "Narrative, because it recounts past events.",
-      "Descriptive, because it lists characteristics of the equipment.",
-      "Injunctive, because it directs a sequence of actions.",
-      "Argumentative, because it defends a technical opinion.",
-      "Expository, because it defines a component."
+      "Narrative mode and literary purpose, because it recounts completed fictional events.",
+      "Descriptive mode and advertising purpose, because it characterises the service's commercial qualities.",
+      "Injunctive mode and normative or procedural purpose, because it directs the actions required for the request.",
+      "Argumentative mode and persuasive purpose, because it seeks agreement with an opinion about the service offered by the team.",
+      "Expository mode and predictive purpose, because it explains a theory and anticipates future events."
     ],
-    explanation: "The verbs in the imperative instruct the reader to carry out actions, which is characteristic of the injunctive mode."
+    explanation: "The imperative verbs organise a sequence of actions characteristic of the injunctive mode and serve the passage's normative or procedural purpose."
   },
   "bruno-massaranduba-2026-04": {
-    prompt: "Select the option in which the grave accent indicating crasis is used correctly:",
+    prompt: "In the sentence \"Somente após a conferência dos hashes, a equipe liberou os arquivos restaurados\", which syntactic and structural analysis is correct?",
     options: [
-      "A equipe dirigiu-se a sala de servidores.",
-      "O relatório foi entregue à cada unidade.",
-      "O suporte funciona de segunda à sexta-feira.",
-      "O técnico apresentou o diagnóstico à direção e prestou esclarecimentos às servidoras.",
-      "A atualização começou às partir das oito horas."
+      "\"A equipe\" is the direct object because it appears after the comma.",
+      "The comma separates the subject \"a equipe\" from the verb \"liberou\".",
+      "The sentence follows direct order, contains no displaced element and has no syntactic inversion in its structure.",
+      "There is a displaced temporal adverbial with a suitable comma; the subject remains \"a equipe\".",
+      "\"Os arquivos restaurados\" functions as a compound subject and alone determines the sentence's verb agreement."
     ],
-    explanation: "In \"à direção\" and \"às servidoras\", the preposition required by the verb merges with the feminine article."
+    explanation: "The opening phrase expresses a temporal circumstance and is a displaced adverbial; the subject is \"a equipe\", and \"os arquivos restaurados\" is the direct object."
   },
   "bruno-massaranduba-2026-05": {
-    prompt: "Select the sentence punctuated according to standard Portuguese:",
+    prompt: "A coordenadora declarou: \"Validem o resultado e comuniquem a conclusão aos usuários.\" Which version in indirect speech preserves the meaning, punctuation and formal register?",
     options: [
-      "A equipe, restaurou o servidor e validou os arquivos.",
-      "Os usuários que estavam sem acesso, receberam novas credenciais.",
-      "O técnico verificou, os cabos os switches e os roteadores.",
-      "Quando o serviço foi restabelecido a equipe, verificou os logs e comunicou os usuários.",
-      "Quando o serviço foi restabelecido, a equipe verificou os logs, documentou a causa e comunicou o resultado aos usuários."
+      "A coordenadora declarou, validem o resultado, e comuniquem a conclusão aos usuários.",
+      "A coordenadora declarou que: validem o resultado e comunicam a conclusão aos usuários.",
+      "A coordenadora perguntou se o resultado, validem e a conclusão comuniquem aos usuários.",
+      "A coordenadora declarou que validem o resultado; e comunicariam a conclusão aos usuários em registro formal.",
+      "A coordenadora solicitou que validassem o resultado e comunicassem a conclusão aos usuários."
     ],
-    explanation: "The displaced adverbial clause is separated by a comma, whereas the subject must not be separated from the verb."
+    explanation: "In indirect speech, the request is integrated into the main clause by \"que\"; the verbs are adjusted to the imperfect subjunctive, and direct-speech markers are removed."
   },
   "bruno-massaranduba-2026-06": {
-    prompt: "In the sentence \"O técnico informou ao diretor que seu computador seria substituído\", the ambiguity arises from:",
+    prompt: "Consider: \"A manutenção foi cuidadosamente planejada, mas possivelmente será adiada.\" Assess the statements: I. \"Cuidadosamente\" and \"possivelmente\" are formed with the suffix \"-mente\" and function as adverbs. II. The former indicates manner, whilst the latter qualifies the statement by reducing its degree of certainty. III. The conjunction \"mas\" turns both words into adjectives. Which option is correct?",
     options: [
-      "The possibility that the possessive \"seu\" may refer either to the technician or to the director.",
-      "The inappropriate use of the future-in-the-past verb tense.",
-      "The lack of agreement between the subject and the predicate.",
-      "The mandatory use of crasis before the word \"diretor\".",
-      "The impossibility of identifying the direct object of the verb \"informar\"."
+      "Only statements I and II are correct.",
+      "Only statement I is correct.",
+      "Only statements II and III are correct.",
+      "Only statements I and III are correct.",
+      "Only statement III is correct."
     ],
-    explanation: "The possessive pronoun does not make clear which of the two referents owns the computer."
+    explanation: "Both terms are adverbs formed with \"-mente\": \"cuidadosamente\" expresses manner and \"possivelmente\" marks possibility. The adversative conjunction does not change their word class."
   },
   "bruno-massaranduba-2026-07": {
-    prompt: "In \"A rede ficou indisponível temporariamente\", the word \"temporariamente\":",
+    prompt: "Compare the uses of \"chave\" in \"a chave abriu a porta\" and \"a chave criptográfica protegeu a mensagem\". In a general dictionary, how is the semantic relationship between these uses best described?",
     options: [
-      "É substantivo derivado do verbo temporizar e funciona como sujeito.",
-      "É advérbio formado a partir de adjetivo com o sufixo \"-mente\" e modifica o predicado, exprimindo circunstância de tempo.",
-      "É adjetivo uniforme e caracteriza diretamente o substantivo \"rede\".",
-      "É conjunção temporal que introduz uma oração subordinada.",
-      "É pronome indefinido que substitui uma expressão de tempo."
+      "Antonymy, because the meanings oppose one another in the same context.",
+      "Polysemy: the same form has related senses selected by context.",
+      "Paronymy, because the two words have different spellings and pronunciations whilst retaining the same contextual meaning.",
+      "Hypernymy, because \"porta\" is a kind of key.",
+      "Perfect synonymy, because the two uses can replace one another."
     ],
-    explanation: "The form results from \"temporária\" plus \"-mente\" and functions as an adverb of time."
+    explanation: "The word retains the same form but has related senses as a means of physical access and a cryptographic access resource; context selects the intended sense."
   },
   "bruno-massaranduba-2026-08": {
-    prompt: "Select the option that is correct with respect to verbal and nominal agreement in Portuguese:",
+    prompt: "Select the option that is entirely correct in Portuguese spelling, accentuation and use of the grave accent indicating crasis:",
     options: [
-      "Fazem dois meses que os equipamentos chegaram.",
-      "Existe, no servidor, arquivos sem cópia de segurança.",
-      "Havia cópias íntegras dos arquivos nos dois repositórios.",
-      "Segue anexas as especificações solicitadas.",
-      "Devem haver soluções para o problema de conectividade."
+      "A medida que os relatorios eram concluidos, a equipe enviava-os as unidades.",
+      "À medida em que os relatórios eram concluídos, a equipe teve a idéia de enviá-los conforme a norma vigente.",
+      "À medida que os relatórios eram concluídos, a equipe pôde enviá-los às unidades responsáveis.",
+      "O técnico dirigiu-se à uma unidade e entregou o relatório à cada gestora.",
+      "Os usuários têm acesso à arquivos que permaneceram disponiveis no repositório."
     ],
-    explanation: "The verb \"haver\", when it means \"to exist\", is impersonal and remains singular: \"havia cópias\"."
+    explanation: "The correct expression is \"à medida que\"; \"relatórios\", \"pôde\" and \"enviá-los\" take the indicated marks, and crasis occurs in \"às unidades\"."
   },
   "bruno-massaranduba-2026-09": {
-    prompt: "A local authority has 240 workstations. Fifteen per cent of them will be serviced during one upgrade stage. How many workstations will be upgraded in this stage?",
-    options: ["24.", "30.", "32.", "36.", "40."],
-    explanation: "Fifteen per cent of 240 is 0.15 × 240 = 36."
+    prompt: "A storage volume has a capacity of 3.5 TB. Of this total, 0.75 TB is reserved for the system and 1.875 TB is already occupied by data. How much remains available?",
+    options: ["0.625 TB.", "0.750 TB.", "0.825 TB.", "0.875 TB.", "1.125 TB."],
+    explanation: "The available space is 3.5 - 0.75 - 1.875 = 0.875 TB."
   },
   "bruno-massaranduba-2026-10": {
-    prompt: "Six technicians, working at the same rate, configure 90 computers in five days. How many computers will ten technicians configure in three days if each technician maintains the same productivity?",
-    options: ["45.", "54.", "60.", "75.", "90."],
-    explanation: "The initial work takes 30 technician-days. Ten technicians working for three days also provide 30 technician-days, so they configure the same 90 computers."
+    prompt: "Eight technicians working at a constant rate update 160 computers in five days. After two days, two technicians are reassigned, and the others work for another three days at the same rate. How many computers are updated in total?",
+    options: ["112.", "120.", "128.", "132.", "136."],
+    explanation: "The rate is 160 ÷ (8 × 5) = 4 computers per technician-day. They complete 8 × 2 × 4 = 64 in the first stage and 6 × 3 × 4 = 72 in the second, for a total of 136."
   },
   "bruno-massaranduba-2026-11": {
-    prompt: "A device costing R$ 5,000.00 was purchased with simple interest of 2% per month for three months. What is the total interest?",
-    options: ["R$ 300.00.", "R$ 306.04.", "R$ 500.00.", "R$ 600.00.", "R$ 5,300.00."],
-    explanation: "For simple interest, J = C × i × t = 5,000 × 0.02 × 3 = 300."
+    prompt: "A reserve of R$10,000.00 earns compound interest of 2% per month. What will the balance be after three months, with no deposits or withdrawals?",
+    options: ["R$10,612.08.", "R$10,600.00.", "R$10,604.00.", "R$10,620.00.", "R$10,824.32."],
+    explanation: "The balances form a geometric progression with ratio 1.02: 10,000 × 1.02³ = 10,612.08."
   },
   "bruno-massaranduba-2026-12": {
-    prompt: "A department has 34 devices comprising computers and printers. The number of computers is six greater than the number of printers. How many computers are there?",
-    options: ["14.", "20.", "22.", "24.", "28."],
-    explanation: "From the system c + p = 34 and c - p = 6, it follows that 2c = 40 and therefore c = 20."
+    prompt: "A set of files initially occupies 4 GB and doubles in size during each cycle. The number of cycles t required to reach 128 GB satisfies 4 × 2ᵗ = 128. What is t?",
+    options: ["4.", "5.", "6.", "7.", "8."],
+    explanation: "Dividing by 4 gives 2ᵗ = 32. Since log₂32 = 5, five cycles are required."
   },
   "bruno-massaranduba-2026-13": {
-    prompt: "A dataset initially occupies 2 GB and doubles in size at the end of each of five processing cycles. What will its size be after the fifth cycle?",
-    options: ["10 GB.", "32 GB.", "64 GB.", "80 GB.", "100 GB."],
-    explanation: "The growth is exponential: 2 × 2⁵ = 64 GB."
+    prompt: "A table relates the number x of technicians to the daily total y of service requests: (1, 12), (3, 24) and (5, 36). Assuming a linear function, which model represents the data, and how many requests are predicted for x = 4?",
+    options: [
+      "y = 12x; 48 requests.",
+      "y = 4x + 8; 24 requests.",
+      "y = 6x + 6; 30 requests.",
+      "y = 6x; 24 requests.",
+      "y = x + 11; 15 requests."
+    ],
+    explanation: "The rate of change is 6, and the point (1, 12) gives an intercept of 6. Therefore, y = 6x + 6 and y(4) = 30."
   },
   "bruno-massaranduba-2026-14": {
-    prompt: "A rectangular room measuring 12 m by 8 m will be covered with floor tiles measuring 0.25 m² each, with no wastage. How many tiles will be required?",
-    options: ["96.", "192.", "256.", "384.", "480."],
-    explanation: "The room has an area of 96 m². Dividing 96 by 0.25 gives 384 tiles."
+    prompt: "The matrix system [[2, 1], [1, 2]] · [x, y]ᵀ = [11, 10]ᵀ determines two quantities. If they are exactly the roots of a monic quadratic polynomial P(t), what is P(t)?",
+    options: [
+      "P(t) = t² - 7t - 12.",
+      "P(t) = t² + 7t + 12.",
+      "P(t) = t² - 12t + 7.",
+      "P(t) = t² - 7t + 12.",
+      "P(t) = t² - 4t + 3."
+    ],
+    explanation: "The system gives x = 4 and y = 3. Therefore, P(t) = (t - 4)(t - 3) = t² - 7t + 12."
   },
   "bruno-massaranduba-2026-15": {
-    prompt: "A team must choose two different staff members from a group of five to carry out a test. How many different pairs can be formed?",
-    options: ["5.", "6.", "8.", "9.", "10."],
-    explanation: "Order does not matter, so the number of pairs is C(5,2) = 10."
+    prompt: "A straight 20 m cable connects the top of a mast to the ground and forms an angle of 30° with level ground. Ignoring the height of the ground fixing, what are the mast height and the horizontal distance to the anchor?",
+    options: [
+      "20 m and 10 m.",
+      "10√3 m and 10 m.",
+      "20√3 m and 20 m.",
+      "10 m and 20√3 m.",
+      "10 m and 10√3 m."
+    ],
+    explanation: "In the right-angled triangle, the height is 20·sin30° = 10 m and the horizontal projection is 20·cos30° = 10√3 m."
   },
   "bruno-massaranduba-2026-16": {
-    prompt: "Consider the proposition: \"If the server is unavailable, then the system sends an alert.\" It was found that the system did not send an alert. Assuming the initial proposition is true, it logically follows that:",
+    prompt: "The service times, in minutes, for five requests were 8, 10, 10, 12 and 20. Two requests will be selected at random, without replacement and without regard to order. What is the sample median, and what is the probability that exactly one selected request has a time above the median?",
     options: [
-      "The server was not unavailable.",
-      "The server was unavailable, but the alert failed.",
-      "The system sent two alerts.",
-      "No conclusion whatsoever can be reached.",
-      "The server was necessarily undergoing maintenance."
+      "Median 10 and probability 3/5.",
+      "Median 10 and probability 2/5.",
+      "Median 12 and probability 3/5.",
+      "Median 12 and probability 1/2.",
+      "Median 20 and probability 1/5."
     ],
-    explanation: "This is modus tollens: if P implies Q and Q is false, then P is false."
+    explanation: "The median is 10. Two values are above it and three are not; among C(5,2) = 10 pairs, 2 × 3 = 6 are favourable, so the probability is 6/10 = 3/5."
   },
   "bruno-massaranduba-2026-17": {
-    prompt: "According to the Municipality of Massaranduba's official historical account, select the correct option:",
+    prompt: "Massaranduba's historical and administrative formation went through several stages. Which summary is chronologically consistent with the official historical records?",
     options: [
-      "The municipality was named after the Itapocu River and gained municipal status in 1951.",
-      "The abundance of the maçaranduba tree gave the municipality its name, and it gained municipal status on 11 November 1961.",
-      "The name honours an Italian immigrant, and municipal status was granted in 1970.",
-      "The name is exclusively of Indigenous origin and is unrelated to local vegetation.",
-      "Permanent settlement began only after the municipality gained municipal status."
+      "European settlement intensified around 1870, municipal status was granted in 1921 and the district was created in 1961, leading to its final administrative form.",
+      "European settlement around 1870; district created in 1921; municipal status restored in 1961, with installation on 11 November.",
+      "European settlement began in 1921, the district was created in 1948 and municipal status was first granted in 1961.",
+      "European settlement intensified around 1870, the municipality was established in 1921 and it returned to district status in 1961.",
+      "The district was created in 1921 and municipal status granted in 1948, with autonomy continuing without later changes."
     ],
-    explanation: "The municipal tourism portal associates the name with the maçaranduba tree and records the municipality's emancipation on 11 November 1961."
+    explanation: "The official milestones place European settlement around 1870, creation of the district in 1921 and renewed elevation to municipal status in 1961, with installation on 11 November."
   },
   "bruno-massaranduba-2026-18": {
-    prompt: "The expression \"Santa Catarina's Rice Capital\", associated with Massaranduba, derives mainly from:",
+    prompt: "A development assessment seeks to relate Massaranduba's regional position to its economy. Which option presents a coherent association?",
     options: [
-      "The concentration of agricultural equipment industries, with no significant rural production.",
-      "The exclusive production of rain-fed rice in small urban areas.",
-      "Farmers' dedication to rice farming, particularly irrigated rice cultivation.",
-      "The location of Santa Catarina's largest rice-exporting port.",
-      "The existence of a university specialising in cereals."
+      "The municipality is part of the Itajaí Valley, and its economic identity derives mainly from port activities.",
+      "Massaranduba is part of the Itapocu Valley, but its rice-related title derives from predominantly banana cultivation and an exclusively textile economy.",
+      "Massaranduba lies in the Itapocu Valley; irrigated rice farming supports the title Santa Catarina's Rice Capital, and industry diversifies jobs.",
+      "Massaranduba is part of the Itapocu Valley, but its rice farming is entirely rain-fed and coastal tourism is its main activity.",
+      "Irrigated rice farming explains the local identity, but it has no relationship with processing, industry or employment diversification."
     ],
-    explanation: "The official account highlights rice farming and irrigated rice cultivation as the origin of this title."
+    explanation: "Its place in the Itapocu Valley, irrigated rice farming and the presence of different industrial sectors provide an integrated reading of local geography and the economy."
   },
   "bruno-massaranduba-2026-19": {
-    prompt: "The Brazilian Energy Balance 2026, using 2025 as its base year, recorded a high share of renewable sources in Brazil's electricity mix. What is the most appropriate interpretation of this finding?",
+    prompt: "In a contemporary debate, false information about a public-health campaign reduces participation, widens inequalities and puts pressure on public services and household budgets. Which public response properly integrates politics, education, health, society and the economy?",
     options: [
-      "The high renewable share eliminates the need for transmission networks and energy storage.",
-      "The result makes energy-efficiency and security-of-supply policies unnecessary.",
-      "The electricity mix and the overall energy mix are equivalent expressions and necessarily have the same percentage.",
-      "The renewable share is an advantage, but the transition requires planning, resilience, infrastructure expansion and energy inclusion.",
-      "Renewable sources make assessments of social and environmental impacts unnecessary."
+      "Extend service hours and concentrate communication in technical bulletins, assessing results by the number of publications and appointments offered.",
+      "Subsidise suppliers and increase stocks, using distributed volume and unit cost as the main measures of public participation.",
+      "Agree a protocol with platforms to label false content and assess success by the total number of posts removed or labelled.",
+      "Combine segmented evidence-based communication, media literacy and access to the service, tracking participation and distributional effects.",
+      "Run a uniform campaign through mass channels and measure reach, exposure cost and total supply without distinguishing barriers faced by each audience."
     ],
-    explanation: "The energy transition combines decarbonisation with security, infrastructure, resilience and access; a favourable indicator does not remove these challenges."
+    explanation: "The integrated response addresses information, critical capacity and access, whilst measuring whether outcomes and costs are distributed unequally among audiences."
   },
   "bruno-massaranduba-2026-20": {
-    prompt: "In response to increasingly frequent heavy rainfall, a municipal policy aligned with sustainable development should:",
+    prompt: "The expansion of data centres increases demand for electricity and for minerals used in equipment, affecting global supply chains and ecosystems. Which analysis is compatible with sustainable development?",
     options: [
-      "Prioritise emergency works alone, without territorial planning.",
-      "Transfer full responsibility for adaptation to the population.",
-      "Suspend social investment to fund roadworks exclusively.",
-      "Address environmental risks separately from housing, health and infrastructure.",
-      "Integrate risk prevention, climate adaptation, social inclusion, economic planning and results monitoring."
+      "Improve server efficiency and contract lower-emission energy, whilst purchasing equipment on lowest price alone and omitting end-of-life assessment.",
+      "Diversify mineral suppliers to reduce geopolitical risk whilst retaining the current energy mix and equipment disposal cycles.",
+      "Set recycling and server-utilisation targets, dispensing with primary-extraction traceability whenever the recycler is certified.",
+      "Expand domestic production under local environmental licensing and assign management of overseas impacts to foreign suppliers.",
+      "Assess energy and materials across the life cycle, combining efficiency, lower-impact sources, circularity and diversified, traceable suppliers."
     ],
-    explanation: "Sustainable development requires the integration of environmental, social and economic dimensions, with prevention and monitoring."
+    explanation: "Life-cycle analysis addresses energy use, material origin, disposal and geopolitical concentration in the supply chain as connected factors."
   },
   "bruno-massaranduba-2026-21": {
-    prompt: "Select the correct classification of microcomputer components:",
+    prompt: "A workstation displays video normally but accepts no input from a USB keyboard that works on another computer. In Windows 10, the USB controller appears disabled in Device Manager. Which action correctly relates the peripheral, interface and software?",
     options: [
-      "A keyboard is an input device, a monitor is an output device and an SSD is a storage device.",
-      "A keyboard and monitor are exclusively processing devices.",
-      "An SSD is volatile memory used only while programs are running.",
-      "A monitor is an input device and a mouse is an output device.",
-      "A processor is an external storage peripheral."
+      "The keyboard is an input device; re-enable the controller and check its driver before replacement, as the interface may block a working device.",
+      "The keyboard is an output device; replace the monitor because video output confirms a joint fault in the USB ports.",
+      "The SSD controls the USB ports; formatting the drive should restore the keyboard without checking the system controller.",
+      "Windows 10 is a peripheral; reinstalling the word processor directly repairs the disabled USB interface.",
+      "Because the keyboard works elsewhere, only the word processor can be at fault, as it controls every system input device."
     ],
-    explanation: "The keyboard sends data, the monitor presents results and the SSD retains data in non-volatile storage."
+    explanation: "A keyboard is an input peripheral but depends on its port, controller and operating-system-managed driver; the test on another computer reduces suspicion of the keyboard itself."
   },
   "bruno-massaranduba-2026-22": {
-    prompt: "In a computer, BIOS or UEFI is firmware primarily responsible for:",
+    prompt: "During compression, monitoring shows 100% CPU use and 45% RAM use. In a separate test, an external SSD is slow only on a USB 2.0 port. Which diagnosis correctly relates processor, memory, buses and interface?",
     options: [
-      "Editing documents and spreadsheets before the system loads.",
-      "Initialising hardware, providing basic settings and starting the boot process.",
-      "Permanently replacing the operating system.",
-      "Managing only the browser's internet connection.",
-      "Storing the user's personal files."
+      "Adding RAM resolves both cases because it stores files permanently and replaces the bandwidth of the USB interface.",
+      "The CPU limits compression; 45% RAM does not indicate exhaustion. USB 2.0 may limit the SSD, and buses carry data between components.",
+      "The external SSD executes the compression instructions; its transfer rate alone determines the measured CPU use.",
+      "100% CPU use proves a physical processor fault; buses and the USB interface cannot affect transfer and can be excluded from diagnosis.",
+      "45% RAM use proves a memory bottleneck; formatting the external SSD increases internal-bus width and reduces processing."
     ],
-    explanation: "BIOS or UEFI initialises and checks components, retains low-level settings and hands loading over to the boot device."
+    explanation: "The readings indicate a processing limit during compression, not exhausted RAM. Interface negotiation may limit SSD transfer, whilst buses carry data among components."
   },
   "bruno-massaranduba-2026-23": {
-    prompt: "Which statement about file management in Windows 10 is correct?",
+    prompt: "After an installation that booted from the old drive is cloned to a new SSD, the computer reports that no boot device was found. Which initial procedure correctly relates storage and firmware?",
     options: [
-      "Changing a file extension from .txt to .pdf automatically converts the file's contents.",
-      "Deleting a shortcut always deletes the original file to which it points.",
-      "Copying a file to another folder preserves the original and creates another instance at the destination.",
-      "The Recycle Bin replaces a backup policy.",
-      "Marking a file as hidden encrypts it."
+      "Immediately reinstall the operating system before checking whether the firmware detects the drive.",
+      "Change only the Secure Boot setting, even if the SSD does not appear among the UEFI devices.",
+      "Check connection, power and UEFI detection; then review boot order, boot mode and the integrity of the loader on the cloned SSD.",
+      "Initialise and format the SSD in another machine and assume that this resolves every incompatibility without confirming the partition scheme used for cloning.",
+      "Update only the Windows drivers although the SSD is still not detected by the firmware."
     ],
-    explanation: "A copy operation retains the source file and creates a copy at the destination; the other statements confuse distinct properties."
+    explanation: "The firmware must detect the drive. Once it does, inspect the boot configuration, cloned partition scheme and system loader without first erasing the copy."
   },
   "bruno-massaranduba-2026-24": {
-    prompt: "In a spreadsheet, cell D5 contains the formula =$B$2*C5. When it is copied to D6, the resulting formula will be:",
-    options: ["=B2*C5", "=$B2*$C6", "=B$2*C$5", "=$B$2*C6", "=$B$3*C6"],
-    explanation: "The $B$2 reference is absolute and remains fixed; C5 is relative and changes to C6."
+    prompt: "A workstation shuts down under load, reaches high temperatures and causes the UPS to signal an overload. Which maintenance approach is technically appropriate?",
+    options: [
+      "Clean the interior whilst it is still energised, without electrostatic control, and keep the UPS at its current load.",
+      "Replace only the thermal paste without testing fans, power supply, consumption or UPS capacity.",
+      "Replace only the UPS battery and ignore both overheating and the workstation's power requirement.",
+      "De-energise, control ESD, inspect cooling and the power supply, and check UPS rating, battery and load.",
+      "Replace only the internal power supply and leave airflow obstructed because temperature and UPS load are independent diagnoses."
+    ],
+    explanation: "The diagnosis must cover safe assembly, thermal flow, internal power delivery and UPS sizing because each may contribute to the shutdown."
   },
   "bruno-massaranduba-2026-25": {
-    prompt: "Consider the following features: I. Heading styles in Word support document structure and table-of-contents generation. II. PowerPoint's Slide Master centralises recurring elements. III. Outlook rules can classify messages automatically. IV. Google Workspace allows files to be shared with different permission levels. Which statements are correct?",
+    prompt: "In Windows 10, a received file appears as \"report.pdf\", but extensions are hidden. Which action reduces risk without confusing the displayed name with the content's actual format?",
     options: [
-      "I only.",
-      "I and II only.",
-      "II and III only.",
-      "I, III and IV only.",
-      "I, II, III and IV."
+      "Trust the displayed icon and open the file with administrative privileges.",
+      "Rename the file with a .txt ending and consider it automatically converted without checking whether its internal structure matches the new suffix.",
+      "Show the extension and treat it as definitive proof of the internal format, omitting properties, signature and content analysis before execution.",
+      "Disable type display and rely exclusively on the application suggested by the file association.",
+      "Show extensions to inspect the complete name, then validate the signature or internal format with an analysis tool before opening."
     ],
-    explanation: "All four statements describe standard features of the applications and services included in the syllabus."
+    explanation: "A visible extension reveals the complete name but does not guarantee the internal format. Properties, signature and content analysis help validate the file before opening."
   },
   "bruno-massaranduba-2026-26": {
-    prompt: "Select the correct statement about backups:",
+    prompt: "A Word report has chapters, must generate an automatic table of contents and needs different headers in two parts. Which procedure is appropriate?",
     options: [
-      "An incremental backup copies changes since the most recent backup of any type; restoration normally requires the latest full backup and the subsequent incremental backups.",
-      "A full backup necessarily depends on all preceding incremental backups for restoration.",
-      "A differential backup copies only the changes since the immediately preceding differential backup.",
-      "Keeping a single copy on the same source disk provides adequate redundancy.",
-      "Synchronisation and backup are always equivalent, including in protection against accidental deletion."
+      "Use heading styles and a section break; unlink the new header from the previous section and update the contents.",
+      "Use spaces to simulate headings and insert line breaks until the header changes.",
+      "Convert each chapter into an image so that Word recognises the hierarchy.",
+      "Type page numbers manually in the text, prevent the table of contents from being updated and keep pagination unlinked from the chapters.",
+      "Replace section breaks with tabs because both perform the same function."
     ],
-    explanation: "Incremental backups record changes since the preceding backup; restoration uses the full baseline and the subsequent incremental chain."
+    explanation: "Styles provide the structure used by the table of contents. The break creates another section, and turning off Link to Previous allows a genuinely different header."
   },
   "bruno-massaranduba-2026-27": {
-    prompt: "A malicious program encrypts files and demands payment in exchange for the recovery key. This behaviour characterises:",
-    options: ["Adware.", "Ransomware.", "A firewall.", "Antivirus software.", "A hypervisor."],
-    explanation: "Ransomware blocks or encrypts data to extort the victim, usually by demanding a ransom."
+    prompt: "In Excel, B2 contains the price of a device and F1 contains a percentage rate entered as 8%, to be applied to every row. Which formula in C2 calculates the price after applying the percentage increase and can be copied down whilst keeping F1 fixed?",
+    options: ["=B2*(1+F1)", "=B2*(1+$F$1)", "=$B$2*(1+F1)", "=B$2+$F1", "=SUM(B2,$F$1)"],
+    explanation: "B2 must vary when the formula is copied, whilst $F$1 is an absolute reference and remains fixed; multiplying by 1 plus the rate applies the percentage increase."
   },
   "bruno-massaranduba-2026-28": {
-    prompt: "Which is the technically appropriate practice when maintaining a computer and providing electrical protection for the department?",
+    prompt: "A training session will be prepared in PowerPoint, scheduled through Outlook, distributed through Google Workspace and accessed in the browsers named in the syllabus. Which workflow uses these tools correctly?",
     options: [
-      "Touch energised circuit boards to locate heat.",
-      "Use a domestic vacuum cleaner directly on electronic components.",
-      "Disconnect the equipment from power, control electrostatic discharge and use a properly sized UPS to allow a safe shutdown during a power failure.",
-      "Replace earthing with an ordinary power strip.",
-      "Block air outlets to prevent dust from entering."
+      "Format each slide manually, send copies as Outlook attachments and allow every participant to maintain an independent version.",
+      "Prepare the slides in PowerPoint but use a public editing link in Workspace and treat the Outlook invitation as sufficient access control.",
+      "Use Slide Master, an Outlook invitation, least-privilege Workspace sharing and an authenticated browser test.",
+      "Standardise the presentation and send the invitation, but keep the file restricted to its owner and assume that the browser will grant guests access.",
+      "Share one account among participants, edit the slides directly in the Outlook attachment and dispense with version history."
     ],
-    explanation: "Power isolation and ESD control protect the hardware; a properly sized UPS provides temporary continuity and allows a controlled shutdown."
+    explanation: "The workflow uses each product for its intended purpose, applies visual consistency, schedules the activity and protects the document through named sharing and least privilege."
   },
   "bruno-massaranduba-2026-29": {
-    prompt: "Select the correct statement about storage systems:",
+    prompt: "There is a full backup from Sunday and incremental backups from Monday, Tuesday and Wednesday. A failure occurs on Thursday before the next backup. To restore the latest available state, the technician should:",
     options: [
-      "RAID 0 maintains a mirrored copy and tolerates the failure of one disk.",
-      "RAID 1 distributes parity across at least three disks.",
-      "A RAID array removes the need for external backups and restoration tests.",
-      "RAID 1 mirrors data between disks but does not replace backups against deletion, corruption or disaster.",
-      "An SSD is volatile and loses its data whenever the computer is switched off."
+      "Restore only Wednesday's incremental backup.",
+      "Restore the incremental backups in any order without the full backup.",
+      "Restore only the full backup and ignore every later change, even when the goal is to recover Wednesday's state.",
+      "Restore Sunday's full backup, then the Monday-to-Wednesday incrementals in order.",
+      "Create a differential backup after the failure and use it as the sole source."
     ],
-    explanation: "RAID 1 mirroring improves availability during a disk failure, but it also replicates errors and does not cover every data-loss scenario."
+    explanation: "Each incremental backup depends on the state produced by the full baseline and the preceding incrementals, so the chain must be applied in order."
   },
   "bruno-massaranduba-2026-30": {
-    prompt: "Which description correctly distinguishes a switch from a router on a local network?",
+    prompt: "A workstation begins to encrypt files and display a demand for payment. Which initial response is most appropriate?",
     options: [
-      "A switch resolves DNS names, while a router stores email messages.",
-      "A switch operates only with analogue signals, while a router operates only with fibre optics.",
-      "Both necessarily perform the same function and can be exchanged without configuration.",
-      "A router forwards frames only by MAC address within the same VLAN.",
-      "A switch forwards frames on the local network using MAC addresses, whereas a router interconnects networks and forwards IP packets."
+      "Start a backup of the volumes whilst the workstation remains connected to shared resources, before containing propagation and until every affected data item has been copied.",
+      "Delete the encrypted files and reinstall the system before preserving evidence or identifying other affected assets.",
+      "Run only an antivirus scan whilst shared resources remain mounted and without invoking the incident procedure.",
+      "Immediately restore the backup to the same still-compromised workstation, without eradication or prior validation.",
+      "Isolate the workstation from the network, invoke the incident procedure, preserve evidence, assess the scope and restore data only from verified copies."
     ],
-    explanation: "Switches forward frames within the local domain; routers select paths between IP networks."
+    explanation: "The behaviour is consistent with ransomware; containment, evidence preservation, analysis and safe restoration limit propagation and support recovery."
   },
   "bruno-massaranduba-2026-31": {
-    prompt: "Which medium is most appropriate for connecting two buildings separated by a long distance where high capacity is required and there is strong electromagnetic interference along the route?",
+    prompt: "In a physical star network, each workstation has its own link to a central switch. What failure effect should be expected?",
     options: [
-      "Fibre optic cable, because it transmits light, supports longer distances and is not affected by electromagnetic interference.",
-      "Unshielded coaxial cable, because it removes every distance limitation.",
-      "Ordinary twisted-pair cable, because it is immune to electromagnetic fields.",
-      "A power cable, without any additional communications equipment.",
-      "Infrared, even though there is no line of sight between the buildings."
+      "A cable fault isolates one workstation; a switch fault may affect every connected workstation.",
+      "A break in any cable necessarily stops the whole network, as in a single bus.",
+      "The switch is unnecessary because each workstation connects directly to every other workstation.",
+      "The physical topology means that data must always be transmitted by radio.",
+      "Switch failure affects only one workstation, regardless of its connections."
     ],
-    explanation: "Fibre optics provide high capacity, longer reach and immunity to electromagnetic interference, making them suitable for this scenario."
+    explanation: "A star normally isolates an individual link failure but concentrates connectivity in the central device."
   },
   "bruno-massaranduba-2026-32": {
-    prompt: "In the TCP/IP model, which option correctly relates the protocols to their functions?",
+    prompt: "Two public buildings 400 m apart need a high-capacity link crossing an area with strong electromagnetic interference. Which solution is most appropriate?",
     options: [
-      "IP alone guarantees reliable, ordered delivery of every segment.",
-      "IP provides packet addressing and routing, while TCP can provide reliable, ordered transport between applications.",
-      "TCP converts domain names into IP addresses and replaces DNS.",
-      "HTTP operates at the data-link layer to forward frames by MAC address.",
-      "Ethernet selects routes between public networks by using TCP port numbers."
+      "Ordinary twisted-pair cable in a single 400 m segment with no intermediate equipment.",
+      "Fibre-optic cable suitable for the distance, terminated in compatible modules and ports on the network equipment.",
+      "Shielded twisted-pair cable in a single 400 m segment, relying on shielding alone to overcome the reach limit.",
+      "A radio link with no survey of line of sight, interference or capacity because it is always immune to the electromagnetic environment.",
+      "Fibre-optic cable terminated directly in electrical RJ-45 ports with no compatible conversion modules."
     ],
-    explanation: "IP handles addressing and forwarding between networks; TCP adds connection control, ordering and retransmission at the transport layer."
+    explanation: "Fibre provides reach and capacity together with immunity to electromagnetic interference; modules and interfaces must suit the fibre type and link."
   },
   "bruno-massaranduba-2026-33": {
-    prompt: "An external reviewer needs to comment on a Google Workspace document but must not edit it. Which configuration follows the principle of least privilege?",
+    prompt: "Whilst tracing a communication through the OSI and TCP/IP models, a technician observes Ethernet frames on the local link, IP packets between networks and TCP segments delivered to applications. Which association is correct?",
     options: [
-      "Publish an open internet link with editing permission.",
-      "Share the password for the account that owns the document.",
-      "Keep access restricted and grant the reviewer's account commenting permission only.",
-      "Transfer ownership of the document to the reviewer.",
-      "Send an editable copy with no access restrictions."
+      "Ethernet operates at the application layer, IP at the physical layer and TCP at the data-link layer throughout the path from source to destination.",
+      "TCP selects MAC addresses, whilst Ethernet routes traffic between networks.",
+      "Ethernet is data-link, IP network/Internet and TCP end-to-end transport.",
+      "IP replaces every layer function and makes TCP and Ethernet unnecessary.",
+      "All three protocols operate exclusively at the OSI physical layer."
     ],
-    explanation: "Granting the minimum required permission to the individual account allows comments without authorising content changes or exposing credentials."
+    explanation: "Ethernet carries frames over a link, IP addresses and forwards packets between networks, and TCP provides transport functions between applications."
   },
   "bruno-massaranduba-2026-34": {
-    prompt: "When configuring an institutional wireless network, which set of measures adequately reduces risk?",
+    prompt: "A computer with address 192.168.10.34/27 must communicate with a server at 192.168.10.65/27. Given the stated mask, what is required?",
     options: [
-      "Retain the default credentials and use a hidden SSID as the only protection.",
-      "Use the same permanently shared password for staff, visitors and administrators.",
-      "Disable encryption to avoid incompatibilities and rely only on MAC addresses.",
-      "Adopt WPA2 with AES/CCMP or, preferably, WPA3, use strong credentials, change factory defaults and segment the guest network.",
-      "Connect access points directly to the administrative network without updating their firmware."
+      "Nothing beyond a hub, because addresses sharing their first three octets are always in the same subnet.",
+      "Change both addresses to broadcast addresses to permit direct communication.",
+      "Use DNS alone because name resolution routes packets.",
+      "Use a gateway/router: the hosts are in subnets 192.168.10.32/27 and 192.168.10.64/27.",
+      "Replace TCP with HTTP because application protocols join separate subnets."
     ],
-    explanation: "WPA2 with AES/CCMP or, preferably, WPA3 avoids obsolete protocols and ciphers; strong credentials, changed factory defaults and guest-network segmentation add complementary protective controls."
+    explanation: "A /27 mask creates blocks of 32 addresses. The first host is in network .32/27 and the second in .64/27, so communication between them requires routing."
   },
   "bruno-massaranduba-2026-35": {
-    prompt: "Monitoring flags unusual outbound traffic from a workstation. Before concluding that an intrusion has occurred, what is the most appropriate technical response?",
+    prompt: "A public office must provide internal Wi-Fi and visitor access without exposing the administrative network. Which design combines performance and security?",
     options: [
-      "Immediately delete every log to free storage space.",
-      "Publicly disclose the device's address before carrying out an analysis.",
-      "Permanently disable the perimeter firewall to observe more traffic.",
-      "Ignore the event, because outbound connections can never indicate compromise.",
-      "Correlate logs, processes, destinations and the baseline; preserve evidence and, if there is consistent evidence of compromise, contain the device in accordance with the incident response procedure."
+      "One open SSID with the administrative password displayed at reception.",
+      "WEP and factory credentials because compatibility is more important than protection.",
+      "Hide the SSID as the only measure and connect visitors to the servers' VLAN.",
+      "Increase every access point's power without surveying channels or coverage and disregard the building's physical obstructions.",
+      "Separate SSIDs/VLANs, use WPA2-AES or WPA3, isolate visitors and plan channels and coverage."
     ],
-    explanation: "Correlation reduces false positives; preserving evidence and applying controlled containment support investigation and limit a possible incident."
+    explanation: "Segmentation and isolation limit lateral access; current encryption, suitable credentials and radio planning address both security and performance."
   },
   "bruno-massaranduba-2026-36": {
-    prompt: "During a videoconference, average bandwidth is sufficient, but variations in delay cause broken-up audio. Which action directly addresses this problem?",
+    prompt: "After a camera and microphone are installed for a stream, video arrives normally, but VoIP audio breaks up when delay variation increases. Which action directly addresses the problem?",
     options: [
-      "Measure jitter and packet loss, prioritise real-time traffic with QoS and adjust the playback buffer where appropriate.",
-      "Increase the video resolution indefinitely.",
-      "Disable every congestion-control mechanism.",
-      "Change the server's DNS name without measuring the network.",
-      "Convert the microphones into storage devices."
+      "Measure jitter and loss, inspect the link, prioritise real-time traffic with QoS and adjust the playback buffer where appropriate.",
+      "Increase the video resolution and bit rate to occupy the available capacity, without measuring jitter or loss, and keep voice in the same queue as file transfers.",
+      "Change to a higher-bit-rate codec and keep voice traffic in the same queue as bulk transfers.",
+      "Change the DNS server although the session is already established and the fault follows delay variation.",
+      "Disable QoS and run backups over the same link during the call to make network use more uniform."
     ],
-    explanation: "Jitter is variation in delay; prioritisation and a suitable buffer help stabilise playback, while measurement confirms the cause."
+    explanation: "Audio break-up associated with delay variation indicates jitter; measurement, prioritisation and a suitable buffer help stabilise real-time media."
   },
   "bruno-massaranduba-2026-37": {
-    prompt: "In a relational database, which statement about primary and foreign keys is correct?",
+    prompt: "Monitoring detects unusual external traffic from a server located in a room with no access control. Which response integrates physical security, logical security and network policy?",
     options: [
-      "A primary key may identify several rows with the same value without restriction.",
-      "A primary key uniquely identifies a row; a foreign key references a key in a related table and helps maintain referential integrity.",
-      "A foreign key is used exclusively to encrypt sensitive columns.",
-      "Every table must have exactly five primary keys.",
-      "Keys are used only to determine the visual order of results."
+      "Restrict physical access only and close the analysis without investigating the traffic deviation.",
+      "Restrict physical access, preserve and correlate logs, segment the network, apply least privilege and follow incident response.",
+      "Immediately block all traffic, delete the logs and return to operation without determining the cause.",
+      "Temporarily make the firewall more permissive and defer containment without preserving evidence of the initial event until traffic returns to its expected pattern.",
+      "Treat the traffic as legitimate merely because it is outbound and leave permissions and segmentation unchanged."
     ],
-    explanation: "The primary key provides a unique identity, while the foreign key represents the relationship with a candidate or primary key in another table."
+    explanation: "The case requires control of the physical environment, evidence retention, investigation of the traffic deviation and logical controls defined by policy."
   },
   "bruno-massaranduba-2026-38": {
-    prompt: "Select the option that correctly classifies three SQL commands:",
+    prompt: "A register repeats the department name on every server row and permits different names for the same code. Which relational design reduces inconsistency?",
     options: [
-      "CREATE TABLE is DML; INSERT is DCL; SELECT is TCL.",
-      "CREATE TABLE is DQL; INSERT is DDL; SELECT is DCL.",
-      "CREATE TABLE is DDL; INSERT is DML; SELECT is DQL.",
-      "CREATE TABLE is TCL; INSERT is DQL; SELECT is DDL.",
-      "All three commands belong exclusively to DCL."
+      "Keep the department name as free text in each row and rely solely on the application to standardise it.",
+      "Create a Department table with no key and copy the name again into every Server record.",
+      "Create Department with a primary key; reference it from Server by foreign key and enforce referential integrity.",
+      "Turn every descriptive column into a composite primary key, continue repeating the data in each row and use that composition for every reference.",
+      "Create a separate Server table for each department with no common relationship or constraints."
     ],
-    explanation: "CREATE TABLE defines structures, INSERT manipulates data and SELECT performs queries, corresponding to DDL, DML and DQL."
+    explanation: "Department gains a unique identity, and the foreign key prevents inconsistent references, thereby reducing redundancy and anomalies."
   },
   "bruno-massaranduba-2026-39": {
-    prompt: "In a DBMS, which description corresponds to a trigger?",
+    prompt: "Which classification of the SQL commands is correct under the categories specified in the syllabus?",
     options: [
-      "A mandatory physical copy of the entire database, created only when the server is switched off.",
-      "A user with unrestricted, unauditable permissions.",
-      "A query that can never depend on tables.",
-      "A routine associated with a configured event, such as an insertion, update or deletion, which the DBMS can execute automatically.",
-      "A routing protocol between databases."
+      "CREATE TABLE is DML; INSERT is DCL; SELECT is TCL; GRANT is DQL; COMMIT is DDL.",
+      "CREATE TABLE is DQL; INSERT is DDL; SELECT is DCL; GRANT is TCL; COMMIT is DML.",
+      "CREATE TABLE is TCL; INSERT is DQL; SELECT is DDL; GRANT is DML; COMMIT is DCL.",
+      "CREATE TABLE is DDL; INSERT is DML; SELECT is DQL; GRANT is DCL; COMMIT is TCL.",
+      "All five commands belong exclusively to DML."
     ],
-    explanation: "Triggers are routines fired by defined database events and can perform validation, auditing or other controlled actions."
+    explanation: "CREATE TABLE defines structures; INSERT manipulates data; SELECT queries data; GRANT controls privileges; COMMIT confirms a transaction."
   },
   "bruno-massaranduba-2026-40": {
-    prompt: "Select the correct statement about transaction control and permissions in SQL:",
+    prompt: "In a relational DBMS, the team must record every INSERT or UPDATE on Server in an audit table automatically, without depending on an application call. Which SQL object should be defined?",
     options: [
-      "COMMIT undoes the transaction, and GRANT deletes a table.",
-      "ROLLBACK permanently confirms changes, and REVOKE creates a view.",
-      "GRANT and REVOKE are data-query commands (DQL).",
-      "COMMIT and ROLLBACK have exactly the same effect on a transaction.",
-      "COMMIT confirms the transaction, ROLLBACK undoes changes that have not yet been committed, and GRANT assigns privileges."
+      "A view, which presents a reusable query and writes changes whenever its rows are queried.",
+      "An index, which organises access paths and records the audit whenever an indexed key is changed.",
+      "A stored procedure explicitly called by every application path before each change to the table.",
+      "A scalar function invoked in a query expression to return the text that would be used as a record.",
+      "A trigger linked to the table and the INSERT and UPDATE events, to insert the audit data automatically."
     ],
-    explanation: "COMMIT and ROLLBACK control transaction completion; GRANT is an access-control command that assigns privileges."
+    explanation: "The DBMS runs the trigger when the configured table event occurs, allowing the audit record to be written without an explicit application call."
   }
 });

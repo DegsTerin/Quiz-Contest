@@ -3,600 +3,600 @@ const MASSARANDUBA_BRUNO_EASY_QUESTIONS = [
     "bruno-massaranduba-2026-easy-01",
     "Língua Portuguesa",
     "Fácil",
-    "Leia o trecho: \"A equipe atualizou os computadores durante a noite. Pela manhã, todos os setores iniciaram o trabalho normalmente.\" De acordo com o texto, é correto afirmar que:",
+    "Leia o trecho: \"Após a troca do cabo, a impressora voltou a funcionar. O atendimento ao público foi retomado cinco minutos depois.\" De acordo com o texto, é correto afirmar que:",
     [
-      "A atualização impediu o funcionamento dos setores pela manhã.",
-      "Somente um setor conseguiu iniciar o trabalho.",
-      "Os computadores foram substituídos durante a manhã.",
-      "A equipe interrompeu a atualização antes de concluí-la.",
-      "A atualização foi realizada à noite e os setores funcionaram normalmente pela manhã."
+      "A impressora permaneceu sem funcionar após a troca do cabo.",
+      "O atendimento foi encerrado definitivamente.",
+      "A troca do cabo ocorreu depois da retomada do atendimento.",
+      "A impressora foi substituída por outro equipamento.",
+      "A impressora voltou a funcionar após a troca do cabo."
     ],
     4,
-    "O trecho informa diretamente quando a atualização ocorreu e que o trabalho começou normalmente na manhã seguinte."
+    "O trecho informa expressamente que a impressora voltou a funcionar após a troca do cabo e que o atendimento foi retomado depois."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-02",
     "Língua Portuguesa",
     "Fácil",
-    "Na frase \"O técnico verificou preventivamente os cabos\", a palavra \"preventivamente\" indica que a verificação foi feita:",
+    "No período \"O servidor salvou o relatório e o enviou por e-mail\", o pronome \"o\" em \"o enviou\" retoma:",
     [
-      "Com antecedência, para evitar possíveis problemas.",
-      "Sem qualquer finalidade definida.",
-      "Depois de o equipamento ser descartado.",
-      "De maneira obrigatoriamente improvisada.",
-      "Somente após uma falha definitiva."
+      "O relatório.",
+      "O servidor.",
+      "O e-mail.",
+      "O salvamento.",
+      "O destinatário."
     ],
     0,
-    "Agir preventivamente significa agir antes do problema, com o objetivo de evitá-lo ou reduzir seus efeitos."
+    "O pronome \"o\" evita a repetição de \"relatório\" e estabelece coesão entre as ações do período."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-03",
     "Língua Portuguesa",
     "Fácil",
-    "Assinale o antônimo da palavra \"temporário\":",
+    "Um manual apresenta a instrução \"Clique em Salvar e feche o documento\". Nesse trecho, predomina o modo de organização:",
     [
-      "Breve.",
-      "Provisório.",
-      "Permanente.",
-      "Passageiro.",
-      "Momentâneo."
+      "Narrativo, pois relata uma sequência ocorrida no passado.",
+      "Descritivo, pois caracteriza detalhadamente um objeto.",
+      "Injuntivo, pois orienta o leitor a realizar ações.",
+      "Argumentativo, pois defende uma opinião.",
+      "Expositivo, pois desenvolve uma teoria sem orientar ações."
     ],
     2,
-    "Aquilo que é permanente não é temporário ou provisório."
+    "O modo injuntivo emprega orientações ou comandos para indicar ao leitor o que deve fazer."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-04",
     "Língua Portuguesa",
     "Fácil",
-    "Assinale a alternativa em que todas as palavras estão escritas corretamente:",
+    "Na oração \"Os técnicos instalaram o programa\", qual termo exerce a função de sujeito?",
     [
-      "Manuntenção, excessão e análize.",
-      "Manutenção, excessão e análise.",
-      "Manuntenção, exceção e análise.",
-      "Manutenção, exceção e análize.",
-      "Manutenção, exceção e análise."
+      "Instalaram.",
+      "O programa.",
+      "Programa.",
+      "Instalaram o programa.",
+      "Os técnicos."
     ],
     4,
-    "As grafias corretas são \"manutenção\", \"exceção\" e \"análise\"."
+    "\"Os técnicos\" é o sujeito porque indica quem praticou a ação de instalar."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-05",
     "Língua Portuguesa",
     "Fácil",
-    "Assinale a alternativa em que todas as palavras estão corretamente acentuadas:",
+    "Assinale a frase corretamente pontuada:",
     [
-      "Tecnico, memória e possivel.",
-      "Técnico, memoria e possível.",
-      "Tecnico, memória e possível.",
-      "Técnico, memória e possivel.",
-      "Técnico, memória e possível."
+      "Bruno desligue, o computador antes da limpeza.",
+      "Bruno desligue o computador, antes da limpeza.",
+      "Bruno, desligue, o computador antes da limpeza.",
+      "Bruno desligue o computador antes, da limpeza.",
+      "Bruno, desligue o computador antes da limpeza."
     ],
     4,
-    "As três palavras exigem acento gráfico: \"técnico\", \"memória\" e \"possível\"."
+    "A vírgula isola o vocativo \"Bruno\" do restante da oração."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-06",
     "Língua Portuguesa",
     "Fácil",
-    "Assinale a frase que está de acordo com a norma-padrão de concordância:",
+    "Na frase \"A atualização provavelmente terminará hoje\", a palavra \"provavelmente\" expressa:",
     [
-      "Os relatório foi enviado ontem.",
-      "As senha precisa ser alterada.",
-      "Os relatórios foram enviados ontem.",
-      "A impressoras estão configurada.",
-      "Os cabo permanece conectado."
+      "Uma certeza absoluta.",
+      "Uma ordem dirigida ao leitor.",
+      "Uma avaliação de possibilidade.",
+      "Uma negação da atualização.",
+      "Uma indicação de lugar."
     ],
     2,
-    "Em \"Os relatórios foram enviados\", artigo, substantivo, verbo e particípio concordam no plural masculino."
+    "\"Provavelmente\" funciona como modalizador e indica que o falante considera o término possível, mas não certo."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-07",
     "Língua Portuguesa",
     "Fácil",
-    "Assinale a frase corretamente pontuada:",
+    "Assinale o sinônimo adequado de \"rápido\" na frase \"O reparo foi rápido\":",
     [
-      "Após a manutenção o técnico, ligou o computador.",
-      "Após, a manutenção o técnico ligou o computador.",
-      "Após a manutenção o técnico ligou, o computador.",
-      "Após a manutenção o, técnico ligou o computador.",
-      "Após a manutenção, o técnico ligou o computador."
+      "Demorado.",
+      "Incompleto.",
+      "Silencioso.",
+      "Distante.",
+      "Veloz."
     ],
     4,
-    "A vírgula separa a expressão adverbial deslocada \"Após a manutenção\" do restante da oração."
+    "Nesse contexto, \"veloz\" mantém o sentido de algo realizado em pouco tempo."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-08",
     "Língua Portuguesa",
     "Fácil",
-    "No período \"A impressora estava sem papel, por isso ela parou de imprimir\", o pronome \"ela\" refere-se:",
+    "Assinale a alternativa escrita de acordo com a norma-padrão:",
     [
-      "Ao papel.",
-      "Ao período.",
-      "À impressora.",
-      "À impressão.",
-      "Ao motivo."
+      "O técnico entregou o relatório à diretoria e iniciou a manutensão.",
+      "O técnico entregou o relatorio a diretoria e iniciou a manutenção.",
+      "O técnico entregou o relatório à diretoria e iniciou a manutenção.",
+      "O técnico entregou o relatório à diretoria e iniciou a manuntenção.",
+      "O técnico entregou o relátorio a diretoria e iniciou a manutenção."
     ],
     2,
-    "O pronome feminino singular \"ela\" retoma o substantivo \"impressora\"."
+    "\"Relatório\" e \"manutenção\" estão corretamente grafados, e ocorre crase em \"à diretoria\" pela união da preposição \"a\" com o artigo feminino \"a\"."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-09",
     "Matemática e Raciocínio Lógico",
     "Fácil",
-    "Um setor possui 80 computadores. Se 25% deles serão substituídos, quantos computadores serão substituídos?",
+    "Um setor possuía 18 teclados e recebeu mais 7. Quantos teclados o setor passou a possuir?",
     [
-      "20.",
-      "15.",
       "25.",
-      "40.",
-      "60."
+      "11.",
+      "18.",
+      "24.",
+      "26."
     ],
     0,
-    "Vinte e cinco por cento correspondem a um quarto; 80 ÷ 4 = 20."
+    "A quantidade final é obtida pela adição 18 + 7 = 25."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-10",
     "Matemática e Raciocínio Lógico",
     "Fácil",
-    "O almoxarifado tinha 125 cabos, recebeu mais 47 e distribuiu 32. Quantos cabos restaram?",
+    "Uma equipe concluiu 25% de 80 atendimentos. Quantos atendimentos foram concluídos?",
     [
-      "108.",
-      "140.",
-      "154.",
-      "172.",
-      "204."
+      "10.",
+      "20.",
+      "25.",
+      "40.",
+      "60."
     ],
     1,
-    "O saldo é 125 + 47 - 32 = 140 cabos."
+    "Vinte e cinco por cento correspondem a um quarto; portanto, 80 ÷ 4 = 20."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-11",
     "Matemática e Raciocínio Lógico",
     "Fácil",
-    "Três cabos iguais custam R$ 45,00. Mantido o mesmo preço unitário, quanto custam cinco cabos?",
+    "Uma aplicação de R$ 1.000,00 rende juros simples de 2% em um mês. Qual é o valor dos juros desse mês?",
     [
-      "R$ 75,00.",
-      "R$ 60,00.",
-      "R$ 70,00.",
-      "R$ 80,00.",
-      "R$ 90,00."
+      "R$ 20,00.",
+      "R$ 2,00.",
+      "R$ 10,00.",
+      "R$ 100,00.",
+      "R$ 200,00."
     ],
     0,
-    "Cada cabo custa R$ 45,00 ÷ 3 = R$ 15,00; cinco cabos custam R$ 75,00."
+    "Dois por cento de R$ 1.000,00 correspondem a 0,02 × 1.000 = R$ 20,00."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-12",
     "Matemática e Raciocínio Lógico",
     "Fácil",
-    "Um técnico concluiu 6 atendimentos na segunda-feira, 8 na terça-feira e 10 na quarta-feira. Qual foi a média diária de atendimentos nesses três dias?",
+    "Resolva a equação x + 6 = 14. O valor de x é:",
     [
       "8.",
       "6.",
-      "7.",
-      "9.",
-      "10."
+      "14.",
+      "20.",
+      "84."
     ],
     0,
-    "A média é (6 + 8 + 10) ÷ 3 = 24 ÷ 3 = 8."
+    "Subtraindo 6 dos dois lados da igualdade, obtém-se x = 14 - 6 = 8."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-13",
     "Matemática e Raciocínio Lógico",
     "Fácil",
-    "Uma sala retangular mede 6 metros de comprimento e 4 metros de largura. Qual é o seu perímetro?",
+    "Considere a função y = 2x. Qual é o valor de y quando x = 3?",
     [
-      "20 metros.",
-      "10 metros.",
-      "24 metros.",
-      "28 metros.",
-      "48 metros."
+      "6.",
+      "2.",
+      "3.",
+      "5.",
+      "9."
     ],
     0,
-    "O perímetro do retângulo é 2 × (6 + 4) = 20 metros."
+    "Substituindo x por 3, resulta y = 2 × 3 = 6."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-14",
     "Matemática e Raciocínio Lógico",
     "Fácil",
-    "A sequência 5, 9, 13, 17, ... forma uma progressão aritmética. Qual é o seu 8º termo?",
+    "No sistema x + y = 10 e x = 4, qual é o valor de y?",
     [
-      "29.",
-      "33.",
-      "31.",
-      "35.",
-      "37."
+      "4.",
+      "6.",
+      "10.",
+      "14.",
+      "40."
     ],
     1,
-    "A razão da progressão é 4. Assim, o 8º termo é 5 + 7 × 4 = 33."
+    "Substituindo x por 4 em x + y = 10, temos 4 + y = 10; logo, y = 6."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-15",
     "Matemática e Raciocínio Lógico",
     "Fácil",
-    "A negação lógica de \"Todos os computadores estão ligados\" é:",
+    "Uma sala retangular mede 5 metros de comprimento e 4 metros de largura. Qual é a área da sala?",
     [
-      "Todos os computadores estão desligados.",
-      "Nenhum computador está ligado.",
-      "Pelo menos um computador não está ligado.",
-      "Pelo menos um computador está ligado.",
-      "Os computadores podem estar ligados."
+      "9 m².",
+      "18 m².",
+      "20 m².",
+      "25 m².",
+      "40 m²."
     ],
     2,
-    "Negar uma afirmação universal exige indicar pelo menos uma exceção: existe ao menos um computador que não está ligado."
+    "A área de um retângulo é comprimento × largura: 5 × 4 = 20 m²."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-16",
     "Matemática e Raciocínio Lógico",
     "Fácil",
-    "Resolva a equação x + 7 = 19. O valor de x é:",
+    "Uma caixa contém 3 cabos azuis e 1 cabo vermelho. Ao retirar um cabo ao acaso, qual é a probabilidade de ele ser vermelho?",
     [
-      "10.",
-      "12.",
-      "14.",
-      "19.",
-      "26."
+      "1/2.",
+      "1/4.",
+      "1/3.",
+      "3/4.",
+      "1."
     ],
     1,
-    "Subtraindo 7 dos dois lados, obtém-se x = 19 - 7 = 12."
+    "Há 1 cabo vermelho entre 4 cabos no total; assim, a probabilidade é 1/4."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-17",
     "Conhecimentos Gerais",
     "Fácil",
-    "Considerando que Massaranduba teve uma primeira criação municipal em 1948, assinale a alternativa que relaciona corretamente a origem do nome à instalação de sua emancipação definitiva:",
+    "A origem do nome do município de Massaranduba está associada:",
     [
-      "O nome surgiu do Rio Itapocu, e a emancipação definitiva foi instalada em 11 de novembro de 1951.",
-      "O nome surgiu da abundância de araucárias, e a emancipação definitiva foi instalada em 21 de abril de 1961.",
-      "O nome surgiu da abundância da árvore maçaranduba, e a emancipação definitiva foi instalada em 11 de novembro de 1961.",
-      "O nome surgiu da imigração italiana, e a emancipação definitiva foi instalada em 7 de setembro de 1962.",
-      "O nome surgiu do cultivo de arroz, e a emancipação definitiva foi instalada em 1º de janeiro de 1960."
+      "À grande quantidade de araucárias existente no litoral.",
+      "Ao sobrenome do primeiro prefeito municipal.",
+      "À presença abundante da árvore conhecida como maçaranduba.",
+      "Ao nome de um rio localizado fora de Santa Catarina.",
+      "À principal variedade de arroz cultivada na região."
     ],
     2,
-    "Após uma primeira experiência municipal em 1948, a emancipação definitiva foi criada em 1961 e instalada em 11 de novembro; o nome Massaranduba remete à abundância da árvore maçaranduba."
+    "O nome Massaranduba relaciona-se à presença abundante da árvore maçaranduba na região."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-18",
     "Conhecimentos Gerais",
     "Fácil",
-    "Qual alternativa relaciona corretamente a economia de Massaranduba a um de seus títulos mais conhecidos?",
+    "O Vale do Itapocu recebe essa denominação por sua relação geográfica principalmente com:",
     [
-      "O cultivo de arroz irrigado explica o título de Capital Catarinense do Arroz, e essa atividade coexiste com uma indústria diversificada.",
-      "O cultivo de milho explica o título de Capital Catarinense do Arroz, e a economia local é exclusivamente agrícola.",
-      "A bananicultura explica o título de Capital Catarinense do Arroz, e não há atividade industrial no município.",
-      "O cultivo de arroz explica o título, mas a economia local se limita à indústria têxtil.",
-      "O título não se relaciona à agricultura, pois a economia do município depende exclusivamente do turismo."
+      "O rio Itapocu e sua bacia hidrográfica.",
+      "O rio Uruguai e a fronteira com a Argentina.",
+      "A Lagoa dos Patos, no Rio Grande do Sul.",
+      "O rio Amazonas e a Região Norte.",
+      "O Pantanal Mato-Grossense."
     ],
     0,
-    "O arroz irrigado está ligado ao título de Capital Catarinense do Arroz, enquanto diferentes ramos industriais também integram a economia municipal."
+    "O Vale do Itapocu está organizado geograficamente em torno do rio Itapocu e de sua bacia hidrográfica."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-19",
     "Conhecimentos Gerais",
     "Fácil",
-    "Sobre a inserção de Massaranduba na Bacia Hidrográfica do Rio Itapocu, assinale a alternativa correta:",
+    "Em economia, o termo \"inflação\" designa:",
     [
-      "O município está totalmente fora da bacia, por isso o planejamento das águas deve ser apenas local.",
-      "A bacia se limita ao território de Massaranduba e integra a Região Hidrográfica RH01.",
-      "O Rio Itapocu forma uma bacia oceânica sem relação com os municípios do Vale do Itapocu.",
-      "Os recursos hídricos da bacia dispensam planejamento integrado entre os municípios envolvidos.",
-      "O município está parcialmente inserido na Bacia do Itapocu, pertencente à RH06, o que favorece o planejamento integrado dos recursos hídricos."
+      "A redução permanente de todos os salários.",
+      "A extinção da circulação de moeda.",
+      "O aumento da produção de apenas uma empresa.",
+      "A queda isolada do preço de um único produto.",
+      "O aumento generalizado e persistente dos preços."
     ],
     4,
-    "Massaranduba está parcialmente inserida na Bacia do Itapocu, que integra a Região Hidrográfica RH06; a gestão da água exige articulação entre os municípios da bacia."
+    "Inflação é o aumento generalizado e persistente dos preços de bens e serviços em uma economia."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-20",
     "Conhecimentos Gerais",
     "Fácil",
-    "Ao receber pelas redes sociais uma notícia sobre uma medida da administração pública, a conduta mais adequada é:",
+    "Uma ação compatível com o desenvolvimento sustentável é:",
     [
-      "Verificar a fonte, a data e a publicação nos canais oficiais antes de compartilhar.",
-      "Compartilhar imediatamente porque a mensagem foi enviada por um conhecido.",
-      "Considerar verdadeira toda mensagem que contenha uma fotografia.",
-      "Ignorar a data porque notícias antigas permanecem sempre atuais.",
-      "Alterar o texto da mensagem antes de confirmar sua origem."
+      "Atender às necessidades atuais sem comprometer as gerações futuras.",
+      "Consumir recursos naturais sem considerar sua reposição.",
+      "Descartar resíduos em rios para reduzir custos.",
+      "Substituir toda área verde por pavimentação.",
+      "Ignorar os impactos ambientais das atividades econômicas."
     ],
     0,
-    "A verificação da fonte, da data e dos canais oficiais reduz a disseminação de informação falsa ou desatualizada."
+    "O desenvolvimento sustentável procura conciliar necessidades presentes, proteção ambiental e condições para as gerações futuras."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-21",
     "Conhecimentos Específicos",
     "Fácil",
-    "Qual componente executa instruções e realiza os principais cálculos de um computador?",
+    "Qual dos itens a seguir é um software?",
     [
-      "O monitor.",
-      "A CPU.",
-      "O teclado.",
-      "A impressora.",
-      "O cabo de rede."
+      "Teclado.",
+      "Windows 10.",
+      "Monitor.",
+      "Memória RAM.",
+      "Impressora."
     ],
     1,
-    "A unidade central de processamento (CPU) executa instruções e operações do computador."
+    "Windows 10 é um sistema operacional e, portanto, um software; os demais itens são componentes ou periféricos físicos."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-22",
     "Conhecimentos Específicos",
     "Fácil",
-    "A memória RAM é utilizada principalmente para:",
+    "A memória RAM é usada principalmente para:",
     [
-      "Armazenar temporariamente dados e programas em uso.",
+      "Manter temporariamente dados e programas que estão em uso.",
       "Imprimir documentos em papel.",
-      "Conectar o computador diretamente à rede elétrica.",
-      "Guardar arquivos permanentemente mesmo sem energia.",
-      "Projetar imagens em uma parede."
+      "Fornecer energia elétrica ao computador.",
+      "Guardar dados permanentemente sem depender de energia.",
+      "Conectar fisicamente dois edifícios por fibra óptica."
     ],
     0,
-    "A RAM mantém temporariamente dados necessários aos programas em execução e perde seu conteúdo quando não há energia."
+    "A RAM é uma memória de trabalho volátil: armazena temporariamente dados utilizados pelo processador."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-23",
     "Conhecimentos Específicos",
     "Fácil",
-    "Uma característica comum de uma unidade SSD é:",
+    "Durante a inicialização do computador, uma função básica do BIOS ou UEFI é:",
     [
-      "Não possuir partes mecânicas móveis para armazenar os dados.",
-      "Servir exclusivamente como memória RAM.",
-      "Funcionar apenas quando conectada à internet.",
-      "Substituir obrigatoriamente o processador.",
-      "Imprimir arquivos sem o uso de outro dispositivo."
+      "Inicializar e verificar componentes antes de carregar o sistema operacional.",
+      "Armazenar permanentemente todos os documentos do usuário.",
+      "Substituir o sistema operacional durante cada inicialização.",
+      "Remover automaticamente qualquer malware do armazenamento.",
+      "Fornecer acesso à internet sem uma interface de rede."
     ],
     0,
-    "SSDs usam memória eletrônica, geralmente memória flash, e não possuem os discos e cabeças móveis encontrados em HDDs."
+    "O firmware BIOS ou UEFI inicializa o hardware e prepara o computador para carregar o sistema operacional a partir do armazenamento."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-24",
     "Conhecimentos Específicos",
     "Fácil",
-    "Qual dos seguintes itens é um dispositivo de entrada?",
+    "Qual equipamento fornece energia temporária ao computador quando ocorre uma interrupção no fornecimento elétrico?",
     [
-      "Monitor.",
-      "Caixa de som.",
-      "Teclado.",
-      "Impressora.",
-      "Projetor."
+      "Switch.",
+      "Dissipador de calor.",
+      "Nobreak (UPS).",
+      "Scanner.",
+      "Roteador."
     ],
     2,
-    "O teclado envia ao computador os dados digitados pelo usuário, por isso é um dispositivo de entrada."
+    "O nobreak utiliza bateria para manter o equipamento ligado por algum tempo durante uma interrupção elétrica."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-25",
     "Conhecimentos Específicos",
     "Fácil",
-    "Qual é uma função básica de um sistema operacional?",
+    "No Windows 10 em português do Brasil, qual ferramenta é usada para navegar por pastas e arquivos?",
     [
-      "Gerenciar os recursos do computador e permitir a execução de programas.",
-      "Substituir fisicamente todos os componentes de hardware.",
-      "Eliminar a necessidade de armazenar arquivos.",
-      "Converter automaticamente qualquer computador em servidor público.",
-      "Impedir a instalação de todos os aplicativos."
+      "Explorador de Arquivos.",
+      "Gerenciador de Tarefas.",
+      "Painel de Controle.",
+      "Visualizador de Eventos.",
+      "Windows PowerShell."
     ],
     0,
-    "O sistema operacional gerencia hardware, arquivos, memória e processos, além de oferecer serviços aos aplicativos."
+    "O Explorador de Arquivos permite visualizar, criar, copiar, mover, renomear e organizar pastas e arquivos."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-26",
     "Conhecimentos Específicos",
     "Fácil",
-    "Qual extensão identifica normalmente um documento no formato Portable Document Format?",
+    "O Microsoft Word é utilizado principalmente para:",
     [
-      ".mp3",
-      ".jpg",
-      ".exe",
-      ".xlsx",
-      ".pdf"
+      "Configurar o roteamento de uma rede.",
+      "Gerenciar tabelas de um banco de dados.",
+      "Monitorar a temperatura do processador.",
+      "Editar arquivos de áudio.",
+      "Criar e formatar documentos."
     ],
     4,
-    "Arquivos no formato Portable Document Format usam normalmente a extensão .pdf."
+    "O Word é um processador de texto empregado para criar, editar e formatar documentos."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-27",
     "Conhecimentos Específicos",
     "Fácil",
-    "No Microsoft Word 2010 em português do Brasil, qual atalho de teclado salva o documento atual?",
+    "No Microsoft Excel em português do Brasil, qual fórmula soma os valores das células A1 até A5?",
     [
-      "Ctrl + P.",
-      "Ctrl + X.",
-      "Ctrl + Z.",
-      "Ctrl + B.",
-      "Ctrl + F."
+      "=MÉDIA(A1:A5)",
+      "=MÁXIMO(A1:A5)",
+      "=A1-A5",
+      "=SOMA(A1:A5)",
+      "=CONTAR(A1:A5)"
     ],
     3,
-    "Na localização em português do Brasil do Word 2010, Ctrl + B executa o comando Salvar."
+    "A função SOMA adiciona os valores de todas as células do intervalo A1:A5."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-28",
     "Conhecimentos Específicos",
     "Fácil",
-    "Em uma planilha em português, qual fórmula soma os valores das células de A1 até A5?",
+    "Assinale a associação correta entre aplicativo ou serviço e sua finalidade:",
     [
-      "=MÉDIA(A1:A5)",
-      "=CONTAR(A1:A5)",
-      "=A1-A5",
-      "=MÁXIMO(A1:A5)",
-      "=SOMA(A1:A5)"
+      "PowerPoint — gerenciar e-mails; Outlook — criar apresentações; Google Workspace — navegar na Web; Chrome — colaborar em documentos.",
+      "PowerPoint — navegar na Web; Outlook — colaborar em documentos; Google Workspace — criar apresentações; Chrome — gerenciar e-mails.",
+      "PowerPoint — colaborar em planilhas; Outlook — navegar na Web; Google Workspace — gerenciar o firmware; Chrome — criar apresentações.",
+      "PowerPoint — organizar arquivos; Outlook — editar planilhas; Google Workspace — configurar o Windows; Chrome — gerenciar calendários.",
+      "PowerPoint — criar apresentações; Outlook — gerenciar e-mails; Google Workspace — colaborar em documentos; Chrome — navegar na Web."
     ],
     4,
-    "A função SOMA adiciona todos os valores do intervalo indicado, de A1 até A5."
+    "PowerPoint cria apresentações, Outlook gerencia e-mails, Google Workspace permite colaborar em documentos e Chrome é um navegador da Web."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-29",
     "Conhecimentos Específicos",
     "Fácil",
-    "O Microsoft PowerPoint é utilizado principalmente para criar:",
+    "Um backup completo caracteriza-se por:",
     [
-      "Bancos de dados relacionais.",
-      "Drivers de dispositivos.",
-      "Sistemas operacionais.",
-      "Apresentações de slides.",
-      "Cabos de rede."
+      "Copiar somente os atalhos dos arquivos.",
+      "Excluir os arquivos originais após a execução.",
+      "Copiar apenas os arquivos alterados desde o último backup.",
+      "Copiar todos os dados selecionados para aquela execução.",
+      "Dispensar qualquer teste de restauração."
     ],
     3,
-    "O PowerPoint é um aplicativo destinado à criação e exibição de apresentações de slides."
+    "O backup completo copia todos os dados incluídos no conjunto definido para a execução."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-30",
     "Conhecimentos Específicos",
     "Fácil",
-    "Ao enviar um e-mail, qual campo permite ocultar dos demais destinatários o endereço de quem recebe uma cópia?",
+    "Qual prática ajuda a proteger um computador contra malware, isto é, programas maliciosos?",
     [
-      "Assunto.",
-      "Cco (cópia oculta).",
-      "Para.",
-      "Anexo.",
-      "Assinatura."
+      "Abrir todos os anexos recebidos por e-mail.",
+      "Manter o sistema e o antivírus atualizados.",
+      "Desativar permanentemente as correções de segurança.",
+      "Usar a mesma senha em todos os serviços.",
+      "Instalar programas de qualquer origem sem verificação."
     ],
     1,
-    "O campo Cco envia uma cópia sem revelar esse destinatário às demais pessoas incluídas na mensagem."
+    "Atualizações corrigem falhas conhecidas e mantêm os mecanismos de proteção preparados para ameaças recentes."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-31",
     "Conhecimentos Específicos",
     "Fácil",
-    "O que caracteriza um backup completo?",
+    "Em uma topologia estrela, os dispositivos da rede conectam-se diretamente:",
     [
-      "A cópia de todos os dados selecionados para aquela execução.",
-      "A exclusão dos arquivos originais depois de copiá-los.",
-      "A cópia apenas dos arquivos alterados desde o último backup.",
-      "O armazenamento exclusivo de atalhos para os arquivos.",
-      "A substituição do antivírus por uma cópia local."
+      "A um equipamento central, como um switch.",
+      "A exatamente dois dispositivos vizinhos, formando um anel.",
+      "A um único cabo principal compartilhado, formando um barramento.",
+      "Diretamente a todos os demais dispositivos, formando uma malha completa.",
+      "Em uma sequência linear, sem qualquer ponto de conexão central."
     ],
     0,
-    "No backup completo, todos os dados definidos no conjunto de backup são copiados."
+    "Na topologia estrela, cada dispositivo possui uma ligação com um ponto central, normalmente um switch."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-32",
     "Conhecimentos Específicos",
     "Fácil",
-    "Para que um antivírus reconheça ameaças recentes, é importante:",
+    "Qual equipamento usa endereços MAC para encaminhar quadros à porta adequada em uma rede local Ethernet?",
     [
-      "Desativar permanentemente as atualizações.",
-      "Manter o programa e suas definições de ameaças atualizados.",
-      "Abrir todos os anexos recebidos por e-mail.",
-      "Usar sempre uma conta com privilégios administrativos.",
-      "Excluir os registros de detecção sem analisá-los."
+      "Roteador.",
+      "Switch.",
+      "Hub.",
+      "Modem.",
+      "Repetidor."
     ],
     1,
-    "Atualizações fornecem correções e informações necessárias para detectar ameaças conhecidas recentemente."
+    "O switch interliga dispositivos em uma LAN e encaminha quadros às portas adequadas."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-33",
     "Conhecimentos Específicos",
     "Fácil",
-    "Qual equipamento pode fornecer energia temporária a um computador quando ocorre uma queda no fornecimento elétrico?",
+    "No modelo OSI, quantas camadas são definidas?",
     [
-      "Switch.",
-      "Scanner.",
-      "Roteador.",
-      "Teclado.",
-      "Nobreak (UPS)."
+      "Duas.",
+      "Três.",
+      "Quatro.",
+      "Cinco.",
+      "Sete."
     ],
     4,
-    "O nobreak utiliza bateria para manter os equipamentos ligados por algum tempo durante uma interrupção de energia."
+    "O modelo de referência OSI organiza a comunicação de rede em sete camadas."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-34",
     "Conhecimentos Específicos",
     "Fácil",
-    "Uma rede que conecta computadores dentro de um mesmo prédio é normalmente classificada como:",
+    "Em uma rede TCP/IP, o endereço IP é usado para:",
     [
-      "WAN.",
-      "LAN.",
-      "PAN intercontinental.",
-      "Rede de satélites.",
-      "Rede móvel pública."
+      "Traduzir nomes de domínio em endereços numéricos.",
+      "Identificar logicamente uma interface de rede.",
+      "Identificar fisicamente a placa por meio do endereço MAC.",
+      "Criptografar obrigatoriamente todo pacote transmitido.",
+      "Definir a velocidade nominal do cabo Ethernet."
     ],
     1,
-    "Uma LAN conecta dispositivos numa área local limitada, como uma sala, escola ou prédio."
+    "O endereço IP fornece identificação lógica à interface e permite o encaminhamento dos pacotes na rede."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-35",
     "Conhecimentos Específicos",
     "Fácil",
-    "Em uma rede TCP/IP, o endereço IP serve para:",
+    "Qual tecnologia permite conectar dispositivos a uma rede local sem o uso de cabos de dados?",
     [
-      "Definir o tamanho físico do monitor.",
-      "Medir a capacidade da bateria.",
-      "Escolher a cor dos cabos.",
-      "Indicar o modelo do teclado.",
-      "Identificar logicamente uma interface de rede."
+      "SATA.",
+      "HDMI.",
+      "VGA.",
+      "USB.",
+      "Wi-Fi."
     ],
     4,
-    "O endereço IP identifica logicamente uma interface e permite o encaminhamento da comunicação na rede."
+    "Wi-Fi é uma tecnologia de rede sem fio utilizada para conectar dispositivos a uma WLAN."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-36",
     "Conhecimentos Específicos",
     "Fácil",
-    "Qual serviço converte nomes de domínio, como exemplo.gov.br, em endereços IP?",
+    "A tecnologia VoIP permite principalmente:",
     [
-      "DNS.",
-      "USB.",
-      "HDMI.",
-      "PDF.",
-      "BIOS."
+      "Transmitir voz por redes que utilizam o protocolo IP.",
+      "Atribuir endereços IP automaticamente aos computadores.",
+      "Traduzir nomes de domínio em endereços IP.",
+      "Filtrar conexões de rede por regras de firewall.",
+      "Sincronizar arquivos de backup entre unidades de armazenamento."
     ],
     0,
-    "O Domain Name System (DNS) resolve nomes de domínio para endereços IP."
+    "VoIP transporta comunicação de voz por redes baseadas no protocolo IP."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-37",
     "Conhecimentos Específicos",
     "Fácil",
-    "Ao acessar um site, o uso de HTTPS indica normalmente que:",
+    "Qual medida representa segurança física de equipamentos de informática?",
     [
-      "O site não utiliza rede alguma.",
-      "A comunicação entre navegador e servidor é protegida por criptografia.",
-      "Todos os arquivos da internet são públicos.",
-      "O computador não precisa de atualizações.",
-      "A página está armazenada somente no computador local."
+      "Instalar um antivírus nos computadores.",
+      "Restringir a entrada na sala dos servidores.",
+      "Exigir senhas fortes para as contas de usuário.",
+      "Configurar um firewall para bloquear conexões indevidas.",
+      "Criptografar os arquivos das cópias de segurança."
     ],
     1,
-    "HTTPS utiliza TLS para proteger a comunicação entre o navegador e o servidor."
+    "O controle de entrada impede que pessoas não autorizadas tenham acesso físico aos servidores."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-38",
     "Conhecimentos Específicos",
     "Fácil",
-    "Em um banco de dados relacional, uma tabela organiza os dados principalmente em:",
+    "Em um banco de dados relacional, uma tabela organiza os dados em:",
     [
       "Pastas e atalhos.",
-      "Imagens e vídeos.",
+      "Áudios e vídeos.",
       "Cabos e conectores.",
       "Processadores e memórias.",
       "Linhas e colunas."
     ],
     4,
-    "Tabelas relacionais representam registros em linhas e atributos em colunas."
+    "Em uma tabela relacional, as linhas representam registros e as colunas representam atributos."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-39",
     "Conhecimentos Específicos",
     "Fácil",
-    "Qual comando SQL é usado para consultar dados armazenados em uma tabela?",
+    "Em SQL, qual comando pertence à linguagem de consulta de dados e recupera registros de uma tabela?",
     [
       "SELECT.",
-      "DROP.",
-      "DELETE.",
-      "UPDATE.",
-      "GRANT."
+      "GRANT.",
+      "COMMIT.",
+      "CREATE.",
+      "DROP."
     ],
     0,
-    "SELECT recupera dados de uma ou mais tabelas de acordo com a consulta definida."
+    "SELECT é o comando utilizado para consultar e recuperar dados armazenados em tabelas."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-40",
     "Conhecimentos Específicos",
     "Fácil",
-    "Em uma tabela de banco de dados, a chave primária deve:",
+    "Qual objeto de banco de dados é uma consulta armazenada que pode ser tratada como uma tabela virtual?",
     [
-      "Conter obrigatoriamente o mesmo valor em todas as linhas.",
-      "Existir apenas em tabelas sem registros.",
-      "Ser usada somente para definir cores na interface.",
-      "Identificar cada registro de forma única.",
-      "Permitir sempre valores nulos e repetidos."
+      "Trigger.",
+      "Índice.",
+      "Procedimento armazenado.",
+      "View.",
+      "Função."
     ],
     3,
-    "A chave primária identifica unicamente cada registro e não admite duplicidade nem valor nulo."
+    "Uma view é definida por uma consulta e apresenta seu resultado como uma tabela virtual."
   ])
 ];
