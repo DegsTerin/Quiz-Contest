@@ -6,6 +6,7 @@
     <img alt="Vanilla JavaScript" src="https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?style=flat-square&logo=javascript&logoColor=111111">
     <img alt="LocalStorage persistence" src="https://img.shields.io/badge/persistence-LocalStorage-1d6f5f?style=flat-square">
     <img alt="Portuguese and British English" src="https://img.shields.io/badge/i18n-pt--BR%20%7C%20en--GB-2b2f31?style=flat-square">
+    <a href="LICENSE"><img alt="MIT licence" src="https://img.shields.io/github/license/DegsTerin/quiz-contest?style=flat-square"></a>
   </p>
   <p>
     <a href="https://degsterin.github.io/quiz-contest/">Open the live application</a>
@@ -171,6 +172,7 @@ These implementation details are not a formal WCAG conformance claim.
 | <code>bruno-hard-questions-en.js</code> | en-GB translations for Bruno's active bank |
 | <code>maria-hard-questions-en.js</code> | en-GB translations for Maria's active bank |
 | <code>docs/quiz-contest-dark-en-gb.gif</code> | Animated README demonstration |
+| <code>LICENSE</code> | MIT licence terms and copyright notice |
 
 ## Run Locally
 
@@ -221,6 +223,12 @@ Automating these checks is the highest-priority engineering improvement.
 - Add progress export and import.
 - Add notice-weighted score calculation as a clearly separate result.
 - Add subject-level filters, analytics and keyboard shortcuts.
+
+## Licence
+
+Quiz Contest is released under the [MIT License](LICENSE).
+
+Copyright (c) 2026 Bruno Araújo - DegsTerin.
 
 ## Disclaimer
 
