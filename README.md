@@ -1,187 +1,231 @@
-# Quiz Contest
-
-[![Static Site](https://img.shields.io/badge/static-HTML%20%2B%20CSS%20%2B%20JS-1d6f5f)](#tech-stack)
-[![No Backend](https://img.shields.io/badge/backend-none-a84432)](#architecture)
-[![Storage](https://img.shields.io/badge/storage-LocalStorage-206246)](#how-it-works)
-[![Languages](https://img.shields.io/badge/UI-Portuguese%20%7C%20English-2b2f31)](#internationalization)
-
-A fully client-side quiz trainer built for contest preparation. It runs as a static GitHub Pages site, saves study progress in the browser, applies profile-aware question and answer ordering, and uses an Anki-inspired review queue for missed questions.
-
-Live demo: [https://degsterin.github.io/quiz-contest/](https://degsterin.github.io/quiz-contest/)
-
-Repository: [https://github.com/DegsTerin/quiz-contest](https://github.com/DegsTerin/quiz-contest)
+<div align="center">
+  <h1>Quiz Contest</h1>
+  <p><strong>A dependency-free, bilingual browser application for Brazilian public-exam preparation, deterministic written-exam sessions and LocalStorage-backed mistake review.</strong></p>
+  <p>
+    <a href="https://degsterin.github.io/quiz-contest/"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-GitHub%20Pages-2ea44f?style=flat-square&logo=github"></a>
+    <img alt="Vanilla JavaScript" src="https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?style=flat-square&logo=javascript&logoColor=111111">
+    <img alt="LocalStorage persistence" src="https://img.shields.io/badge/persistence-LocalStorage-1d6f5f?style=flat-square">
+    <img alt="Portuguese and British English" src="https://img.shields.io/badge/i18n-pt--BR%20%7C%20en--GB-2b2f31?style=flat-square">
+  </p>
+  <p>
+    <a href="https://degsterin.github.io/quiz-contest/">Open the live application</a>
+    ·
+    <a href="https://github.com/DegsTerin/quiz-contest">Browse the source</a>
+  </p>
+</div>
 
 ![Quiz Contest demonstration in dark mode and British English](docs/quiz-contest-dark-en-gb.gif)
 
-## What Makes It Portfolio-Ready
+## Overview
 
-This project demonstrates a complete static web application without a backend. It includes state persistence, dynamic rendering, ordered and randomised sessions, profile switching, bilingual UI controls, and a learning loop inspired by spaced repetition.
+Quiz Contest is a browser-based study application for Brazilian public-service competitions. It combines profile-specific exam sessions, isolated progress, bilingual question banks and a step-based mistake-review loop in a static site that can be deployed without a build pipeline or application server.
 
-The content is tailored to Brazilian public contest preparation, while the interface can be used in Portuguese or English. Portuguese is the default language because the question banks are based on Brazilian exam notices.
+The product deliberately keeps its runtime boundary small: the browser renders the interface, runs the quiz engine and stores progress. There is no backend, account system or external service involved in a study session.
 
-## Main Features
-
-| Feature | Description |
+| Area | Implementation |
 | --- | --- |
-| Multiple profiles | Switch between two independent study profiles without mixing progress. |
-| Question bank | 100 active questions: 40 authored practice questions for Bruno and 60 original FURB questions for Maria. |
-| Profile-aware presentation | Bruno's full quiz follows written-exam order with stable A-E alternatives; Maria and review queues retain randomisation. |
-| Paper-style alternatives | Answers are displayed as A, B, C, D, and E, like a printed exam. |
-| Immediate feedback | Users see whether the answer is correct and get an explanation. |
-| Review queue | Missed questions are saved and repeated after the main round. |
-| Basic spaced repetition | Correct streaks reduce how often a question appears again. |
-| Local persistence | Progress, accuracy, streaks, and review status are stored in LocalStorage. |
-| Bilingual experience | Portuguese is default; English translates the interface, questions, alternatives, and feedback into British English. |
-| GitHub Pages ready | No build step, no server, no external libraries. |
+| Runtime | Browser-only HTML, CSS and vanilla JavaScript |
+| Content | Two profiles and 100 active questions |
+| Session strategies | Written-exam sequence for Bruno; study-oriented randomisation for Maria and review queues |
+| Persistence | Versioned LocalStorage state, isolated by profile |
+| Localisation | pt-BR by default, with an en-GB experience |
+| Delivery | Static hosting through GitHub Pages; no build step |
 
-## How It Works
+## Product Capabilities
 
-1. The user selects a profile: Bruno or Maria.
-2. The app loads the matching question bank from the static question files.
-3. Bruno's full quiz follows written-exam order; other profile and review queues retain their study-oriented randomisation.
-4. Each question shows one prompt and five alternatives in the order defined by the active profile and study mode.
-5. When the user answers, the app displays immediate feedback.
-6. Incorrect answers enter a review queue.
-7. After the full round, missed questions come back for review.
-8. If a question is answered correctly multiple times, it appears less often.
-9. Progress is saved locally in the browser using LocalStorage.
-
-<details>
-<summary><strong>Study Flow Diagram</strong></summary>
-
-```mermaid
-flowchart TD
-  A["Choose profile"] --> B["Start full quiz"]
-  B --> C["Show the next scheduled question"]
-  C --> D["User selects A-E answer"]
-  D --> E{"Correct?"}
-  E -->|Yes| F["Increase correct streak"]
-  E -->|No| G["Add to review queue"]
-  F --> H{"More questions?"}
-  G --> H
-  H -->|Yes| C
-  H -->|No| I["Review missed questions"]
-  I --> J["Update LocalStorage stats"]
-```
-
-</details>
-
-## Internationalization
-
-The app supports two languages:
-
-| Language | Behavior |
+| Capability | Behaviour |
 | --- | --- |
-| Portuguese | Default language for the complete quiz experience. |
-| English | British English translation for the interface, question prompts, alternatives, and feedback. |
+| Independent profiles | Bruno and Maria use separate question banks, progress records and session policies. |
+| Written-exam fidelity | Bruno's full quiz follows the notice subject order and keeps a deterministic A–E answer layout. |
+| Study variation | Maria's full quiz and mistake-review queues randomise questions and alternatives. |
+| Immediate feedback | Every answer is evaluated in the browser and followed by an explanation. |
+| Adaptive mistake review | Incorrect answers are scheduled to reappear; consecutive correct answers clear the review requirement. |
+| Durable local progress | Totals, per-question history, selected profile, language and theme survive page reloads. |
+| Bilingual interface | Controls, questions, alternatives and explanations are available in pt-BR and en-GB. |
+| Responsive themes | The interface supports light and dark themes across desktop and narrow viewports. |
+| Zero-install delivery | There are no runtime packages, server processes or environment variables to configure. |
 
-The English question bank is stored statically in JavaScript translation files, so the deployed app does not depend on any external translation service at runtime.
+## Study Engine
+
+### Full quiz
+
+A session policy is selected from the active profile:
+
+- Bruno's main queue preserves the authored 1–40 written-exam sequence.
+- Bruno's A–E alternatives use a seeded deterministic permutation derived from the question ID. This keeps the layout stable without exposing the answer-key pattern.
+- Maria's main queue is randomised and gives greater priority to questions with a lower correct-answer streak.
+- Review queues can randomise alternatives so that study recall does not depend on a memorised position.
+
+### Mistake review
+
+The review mechanism is based on answered-question steps, not elapsed time:
+
+1. An incorrect answer marks the question as needing review and schedules it for the next review step.
+2. Due review items are shuffled before they are presented.
+3. A correct review answer increases the streak and, while the question is not yet mastered, schedules it at a longer step interval.
+4. Two consecutive correct answers clear the review requirement.
+5. State is saved after every answer.
+
+This is a focused in-session learning loop rather than a time-based spaced-repetition system.
+
+## Question Banks and Provenance
+
+| Profile | Active bank | Main-session behaviour |
+| --- | --- | --- |
+| Bruno | 40 author-created, non-official practice questions aligned with Massaranduba Municipal Public Competition Notice 001/2026 for IT Technician | Fixed written-exam order with stable alternatives |
+| Maria | 60 original FURB objective-test questions for AEE/Mixed and Libras Interpreter roles, SED/SC Notice 793/2026, with the preliminary answer key | Randomised, streak-aware study order |
+
+### Bruno written-exam sequence
+
+| Question range | Subject | Questions | Notice points each | Notice total |
+| --- | --- | ---: | ---: | ---: |
+| 1–8 | Portuguese Language | 8 | 2 | 16 |
+| 9–16 | Mathematics and Logical Reasoning | 8 | 2 | 16 |
+| 17–20 | General Knowledge | 4 | 2 | 8 |
+| 21–40 | Role-Specific Knowledge | 20 | 3 | 60 |
+| **Total** |  | **40** |  | **100** |
+
+Every active question has five alternatives and one designated answer. Bruno's questions and explanations are independent study material; they are not copied from an official test and do not constitute an official answer key.
+
+The dashboard intentionally reports raw correct-answer counts and accuracy. It does not calculate the notice-weighted score or determine whether an official pass threshold has been met.
 
 ## Architecture
 
-```text
-quiz-contest/
-  index.html       Static HTML structure
-  style.css        Responsive styling and visual system
-  app.js           Quiz engine, i18n, LocalStorage, review logic
-  questions.js     Question banks and profile metadata
-  bruno-hard-questions.js
-                   Authored IT Technician practice questions for Massaranduba Notice 001/2026
-  maria-hard-questions.js
-                   Original AEE/Mixed and Libras FURB exam questions
-  questions-en.js  English interface support and legacy fallback translations
-  bruno-hard-questions-en.js
-                   British English translations for Bruno's adapted practice bank
-  maria-hard-questions-en.js
-                   British English translations for the original AEE/Mixed and Libras bank
-  docs/
-    quiz-contest-dark-en-gb.gif
-                   Animated README demonstration in dark mode and British English
-```
+~~~mermaid
+flowchart LR
+  Host["GitHub Pages or a static server"] --> UI
 
-No backend is required. The browser loads JavaScript directly, renders the current profile, and persists progress locally.
+  subgraph Browser["Browser runtime"]
+    UI["index.html + style.css"]
+    Engine["app.js<br/>rendering, sessions, review and i18n"]
+    Banks["Question-bank and en-GB scripts"]
+    State[("Versioned LocalStorage")]
 
-## Tech Stack
+    UI <--> Engine
+    Banks --> Engine
+    Engine <--> State
+  end
+~~~
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- LocalStorage
-- GitHub Pages
+### Runtime boundary
 
-## Question Banks
+- The application loads classic JavaScript files directly from the static host.
+- There is no API, backend, database, server-side session, authentication or authorisation flow.
+- The application does not handle credentials, access tokens, refresh tokens, cookies or secrets.
+- Progress is not uploaded and there is no cross-device synchronisation.
+- Localisation dictionaries ship with the application; no translation API is called at runtime.
+- No package manager, framework or build output is required.
 
-| Profile | Target |
+## State, Privacy and Security Boundary
+
+The application stores only study state and interface preferences in the current browser origin.
+
+| LocalStorage key | Purpose |
 | --- | --- |
-| Bruno | Author-created, non-official practice set for IT Technician, Massaranduba Municipal Public Competition Notice 001/2026. |
-| Maria | Original FURB objective test for AEE/Mixed and Libras Interpreter teacher roles, SED/SC 793/2026. |
+| <code>static-quiz-system-state-v3-bruno</code> | Bruno's totals and per-question progress |
+| <code>static-quiz-system-state-v2-maria</code> | Maria's totals and per-question progress |
+| <code>static-quiz-system-active-profile</code> | Last selected profile |
+| <code>static-quiz-system-active-language</code> | Last selected language |
+| <code>static-quiz-system-theme</code> | Last selected theme |
 
-The project currently includes 40 questions for Bruno and 60 questions for Maria, for 100 total questions.
+Per-question state records correct and incorrect totals, the current streak, the last result, whether review is required and the number of review attempts.
 
-Bruno's bank is an author-created, non-official practice set adapted to the notice's official distribution: 8 Portuguese Language, 8 Mathematics and Logical Reasoning, 4 General Knowledge, and 20 Role-Specific Knowledge questions. Every question has five alternatives and one designated correct answer. The questions are not copied from an official test and the explanations are not an official answer key.
+<code>Reset Progress</code> removes only the active profile's versioned progress record. The other profile and interface preferences remain available.
 
-The full Bruno quiz presents these subjects in written-exam sequence: questions 1-8 Portuguese Language, 9-16 Mathematics and Logical Reasoning, 17-20 General Knowledge, and 21-40 Role-Specific Knowledge. Its alternatives use a stable deterministic A-E order that removes the source-key pattern; error-review rounds may still randomise them as a study aid.
+LocalStorage is browser-local, unencrypted and removable through browser settings. The application does not request sensitive personal data, and progress should not be treated as a portable backup.
 
-Maria's active bank retains the original wording and preliminary FURB answer key from its source objective tests and remains marked as `Original` in the quiz UI.
+## Internationalisation
 
-For transparency, the dashboard shows raw correct-answer counts and accuracy; it does not calculate Bruno's official 100-point result or determine whether the 50-point pass rule was met. The notice assigns 2 points to each Portuguese Language, Mathematics and Logical Reasoning, and General Knowledge question, and 3 points to each Role-Specific Knowledge question, producing subject totals of 16, 16, 8, and 60 points.
+pt-BR is the default experience. The en-GB mode is implemented with static, ID-based dictionaries:
 
-## LocalStorage Model
+- interface copy and category labels live in <code>app.js</code>;
+- shared and legacy question translations live in <code>questions-en.js</code>;
+- active profile translations live in <code>bruno-hard-questions-en.js</code> and <code>maria-hard-questions-en.js</code>.
 
-The app stores one progress object per profile. Each question tracks:
+Questions, alternatives and explanations switch without restarting the session. Portuguese source passages may remain in Portuguese where the language itself is the subject being assessed.
 
-- total correct answers
-- total incorrect answers
-- current correct streak
-- last result
-- review status
-- number of review attempts
+## Accessibility and Responsive Behaviour
 
-This keeps each profile independent while still allowing the same quiz engine to power both. Bruno's storage version was advanced for the new question bank, while Maria's existing storage key remains unchanged.
+The interface includes practical accessibility and responsive behaviours:
 
-## Running Locally
+- native button controls for primary actions and alternatives;
+- <code>aria-pressed</code> state for profile, language and theme controls;
+- polite <code>aria-live</code> announcements for questions and feedback;
+- programmatic focus movement when a new question or completion state is rendered;
+- visible keyboard focus styling;
+- responsive layouts at 840 px and 520 px breakpoints.
 
-Because this is a static app, no installation is required.
+These implementation details are not a formal WCAG conformance claim.
 
-```bash
+## Repository Structure
+
+| Path | Responsibility |
+| --- | --- |
+| <code>index.html</code> | Semantic page structure, controls and script loading |
+| <code>style.css</code> | Responsive layout, design tokens, themes and component states |
+| <code>app.js</code> | Rendering, localisation, session scheduling, review logic and persistence |
+| <code>questions.js</code> | Question factory, base banks, profile metadata and registry |
+| <code>bruno-hard-questions.js</code> | Active Massaranduba IT Technician practice bank |
+| <code>maria-hard-questions.js</code> | Active FURB AEE/Mixed and Libras bank |
+| <code>questions-en.js</code> | Shared and legacy en-GB question translations |
+| <code>bruno-hard-questions-en.js</code> | en-GB translations for Bruno's active bank |
+| <code>maria-hard-questions-en.js</code> | en-GB translations for Maria's active bank |
+| <code>docs/quiz-contest-dark-en-gb.gif</code> | Animated README demonstration |
+
+## Run Locally
+
+No dependency installation is required.
+
+~~~bash
 git clone https://github.com/DegsTerin/quiz-contest.git
 cd quiz-contest
-```
-
-Then open `index.html` in a browser.
-
-You can also use any simple static server:
-
-```bash
 python -m http.server 8000
-```
+~~~
 
-Then visit:
+Open <http://localhost:8000> in a browser.
 
-```text
-http://localhost:8000
-```
+Opening <code>index.html</code> directly is also supported by the current architecture, but a local static server more closely matches the deployed HTTP environment.
 
-## GitHub Pages
+## Deployment
 
-The app is designed to run directly from the repository root on GitHub Pages:
+The live application is available at [degsterin.github.io/quiz-contest](https://degsterin.github.io/quiz-contest/).
 
-```text
-Branch: main
-Folder: /
-```
+The repository keeps <code>index.html</code> and all runtime assets at the root, so the same files can be served by GitHub Pages or another static host. There is no compilation step or generated distribution directory.
 
-## Design Notes
+## Engineering Decisions
 
-- The visual style uses warm paper-like tones to evoke a study environment.
-- Answer alternatives use circular labels to resemble physical exam sheets.
-- The dashboard keeps the learning loop visible: mode, progress, raw correct-answer count, and accuracy.
-- The app avoids dependencies so it remains easy to host, inspect, and maintain.
+| Decision | Rationale | Trade-off |
+| --- | --- | --- |
+| Static browser-only architecture | Minimises deployment and operational complexity | No accounts, server validation or cross-device synchronisation |
+| Versioned per-profile LocalStorage | Prevents unrelated profiles and incompatible bank revisions from sharing state | Progress remains tied to one browser and breaking revisions may start with fresh state |
+| Profile-specific session policies | Preserves written-exam fidelity for Bruno while retaining study variation for Maria | The engine must maintain both deterministic and randomised paths |
+| Seeded Bruno answer ordering | Produces a stable paper-style A–E layout without exposing the source-key sequence | Deliberate reshuffling requires a seed or question-ID change |
+| Static localisation dictionaries | Removes runtime translation dependencies and keeps copy reviewable in source control | Translation parity must be maintained when content changes |
 
-## Future Improvements
+## Development Quality Gate
 
-- Add import/export for progress backup.
-- Add filters by category and difficulty.
-- Add notice-weighted score calculation per profile.
-- Add charts for accuracy by subject.
-- Add keyboard shortcuts for A-E answers.
+The repository does not currently include a package manifest, automated test suite or CI workflow. A safe content or engine change should therefore include, at minimum:
+
+- JavaScript syntax checks for every script;
+- a browser smoke test in pt-BR and en-GB;
+- a full-session check for both profiles;
+- verification of question counts, five-option shape and translation coverage;
+- a LocalStorage compatibility check for both versioned profile keys.
+
+Automating these checks is the highest-priority engineering improvement.
+
+## Roadmap
+
+- Add a checked-in regression suite for question-bank, ordering and storage invariants.
+- Run the regression suite through GitHub Actions.
+- Add progress export and import.
+- Add notice-weighted score calculation as a clearly separate result.
+- Add subject-level filters, analytics and keyboard shortcuts.
+
+## Disclaimer
+
+Quiz Contest is an independent educational project. Bruno's profile is author-created and non-official. Maria's profile preserves source exam wording and a preliminary answer key. Candidates should always consult the applicable notice, amendments and final official answer key as the authoritative sources.
+
+## Maintainer
+
+Built and maintained by [DegsTerin](https://github.com/DegsTerin).
