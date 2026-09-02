@@ -122,8 +122,9 @@ const MARIA_QUESTIONS = [
 const QUESTION_SETS = {
   bruno: {
     owner: "Bruno",
-    title: "Quiz Analista de Informática",
-    description: "Questões originais da prova objetiva FURB do Edital 794/SED/2026 para Analista de Informática, com gabarito preliminar e revisão de erros.",
+    title: "Quiz Técnico em Informática",
+    description: "Simulado autoral e não oficial para Técnico em Informática, adaptado ao conteúdo e à distribuição de 40 questões por disciplina do Edital de Concurso Público 001/2026 do Município de Massaranduba, com revisão de erros.",
+    fullQuizPresentation: "written-exam",
     questions: BRUNO_QUESTIONS
   },
   maria: {

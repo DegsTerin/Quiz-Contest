@@ -1,8 +1,11 @@
-const LEGACY_STORAGE_KEY = "static-quiz-system-state-v1";
 const ACTIVE_PROFILE_KEY = "static-quiz-system-active-profile";
 const ACTIVE_LANGUAGE_KEY = "static-quiz-system-active-language";
 const ACTIVE_THEME_KEY = "static-quiz-system-theme";
-const STORAGE_KEY_PREFIX = "static-quiz-system-state-v2";
+const STORAGE_KEY_PREFIX = "static-quiz-system-state";
+const PROFILE_STORAGE_VERSIONS = {
+  bruno: "v3",
+  maria: "v2"
+};
 const DEFAULT_PROFILE_ID = "bruno";
 const DEFAULT_LANGUAGE_ID = "pt";
 const DEFAULT_THEME_ID = "dark";
@@ -23,7 +26,7 @@ const I18N = {
     resetProgress: "Zerar Progresso",
     modeLabel: "Modo",
     progressLabel: "Progresso",
-    scoreLabel: "Pontuação",
+    scoreLabel: "Acertos",
     accuracyLabel: "Aproveitamento",
     nextQuestion: "Próxima Questão",
     sessionSummaryTitle: "Resumo da Sessão",
@@ -46,13 +49,13 @@ const I18N = {
     completedReviewMessage: "Revisão concluída. Inicie outra revisão ou refaça o quiz completo.",
     completedAllMessage: "Quiz completo concluído. As respostas erradas foram revisadas pela fila de repetição.",
     sessionAccuracyMessage: "Aproveitamento da sessão: {accuracy}%. Questões respondidas: {answered}. Acertos: {correct}.",
-    scoreValue: "{correct} acertos",
+    scoreValue: "{correct}",
     resetMessage: "Progresso zerado. Clique em “Iniciar Quiz Completo” para recomeçar.",
     profileSelectedMessage: "Perfil de {owner} selecionado. Clique em “Iniciar Quiz Completo” para começar.",
     profiles: {
       bruno: {
-        title: "Quiz Analista de Informática",
-        description: "Questões originais da prova objetiva FURB do Edital 794/SED/2026 para Analista de Informática, com gabarito preliminar e revisão de erros."
+        title: "Quiz Técnico em Informática",
+        description: "Simulado autoral e não oficial para Técnico em Informática, adaptado ao conteúdo e à distribuição de 40 questões por disciplina do Edital de Concurso Público 001/2026 do Município de Massaranduba, com revisão de erros."
       },
       maria: {
         title: "Quiz Professora AEE/Misto e Libras",
@@ -60,6 +63,8 @@ const I18N = {
       }
     },
     categories: {
+      "Língua Portuguesa": "Língua Portuguesa",
+      "Matemática e Raciocínio Lógico": "Matemática e Raciocínio Lógico",
       "Conhecimentos Gerais": "Conhecimentos Gerais",
       "Noções de Informática": "Noções de Informática",
       "Conhecimentos Específicos": "Conhecimentos Específicos",
@@ -87,7 +92,7 @@ const I18N = {
     resetProgress: "Reset Progress",
     modeLabel: "Mode",
     progressLabel: "Progress",
-    scoreLabel: "Score",
+    scoreLabel: "Correct",
     accuracyLabel: "Accuracy",
     nextQuestion: "Next Question",
     sessionSummaryTitle: "Session Summary",
@@ -110,13 +115,13 @@ const I18N = {
     completedReviewMessage: "Review finished. Start another review or retake the full quiz.",
     completedAllMessage: "Full quiz finished. Wrong answers were reviewed through the repetition queue.",
     sessionAccuracyMessage: "Session accuracy: {accuracy}%. Questions answered: {answered}. Correct answers: {correct}.",
-    scoreValue: "{correct} correct",
+    scoreValue: "{correct}",
     resetMessage: "Progress reset. Click “Start Full Quiz” to begin again.",
     profileSelectedMessage: "{owner}'s profile selected. Click “Start Full Quiz” to begin.",
     profiles: {
       bruno: {
-        title: "IT Analyst Quiz",
-        description: "Original FURB objective-test questions from Notice 794/SED/2026 for IT Analyst, translated into British English with the preliminary answer key and mistake review."
+        title: "IT Technician Quiz",
+        description: "An author-created, non-official practice set for IT Technician, aligned with the syllabus and 40-question subject distribution of Massaranduba Municipal Public Competition Notice 001/2026, with mistake review."
       },
       maria: {
         title: "AEE/Mixed and Libras Teacher Quiz",
@@ -124,6 +129,8 @@ const I18N = {
       }
     },
     categories: {
+      "Língua Portuguesa": "Portuguese Language",
+      "Matemática e Raciocínio Lógico": "Mathematics and Logical Reasoning",
       "Conhecimentos Gerais": "General Knowledge",
       "Noções de Informática": "Computer Basics",
       "Conhecimentos Específicos": "Role-Specific Knowledge",
@@ -207,7 +214,8 @@ function t(key, replacements = {}) {
 }
 
 function getStorageKey(profileId = activeProfileId) {
-  return `${STORAGE_KEY_PREFIX}-${profileId}`;
+  const storageVersion = PROFILE_STORAGE_VERSIONS[profileId] || "v2";
+  return `${STORAGE_KEY_PREFIX}-${storageVersion}-${profileId}`;
 }
 
 function createQuestionMap() {
@@ -279,11 +287,6 @@ function loadState() {
     return currentState;
   }
 
-  // Mantém o progresso antigo do primeiro quiz do Bruno, caso já existisse no navegador.
-  if (activeProfileId === DEFAULT_PROFILE_ID) {
-    return parseSavedState(LEGACY_STORAGE_KEY) || createDefaultState();
-  }
-
   return createDefaultState();
 }
 
@@ -307,17 +310,54 @@ function shuffleArray(items) {
   return copy;
 }
 
-function randomizeAnswers(question) {
+function usesWrittenExamPresentation() {
+  return activeQuestionSet.fullQuizPresentation === "written-exam";
+}
+
+function createStableSeed(text) {
+  let value = 2166136261;
+
+  for (let index = 0; index < text.length; index += 1) {
+    value ^= text.charCodeAt(index);
+    value = Math.imul(value, 16777619);
+  }
+
+  return value >>> 0;
+}
+
+function orderWrittenExamAnswers(question, answerChoices) {
+  const orderedChoices = [...answerChoices];
+  let state = createStableSeed(`19933:${question.id}`);
+
+  // A fixed seed keeps the printed-style order stable without exposing the source answer pattern.
+  for (let index = orderedChoices.length - 1; index > 0; index -= 1) {
+    state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
+    const swapIndex = Math.floor((state / 4294967296) * (index + 1));
+    [orderedChoices[index], orderedChoices[swapIndex]] = [orderedChoices[swapIndex], orderedChoices[index]];
+  }
+
+  return orderedChoices;
+}
+
+function prepareAnswers(question) {
   const answerChoices = question.options.map((option, index) => ({
     label: option,
     sourceIndex: index,
     isCorrect: index === question.answerIndex
   }));
 
+  if (usesWrittenExamPresentation() && session.mode === "all" && session.currentQueueSource === "main") {
+    return orderWrittenExamAnswers(question, answerChoices);
+  }
+
   return shuffleArray(answerChoices);
 }
 
 function createInitialQueue() {
+  if (usesWrittenExamPresentation()) {
+    return questions.map((question) => question.id);
+  }
+
   const randomizedQuestions = shuffleArray(questions);
 
   // Questões com menor sequência de acertos aparecem antes para priorizar revisão.
@@ -415,7 +455,7 @@ function showNextQuestion() {
   }
 
   session.currentQuestionId = session.queue.shift();
-  session.currentAnswers = randomizeAnswers(questionMap.get(session.currentQuestionId));
+  session.currentAnswers = prepareAnswers(questionMap.get(session.currentQuestionId));
   session.answeredCurrent = false;
   session.currentSelectedAnswer = null;
   session.currentIndex += 1;
@@ -725,10 +765,6 @@ function updateDashboard() {
 
 function resetProgress() {
   localStorage.removeItem(getStorageKey());
-
-  if (activeProfileId === DEFAULT_PROFILE_ID) {
-    localStorage.removeItem(LEGACY_STORAGE_KEY);
-  }
 
   appState = loadState();
   session = createEmptySession();

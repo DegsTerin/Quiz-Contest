@@ -1,45 +1,551 @@
-const ORIGINAL_BRUNO_QUESTIONS = [
-  makeQuestion(["bruno-original-01", "Conhecimentos Gerais", "Original", "O Censo Escolar 2025 registrou queda de 2,29% nas matrículas da educação básica brasileira em relação a 2024, totalizando 46,018 milhões de estudantes. No mesmo levantamento, a taxa de frequência escolar na faixa etária de 4 a 17 anos atingiu 97,2%; a distorção idade-série no 3º ano do ensino médio recuou de 27,2% para 13,99% entre 2022 e 2025; o percentual de escolas com acesso à internet passou de 82,8% para 94,5% entre 2021 e 2025; e a taxa de atendimento em creche para crianças de até 3 anos alcançou 41,8%, aproximando-se da meta estabelecida para o ciclo decenal encerrado em 2024. A população de 0 a 3 anos recuou 8,4% entre 2022 e 2025, segundo dados do IBGE. Considerando os fundamentos do planejamento educacional, os critérios de avaliação institucional e os princípios constitucionais que regem a educação brasileira, assinale a alternativa correta a respeito desse conjunto de dados:", ["Ele indica, quando articulado com a taxa de frequência de 97,2% na faixa etária obrigatória e com o avanço da conectividade, que o sistema avançou em acesso e condições de oferta, sendo a redução da distorção idade-série a evidência complementar que permite concluir sobre melhoria da eficiência e da qualidade do fluxo escolar.", "Ele aponta, quando combinado com a redução da distorção idade-série, avanço na eficiência do fluxo escolar, sendo esse o indicador mais relevante para avaliar a qualidade do sistema educacional, pois expressa a capacidade das redes de garantir progressão regular e conclusão na idade adequada.", "Ele reforça, quando interpretado com os dados de frequência e conectividade, que o principal desafio remanescente da educação básica é a equidade territorial, dado que a distribuição desigual da infraestrutura digital entre regiões é o fator que mais diretamente compromete a qualidade da oferta nas redes públicas.", "Ele indica, quando articulado com a redução da população em idade escolar e com a taxa de frequência de 97,2% na faixa etária obrigatória, que o país avançou na universalização do acesso à educação básica, cabendo ao planejamento educacional concentrar esforços na expansão da creche e na melhoria da conectividade como desafios remanescentes prioritários.", "Ele requer interpretação contextualizada por múltiplos indicadores, pois os dados demográficos, de fluxo, de frequência e de infraestrutura capturam dimensões distintas da política educacional, nenhuma das quais, tomada isoladamente, é suficiente para concluir sobre eficiência sistêmica, retrocesso ou consolidação da qualidade."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-02", "Conhecimentos Gerais", "Original", "Análises contemporâneas sobre o ambiente informacional digital identificam um fenômeno que vai além da circulação de conteúdos falsos: a produção sistemática de um estado de desorientação epistêmica, no qual a velocidade de disseminação, a lógica de engajamento das plataformas e a captura da linguagem por sistemas algorítmicos criam condições estruturais para o enfraquecimento da razão crítica e da esfera pública. Nesse contexto, a inteligência artificial generativa não é apenas ferramenta de produção de conteúdo, mas infraestrutura que potencializa a opacidade dos processos informativos, dificultando a distinção entre o que informa, o que entretém e o que desinforma. Para os profissionais que atuam na gestão e no assessoramento educacional, compreender esse cenário é condição para orientar a elaboração de propostas pedagógicas e institucionais voltadas ao letramento digital crítico. A esse respeito, o letramento digital crítico:", ["Realiza-se quando os estudantes desenvolvem habilidade de checagem sistemática de informações e domínio de critérios jornalísticos de verificação, porque a capacidade de distinguir fontes confiáveis de não confiáveis é condição suficiente para navegar com autonomia no ecossistema informacional contemporâneo.", "Exige que a escola forme estudantes capazes de identificar os mecanismos de manipulação emocional presentes nos conteúdos digitais, porque o apelo afetivo e a espetacularização são os vetores centrais pelos quais a desinformação captura a atenção e contorna a razão crítica dos usuários.", "Demanda desenvolver nos estudantes compreensão das lógicas algorítmicas, das infraestruturas de engajamento e dos interesses que estruturam o ambiente informacional, porque a desorientação epistêmica é produzida sistemicamente e não se resolve pela triagem de fontes ou pela verificação pontual de conteúdos.", "Implica articular compreensão das lógicas de engajamento das plataformas com desenvolvimento de competências socioemocionais para lidar com a sobrecarga informacional, porque a dimensão afetiva da exposição ao ambiente digital é condição tão determinante quanto a dimensão cognitiva para a formação de sujeitos críticos.", "Requer que a escola desenvolva nos estudantes capacidade de reconhecer os interesses econômicos e políticos que orientam a produção e a circulação de conteúdos digitais, porque a identificação dos agentes e das motivações por trás dos fluxos informativos é a competência central para resistir à desorientação epistêmica estrutural."], 2, "Gabarito preliminar da FURB: alternativa C."]),
-  makeQuestion(["bruno-original-03", "Conhecimentos Gerais", "Original", "Pesquisas nacionais sobre violência no ambiente escolar brasileiro documentam que episódios de agressão, intimidação e constrangimento contra docentes ocorrem com frequência significativamente superior ao que os registros oficiais capturam, raramente ultrapassando os muros das unidades escolares. O fenômeno atinge todos os níveis e etapas da educação, provoca impacto direto sobre a saúde mental dos profissionais afetados e degrada o clima escolar mesmo para aqueles que não foram vítimas diretas. Em Santa Catarina, aproximadamente 82,8% dos docentes da educação básica são mulheres. Considerando os fundamentos constitucionais da educação, a proteção institucional do trabalho docente e a promoção de equidade no contexto escolar, esse quadro exige política pública preventiva e estruturante que:", ["Seja fundada em proteção e equidade, vedada, contudo, diferenciação institucional relacionada ao perfil de gênero do magistério, para preservação da impessoalidade administrativa.", "Estabeleça protocolos obrigatórios de registro, notificação, proteção e acompanhamento, sem delegação às unidades escolares da decisão sobre tornar visíveis ou não os episódios.", "Inclua protocolos de apoio, registro e acompanhamento, preservada às unidades escolares a definição do grau de formalização, publicidade e encaminhamento de cada episódio conforme o contexto.", "Priorize o acolhimento e a saúde mental, ficando os protocolos centrais de registro e notificação reservados aos casos reiterados ou de gravidade manifesta.", "Integre educação e saúde e crie canais específicos de apoio, concentrando o núcleo da resposta na valorização da carreira e na melhoria das condições gerais de trabalho."], 1, "Gabarito preliminar da FURB: alternativa B."]),
-  makeQuestion(["bruno-original-04", "Conhecimentos Gerais", "Original", "O Censo Escolar 2025 registrou que as matrículas na educação profissional e tecnológica cresceram 68,4% em cinco anos no Brasil, atingindo mais de 3,1 milhões de estudantes, com as redes estaduais respondendo por 81,7% das matrículas públicas. No mesmo período, o percentual de alunos da rede pública em tempo integral passou de 15,1% para 25,8%, patamar que correspondeu à meta estabelecida para o ciclo decenal encerrado em 2024. Os dados revelam ainda disparidades expressivas entre estados: enquanto o Piauí atingiu 68,8% de articulação técnica entre ensino médio e educação profissional na rede pública, o Amazonas registrou 5,2%. Considerando os fundamentos normativos da educação brasileira, os princípios do planejamento educacional e os critérios de avaliação institucional, esse conjunto de dados indica avanço de trajetória e:", ["Revela que a concentração das matrículas nos eixos de \"gestão e negócios\" e \"ambiente e saúde\" comprova que a política pública está respondendo adequadamente às demandas produtivas dos territórios, o que constitui critério central de avaliação da qualidade da oferta da Educação Profissional e Tecnológica.", "Demonstra que as disparidades territoriais identificadas entre estados expressam o exercício legítimo da autonomia federativa na definição de prioridades educacionais, sem que configurem, por si mesmas, falha de coordenação da política nacional.", "Aponta que a concentração de 81,7% das matrículas públicas nas redes estaduais demonstra que o regime de colaboração federativa está distribuindo adequadamente as responsabilidades de oferta entre os entes, com papel complementar e proporcional da rede federal.", "Evidencia que a persistência de disparidades territoriais expressivas e a insuficiência dos indicadores de acesso para capturar intencionalidade pedagógica e capacidade institucional das redes exigem que a avaliação da política pública mobilize dimensões que o Censo Escolar não mensura isoladamente.", "Sugere que o alcance do patamar previsto para o ciclo decenal encerrado em 2024 no tempo integral indica que os instrumentos de planejamento e monitoramento adotados foram suficientes para orientar a expansão com qualidade nas redes públicas."], 3, "Gabarito preliminar da FURB: alternativa D."]),
-  makeQuestion(["bruno-original-05", "Conhecimentos Gerais", "Original", "A Fundação Biblioteca Nacional ampliou, em 2025, suas ações de mediação de leitura para além dos espaços escolares convencionais, inaugurando bibliotecas em ambiente hospitalar e preparando iniciativas para adolescentes em cumprimento de medida socioeducativa. Essas ações são coordenadas com curadoria especializada e articuladas à formação de leitores desde a infância. Nesse contexto, a experiência sueca de retomada do livro impresso após período de substituição por suportes digitais é citada como evidência de que os diferentes suportes de leitura têm especificidades pedagógicas que não se anulam mutuamente. Considerando os fundamentos normativos da educação brasileira e os princípios do trabalho pedagógico com a leitura literária, analise as sentenças que tratam da mediação de leitura literária como responsabilidade institucional obrigatória da escola ao longo de toda a educação básica e assinale a alternativa correta:", ["Quando estendida a espaços não escolares, expressa a amplitude do direito à formação integral, sem que a escola possa delegar essa responsabilidade às instituições culturais que atuam nesses espaços.", "Quando estendida a contextos de vulnerabilidade, deve ser reconhecida como dimensão autônoma da política cultural do Estado, com projeto pedagógico próprio articulado, mas não integrado ao projeto educativo da escola de origem dos estudantes atendidos.", "Encontra na experiência sueca indicativo de que a política educacional deve estruturar prioritariamente a oferta e a renovação do acervo físico nas escolas como eixo central da formação leitora, articulado à mediação docente.", "Quando estendida a espaços não escolares, indica que a coordenação da política pública de leitura deve ser assumida por instituições culturais especializadas, cabendo à escola papel de articulação e encaminhamento dos estudantes.", "Quando estendida a contextos com públicos de necessidades específicas, requer que o projeto pedagógico dessas iniciativas seja elaborado pelas instituições coordenadoras, com participação consultiva da escola de origem dos estudantes atendidos."], 0, "Gabarito preliminar da FURB: alternativa A."]),
-  makeQuestion(["bruno-original-06", "Conhecimentos Gerais", "Original", "A Política Nacional de Cuidados, instituída pela Lei n.º 15.069, de 23 de dezembro de 2024, e regulamentada pelo Decreto n.º 12.562, de 2025, previu, no âmbito do Plano Nacional de Cuidados, a implantação das Cuidotecas: espaços públicos, gratuitos e acessíveis destinados ao acolhimento de crianças de 3 a 12 anos, com e sem deficiência, em horários que excedem a jornada escolar, especialmente no período noturno. O serviço apoia pessoas responsáveis pelo cuidado de crianças no âmbito familiar que precisam estudar, se qualificar ou trabalhar. Dados da Pesquisa Nacional por Amostra de Domicílios indicam que mais de 30% das mulheres que deixaram de procurar emprego apontaram os cuidados familiares como motivo, índice que entre os homens não chega a 3%. Considerando os fundamentos constitucionais e normativos da educação e dos direitos sociais no Brasil, as Cuidotecas, na arquitetura de proteção social brasileira, operacionalizam o princípio da corresponsabilidade social ao compartilhar com o âmbito público parte do cuidado de crianças em horários alternativos à escola e:", ["Devem ter sua efetividade avaliada prioritariamente pelo critério de redução da sobrecarga de cuidado sobre as mulheres, dado que esse indicador expressa diretamente o cumprimento do objetivo central da política.", "Têm como objetivo normativo central reduzir a evasão escolar e prevenir riscos ao desenvolvimento integral das crianças, sendo a autonomia econômica das mulheres objetivo derivado e complementar.", "Têm na concentração inicial de implantação em Institutos Federais e capitais uma estratégia que prioriza a autonomia econômica das mulheres em contextos urbanos de maior dinamismo produtivo, em conformidade com os critérios de equidade previstos na política.", "Funcionam como complemento à oferta da educação básica ao ampliar o tempo de permanência das crianças em ambiente institucional protegido, articulando-se às metas de educação em tempo integral previstas no Plano Nacional de Educação.", "Endereçam a desigualdade estrutural de gênero que limita o acesso de mulheres à educação e ao trabalho, sem substituir os serviços educacionais formais nem a convivência familiar."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-07", "Conhecimentos Gerais", "Original", "Em contextos educacionais atravessados por crises, desigualdades e disputas sobre o sentido do futuro, diferentes matrizes temporais passam a orientar, explícita ou implicitamente, as práticas educativas e as propostas institucionais. Algumas tratam a melhoria como decorrência quase automática do tempo; outras convertem a incerteza em paralisia; outras, ainda, fazem da ação crítica no presente a condição para abertura de possibilidades históricas. Associe a segunda coluna de acordo com a primeira, relacionando cada eixo temporal-pedagógico a sua respectiva formulação: Primeira coluna: eixo temporal-pedagógico 1.Esperança crítica orientada ao presente 2.Otimismo deshistoricizado 3.Fatalismo desmobilizador Segunda coluna: formulação correspondente (__)Disposição afirmativa perante o futuro que tende a supor convergência espontânea entre tempo e melhoria, rebaixando a análise das condições concretas e a necessidade de intervenção crítica sobre o presente como condição do porvir desejado. (__)Leitura da crise que, ao reconhecer a gravidade das contradições, converte a incerteza em bloqueio político-pedagógico, restringindo a escola à gestão adaptativa do dado e naturalizando o presente como horizonte de repetição. (__)Postura que recusa simultaneamente o cinismo paralisante e a promessa automática de progresso, tomando a indeterminação do futuro como razão para intensificar a ação coletiva no presente e manter abertas possibilidades históricas não realizadas. Assinale a alternativa que apresenta a correta associação entre as colunas:", ["2 – 3 – 1.", "3 – 1 – 2.", "1 – 2 – 3.", "3 – 2 – 1.", "2 – 1 – 3."], 0, "Gabarito preliminar da FURB: alternativa A."]),
-  makeQuestion(["bruno-original-08", "Conhecimentos Gerais", "Original", "Com a entrada em vigor, em março de 2026, de nova legislação federal voltada à proteção de crianças e adolescentes em ambientes digitais, intensificou-se no Brasil o debate sobre as responsabilidades do Estado, da família, da escola e dos fornecedores de serviços digitais diante dos riscos de exposição precoce, publicidade comportamental, verificação etária e interações inadequadas em redes sociais e jogos on-line. Em uma rede pública de ensino, formou-se controvérsia sobre a extensão dessas responsabilidades: parte da comunidade defendia que o problema exige atuação estrutural e preventiva do Estado; outra sustentava que a proteção cotidiana deve concentrar-se na orientação familiar e pedagógica, com o Estado atuando de forma subsidiária. À luz do Estatuto da Criança e do Adolescente e dos fundamentos constitucionais de proteção da infância, assinale a alternativa correta a respeito da proteção de crianças e adolescentes no ambiente digital:", ["Decorre do dever de proteção integral e exige atuação preventiva, educativa e estrutural do Estado em corresponsabilidade com família, escola e agentes econômicos, sendo o padrão protetivo uniforme para toda a faixa etária coberta pelo ECA, dada a igualdade de titularidade do direito.", "Expressa o dever de proteção integral e impõe deveres de transparência e adequação aos fornecedores de serviços digitais, cabendo ao Estado, à família e à escola papel complementar de educação para o uso crítico, sem diferenciação protetiva por faixa etária ou grau de desenvolvimento.", "Vincula-se ao dever de proteção integral e pressupõe atuação preventiva, educativa e estrutural do Estado em corresponsabilidade com família, escola e agentes econômicos, concentrando-se o núcleo da iniciativa protetiva cotidiana na família e na escola, às quais cabe definir, conforme o contexto, o padrão efetivo de segurança do menor.", "É exigência do dever de proteção integral e demanda atuação preventiva, educativa e estrutural do Estado em corresponsabilidade com família, escola e agentes econômicos, com salvaguardas diferenciadas conforme a faixa etária e o estágio de desenvolvimento.", "Compõe o dever de proteção integral, mas sua operacionalização ordinária deve priorizar a orientação familiar e a mediação pedagógica, reservando a atuação estrutural do Estado para contextos de risco comprovado ou de violação sistemática de direitos."], 3, "Gabarito preliminar da FURB: alternativa D."]),
-  makeQuestion(["bruno-original-09", "Conhecimentos Gerais", "Original", "Pesquisas divulgadas em novembro de 2025 produziram dois conjuntos de dados sobre escolaridade e trajetória juvenil no Brasil. O primeiro, da organização Todos pela Educação, registrou que a taxa de conclusão do ensino médio na idade correta avançou de 54,5% para 74,3% entre 2015 e 2025, mas que a diferença entre os 20% mais pobres e os 20% mais ricos permanece em 33,8 pontos percentuais, e que, mantido o ritmo atual, jovens mais pobres só terão as mesmas chances de concluir o ensino médio que os mais ricos têm hoje em mais de duas décadas. O segundo, do Instituto Data Favela, identificou que mais da metade das quase 4 mil pessoas envolvidas com o tráfico de drogas entrevistadas não chegou ao ensino médio, que 41% relataram que teriam estudado mais se pudessem refazer o passado, e que 74% são negras. Considerando os fundamentos normativos da educação brasileira e os princípios de planejamento e avaliação de políticas educacionais, assinale a alternativa que analisa corretamente esse conjunto de dados:", ["Evidencia que o avanço quantitativo nas taxas de conclusão não elimina a obrigação institucional de endereçar desigualdades estruturais de renda e raça, pois a persistência dessas disparidades indica que a expansão do acesso, sem políticas intencionalmente orientadas à equidade, não produz convergência entre grupos em ritmo compatível com o horizonte normativo de universalização.", "Confirma a eficácia das políticas educacionais da última década, sendo os dados sobre escolaridade de pessoas envolvidas com o tráfico um reforço de que a ampliação do acesso à escola é a principal resposta institucional disponível para a redução das desigualdades socioeconômicas e raciais identificadas.", "Revela que o recorte de gênero é o fator estrutural mais negligenciado pela política educacional, pois os dados indicam que mulheres negras pobres apresentam taxas de conclusão superiores às dos homens no mesmo grupo socioeconômico e racial, evidenciando que o desafio remanescente concentra-se na retenção masculina de baixa renda.", "Sugere que o ritmo de redução das desigualdades de renda é mais relevante para a política educacional do que o recorte racial, pois a diferença entre os grupos de renda extremos é aproximadamente três vezes maior do que a diferença entre brancos e pretos, pardos e indígenas nas taxas de conclusão.", "Aponta trajetória positiva que deve ser mantida, sendo a baixa escolaridade entre pessoas envolvidas com o tráfico uma evidência de que a evasão escolar é o fator isolado mais determinante para a vulnerabilidade social, exigindo que a política educacional concentre esforços na permanência como prioridade central."], 0, "Gabarito preliminar da FURB: alternativa A."]),
-  makeQuestion(["bruno-original-10", "Conhecimentos Gerais", "Original", "Em 2025, o Brasil registrou que 66% das crianças concluintes do 2º ano do Ensino Fundamental estavam alfabetizadas na idade certa, superando a meta intermediária pactuada no âmbito do Compromisso Nacional Criança Alfabetizada. O modelo adotado atribui a cada ente federativo a formulação de sua política de alfabetização conforme as especificidades do território, em colaboração com a União. Especialistas do setor alertaram, contudo, que o resultado agregado nacional pode ocultar desigualdades relevantes entre grupos sociais definidos por raça/cor, nível socioeconômico, região e localização, e que as crianças não contempladas pelo indicador não podem ser tratadas como resíduo aceitável de política pública. À luz dos fundamentos constitucionais e normativos da educação brasileira, assinale a alternativa correta a respeito da superação dessa meta intermediária de alfabetização:", ["Permite que a cooperação federativa redirecione sua capacidade institucional para as etapas subsequentes ao 2º ano do Ensino Fundamental, dado que a priorização política da alfabetização inicial já produziu efeitos suficientes para sustentar trajetória autônoma de melhora do indicador agregado nacional.", "Não suspende o dever estatal de universalização nem afasta a obrigação de que o regime de colaboração federativa seja orientado pela redução das desigualdades materiais entre grupos e territórios, pois a Constituição não admite que eficiência agregada de indicador nacional substitua equidade no acesso ao direito à educação.", "Evidencia que a diferenciação territorial das políticas, ao reconhecer as especificidades de cada ente, realiza o princípio da equidade educacional, de modo que as desigualdades inter-redes identificadas pelos dados agregados configuram expressão legítima da autonomia federativa e não falha de coordenação institucional.", "Indica que o resultado agregado nacional é indicador suficiente para avaliar a adequação da política pública, cabendo à análise desagregada por grupos sociais papel auxiliar e não estruturante na formulação das estratégias federativas de universalização da alfabetização.", "Demonstra que o regime de colaboração federativa operou com eficiência suficiente para justificar a progressiva transferência da responsabilidade de universalização aos entes subnacionais, mantida a União em papel de monitoramento e apoio técnico, sem que isso implique coordenação federal vinculante sobre as desigualdades inter-redes."], 1, "Gabarito preliminar da FURB: alternativa B."]),
-  makeQuestion(["bruno-original-11", "Noções de Informática", "Original", "Em sistemas operacionais multitarefa, há uma distinção fundamental entre o conceito de programa, que representa um conjunto estático de instruções armazenadas em disco, e processo, que corresponde à execução ativa dessas instruções em memória. A esse respeito, assinale a alternativa correta:", ["Um sistema operacional multitarefa impede que múltiplas instâncias de um mesmo programa sejam executadas simultaneamente.", "Programas em execução não podem ser interrompidos por eventos externos, garantindo execução contínua até sua finalização.", "As informações sobre processos ativos são armazenadas como arquivos ocultos no sistema de arquivos do sistema operacional.", "Processos derivados do mesmo programa compartilham automaticamente todas as variáveis globais em memória física.", "Um processo é uma instância em execução de um programa, contendo seu próprio estado de execução, como contador de programa, registradores e espaço de memória."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-12", "Noções de Informática", "Original", "Em sistemas operacionais de tempo real, o escalonamento baseado em prioridades é amplamente utilizado para garantir que tarefas críticas atendam a seus requisitos temporais. No entanto, o uso de recursos compartilhados, como mutexes e semáforos, pode introduzir situações em que tarefas de maior prioridade sofrem atrasos inesperados. Nesse contexto, assinale a alternativa que descreve corretamente o fenômeno de inversão de prioridade:", ["Refere-se a um mecanismo de controle do escalonador que reduz dinamicamente a prioridade de tarefas críticas ao detectar contenção por recursos, com o objetivo de equilibrar o uso da CPU e evitar starvation entre tarefas concorrentes.", "Ocorre quando o escalonador, ao adotar políticas estritamente baseadas em prioridade fixa, garante que tarefas de maior prioridade sempre preemptem tarefas de menor prioridade, inclusive durante o uso de recursos compartilhados, eliminando qualquer possibilidade de bloqueio indireto.", "É uma técnica de escalonamento utilizada para otimizar o consumo de energia, na qual tarefas de maior prioridade têm sua execução deliberadamente postergada para reduzir o uso de recursos computacionais.", "Acontece exclusivamente em sistemas não preemptivos, nos quais uma tarefa em execução mantém o controle da CPU até liberar voluntariamente o processador, impedindo a atuação do escalonador na reorganização das prioridades durante a execução.", "Ocorre quando uma tarefa de alta prioridade é bloqueada por uma tarefa de menor prioridade, a qual detém um recurso necessário à sua execução, podendo haver ou não a interferência de tarefas de prioridade intermediária."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-13", "Noções de Informática", "Original", "Nos sistemas operacionais modernos, a organização dos arquivos e diretórios é baseada em uma estrutura hierárquica em forma de árvore. Nessa estrutura, existe um diretório raiz (root directory) que serve como ponto de partida para toda a navegação e referência de arquivos e subdiretórios no sistema. Considerando esse modelo, assinale a alternativa correta:", ["Caminhos relativos são resolvidos mais rapidamente que caminhos absolutos, pois não requerem acesso às estruturas internas do sistema de arquivos.", "Em uma árvore hierárquica estrita, um mesmo arquivo pode estar simultaneamente contido em múltiplos diretórios pais sem a necessidade de mecanismos adicionais.", "O diretório raiz não possui permissões de acesso, sendo automaticamente acessível por todos os processos do sistema.", "Um caminho absoluto define a localização completa de um arquivo ou diretório a partir do diretório raiz, sendo independente do diretório de trabalho atual do processo.", "Diretórios podem conter apenas arquivos, sendo proibida a criação de subdiretórios para evitar a formação de ciclos na estrutura."], 3, "Gabarito preliminar da FURB: alternativa D."]),
-  makeQuestion(["bruno-original-14", "Noções de Informática", "Original", "No Google Workspace, o recurso de Acesso de Convidado (Guest Access) permite que usuários externos participem de reuniões, documentos e espaços colaborativos, desde que respeitem as políticas de segurança e governança definidas pela organização. Analise as afirmativas a seguir: I.O acesso de convidado permite que usuários externos colaborem utilizando suas próprias identidades, respeitando as permissões configuradas pelo administrador. II.A configuração de listas de domínios permitidos (allow list) define quais domínios externos podem acessar o ambiente, restringindo o acesso a origens autorizadas. III.Usuários convidados possuem, por padrão, privilégios administrativos equivalentes aos administradores globais da organização. É correto o que se afirma em:", ["II e III, apenas.", "I, II e III.", "III, apenas.", "I e II, apenas.", "I, apenas."], 3, "Gabarito preliminar da FURB: alternativa D."]),
-  makeQuestion(["bruno-original-15", "Noções de Informática", "Original", "No Google Workspace, os administradores utilizam as Unidades Organizacionais para organizar usuários e dispositivos de forma hierárquica. Essa estrutura permite aplicar configurações e políticas de forma centralizada e organizada. Assinale a alternativa correta a respeito do funcionamento das Unidades Organizacionais:", ["Um usuário pode pertencer simultaneamente a várias unidades organizacionais, acumulando as permissões e configurações de todas elas.", "Ao excluir uma unidade organizacional superior, todos os usuários são automaticamente movidos para a raiz do domínio sem qualquer impacto nas políticas aplicadas anteriormente.", "As unidades organizacionais servem apenas para distribuir espaço de armazenamento entre os usuários, não influenciando as permissões de serviços como Gmail, Drive ou Meet.", "A estrutura das unidades organizacionais deve obrigatoriamente seguir a arquitetura física da rede da empresa para que os serviços funcionem corretamente.", "As configurações definidas em uma unidade organizacional são automaticamente herdadas pelas unidades organizacionais subordinadas, salvo quando houver uma configuração diferente, definida explicitamente em um nível inferior."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-16", "Noções de Informática", "Original", "No Sistema de Nomes de Domínio (DNS – Domain Name System), a resolução de nomes é realizada por meio de consultas que podem envolver múltiplos servidores distribuídos hierarquicamente. Um resolvedor recursivo atua em nome do cliente, sendo responsável por obter a resposta completa à consulta DNS. Considerando o funcionamento do resolvedor recursivo, assinale a alternativa correta:", ["Consulta diretamente os servidores raiz em todas as resoluções, independentemente da existência de informações previamente armazenadas em cache.", "Encaminha a consulta original diretamente a um servidor DNS autoritativo previamente configurado e aguarda a resposta final, sem realizar consultas iterativas a servidores intermediários, como servidores raiz ou TLD, delegando integralmente a resolução externa.", "Realiza consultas sucessivas a servidores DNS, seguindo a hierarquia do sistema, até obter uma resposta válida (autoritativa ou não), podendo armazená-la em cache antes de retorná- la ao cliente.", "Responde exclusivamente com dados previamente armazenados em cache local, sem realizar consultas adicionais a outros servidores DNS, mesmo na ausência da informação solicitada.", "Utiliza obrigatoriamente o protocolo TCP em todas as consultas DNS, tanto para garantir a confiabilidade na entrega das mensagens quanto para suportar respostas maiores, independentemente do contexto da consulta ou das características da rede."], 2, "Gabarito preliminar da FURB: alternativa C."]),
-  makeQuestion(["bruno-original-17", "Noções de Informática", "Original", "Em aplicações modernas, é comum permitir que serviços de terceiros acessem recursos protegidos de um usuário (como dados de perfil, arquivos ou e-mails) sem a necessidade de compartilhar credenciais diretamente. Para isso, utiliza-se o OAuth 2.0, que implementa um modelo de autorização delegada baseado em tokens de acesso e escopos definidos pelo servidor de autorização. Considerando o funcionamento do OAuth 2.0, assinale a alternativa correta:", ["O cliente deve armazenar as credenciais do usuário (como login e senha) de forma segura para renovar automaticamente o acesso aos recursos protegidos sempre que necessário.", "O OAuth 2.0 é responsável por garantir a confidencialidade e integridade dos dados durante a comunicação entre cliente e servidor, substituindo mecanismos criptográficos de transporte ao prover proteção nativa contra interceptação, ataques man-in-the-middle e vazamento de dados em trânsito.", "O código de autorização (authorization code) pode ser reutilizado múltiplas vezes pelo cliente para obtenção de novos tokens de acesso, funcionando como uma credencial persistente equivalente à senha do usuário.", "O token de acesso concedido ao cliente fornece acesso completo e irrestrito a todos os recursos disponíveis do usuário no servidor de recursos, independentemente dos escopos solicitados ou do consentimento explicitamente fornecido durante o fluxo de autorização.", "O token de acesso permite que o cliente acesse recursos protegidos em nome do usuário, limitado pelos escopos autorizados e pelo tempo de validade definido pelo servidor de autorização."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-18", "Noções de Informática", "Original", "Em sistemas de gestão de documentos e informação, os metadados desempenham um papel essencial na organização, classificação, busca e recuperação eficiente de conteúdos digitais. Eles fornecem informações sobre os dados, ajudando a contextualizar, estruturar e gerenciar os recursos armazenados. Assinale a alternativa correta sobre o conceito de metadados:", ["A remoção de metadados de um arquivo digital melhora sua capacidade de indexação em mecanismos de busca baseados em conteúdo textual.", "Metadados servem apenas para melhorar a aparência visual dos documentos, sem qualquer influência na organização ou recuperação das informações.", "Metadados são obrigatoriamente armazenados no interior do próprio arquivo, não podendo ser mantidos em sistemas ou bancos de dados externos.", "Metadados são sempre inseridos manualmente pelos usuários, não sendo possível gerá-los de forma automática por sistemas ou ferramentas.", "Metadados estruturais descrevem a organização interna de um recurso, como a sequência de páginas, capítulos, seções ou componentes de um documento."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-19", "Noções de Informática", "Original", "Em ambientes corporativos que utilizam plataformas de colaboração digital, as ameaças não técnicas continuam sendo uma das principais causas de incidentes de segurança. Nesse contexto, os ataques de engenharia social exploram fatores humanos para obter acesso indevido a informações ou sistemas. Assinale a alternativa correta sobre esse tipo de ataque:", ["A mitigação eficaz de ataques de engenharia social depende exclusivamente da aplicação de controles técnicos avançados, como firewalls, antivírus e sistemas de detecção de intrusão.", "O termo spam refere-se exclusivamente à técnica de engenharia social que consiste em enviar mensagens em massa com o objetivo de sobrecarregar servidores de e-mail e causar interrupções no serviço.", "A implementação de autenticação multifator elimina completamente o risco de ataques baseados em manipulação psicológica.", "O pretexting é uma técnica que envolve a criação de uma situação fictícia ou cenário falso para convencer a vítima a fornecer informações confidenciais ou realizar ações que comprometam a segurança.", "Ataques de phishing em ambientes corporativos exigem que o atacante tenha acesso físico à infraestrutura de rede ou aos servidores dos provedores de serviço para serem bem-sucedidos."], 3, "Gabarito preliminar da FURB: alternativa D."]),
-  makeQuestion(["bruno-original-20", "Noções de Informática", "Original", "Os cookies são arquivos de texto utilizados pelas aplicações web para manter informações de estado entre o navegador do usuário e o servidor, uma vez que o protocolo HTTP é stateless (não mantém estado entre requisições). Assinale a alternativa correta sobre o funcionamento dos cookies:", ["São armazenados apenas no servidor, onde ficam todas as informações de sessão e preferências do usuário.", "São enviados pelo navegador do cliente em requisições subsequentes ao mesmo domínio, permitindo que o servidor reconheça o usuário nas visitas seguintes.", "Não podem ser utilizados para controlar sessões de usuário, pois são inseguros e facilmente manipuláveis.", "Funcionam exclusivamente em conexões HTTPS, não sendo suportados em conexões HTTP comuns.", "São sempre persistentes, ou seja, permanecem armazenados no navegador do usuário mesmo após o fechamento do navegador ou reinicialização do computador, e nunca expiram."], 1, "Gabarito preliminar da FURB: alternativa B."]),
-  makeQuestion(["bruno-original-21", "Conhecimentos Específicos", "Original", "Em sistemas operacionais, o fenômeno de deadlock ocorre quando um conjunto de processos permanece indefinidamente bloqueado, cada um aguardando recursos detidos por outros. As condições necessárias para a ocorrência de deadlock foram formalizadas por Coffman conditions e são utilizadas como base para técnicas de prevenção, evitação e detecção. A esse respeito, analise as afirmativas a seguir: I.A condição de exclusão mútua estabelece que pelo menos um recurso do sistema deve ser não compartilhável, isto é, sua utilização por um processo impede simultaneamente o uso por outros processos. II.A condição de posse e espera (hold and wait) ocorre quando um processo mantém a posse de um ou mais recursos já alocados enquanto aguarda a concessão de recursos adicionais que ainda não lhe foram atribuídos. III.A condição de espera circular pode ser prevenida pela imposição de uma ordem total sobre os tipos de recursos, exigindo que todos os processos requisitem recursos em ordem crescente dessa hierarquia, eliminando a possibilidade de ciclos no grafo de alocação. É correto o que se afirma em:", ["I e II, apenas.", "I, apenas.", "I, II e III.", "II e III, apenas.", "III, apenas."], 2, "Gabarito preliminar da FURB: alternativa C."]),
-  makeQuestion(["bruno-original-22", "Conhecimentos Específicos", "Original", "Em aplicações de Internet of Things, o protocolo MQTT é amplamente utilizado devido ao seu modelo leve de publicação/assinatura (publish/subscribe) e suporte a diferentes níveis de Quality of Service (QoS), que determinam garantias de entrega de mensagens entre clientes e brokers. Considerando os níveis de QoS definidos pelo MQTT, assinale a alternativa correta:", ["O nível QoS 2 garante que a mensagem seja entregue exatamente uma vez, utilizando um protocolo de troca em quatro etapas envolvendo os pacotes PUBLISH, PUBREC, PUBREL e PUBCOMP.", "O nível QoS 3 é definido na especificação do MQTT para cenários críticos, garantindo entrega exatamente uma vez com criptografia obrigatória ponta a ponta.", "O nível QoS 0 garante a entrega da mensagem ao menos uma vez, utilizando confirmações explícitas entre cliente e broker para assegurar a recepção.", "O nível QoS 2 garante entrega ao menos uma vez, permitindo duplicação de mensagens em cenários de falha de comunicação, sendo equivalente ao comportamento do QoS 1.", "O nível QoS 1 garante que a mensagem seja entregue exatamente uma vez, utilizando um mecanismo de confirmação simples baseado em retransmissão automática em caso de falha."], 0, "Gabarito preliminar da FURB: alternativa A."]),
-  makeQuestion(["bruno-original-23", "Conhecimentos Específicos", "Original", "O algoritmo de criptografia simétrica AES (Advanced Encryption Standard – Padrão Avançado de Criptografia), quando utilizado no modo de operação GCM (Galois/ Counter Mode – Modo Contador com autenticação baseada em campos de Galois), é amplamente empregado em protocolos modernos de segurança, como TLS (Transport Layer Security – Segurança da Camada de Transporte), por oferecer propriedades adicionais além da confidencialidade, incluindo integridade e autenticidade dos dados. Assinale a alternativa correta:", ["O modo GCM apresenta vulnerabilidade a ataques do tipo padding oracle (oráculo de preenchimento), característicos de modos como CBC (Cipher Block Chaining – Encadeamento de Blocos de Cifra), devido ao uso de preenchimento de blocos de tamanho fixo.", "O modo GCM utiliza chaves assimétricas baseadas em ECC (Elliptic Curve Cryptography – Criptografia de Curva Elíptica) para realizar a autenticação das mensagens, sendo frequentemente empregado em substituição a algoritmos simétricos em sistemas modernos.", "O modo GCM exige a troca frequente da chave criptográfica após um número pré-definido de blocos de dados processados, o que limita sua aplicação em sistemas de alto desempenho e grande volume de tráfego, como servidores web e sistemas distribuídos.", "O modo GCM fornece apenas confidencialidade dos dados, sendo necessário o uso adicional de HMAC (Hash-based Message Authentication Code – Código de Autenticação de Mensagem baseado em função hash) para garantir integridade e autenticidade em aplicações seguras.", "O modo GCM combina criptografia no modo contador (CTR) para confidencialidade com um mecanismo de autenticação baseado em operações no corpo de Galois, proporcionando confidencialidade, integridade e autenticidade."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-24", "Conhecimentos Específicos", "Original", "Na Zero Trust Architecture, o controle de acesso é realizado por componentes com funções bem definidas, como coleta de informações, tomada de decisão e aplicação das políticas. Assinale a alternativa que identifica corretamente o componente responsável por avaliar as políticas de acesso e emitir a decisão de autorização (permitir ou negar):", ["Policy Enforcement Point (PEP), responsável por aplicar a decisão de acesso ao interceptar a requisição.", "Policy Administration Point (PAP), responsável por criar e gerenciar as políticas de acesso.", "Policy Decision Point (PDP), responsável por avaliar as políticas com base nos atributos disponíveis e retornar a decisão de autorização.", "Security Information and Event Management (SIEM), responsável por coletar e correlacionar eventos de segurança para monitoramento.", "Policy Information Point (PIP), responsável por fornecer atributos e informações de contexto utilizados na decisão."], 2, "Gabarito preliminar da FURB: alternativa C."]),
-  makeQuestion(["bruno-original-25", "Conhecimentos Específicos", "Original", "No IPv4, uma sub-rede com máscara /26 define a quantidade de endereços disponíveis para hosts a partir da divisão entre bits de rede e de host. A esse respeito, assinale a alternativa correta:", ["Uma sub-rede /26 possui 64 endereços no total, sendo 62 utilizáveis para hosts, considerando a reserva dos endereços de rede e broadcast.", "Uma sub-rede /26 possui 126 endereços utilizáveis para hosts, considerando o padrão de endereçamento classful.", "O número de hosts utilizáveis em uma sub-rede /26 depende exclusivamente do suporte a CIDR pelos roteadores da rede.", "Uma sub-rede /26 permite 64 endereços IP utilizáveis para hosts, pois todos os endereços podem ser atribuídos.", "Uma sub-rede /26 não possui endereço de broadcast, pois todos os endereços são utilizáveis para hosts."], 0, "Gabarito preliminar da FURB: alternativa A."]),
-  makeQuestion(["bruno-original-26", "Conhecimentos Específicos", "Original", "A tecnologia NVMe foi projetada para explorar o alto desempenho de dispositivos de armazenamento baseados em memória não volátil conectados diretamente ao barramento PCI Express, proporcionando baixa latência, alto paralelismo e eficiência no processamento de operações de entrada e saída (I/O), especialmente em ambientes com múltiplas filas e alta concorrência. Considerando as características do NVMe, assinale a alternativa correta:", ["O NVMe é construído sobre o protocolo SCSI encapsulado, de forma semelhante a tecnologias como iSCSI, permitindo interoperabilidade direta com dispositivos legados SATA e SAS por meio da reutilização de comandos e estruturas tradicionais de armazenamento.", "Dispositivos NVMe utilizam um controlador interno especializado para gerenciar a memória NAND e processar comandos, operando por meio de filas de submissão e conclusão acessadas via memória compartilhada com a CPU.", "Dispositivos NVMe operam apenas no modo PIO (Programmed Input/Output), exigindo que a CPU participe diretamente de todas as transferências de dados entre memória e dispositivo.", "O NVMe adota um modelo baseado em uma única fila de comandos centralizada, semelhante ao padrão AHCI utilizado em interfaces SATA, no qual as requisições são organizadas sequencialmente para simplificar o controle de acesso e garantir a integridade das operações em ambientes concorrentes.", "A comunicação em NVMe apresenta maior latência que interfaces tradicionais como SATA, devido à necessidade de camadas adicionais de abstração no protocolo."], 1, "Gabarito preliminar da FURB: alternativa B."]),
-  makeQuestion(["bruno-original-27", "Conhecimentos Específicos", "Original", "Em arquiteturas modernas de processadores, a hierarquia de memória cache é composta por múltiplos níveis (L1, L2 e L3), organizados para reduzir a latência média de acesso à memória. Aspectos como associatividade, políticas de substituição, estratégias de escrita e mecanismos de coerência (como protocolos baseados em estados) influenciam diretamente o desempenho e a consistência dos dados. Considerando os conceitos avançados de organização e funcionamento de caches, assinale a alternativa correta:", ["Em sistemas com caches inclusivos, a remoção de uma linha no cache de nível inferior (como L2 ou L3) não implica qualquer ação sobre os níveis superiores, pois a coerência é mantida exclusivamente por protocolos como MESI no nível L1.", "Em caches totalmente associativos (fully associative), cada bloco de memória pode ser armazenado em qualquer linha do cache, o que elimina completamente conflict misses e também capacity misses, já que a flexibilidade de mapeamento permite acomodar dinamicamente qualquer conjunto de dados ativos, restando apenas compulsory misses decorrentes do primeiro acesso aos blocos.", "Em caches que utilizam política write-back associada a write-allocate, toda operação de escrita implica a atualização imediata tanto da linha correspondente no cache quanto da memória principal, garantindo consistência síncrona entre os níveis de memória, ao mesmo tempo em que reduz a necessidade de mecanismos adicionais de controle de coerência.", "Em caches com política write-through e no-write-allocate, uma operação de escrita em um endereço não presente no cache resulta no carregamento do bloco correspondente para o cache antes da escrita, garantindo localidade temporal futura.", "Em caches do tipo set-associative, cada bloco de memória principal é mapeado para um conjunto específico, e a substituição ocorre apenas entre as linhas pertencentes a esse conjunto, não eliminando completamente a ocorrência de conflict misses."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-28", "Conhecimentos Específicos", "Original", "A tecnologia Simultaneous Multithreading (SMT), conhecida comercialmente como Hyper-Threading em processadores Intel, permite que um único núcleo físico mantenha múltiplos contextos de execução simultaneamente, com o objetivo de melhorar a utilização dos recursos internos da CPU e aumentar o throughput em cenários com paralelismo de threads. Considerando as características do SMT, assinale a alternativa correta:", ["O SMT implementa múltiplos núcleos físicos completos dentro de um único núcleo, replicando integralmente unidades de execução, pipelines, caches e buffers internos, de modo que cada thread lógico possua recursos dedicados equivalentes aos de um núcleo físico independente.", "O uso de SMT garante aumento de desempenho para qualquer tipo de aplicação, inclusive aquelas com alta contenção por recursos internos do processador, pois a execução simultânea de múltiplos threads elimina gargalos estruturais no pipeline e maximiza automaticamente o uso das unidades funcionais.", "O SMT reduz obrigatoriamente o consumo de energia total do processador, pois distribui a carga de trabalho entre múltiplos threads lógicos sem aumentar a utilização dos recursos físicos.", "O SMT mantém múltiplos estados arquiteturais independentes (como registradores e contador de programa) para cada thread lógico, enquanto compartilha dinamicamente os recursos internos do núcleo, como unidades de execução, pipelines e, conforme a implementação, níveis de cache.", "O SMT faz com que o sistema operacional enxergue apenas um único processador lógico por núcleo físico, ocultando completamente a existência de múltiplos threads de hardware e impedindo que o escalonador diferencie contextos de execução concorrentes no mesmo núcleo."], 3, "Gabarito preliminar da FURB: alternativa D."]),
-  makeQuestion(["bruno-original-29", "Conhecimentos Específicos", "Original", "Uma secretaria estadual de educação instituiu processo anual de revisão de prioridades da rede por meio de consultas digitais, audiências territoriais e manifestações dos conselhos escolares. Ao final de cada ciclo, publica relatório com as metas e ações priorizadas, acompanhado de síntese quantitativa das contribuições recebidas por eixo temático. A equipe central, contudo, não torna públicos os critérios de tratamento das propostas, não informa quais foram acolhidas ou rejeitadas e não apresenta devolutiva com justificativa às instâncias participantes. O processo é apresentado pela secretaria como modelo de gestão participativa e transparente. Considerando os fundamentos de governo aberto, participação social e accountability, a interpretação tecnicamente mais adequada é a de que:", ["A exigência de devolutiva com justificativa individualizada ou colegiada às instâncias participantes extrapola o dever de transparência da administração pública, cujo núcleo esgota-se na publicidade do resultado e na disponibilização dos dados agregados produzidos pelo processo.", "A síntese quantitativa das contribuições por eixo temático cumpre adequadamente a função de devolutiva institucional, pois demonstra que as manifestações foram sistematizadas e consideradas no processo de consolidação das prioridades.", "A política é compatível com participação social porque preserva autonomia decisória da equipe técnica sem inviabilizar os canais de manifestação, e a accountability do processo pode ser exercida pelo controle externo a partir do relatório de metas publicado ao final do ciclo.", "A política satisfaz os requisitos de governo aberto porque combina múltiplos canais de escuta com publicização do resultado final, sendo a prestação de contas sobre o tratamento interno das contribuições matéria de gestão discricionária que não integra o núcleo obrigatório da transparência ativa.", "A publicação de síntese quantitativa das contribuições não configura transparência do processo decisório, pois participação social qualificada exige rastreabilidade das propostas, critérios públicos de tratamento e devolutiva fundamentada que permita às instâncias participantes avaliar como suas contribuições influenciaram as decisões."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-30", "Conhecimentos Específicos", "Original", "Em sistemas distribuídos que executam transações envolvendo múltiplos nós, a garantia de atomicidade é frequentemente obtida por meio do protocolo Two-Phase Commit, no qual um coordenador interage com participantes por meio de duas fases distintas: prepare (voting) e commit/abort. O protocolo assume comunicação confiável e utiliza registros persistentes (logs) para permitir recuperação após falhas, mantendo consistência entre os participantes. Considerando as propriedades formais do protocolo 2PC, assinale a alternativa correta:", ["O protocolo 2PC consiste apenas em uma fase de decisão global (commit), na qual cada participante decide independentemente com base em seu estado local, sem necessidade de uma fase prévia de votação ou preparação.", "Em sistemas que assumem comunicação síncrona, detecção perfeita de falhas e canais confiáveis, o protocolo 2PC deixa de apresentar comportamento bloqueante, pois os participantes conseguem coordenar entre si, após timeouts, para determinar a decisão global correta, mesmo sem a participação do coordenador original.", "O protocolo 2PC pode ser considerado não bloqueante em cenários onde os participantes mantêm logs persistentes detalhados e utilizam mecanismos de timeout e troca de mensagens entre si para reconstruir o estado global da transação, permitindo inferir a decisão final mesmo na ausência do coordenador e liberar recursos de forma consistente.", "No protocolo 2PC, participantes que tenham registrado o estado \" ready/yes \" podem, após timeout, decidir unilateralmente pelo commit da transação com base em seus logs locais, garantindo progresso do sistema sem violar a atomicidade.", "O protocolo 2PC é bloqueante, pois, se o coordenador falhar após enviar mensagens de prepare e antes de comunicar a decisão final, participantes que votaram \" ready/yes \" podem permanecer indefinidamente em estado incerto (uncertain state), mantendo recursos alocados até que a decisão seja conhecida."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-31", "Conhecimentos Específicos", "Original", "Uma secretaria de educação elaborou plano de continuidade de serviços que define cenários críticos, papéis e responsabilidades, fluxos de comunicação interna e externa e protocolos de retomada das atividades escolares. O plano foi validado tecnicamente pela equipe central e divulgado às escolas por meio de circular. Contudo, não foi objeto de simulações práticas, não há formação das equipes escolares para sua execução, os protocolos de comunicação com famílias e comunidade não foram testados e o plano não prevê mecanismo de revisão após a ocorrência de eventos críticos reais. Quando um evento inesperado afetou três escolas da rede, as equipes locais não souberam acionar os protocolos e a comunicação com as famílias foi improvisada pela direção de cada unidade. A secretaria avalia que o problema foi de execução pontual e não de concepção do plano. Considerando os fundamentos da gestão de crises e da continuidade de serviços públicos, assinale a alternativa que indica a interpretação mais adequada:", ["O plano cumpriu sua função institucional porque formalizou cenários, papéis e fluxos de comunicação, sendo a falha na execução decorrente de insuficiência das equipes locais, o que demanda capacitação pontual sem necessidade de revisão do modelo de gestão de crises adotado.", "A improvisação das equipes locais na comunicação com as famílias demonstra que o problema central é a ausência de autonomia das unidades escolares para adaptar os protocolos às suas realidades, cabendo à secretaria ampliar a margem decisória local sem alterar a estrutura central do plano.", "A comunicação improvisada pelas direções escolares pode ser considerada resposta adaptativa legítima em contextos de crise, pois a capacidade de decisão situacional das lideranças locais é atributo essencial da gestão de crises e não pode ser inteiramente substituída por protocolos centralizados.", "A existência de plano tecnicamente elaborado não é suficiente para assegurar continuidade de serviços em contextos críticos, pois a capacidade de resposta institucional depende de simulações, formação das equipes, teste dos protocolos de comunicação e mecanismos de aprendizagem organizacional após eventos reais.", "A avaliação da secretaria está parcialmente correta, pois problemas de execução e problemas de concepção do plano são categorias distintas e a ausência de simulações e formação configura lacuna operacional que pode ser corrigida sem redesenho do instrumento de continuidade."], 3, "Gabarito preliminar da FURB: alternativa D."]),
-  makeQuestion(["bruno-original-32", "Conhecimentos Específicos", "Original", "No IPv6, o cabeçalho base possui tamanho fixo e inclui campos destinados ao tratamento de prioridade e identificação de fluxos, representando uma evolução em relação ao IPv4. Entre esses campos destacam-se o Traffic Class e o Flow Label, que desempenham papéis distintos no encaminhamento e tratamento de pacotes na rede. Considerando as características e funções desses campos, assinale a alternativa correta:", ["O campo Flow Label substitui integralmente o Traffic Class no tratamento de QoS, sendo utilizado para classificar, priorizar e controlar dinamicamente o encaminhamento de pacotes em roteadores intermediários, inclusive em mecanismos como DiffServ e políticas de enfileiramento avançado.", "O campo Traffic Class possui 16 bits e é utilizado principalmente para identificação de fluxos de comunicação, permitindo que roteadores agrupem pacotes pertencentes a uma mesma sessão.", "O campo Flow Label é responsável por fornecer mecanismos de confiabilidade fim a fim no IPv6, incluindo detecção de erros, controle de integridade e solicitação de retransmissão de pacotes, funções tradicionalmente associadas a protocolos da camada de transporte.", "O campo Traffic Class é opcional no cabeçalho base do IPv6 e pode ser omitido em implementações específicas para reduzir o overhead de processamento.", "O campo Traffic Class possui 8 bits e exerce função análoga ao campo Type of Service (ToS) do IPv4 (posteriormente reinterpretado como DSCP/ECN), sendo utilizado para classificação e priorização de pacotes ao longo do caminho."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-33", "Conhecimentos Específicos", "Original", "Uma secretaria de educação implantou matriz institucional de riscos em que cada unidade administrativa identifica eventos, atribui probabilidade e impacto e remete as informações à instância central ao fim do exercício. A consolidação anual subsidia relatório encaminhado a órgãos de controle. Contudo, não há definição formal de proprietários do risco, nem vinculação entre riscos priorizados, medidas de tratamento, alocação orçamentária e monitoramento contínuo das respostas adotadas. A secretaria apresenta a matriz como instrumento de governança e gestão de riscos consolidado. À luz dos fundamentos da gestão de riscos institucionais no setor público, assinale a alternativa que indica a interpretação tecnicamente mais adequada:", ["O monitoramento contínuo pode ser adequadamente substituído por revisões anuais consolidadas, desde que a metodologia de classificação dos riscos seja padronizada e permita comparabilidade entre exercícios, assegurando rastreabilidade histórica dos eventos mapeados.", "A integração entre riscos priorizados e alocação orçamentária é desejável, mas não constitutiva da gestão de riscos, cuja finalidade principal é produzir memória institucional dos eventos críticos, subsidiar a fiscalização externa e não interferir diretamente na alocação de recursos.", "A ausência de proprietários formais do risco não compromete a política desde que a instância central consolide adequadamente a matriz, pois a responsabilização difusa entre unidades administrativas pode ser funcionalmente equivalente à designação formal de responsáveis.", "A política já atende ao núcleo da gestão de riscos porque o mapeamento anual com escala de probabilidade e impacto permite à administração cumprir adequadamente sua obrigação de prevenção institucional e subsidiar o controle externo com informação sistematizada.", "A política permanece em estágio predominantemente inventarial, porque identificação e classificação de riscos sem tratamento definido, responsabilização, integração decisória e monitoramento não configuram ciclo maduro de gestão de riscos, independentemente da regularidade com que a matriz é produzida."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-34", "Conhecimentos Específicos", "Original", "Uma secretaria de educação instituiu política de sustentabilidade que incorporou critérios socioambientais aos editais de compras, estabeleceu metas de redução de consumo de energia e água nas unidades escolares e criou comitê interno de acompanhamento com reuniões bimestrais. Após dois anos de implementação, o comitê constata que os critérios socioambientais nos editais foram cumpridos formalmente, mas os produtos adquiridos nem sempre atendem ao desempenho ambiental esperado porque as especificações técnicas são genéricas e não há verificação posterior do atendimento aos critérios durante a execução contratual. As metas de consumo foram definidas sem diagnóstico prévio das condições de infraestrutura das unidades e os dados de monitoramento apresentam inconsistências que impedem avaliação confiável dos resultados. O comitê avalia que a política está em fase de consolidação e que os problemas identificados são naturais do processo de maturação institucional. Considerando os fundamentos da sustentabilidade na gestão pública e da responsabilidade institucional, assinale a alternativa que indica a interpretação mais adequada:", ["A avaliação do comitê está correta ao qualificar os problemas como naturais do processo de maturação, pois políticas de sustentabilidade em organizações públicas exigem ciclos longos de aprendizagem e os indicadores de efetividade só podem ser avaliados com confiabilidade após período mínimo de cinco anos de implementação contínua.", "A política possui estrutura formal relevante, mas apresenta fragilidades constitutivas que não se reduzem a problemas de maturação, pois especificações genéricas sem verificação de execução, metas sem diagnóstico de base e monitoramento inconsistente comprometem a efetividade dos critérios socioambientais adotados e a responsabilidade institucional sobre os resultados.", "A política está adequadamente encaminhada porque combina critérios nos editais, metas quantitativas e instância de acompanhamento, sendo as inconsistências identificadas pelo comitê problemas esperados de ajuste que tendem a ser superados com o acúmulo de experiência institucional ao longo dos ciclos de implementação.", "O cumprimento formal dos critérios socioambientais nos editais é suficiente para caracterizar política de compras sustentáveis, pois a verificação do desempenho ambiental durante a execução contratual é atribuição do setor de contratos e não integra o escopo da política de sustentabilidade institucional.", "As metas de redução de consumo definidas sem diagnóstico prévio constituem problema de planejamento corrigível na próxima revisão do plano, mas não comprometem a validade da política de sustentabilidade, cuja responsabilidade institucional se afere principalmente pelo compromisso declarado com critérios socioambientais e não pelos resultados mensurados."], 1, "Gabarito preliminar da FURB: alternativa B."]),
-  makeQuestion(["bruno-original-35", "Conhecimentos Específicos", "Original", "Em bancos de dados distribuídos, o Sharding é utilizado para distribuir dados entre múltiplos nós, visando escalabilidade horizontal e melhor desempenho. A respeito do Sharding, assinale a alternativa correta:", ["Torna desnecessária a escolha de chave de particionamento, pois a distribuição e o roteamento são tratados automaticamente pelo sistema.", "Implica replicação completa dos dados entre todos os nós do cluster, sendo utilizado principalmente para aumentar disponibilidade e tolerância a falhas, garantindo que cada nó possa responder a qualquer consulta independentemente de particionamento.", "Consiste na partição horizontal dos dados, em que cada shard possui o mesmo esquema, mas armazena apenas um subconjunto das linhas definido por uma chave de particionamento.", "É um mecanismo nativo dos SGBDs distribuídos, no qual o próprio sistema gerencia automaticamente a distribuição dos dados entre nós, incluindo definição de partições, balanceamento de carga e roteamento de consultas, sem necessidade de configuração ou lógica adicional na aplicação.", "Corresponde à partição vertical dos dados, na qual colunas ou tabelas são distribuídas entre nós distintos, permitindo separar responsabilidades funcionais e reduzir acoplamento, sem dividir os registros de uma mesma tabela entre diferentes servidores."], 2, "Gabarito preliminar da FURB: alternativa C."]),
-  makeQuestion(["bruno-original-36", "Conhecimentos Específicos", "Original", "Em sistemas de backup modernos, a técnica de deduplicação de dados na origem (source-side deduplication) é utilizada para otimizar o uso de banda de rede e armazenamento. A esse respeito, assinale a alternativa correta:", ["Na deduplicação na origem, os dados são analisados no cliente e apenas os blocos que ainda não existem no repositório de destino são transmitidos pela rede.", "A deduplicação na origem é limitada ao nível de arquivos completos, não sendo aplicável a blocos de dados.", "A deduplicação na origem aumenta o tráfego de rede, pois requer a transferência contínua de tabelas completas de hashes entre cliente e servidor.", "A deduplicação na origem exige que todos os dados sejam transmitidos integralmente ao servidor antes da identificação de duplicidades.", "A utilização de deduplicação na origem impede o uso de criptografia em trânsito, devido à necessidade de comparação de blocos em texto claro."], 0, "Gabarito preliminar da FURB: alternativa A."]),
-  makeQuestion(["bruno-original-37", "Conhecimentos Específicos", "Original", "Nos protocolos IPv4 e IPv6, os campos TTL (Time to Live) e Hop Limit são utilizados como mecanismos para limitar o número de encaminhamentos de um pacote na rede, evitando loops de roteamento. Esses campos são processados por cada roteador ao longo do caminho até o destino e estão diretamente relacionados à geração de mensagens de controle em caso de expiração. Considerando o comportamento desses campos e suas implicações no funcionamento da rede, assinale a alternativa correta:", ["No IPv4, o campo TTL é utilizado como mecanismo de detecção de erros no cabeçalho IP, permitindo que roteadores solicitem automaticamente a retransmissão de pacotes corrompidos diretamente na camada de rede.", "No IPv4, o campo TTL foi originalmente concebido para representar o tempo máximo (em segundos) de permanência de um pacote na rede, sendo decrementado com base no tempo gasto em cada roteador; já no IPv6, o campo Hop Limit substitui esse modelo e passa a ser decrementado exclusivamente a cada salto, refletindo uma mudança conceitual completa na forma de controle de tempo de vida dos pacotes.", "No IPv6, o campo Hop Limit não faz parte do cabeçalho base, sendo implementado como um campo opcional em cabeçalhos de extensão, podendo ser omitido em roteadores de alto desempenho que utilizam técnicas alternativas de encaminhamento para reduzir latência e aumentar o throughput.", "Tanto no IPv4 quanto no IPv6, os campos TTL e Hop Limit são decrementados em uma unidade a cada roteador que encaminha o pacote; quando o valor atinge zero, o pacote é descartado e o roteador envia, respectivamente, uma mensagem ICMP do tipo Time Exceeded (no IPv4) ou uma mensagem ICMPv6 equivalente (no IPv6) ao endereço de origem do pacote.", "O valor inicial dos campos TTL e Hop Limit é definido de forma padronizada e fixa pelas especificações dos protocolos, tipicamente em 255, não sendo permitido ao emissor do pacote ou à aplicação modificar esse valor, a fim de garantir uniformidade no controle de loops em redes heterogêneas."], 3, "Gabarito preliminar da FURB: alternativa D."]),
-  makeQuestion(["bruno-original-38", "Conhecimentos Específicos", "Original", "Após recomendações de órgãos de controle, uma secretaria de educação passou a publicar painéis trimestrais de execução física e financeira de seus programas. Os dados são tecnicamente consistentes e organizados por indicador, programa e unidade orçamentária. As manifestações dos cidadãos sobre os painéis recebem resposta em até cinco dias úteis, dentro do prazo legal, e são encaminhadas ao setor responsável pelo dado questionado. As respostas, contudo, confirmam a existência e a localização do dado no painel sem explicar seu significado, sem orientar sobre caminhos administrativos cabíveis e sem indicar a quem recorrer em caso de discordância. Considerando os fundamentos da comunicação pública e do atendimento ao cidadão, assinale a alternativa que apresenta a interpretação mais adequada:", ["A política atende adequadamente ao dever de comunicação pública porque combina disponibilização ativa de dados consistentes com resposta dentro do prazo legal, sendo a acessibilidade comunicativa responsabilidade do cidadão que acessa informações de natureza técnico-orçamentária.", "A resposta que confirma a existência e a localização do dado cumpre o dever de atendimento ao cidadão, pois a orientação sobre o significado dos dados e os caminhos administrativos cabíveis extrapola o escopo do canal de manifestações e compete a instâncias especializadas de ouvidoria.", "A política apresenta fragilidade apenas operacional porque o conteúdo técnico dos painéis é adequado e a limitação das respostas decorre de restrições de capacidade dos setores responsáveis, podendo ser superada com treinamento pontual das equipes de atendimento sem necessidade de redesenho da política.", "A exigência de linguagem cidadã nas respostas deve ser ponderada com o princípio da impessoalidade, que veda tratamento diferenciado entre cidadãos e impõe padronização das respostas institucionais, o que justifica o formato confirmatório adotado pela secretaria.", "O cumprimento formal dos prazos legais de resposta não configura atendimento com qualidade ao cidadão, pois comunicação pública exige que a resposta seja compreensível, orientadora e capaz de habilitar o cidadão a exercer seus direitos, e não apenas confirmatória da existência da informação."], 4, "Gabarito preliminar da FURB: alternativa E."]),
-  makeQuestion(["bruno-original-39", "Conhecimentos Específicos", "Original", "A tecnologia RAID combina múltiplos discos físicos em uma unidade lógica, podendo empregar técnicas como striping, mirroring e paridade distribuída para atingir objetivos de desempenho e tolerância a falhas. A esse respeito analise as afirmativas a seguir: I.O RAID 5 utiliza paridade distribuída entre os discos do arranjo, permitindo a reconstrução dos dados em caso de falha de exatamente um disco por grupo de paridade, desde que não ocorram falhas adicionais durante o processo de recuperação. II.O RAID 6 emprega dois blocos de paridade independentes distribuídos entre os discos, permitindo a recuperação dos dados mesmo na ocorrência de falha simultânea de até dois discos no mesmo conjunto. III.O RAID 10 (1+0) combina mirroring e striping, organizando espelhamento em pares de discos sobre os quais é aplicado striping, permitindo múltiplas falhas desde que não ocorram no mesmo par espelhado. É correto o que se afirma em:", ["I e II, apenas.", "I, II e III.", "II, apenas.", "I e III, apenas.", "III, apenas."], 1, "Gabarito preliminar da FURB: alternativa B."]),
-  makeQuestion(["bruno-original-40", "Conhecimentos Específicos", "Original", "No modelo de computação em nuvem conhecido como Serverless Computing, frequentemente associado ao paradigma Function as a Service, aplicações são estruturadas como funções acionadas sob demanda, com abstração da infraestrutura subjacente. Nesse modelo, o provedor de nuvem assume responsabilidades como provisionamento automático, escalabilidade e gerenciamento de disponibilidade, enquanto o modelo de cobrança está associado ao uso efetivo de recursos. Considerando as características técnicas e operacionais desse modelo, assinale a alternativa correta:", ["No modelo Serverless, o usuário deve definir previamente limites fixos de CPU e memória e reservar capacidade computacional para garantir desempenho previsível, sendo cobrado por essa reserva independentemente da execução das funções, de forma semelhante a modelos de provisionamento antecipado adotados em IaaS e ambientes com instâncias dedicadas.", "Funções em ambientes Serverless são projetadas para execução contínua e manutenção de estado persistente entre invocações, permitindo o armazenamento local de dados e sessões diretamente no ambiente de execução da função, com garantia de persistência e consistência entre chamadas subsequentes.", "No modelo Serverless, o provedor de nuvem é responsável pelo provisionamento, escalabilidade automática, balanceamento de carga e alta disponibilidade das funções, enquanto o modelo de cobrança é tipicamente baseado em métricas como número de invocações, tempo de execução e recursos consumidos (por exemplo, memória alocada), conforme definido pelo provedor.", "Em arquiteturas Serverless, o usuário é responsável por configurar explicitamente balanceadores de carga, filas de distribuição e mecanismos de escalabilidade horizontal, pois o provedor apenas executa as funções sem gerenciar a distribuição de requisições.", "O modelo Serverless não é adequado para aplicações críticas que exigem baixa latência e alta previsibilidade de desempenho, pois eventos como cold start, variações no tempo de inicialização e dependência de provisionamento dinâmico impedem a obtenção de garantias mínimas de tempo de resposta, mesmo quando estratégias de mitigação são aplicadas."], 2, "Gabarito preliminar da FURB: alternativa C."]),
+const MASSARANDUBA_BRUNO_QUESTIONS = [
+  makeQuestion([
+    "bruno-massaranduba-2026-01",
+    "Língua Portuguesa",
+    "Média",
+    "Leia o trecho: \"Depois de identificar falhas recorrentes, a equipe passou a registrar cada incidente, sua causa e a ação corretiva. Em três meses, o tempo médio de restauração caiu, embora o número de chamados não tenha diminuído.\" A conclusão compatível com o texto é:",
+    [
+      "O registro sistemático contribuiu para restaurar os serviços com mais eficiência, sem evidência de redução na quantidade de incidentes.",
+      "A queda no tempo de restauração comprova que os incidentes deixaram de ocorrer.",
+      "O número de chamados diminuiu porque a equipe eliminou todas as causas recorrentes.",
+      "A documentação aumentou o tempo de atendimento, mas reduziu a quantidade de falhas.",
+      "Os registros foram abandonados depois que o serviço se estabilizou."
+    ],
+    0,
+    "O texto relaciona os registros à redução do tempo de restauração e afirma expressamente que o número de chamados não diminuiu."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-02",
+    "Língua Portuguesa",
+    "Fácil",
+    "No período \"Para reduzir a perda de dados, a equipe adotou backup incremental diário. Essa medida também diminuiu o volume transferido em cada execução\", a expressão \"Essa medida\" retoma:",
+    [
+      "A perda de dados.",
+      "A adoção do backup incremental diário.",
+      "O volume total do armazenamento.",
+      "Cada arquivo transferido.",
+      "A execução do sistema operacional."
+    ],
+    1,
+    "O demonstrativo \"essa\" estabelece coesão referencial com a ação mencionada na frase anterior: adotar backup incremental diário."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-03",
+    "Língua Portuguesa",
+    "Fácil",
+    "Considere o trecho de um procedimento: \"Desligue o equipamento, aguarde trinta segundos e reconecte o cabo de alimentação.\" Predomina nesse trecho o modo de organização discursiva:",
+    [
+      "Narrativo, porque relata acontecimentos passados.",
+      "Descritivo, porque enumera características do equipamento.",
+      "Injuntivo, porque orienta uma sequência de ações.",
+      "Argumentativo, porque defende uma opinião técnica.",
+      "Expositivo, porque conceitua um componente."
+    ],
+    2,
+    "Os verbos no imperativo orientam o leitor a executar ações, característica do modo injuntivo."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-04",
+    "Língua Portuguesa",
+    "Média",
+    "Assinale a alternativa em que o uso do acento indicativo de crase está correto:",
+    [
+      "A equipe dirigiu-se a sala de servidores.",
+      "O relatório foi entregue à cada unidade.",
+      "O suporte funciona de segunda à sexta-feira.",
+      "O técnico apresentou o diagnóstico à direção e prestou esclarecimentos às servidoras.",
+      "A atualização começou às partir das oito horas."
+    ],
+    3,
+    "Em \"à direção\" e \"às servidoras\", há fusão da preposição exigida pelo verbo com o artigo feminino."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-05",
+    "Língua Portuguesa",
+    "Média",
+    "Assinale a frase pontuada de acordo com a norma-padrão:",
+    [
+      "A equipe, restaurou o servidor e validou os arquivos.",
+      "Os usuários que estavam sem acesso, receberam novas credenciais.",
+      "O técnico verificou, os cabos os switches e os roteadores.",
+      "Quando o serviço foi restabelecido a equipe, verificou os logs e comunicou os usuários.",
+      "Quando o serviço foi restabelecido, a equipe verificou os logs, documentou a causa e comunicou o resultado aos usuários."
+    ],
+    4,
+    "A oração adverbial deslocada é separada por vírgula, enquanto o sujeito não deve ser separado do verbo."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-06",
+    "Língua Portuguesa",
+    "Média",
+    "Na frase \"O técnico informou ao diretor que seu computador seria substituído\", a ambiguidade decorre:",
+    [
+      "Da possibilidade de o possessivo \"seu\" referir-se ao técnico ou ao diretor.",
+      "Do emprego inadequado do tempo verbal futuro do pretérito.",
+      "Da ausência de concordância entre sujeito e predicado.",
+      "Do uso obrigatório de crase antes da palavra \"diretor\".",
+      "Da impossibilidade de identificar o objeto direto do verbo informar."
+    ],
+    0,
+    "O pronome possessivo não deixa claro a qual dos dois referentes pertence o computador."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-07",
+    "Língua Portuguesa",
+    "Difícil",
+    "Em \"A rede ficou indisponível temporariamente\", a palavra \"temporariamente\":",
+    [
+      "É substantivo derivado do verbo temporizar e funciona como sujeito.",
+      "É advérbio formado a partir de adjetivo com o sufixo \"-mente\" e modifica o predicado, exprimindo circunstância de tempo.",
+      "É adjetivo uniforme e caracteriza diretamente o substantivo \"rede\".",
+      "É conjunção temporal que introduz uma oração subordinada.",
+      "É pronome indefinido que substitui uma expressão de tempo."
+    ],
+    1,
+    "A forma resulta de \"temporária\" mais \"-mente\" e atua como advérbio de tempo."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-08",
+    "Língua Portuguesa",
+    "Média",
+    "Assinale a alternativa correta quanto à concordância verbal e nominal:",
+    [
+      "Fazem dois meses que os equipamentos chegaram.",
+      "Existe, no servidor, arquivos sem cópia de segurança.",
+      "Havia cópias íntegras dos arquivos nos dois repositórios.",
+      "Segue anexas as especificações solicitadas.",
+      "Devem haver soluções para o problema de conectividade."
+    ],
+    2,
+    "O verbo \"haver\" com sentido de existir é impessoal e permanece no singular: \"havia cópias\"."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-09",
+    "Matemática e Raciocínio Lógico",
+    "Fácil",
+    "Uma prefeitura possui 240 estações de trabalho. Em uma etapa de atualização, 15% delas serão atendidas. Quantas estações serão atualizadas nessa etapa?",
+    ["24.", "30.", "32.", "36.", "40."],
+    3,
+    "Quinze por cento de 240 corresponde a 0,15 × 240 = 36."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-10",
+    "Matemática e Raciocínio Lógico",
+    "Média",
+    "Seis técnicos, com a mesma produtividade, configuram 90 computadores em cinco dias. Quantos computadores dez técnicos configurarão em três dias, mantendo-se a produtividade individual?",
+    ["45.", "54.", "60.", "75.", "90."],
+    4,
+    "O trabalho inicial consome 30 técnico-dias. Dez técnicos por três dias também totalizam 30 técnico-dias, portanto produzem os mesmos 90 computadores."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-11",
+    "Matemática e Raciocínio Lógico",
+    "Fácil",
+    "Um equipamento de R$ 5.000,00 foi adquirido com juros simples de 2% ao mês por três meses. Qual é o valor total dos juros?",
+    ["R$ 300,00.", "R$ 306,04.", "R$ 500,00.", "R$ 600,00.", "R$ 5.300,00."],
+    0,
+    "Nos juros simples, J = C × i × t = 5.000 × 0,02 × 3 = 300."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-12",
+    "Matemática e Raciocínio Lógico",
+    "Média",
+    "Em um setor há 34 equipamentos entre computadores e impressoras. O número de computadores supera o de impressoras em 6. Quantos computadores há no setor?",
+    ["14.", "20.", "22.", "24.", "28."],
+    1,
+    "Do sistema c + i = 34 e c - i = 6, obtém-se 2c = 40 e, portanto, c = 20."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-13",
+    "Matemática e Raciocínio Lógico",
+    "Média",
+    "Um conjunto de dados ocupa inicialmente 2 GB e dobra de tamanho ao final de cada um de cinco ciclos de processamento. Qual será o tamanho após o quinto ciclo?",
+    ["10 GB.", "32 GB.", "64 GB.", "80 GB.", "100 GB."],
+    2,
+    "O crescimento é exponencial: 2 × 2⁵ = 64 GB."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-14",
+    "Matemática e Raciocínio Lógico",
+    "Média",
+    "Uma sala retangular de 12 m por 8 m receberá placas de piso de 0,25 m² cada, sem perdas. Quantas placas serão necessárias?",
+    ["96.", "192.", "256.", "384.", "480."],
+    3,
+    "A área da sala é 96 m². Dividindo 96 por 0,25, obtêm-se 384 placas."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-15",
+    "Matemática e Raciocínio Lógico",
+    "Média",
+    "Uma equipe precisa escolher dois servidores distintos entre cinco para executar um teste. Quantos pares diferentes podem ser formados?",
+    ["5.", "6.", "8.", "9.", "10."],
+    4,
+    "A ordem não importa; logo, o número de pares é C(5,2) = 10."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-16",
+    "Matemática e Raciocínio Lógico",
+    "Difícil",
+    "Considere: \"Se o servidor está indisponível, então o sistema envia um alerta.\" Verificou-se que o sistema não enviou alerta. Admitindo verdadeira a proposição inicial, conclui-se logicamente que:",
+    [
+      "O servidor não estava indisponível.",
+      "O servidor estava indisponível, mas o alerta falhou.",
+      "O sistema enviou dois alertas.",
+      "Não é possível estabelecer qualquer conclusão.",
+      "O servidor estava necessariamente em manutenção."
+    ],
+    0,
+    "Trata-se de modus tollens: se P implica Q e Q é falso, então P é falso."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-17",
+    "Conhecimentos Gerais",
+    "Fácil",
+    "Segundo a apresentação histórica oficial do Município de Massaranduba, assinale a alternativa correta:",
+    [
+      "O município recebeu o nome por causa do rio Itapocu e emancipou-se em 1951.",
+      "A abundância da árvore maçaranduba deu nome ao município, emancipado em 11 de novembro de 1961.",
+      "A denominação homenageia um imigrante italiano e a emancipação ocorreu em 1970.",
+      "O nome tem origem exclusivamente indígena e não se relaciona à vegetação local.",
+      "A ocupação definitiva começou apenas depois da emancipação municipal."
+    ],
+    1,
+    "O portal municipal de turismo relaciona o nome à árvore maçaranduba e registra a emancipação em 11 de novembro de 1961."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-18",
+    "Conhecimentos Gerais",
+    "Fácil",
+    "A expressão \"Capital Catarinense do Arroz\", associada a Massaranduba, decorre principalmente:",
+    [
+      "Da concentração de indústrias de equipamentos agrícolas, sem produção rural relevante.",
+      "Da produção exclusiva de arroz de sequeiro em pequenas áreas urbanas.",
+      "Da dedicação dos agricultores à rizicultura, especialmente ao cultivo de arroz irrigado.",
+      "Da localização do maior porto exportador de arroz de Santa Catarina.",
+      "Da existência de uma universidade especializada em cereais."
+    ],
+    2,
+    "A caracterização oficial destaca a rizicultura e o cultivo de arroz irrigado como origem desse título."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-19",
+    "Conhecimentos Gerais",
+    "Média",
+    "O Balanço Energético Nacional 2026, com ano-base 2025, registrou elevada participação de fontes renováveis na matriz elétrica brasileira. A interpretação mais adequada desse dado é:",
+    [
+      "A elevada participação renovável elimina a necessidade de redes de transmissão e armazenamento.",
+      "O resultado permite abandonar políticas de eficiência energética e de segurança do suprimento.",
+      "Matriz elétrica e matriz energética são expressões equivalentes e apresentam necessariamente o mesmo percentual.",
+      "A participação renovável é uma vantagem, mas a transição exige planejamento, resiliência, expansão da infraestrutura e inclusão energética.",
+      "Fontes renováveis tornam desnecessária a avaliação de impactos sociais e ambientais."
+    ],
+    3,
+    "A transição energética combina descarbonização com segurança, infraestrutura, resiliência e acesso; um indicador favorável não elimina esses desafios."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-20",
+    "Conhecimentos Gerais",
+    "Média",
+    "Diante de chuvas intensas mais frequentes, uma política municipal alinhada ao desenvolvimento sustentável deve:",
+    [
+      "Priorizar apenas obras emergenciais, sem planejamento territorial.",
+      "Transferir integralmente à população a responsabilidade pela adaptação.",
+      "Suspender investimentos sociais para financiar exclusivamente obras viárias.",
+      "Tratar riscos ambientais separadamente de habitação, saúde e infraestrutura.",
+      "Integrar prevenção de riscos, adaptação climática, inclusão social, planejamento econômico e monitoramento de resultados."
+    ],
+    4,
+    "Desenvolvimento sustentável exige integração das dimensões ambiental, social e econômica, com prevenção e acompanhamento."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-21",
+    "Conhecimentos Específicos",
+    "Fácil",
+    "Assinale a classificação correta dos componentes de um microcomputador:",
+    [
+      "Teclado é dispositivo de entrada, monitor é dispositivo de saída e SSD é dispositivo de armazenamento.",
+      "Teclado e monitor são dispositivos exclusivamente de processamento.",
+      "SSD é memória volátil usada apenas durante a execução de programas.",
+      "Monitor é dispositivo de entrada e mouse é dispositivo de saída.",
+      "Processador é periférico externo de armazenamento."
+    ],
+    0,
+    "O teclado envia dados, o monitor apresenta resultados e o SSD mantém dados em armazenamento não volátil."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-22",
+    "Conhecimentos Específicos",
+    "Fácil",
+    "Em um computador, BIOS ou UEFI é o firmware responsável principalmente por:",
+    [
+      "Editar documentos e planilhas antes do carregamento do sistema.",
+      "Inicializar o hardware, disponibilizar configurações básicas e iniciar o processo de boot.",
+      "Substituir permanentemente o sistema operacional.",
+      "Gerenciar apenas a conexão do navegador com a internet.",
+      "Armazenar os arquivos pessoais do usuário."
+    ],
+    1,
+    "BIOS/UEFI inicializa e verifica componentes, mantém configurações de baixo nível e entrega o carregamento ao dispositivo de boot."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-23",
+    "Conhecimentos Específicos",
+    "Média",
+    "No gerenciamento de arquivos do Windows 10, é correto afirmar que:",
+    [
+      "Alterar a extensão de .txt para .pdf converte automaticamente o conteúdo do arquivo.",
+      "Excluir um atalho sempre exclui também o arquivo original apontado por ele.",
+      "Copiar um arquivo para outra pasta preserva o original e cria outra instância no destino.",
+      "A Lixeira substitui uma política de cópias de segurança.",
+      "Marcar um arquivo como oculto o torna criptografado."
+    ],
+    2,
+    "A operação de cópia mantém o arquivo de origem e cria uma cópia no destino; as demais afirmações confundem propriedades distintas."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-24",
+    "Conhecimentos Específicos",
+    "Média",
+    "Em uma planilha, a célula D5 contém a fórmula =$B$2*C5. Ao copiá-la para D6, a fórmula resultante será:",
+    ["=B2*C5", "=$B2*$C6", "=B$2*C$5", "=$B$2*C6", "=$B$3*C6"],
+    3,
+    "A referência $B$2 é absoluta e permanece fixa; C5 é relativa e muda para C6."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-25",
+    "Conhecimentos Específicos",
+    "Média",
+    "Analise as funcionalidades: I. Estilos de título no Word apoiam a estrutura e a geração de sumário. II. O Slide Mestre do PowerPoint centraliza elementos recorrentes. III. Regras do Outlook podem classificar mensagens automaticamente. IV. O Google Workspace permite compartilhar arquivos com níveis distintos de permissão. Está correto o que se afirma em:",
+    [
+      "I, apenas.",
+      "I e II, apenas.",
+      "II e III, apenas.",
+      "I, III e IV, apenas.",
+      "I, II, III e IV."
+    ],
+    4,
+    "As quatro afirmações descrevem funcionalidades usuais dos aplicativos e serviços previstos no conteúdo programático."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-26",
+    "Conhecimentos Específicos",
+    "Média",
+    "Sobre cópias de segurança, assinale a alternativa correta:",
+    [
+      "O backup incremental copia as alterações desde o último backup de qualquer tipo; para restaurar, normalmente são necessários o último backup completo e os incrementais posteriores.",
+      "O backup completo depende obrigatoriamente de todos os incrementais anteriores para restauração.",
+      "O backup diferencial copia apenas as mudanças desde o diferencial imediatamente anterior.",
+      "Manter uma única cópia no mesmo disco de origem caracteriza redundância adequada.",
+      "Sincronização e backup são sempre equivalentes, inclusive contra exclusões acidentais."
+    ],
+    0,
+    "Incrementais registram mudanças desde o backup anterior; sua restauração usa a base completa e a cadeia incremental subsequente."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-27",
+    "Conhecimentos Específicos",
+    "Fácil",
+    "Um programa malicioso cifra arquivos e exige pagamento para fornecer a chave de recuperação. Esse comportamento caracteriza:",
+    ["Adware.", "Ransomware.", "Firewall.", "Antivírus.", "Hipervisor."],
+    1,
+    "Ransomware bloqueia ou cifra dados para extorquir a vítima, geralmente mediante pedido de resgate."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-28",
+    "Conhecimentos Específicos",
+    "Média",
+    "Durante a manutenção de um computador e a proteção elétrica do setor, a conduta tecnicamente adequada é:",
+    [
+      "Manipular placas energizadas para localizar aquecimento pelo toque.",
+      "Usar aspirador doméstico diretamente sobre os componentes eletrônicos.",
+      "Desenergizar o equipamento, controlar descarga eletrostática e usar nobreak dimensionado para permitir desligamento seguro em falta de energia.",
+      "Substituir o aterramento por um filtro de linha comum.",
+      "Bloquear as saídas de ar para impedir a entrada de poeira."
+    ],
+    2,
+    "Desenergização e controle de ESD protegem o hardware; nobreak corretamente dimensionado dá continuidade temporária e permite desligamento controlado."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-29",
+    "Conhecimentos Específicos",
+    "Média",
+    "Sobre sistemas de armazenamento, assinale a alternativa correta:",
+    [
+      "RAID 0 mantém cópia espelhada e tolera a falha de um disco.",
+      "RAID 1 distribui paridade entre, no mínimo, três discos.",
+      "Um arranjo RAID elimina a necessidade de cópias externas e testes de restauração.",
+      "RAID 1 espelha dados entre discos, mas não substitui backup contra exclusão, corrupção ou desastre.",
+      "SSD é volátil e perde os dados sempre que o computador é desligado."
+    ],
+    3,
+    "O espelhamento do RAID 1 aumenta disponibilidade diante de falha de disco, mas replica também erros e não cobre todos os cenários de perda."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-30",
+    "Conhecimentos Específicos",
+    "Média",
+    "Em uma rede local, qual descrição diferencia corretamente switch e roteador?",
+    [
+      "O switch resolve nomes DNS e o roteador armazena mensagens de e-mail.",
+      "O switch opera apenas com sinais analógicos e o roteador apenas com fibra óptica.",
+      "Ambos têm obrigatoriamente a mesma função e podem ser trocados sem configuração.",
+      "O roteador encaminha quadros somente pelo endereço MAC dentro da mesma VLAN.",
+      "O switch encaminha quadros na rede local usando endereços MAC, enquanto o roteador interliga redes e encaminha pacotes IP."
+    ],
+    4,
+    "Switches comutam quadros no domínio local; roteadores selecionam caminhos entre redes IP."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-31",
+    "Conhecimentos Específicos",
+    "Média",
+    "Para interligar dois prédios separados por grande distância, com alta capacidade e forte interferência eletromagnética no trajeto, o meio mais adequado é:",
+    [
+      "Fibra óptica, por transmitir luz, suportar maiores distâncias e não sofrer interferência eletromagnética.",
+      "Cabo coaxial sem blindagem, porque elimina qualquer limite de distância.",
+      "Par trançado comum, porque é imune a campos eletromagnéticos.",
+      "Cabo de energia, sem equipamentos de comunicação adicionais.",
+      "Infravermelho, ainda que não exista linha de visada entre os prédios."
+    ],
+    0,
+    "A fibra óptica oferece alta capacidade, maior alcance e imunidade à interferência eletromagnética, características apropriadas ao cenário."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-32",
+    "Conhecimentos Específicos",
+    "Média",
+    "No modelo TCP/IP, qual alternativa relaciona corretamente os protocolos às suas funções?",
+    [
+      "O IP garante, sozinho, entrega confiável e ordenada de todos os segmentos.",
+      "O IP realiza endereçamento e roteamento de pacotes, enquanto o TCP pode fornecer transporte confiável e ordenado entre aplicações.",
+      "O TCP converte nomes de domínio em endereços IP e substitui o DNS.",
+      "O HTTP atua na camada de enlace para encaminhar quadros por endereço MAC.",
+      "O Ethernet escolhe rotas entre redes públicas por meio de números de porta TCP."
+    ],
+    1,
+    "O IP cuida do endereçamento e do encaminhamento entre redes; o TCP acrescenta controle de conexão, ordem e retransmissão no transporte."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-33",
+    "Conhecimentos Específicos",
+    "Fácil",
+    "Um revisor externo precisa comentar em um documento do Google Workspace, mas não deve editá-lo. Qual configuração segue o princípio do menor privilégio?",
+    [
+      "Publicar na internet um link aberto com permissão de edição.",
+      "Compartilhar a senha da conta proprietária do documento.",
+      "Manter o acesso restrito e conceder à conta do revisor somente permissão para comentar.",
+      "Transferir a propriedade do documento ao revisor.",
+      "Enviar uma cópia editável sem qualquer restrição de acesso."
+    ],
+    2,
+    "A concessão individual da permissão mínima necessária permite comentários sem autorizar alterações no conteúdo nem expor credenciais."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-34",
+    "Conhecimentos Específicos",
+    "Média",
+    "Na configuração de uma rede sem fio institucional, qual conjunto de medidas reduz adequadamente os riscos?",
+    [
+      "Manter credenciais padrão e ocultar o SSID como única proteção.",
+      "Usar a mesma senha compartilhada permanentemente por servidores, visitantes e administradores.",
+      "Desativar a criptografia para evitar incompatibilidades e confiar apenas no endereço MAC.",
+      "Adotar WPA2 ou WPA3, credenciais fortes, alterar padrões de fábrica e segmentar a rede de visitantes.",
+      "Conectar pontos de acesso diretamente à rede administrativa sem atualização de firmware."
+    ],
+    3,
+    "Criptografia atual, credenciais seguras, remoção de configurações padrão e segmentação combinam controles complementares de proteção."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-35",
+    "Conhecimentos Específicos",
+    "Difícil",
+    "O monitoramento aponta tráfego de saída incomum em uma estação. Antes de concluir que ocorreu uma invasão, a resposta técnica mais adequada é:",
+    [
+      "Apagar imediatamente todos os registros para liberar espaço.",
+      "Divulgar publicamente o endereço do equipamento antes da análise.",
+      "Desativar permanentemente o firewall de borda para observar mais tráfego.",
+      "Ignorar o evento, pois conexões de saída nunca indicam comprometimento.",
+      "Correlacionar logs, processos, destinos e linha de base; preservar evidências e, havendo indício consistente, conter o equipamento conforme o procedimento de incidentes."
+    ],
+    4,
+    "A correlação reduz falsos positivos; a preservação de evidências e a contenção controlada permitem investigar e limitar um possível incidente."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-36",
+    "Conhecimentos Específicos",
+    "Média",
+    "Em uma videoconferência, a largura de banda média é suficiente, mas variações de atraso causam áudio entrecortado. Qual ação aborda diretamente esse problema?",
+    [
+      "Medir jitter e perda, priorizar o tráfego em tempo real com QoS e ajustar o buffer de reprodução quando apropriado.",
+      "Aumentar indefinidamente a resolução do vídeo.",
+      "Desativar todos os mecanismos de controle de congestionamento.",
+      "Trocar o nome DNS do servidor, sem medir a rede.",
+      "Converter os microfones em dispositivos de armazenamento."
+    ],
+    0,
+    "Jitter é a variação do atraso; priorização e buffer adequado ajudam a estabilizar a reprodução, enquanto a medição confirma a causa."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-37",
+    "Conhecimentos Específicos",
+    "Média",
+    "Em um banco relacional, qual afirmação sobre chaves primária e estrangeira está correta?",
+    [
+      "A chave primária pode identificar simultaneamente várias linhas com o mesmo valor, sem restrição.",
+      "A chave primária identifica univocamente uma linha; a chave estrangeira referencia uma chave da tabela relacionada e ajuda a manter a integridade referencial.",
+      "A chave estrangeira serve exclusivamente para cifrar colunas sensíveis.",
+      "Toda tabela deve possuir exatamente cinco chaves primárias.",
+      "Chaves são usadas apenas para ordenar visualmente os resultados."
+    ],
+    1,
+    "A chave primária fornece identidade única, e a estrangeira representa a relação com uma chave candidata ou primária de outra tabela."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-38",
+    "Conhecimentos Específicos",
+    "Média",
+    "Assinale a alternativa que classifica corretamente três comandos SQL:",
+    [
+      "CREATE TABLE é DML; INSERT é DCL; SELECT é TCL.",
+      "CREATE TABLE é DQL; INSERT é DDL; SELECT é DCL.",
+      "CREATE TABLE é DDL; INSERT é DML; SELECT é DQL.",
+      "CREATE TABLE é TCL; INSERT é DQL; SELECT é DDL.",
+      "Os três comandos pertencem exclusivamente à DCL."
+    ],
+    2,
+    "CREATE TABLE define estruturas, INSERT manipula dados e SELECT realiza consultas, correspondendo a DDL, DML e DQL."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-39",
+    "Conhecimentos Específicos",
+    "Média",
+    "Em um SGBD, qual descrição corresponde a um trigger (gatilho)?",
+    [
+      "Uma cópia física obrigatória de toda a base, criada apenas ao desligar o servidor.",
+      "Um usuário com permissão irrestrita e não auditável.",
+      "Uma consulta que nunca pode depender de tabelas.",
+      "Uma rotina associada a evento configurado, como inserção, atualização ou exclusão, que pode ser executada automaticamente pelo SGBD.",
+      "Um protocolo de roteamento entre bancos de dados."
+    ],
+    3,
+    "Triggers são rotinas disparadas por eventos definidos no banco e podem aplicar validações, auditoria ou outras ações controladas."
+  ]),
+  makeQuestion([
+    "bruno-massaranduba-2026-40",
+    "Conhecimentos Específicos",
+    "Média",
+    "Sobre controle de transações e permissões em SQL, assinale a alternativa correta:",
+    [
+      "COMMIT desfaz a transação e GRANT apaga uma tabela.",
+      "ROLLBACK confirma definitivamente as alterações e REVOKE cria uma visão.",
+      "GRANT e REVOKE são comandos de consulta de dados (DQL).",
+      "COMMIT e ROLLBACK têm exatamente o mesmo efeito sobre a transação.",
+      "COMMIT confirma a transação, ROLLBACK desfaz alterações ainda não confirmadas e GRANT concede privilégios."
+    ],
+    4,
+    "COMMIT e ROLLBACK controlam a conclusão da transação; GRANT pertence ao controle de acesso e atribui privilégios."
+  ])
 ];
 
-QUESTION_SETS.bruno.questions = ORIGINAL_BRUNO_QUESTIONS;
-QUESTION_SETS.bruno.source = "Prova objetiva FURB Edital 794/SED/2026 - gabarito preliminar";
+QUESTION_SETS.bruno.questions = MASSARANDUBA_BRUNO_QUESTIONS;
+QUESTION_SETS.bruno.source = "Simulado autoral e não oficial adaptado ao Edital de Concurso Público 001/2026 - Município de Massaranduba";
