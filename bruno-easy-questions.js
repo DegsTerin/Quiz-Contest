@@ -198,16 +198,16 @@ const MASSARANDUBA_BRUNO_EASY_QUESTIONS = [
     "bruno-massaranduba-2026-easy-14",
     "Matemática e Raciocínio Lógico",
     "Fácil",
-    "Observe a sequência 2, 4, 6, 8, __. Qual número completa corretamente a sequência?",
+    "A sequência 5, 9, 13, 17, ... forma uma progressão aritmética. Qual é o seu 8º termo?",
     [
-      "9.",
-      "10.",
-      "11.",
-      "12.",
-      "14."
+      "29.",
+      "33.",
+      "31.",
+      "35.",
+      "37."
     ],
     1,
-    "A sequência aumenta de dois em dois; depois de 8 vem 10."
+    "A razão da progressão é 4. Assim, o 8º termo é 5 + 7 × 4 = 33."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-15",
@@ -243,46 +243,46 @@ const MASSARANDUBA_BRUNO_EASY_QUESTIONS = [
     "bruno-massaranduba-2026-easy-17",
     "Conhecimentos Gerais",
     "Fácil",
-    "O Município de Massaranduba ao qual se refere o Edital de Concurso Público nº 001/2026 está localizado em qual estado brasileiro?",
+    "Considerando que Massaranduba teve uma primeira criação municipal em 1948, assinale a alternativa que relaciona corretamente a origem do nome à instalação de sua emancipação definitiva:",
     [
-      "Paraná.",
-      "Rio Grande do Sul.",
-      "Santa Catarina.",
-      "São Paulo.",
-      "Mato Grosso do Sul."
+      "O nome surgiu do Rio Itapocu, e a emancipação definitiva foi instalada em 11 de novembro de 1951.",
+      "O nome surgiu da abundância de araucárias, e a emancipação definitiva foi instalada em 21 de abril de 1961.",
+      "O nome surgiu da abundância da árvore maçaranduba, e a emancipação definitiva foi instalada em 11 de novembro de 1961.",
+      "O nome surgiu da imigração italiana, e a emancipação definitiva foi instalada em 7 de setembro de 1962.",
+      "O nome surgiu do cultivo de arroz, e a emancipação definitiva foi instalada em 1º de janeiro de 1960."
     ],
     2,
-    "O edital refere-se ao Município de Massaranduba, no Estado de Santa Catarina."
+    "Após uma primeira experiência municipal em 1948, a emancipação definitiva foi criada em 1961 e instalada em 11 de novembro; o nome Massaranduba remete à abundância da árvore maçaranduba."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-18",
     "Conhecimentos Gerais",
     "Fácil",
-    "No âmbito municipal, quem exerce a chefia do Poder Executivo?",
+    "Qual alternativa relaciona corretamente a economia de Massaranduba a um de seus títulos mais conhecidos?",
     [
-      "O prefeito.",
-      "O presidente da Câmara dos Deputados.",
-      "O governador.",
-      "O presidente do Tribunal de Justiça.",
-      "O senador mais votado."
+      "O cultivo de arroz irrigado explica o título de Capital Catarinense do Arroz, e essa atividade coexiste com uma indústria diversificada.",
+      "O cultivo de milho explica o título de Capital Catarinense do Arroz, e a economia local é exclusivamente agrícola.",
+      "A bananicultura explica o título de Capital Catarinense do Arroz, e não há atividade industrial no município.",
+      "O cultivo de arroz explica o título, mas a economia local se limita à indústria têxtil.",
+      "O título não se relaciona à agricultura, pois a economia do município depende exclusivamente do turismo."
     ],
     0,
-    "O prefeito é o chefe do Poder Executivo do município."
+    "O arroz irrigado está ligado ao título de Capital Catarinense do Arroz, enquanto diferentes ramos industriais também integram a economia municipal."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-19",
     "Conhecimentos Gerais",
     "Fácil",
-    "Qual atitude contribui diretamente para a coleta seletiva e para o desenvolvimento sustentável?",
+    "Sobre a inserção de Massaranduba na Bacia Hidrográfica do Rio Itapocu, assinale a alternativa correta:",
     [
-      "Misturar resíduos recicláveis com restos de alimentos.",
-      "Descartar pilhas em qualquer lixeira comum.",
-      "Queimar embalagens plásticas no quintal.",
-      "Usar recipientes descartáveis sempre que possível.",
-      "Separar resíduos recicláveis dos resíduos orgânicos."
+      "O município está totalmente fora da bacia, por isso o planejamento das águas deve ser apenas local.",
+      "A bacia se limita ao território de Massaranduba e integra a Região Hidrográfica RH01.",
+      "O Rio Itapocu forma uma bacia oceânica sem relação com os municípios do Vale do Itapocu.",
+      "Os recursos hídricos da bacia dispensam planejamento integrado entre os municípios envolvidos.",
+      "O município está parcialmente inserido na Bacia do Itapocu, pertencente à RH06, o que favorece o planejamento integrado dos recursos hídricos."
     ],
     4,
-    "Separar os tipos de resíduos facilita a reciclagem e reduz o descarte inadequado."
+    "Massaranduba está parcialmente inserida na Bacia do Itapocu, que integra a Região Hidrográfica RH06; a gestão da água exige articulação entre os municípios da bacia."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-20",
@@ -393,16 +393,16 @@ const MASSARANDUBA_BRUNO_EASY_QUESTIONS = [
     "bruno-massaranduba-2026-easy-27",
     "Conhecimentos Específicos",
     "Fácil",
-    "Em muitos aplicativos do Windows, qual atalho é usado para salvar o documento atual?",
+    "No Microsoft Word 2010 em português do Brasil, qual atalho de teclado salva o documento atual?",
     [
       "Ctrl + P.",
       "Ctrl + X.",
       "Ctrl + Z.",
-      "Ctrl + S.",
+      "Ctrl + B.",
       "Ctrl + F."
     ],
     3,
-    "Ctrl + S é o atalho amplamente usado para salvar o documento atual."
+    "Na localização em português do Brasil do Word 2010, Ctrl + B executa o comando Salvar."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-easy-28",

@@ -143,15 +143,15 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
     explanation: "The perimeter of the rectangle is 2 × (6 + 4) = 20 metres."
   },
   "bruno-massaranduba-2026-easy-14": {
-    prompt: "Consider the sequence 2, 4, 6, 8, __. Which number correctly completes it?",
+    prompt: "The sequence 5, 9, 13, 17, ... forms an arithmetic progression. What is its 8th term?",
     options: [
-      "9.",
-      "10.",
-      "11.",
-      "12.",
-      "14."
+      "29.",
+      "33.",
+      "31.",
+      "35.",
+      "37."
     ],
-    explanation: "The sequence increases by two each time; 10 follows 8."
+    explanation: "The common difference is 4. Therefore, the 8th term is 5 + 7 × 4 = 33."
   },
   "bruno-massaranduba-2026-easy-15": {
     prompt: "The logical negation of \"All computers are switched on\" is:",
@@ -176,37 +176,37 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
     explanation: "Subtracting 7 from both sides gives x = 19 - 7 = 12."
   },
   "bruno-massaranduba-2026-easy-17": {
-    prompt: "In which Brazilian state is the Municipality of Massaranduba referred to in Public Competition Notice No. 001/2026 located?",
+    prompt: "Given that Massaranduba first became a municipality in 1948, which option correctly matches the origin of its name with the definitive restoration of its municipal status?",
     options: [
-      "Paraná.",
-      "Rio Grande do Sul.",
-      "Santa Catarina.",
-      "São Paulo.",
-      "Mato Grosso do Sul."
+      "The name came from the Itapocu River, and its restored municipal administration was formally inaugurated on 11 November 1951.",
+      "The name came from the abundance of Paraná pine trees, and its restored municipal administration was formally inaugurated on 21 April 1961.",
+      "The name came from the abundance of maçaranduba trees, and its restored municipal administration was formally inaugurated on 11 November 1961.",
+      "The name came from Italian immigration, and its restored municipal administration was formally inaugurated on 7 September 1962.",
+      "The name came from rice cultivation, and its restored municipal administration was formally inaugurated on 1 January 1960."
     ],
-    explanation: "The notice refers to the Municipality of Massaranduba in the State of Santa Catarina."
+    explanation: "After an initial period as a municipality in 1948, its municipal status was restored in 1961 and formally inaugurated on 11 November; the name Massaranduba refers to the abundance of maçaranduba trees."
   },
   "bruno-massaranduba-2026-easy-18": {
-    prompt: "At municipal level, who heads the Executive Branch?",
+    prompt: "Which option correctly connects Massaranduba's economy with one of its best-known titles?",
     options: [
-      "The mayor.",
-      "The President of the Chamber of Deputies.",
-      "The state governor.",
-      "The President of the Court of Justice.",
-      "The senator who received the most votes."
+      "Irrigated rice cultivation explains the title of Santa Catarina Rice Capital, and this activity coexists with a diversified industrial sector.",
+      "Maize cultivation explains the title of Santa Catarina Rice Capital, and the local economy is exclusively agricultural.",
+      "Banana farming explains the title of Santa Catarina Rice Capital, and the municipality has no industrial activity.",
+      "Rice cultivation explains the title, but the local economy is limited to the textile industry.",
+      "The title is unrelated to agriculture because the municipality's economy depends exclusively on tourism."
     ],
-    explanation: "The mayor is the head of the municipality's Executive Branch."
+    explanation: "Irrigated rice is linked to the title of Santa Catarina Rice Capital, whilst several industrial sectors also form part of the municipal economy."
   },
   "bruno-massaranduba-2026-easy-19": {
-    prompt: "Which action directly supports separate waste collection and sustainable development?",
+    prompt: "Regarding Massaranduba's position within the Itapocu River Basin, select the correct option:",
     options: [
-      "Mixing recyclable waste with food scraps.",
-      "Discarding batteries in any general waste bin.",
-      "Burning plastic packaging in the garden.",
-      "Using disposable containers whenever possible.",
-      "Separating recyclable waste from organic waste."
+      "The municipality lies entirely outside the basin, so water planning should be solely local.",
+      "The basin is confined to Massaranduba and belongs to Hydrographic Region RH01.",
+      "The Itapocu River forms an ocean basin unrelated to the municipalities of the Itapocu Valley.",
+      "The basin's water resources require no integrated planning amongst the municipalities concerned.",
+      "The municipality lies partly within the Itapocu Basin, which belongs to RH06, supporting integrated water-resource planning."
     ],
-    explanation: "Separating waste types facilitates recycling and reduces improper disposal."
+    explanation: "Massaranduba lies partly within the Itapocu Basin, which belongs to Hydrographic Region RH06; water management therefore requires coordination amongst the basin's municipalities."
   },
   "bruno-massaranduba-2026-easy-20": {
     prompt: "When a social media message reports a measure taken by the public administration, the most appropriate action is to:",
@@ -286,15 +286,15 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
     explanation: "Portable Document Format files normally use the .pdf extension."
   },
   "bruno-massaranduba-2026-easy-27": {
-    prompt: "In many Windows applications, which keyboard shortcut saves the current document?",
+    prompt: "In the Brazilian Portuguese localisation of Microsoft Word 2010, which keyboard shortcut saves the current document?",
     options: [
       "Ctrl + P.",
       "Ctrl + X.",
       "Ctrl + Z.",
-      "Ctrl + S.",
+      "Ctrl + B.",
       "Ctrl + F."
     ],
-    explanation: "Ctrl + S is the widely used keyboard shortcut for saving the current document."
+    explanation: "In the Brazilian Portuguese localisation of Word 2010, Ctrl + B runs the Save command."
   },
   "bruno-massaranduba-2026-easy-28": {
     prompt: "In a Portuguese-language spreadsheet, which formula adds the values from cells A1 to A5?",

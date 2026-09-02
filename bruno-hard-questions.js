@@ -449,11 +449,11 @@ const MASSARANDUBA_BRUNO_QUESTIONS = [
       "Manter credenciais padrão e ocultar o SSID como única proteção.",
       "Usar a mesma senha compartilhada permanentemente por servidores, visitantes e administradores.",
       "Desativar a criptografia para evitar incompatibilidades e confiar apenas no endereço MAC.",
-      "Adotar WPA2 ou WPA3, credenciais fortes, alterar padrões de fábrica e segmentar a rede de visitantes.",
+      "Adotar WPA2 com AES/CCMP ou, preferencialmente, WPA3, usar credenciais fortes, alterar os padrões de fábrica e segmentar a rede de visitantes.",
       "Conectar pontos de acesso diretamente à rede administrativa sem atualização de firmware."
     ],
     3,
-    "Criptografia atual, credenciais seguras, remoção de configurações padrão e segmentação combinam controles complementares de proteção."
+    "WPA2 com AES/CCMP ou, preferencialmente, WPA3 evita protocolos e cifras obsoletos; credenciais fortes, alteração dos padrões de fábrica e segmentação da rede de visitantes acrescentam controles complementares de proteção."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-35",

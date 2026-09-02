@@ -314,10 +314,10 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
       "Retain the default credentials and use a hidden SSID as the only protection.",
       "Use the same permanently shared password for staff, visitors and administrators.",
       "Disable encryption to avoid incompatibilities and rely only on MAC addresses.",
-      "Adopt WPA2 or WPA3, use strong credentials, change factory defaults and segment the guest network.",
+      "Adopt WPA2 with AES/CCMP or, preferably, WPA3, use strong credentials, change factory defaults and segment the guest network.",
       "Connect access points directly to the administrative network without updating their firmware."
     ],
-    explanation: "Current encryption, secure credentials, removal of default settings and segmentation provide complementary protective controls."
+    explanation: "WPA2 with AES/CCMP or, preferably, WPA3 avoids obsolete protocols and ciphers; strong credentials, changed factory defaults and guest-network segmentation add complementary protective controls."
   },
   "bruno-massaranduba-2026-35": {
     prompt: "Monitoring flags unusual outbound traffic from a workstation. Before concluding that an intrusion has occurred, what is the most appropriate technical response?",

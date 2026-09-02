@@ -66,6 +66,26 @@ function getWrittenExamAnswerPosition(question) {
   return positions.indexOf(question.answerIndex);
 }
 
+function getLongestRun(values) {
+  return values.reduce(
+    (state, value) => ({
+      previous: value,
+      current: value === state.previous ? state.current + 1 : 1,
+      longest: Math.max(state.longest, value === state.previous ? state.current + 1 : 1)
+    }),
+    { previous: null, current: 0, longest: 0 }
+  ).longest;
+}
+
+function getOptionFingerprint(option) {
+  return String(option)
+    .normalize("NFKC")
+    .trim()
+    .toLocaleLowerCase("pt-BR")
+    .replace(/\s+/gu, " ")
+    .replace(/[.,;:!?]+$/gu, "");
+}
+
 function validateQuestion(question, bankName) {
   if (!question || typeof question !== "object") {
     check(false, `${bankName}: missing question object`);
@@ -79,7 +99,7 @@ function validateQuestion(question, bankName) {
   check(Array.isArray(question.options) && question.options.length === 5, `${question.id}: expected five options`);
   if (Array.isArray(question.options)) {
     check(question.options.every((option) => typeof option === "string" && option.trim().length > 0), `${question.id}: blank option`);
-    check(new Set(question.options.map((option) => option.trim())).size === 5, `${question.id}: duplicate options`);
+    check(new Set(question.options.map(getOptionFingerprint)).size === 5, `${question.id}: duplicate options`);
   }
   check(Number.isInteger(question.answerIndex) && question.answerIndex >= 0 && question.answerIndex < 5, `${question.id}: invalid answerIndex`);
   check(typeof question.explanation === "string" && question.explanation.trim().length > 0, `${question.id}: missing explanation`);
@@ -165,10 +185,12 @@ validateDifficultyBanks("Maria", questionSets.maria, mariaBanks, expectedMariaCa
 for (const [difficultyId, questions] of Object.entries(brunoBanks)) {
   check(questions.every((question, index) => question.id === expectedBrunoId[difficultyId](index)), `Bruno ${difficultyId}: IDs are not sequential and versioned`);
 
+  const displayedAnswerPositions = questions.map(getWrittenExamAnswerPosition);
   const displayedAnswerCounts = Array.from({ length: 5 }, (_, position) =>
-    questions.filter((question) => getWrittenExamAnswerPosition(question) === position).length
+    displayedAnswerPositions.filter((answerPosition) => answerPosition === position).length
   );
   check(displayedAnswerCounts.every((count) => count === 8), `Bruno ${difficultyId}: displayed answer-position distribution ${displayedAnswerCounts.join("/")}`);
+  check(getLongestRun(displayedAnswerPositions) <= 2, `Bruno ${difficultyId}: displayed answer key contains a run longer than two`);
 }
 
 for (const [difficultyId, questions] of Object.entries(mariaBanks)) {
@@ -196,7 +218,7 @@ for (const question of activeQuestions) {
     check(typeof translation.prompt === "string" && translation.prompt.trim().length > 0, `${question.id}: blank English prompt`);
     check(Array.isArray(translation.options) && translation.options.length === 5, `${question.id}: expected five English options`);
     check(translation.options.every((option) => typeof option === "string" && option.trim().length > 0), `${question.id}: blank English option`);
-    check(new Set(translation.options.map((option) => option.trim())).size === 5, `${question.id}: duplicate English options`);
+    check(new Set(translation.options.map(getOptionFingerprint)).size === 5, `${question.id}: duplicate English options`);
     check(typeof translation.explanation === "string" && translation.explanation.trim().length > 0, `${question.id}: blank English explanation`);
   }
 }
@@ -211,10 +233,10 @@ check(!JSON.stringify(translations["maria-original-16"]).includes("Recognize"), 
 
 const appSource = fs.readFileSync(path.join(repository, "app.js"), "utf8");
 const indexSource = fs.readFileSync(path.join(repository, "index.html"), "utf8");
-check(/bruno:\s*"v4"/.test(appSource), "Bruno storage is not versioned to v4");
+check(/bruno:\s*"v5"/.test(appSource), "Bruno storage is not versioned to v5");
 check(/maria:\s*"v3"/.test(appSource), "Maria storage is not versioned to v3");
 check(appSource.includes("static-quiz-system-active-difficulty"), "Difficulty preferences are not persisted by profile");
-check(appSource.includes("static-quiz-system-state-v3-bruno"), "Compatible Bruno v3 progress is not migrated to Medium");
+check(!appSource.includes("static-quiz-system-state-v4-bruno"), "Incompatible Bruno v4 progress must not be migrated into the revised banks");
 check(appSource.includes("static-quiz-system-state-v2-maria"), "Compatible Maria v2 progress is not migrated to Hard");
 check(appSource.includes('htmlLang: "en-GB"'), "The British English document language is not en-GB");
 check(indexSource.match(/id="difficulty-toggle-btn"/g)?.length === 1, "The page must expose exactly one difficulty button");
@@ -233,8 +255,8 @@ if (failures.length > 0) {
   process.exitCode = 1;
 } else {
   console.log("PASS: Bruno has 40 easy, 40 medium and 40 hard questions in written-exam order");
-  console.log("PASS: every Bruno bank has complete en-GB translations and an 8/8/8/8/8 displayed answer key");
+  console.log("PASS: every Bruno bank has complete en-GB translations, an 8/8/8/8/8 displayed answer key and no answer run longer than two");
   console.log("PASS: Maria has 40 easy, 40 medium and 40 hard questions in 10/10/10/10 subject order");
   console.log("PASS: Maria's 60-question original source remains byte-for-byte and semantically unchanged");
-  console.log("PASS: per-profile difficulty state uses Bruno v4 and Maria v3 with compatible legacy migration");
+  console.log("PASS: per-profile difficulty state uses Bruno v5 and Maria v3, preserving only Maria's compatible legacy migration");
 }

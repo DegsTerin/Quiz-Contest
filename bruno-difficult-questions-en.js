@@ -91,9 +91,9 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
     prompt: "Four technicians configure 72 workstations in six hours, with constant and equal productivity. At another site, five technicians will work for four hours, but an operational constraint will reduce each technician's productivity by 20%. How many workstations will they configure?",
     options: [
       "36 workstations.",
-      "40 workstations.",
-      "45 workstations.",
       "48 workstations.",
+      "45 workstations.",
+      "40 workstations.",
       "60 workstations."
     ],
     explanation: "The original productivity is 72 ÷ (4 × 6) = 3 workstations per technician-hour. Therefore, 5 × 4 × 3 × 0.8 = 48."
@@ -114,8 +114,8 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
     options: [
       "6 servers and 12 workstations.",
       "7 servers and 11 workstations.",
-      "8 servers and 10 workstations.",
       "9 servers and 9 workstations.",
+      "8 servers and 10 workstations.",
       "10 servers and 8 workstations."
     ],
     explanation: "From the system x + y = 18 and 4x + 2y = 52, we obtain 2x + y = 26; subtracting the first equation gives x = 8 and y = 10."
@@ -176,59 +176,59 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
     explanation: "The negation of a conjunction is the disjunction of the negations: not every server having a backup means that at least one lacks one; negating \"at least one has been tested\" means \"none has been tested\"."
   },
   "bruno-massaranduba-2026-difficult-17": {
-    prompt: "A municipality compares two energy sources. Source X has a lower immediate cost but higher emissions; source Y emits less during operation but is intermittent and requires investment in storage. Which analysis is most consistent with sustainable development?",
+    prompt: "Consider the statements about Massaranduba's historical and economic development: I. Indigenous peoples were present in the region before European groups arrived. II. German, Italian, Polish and Luso-Brazilian immigrants settled in the region around 1870. III. Irrigated rice cultivation became a defining feature of the municipality alongside diversified industrial activity. According to the municipality's official history, which statements are correct?",
     options: [
-      "Choose X solely because of its lower initial cost, without assessing future effects.",
-      "Choose Y solely because of its operational emissions, ignoring reliability and life cycle.",
-      "Reject both because every form of energy generation has some impact.",
-      "Assess life-cycle costs and emissions, security of supply and measures for managing intermittency before deciding.",
-      "Postpone the decision indefinitely because environmental and economic criteria can never be compared."
+      "I only.",
+      "II only.",
+      "I and II only.",
+      "I, II and III.",
+      "II and III only."
     ],
-    explanation: "Sustainability requires environmental, economic and social dimensions to be integrated alongside reliability and life-cycle effects."
+    explanation: "All three statements accord with the official history: Indigenous peoples already occupied the region, the listed immigrant groups arrived around 1870, and the economy came to combine the prominence of irrigated rice with diversified industrial activities."
   },
   "bruno-massaranduba-2026-difficult-18": {
-    prompt: "In a hypothetical regional study, the population grew from 80,000 to 100,000. The urban share increased from 60% to 75%. Which conclusion necessarily follows from these figures?",
+    prompt: "Analyse the statements about the Itapocu River Basin: I. Its approximate area is 3,160 km² and it belongs to Hydrographic Region RH06. II. Massaranduba's territory lies partly within this basin. III. The most distant source is that of the Rio Vermelho in São Bento do Sul, and the Itapocu reaches the sea in Barra Velha. Which statements are correct?",
     options: [
-      "The urban population grew by 15,000, and the rural population remained stable.",
-      "The urban population grew by 27,000, while the rural population fell by 7,000.",
-      "The rural population grew by 20,000.",
-      "All total growth occurred exclusively in the rural area.",
-      "The urban and rural populations grew at the same rate."
+      "I only.",
+      "I, II and III.",
+      "II and III only.",
+      "I and III only.",
+      "III only."
     ],
-    explanation: "Initially, there were 48,000 urban and 32,000 rural residents; afterwards there were 75,000 urban and 25,000 rural residents. The changes are +27,000 and -7,000."
+    explanation: "All three statements are correct: the basin covers approximately 3,160 km², belongs to RH06, includes part of Massaranduba, and extends from the most distant source of the Rio Vermelho in São Bento do Sul to the river mouth in Barra Velha."
   },
   "bruno-massaranduba-2026-difficult-19": {
-    prompt: "A tourist route begins receiving more visitors than its local infrastructure can support, increasing waste and pressure on natural areas. Which public response reconciles tourism, the economy and environmental protection?",
+    prompt: "A report highlights the high share of renewable sources in Brazil's electricity mix and proposes expanding wind and solar generation. Which assessment correctly interprets this situation without confusing the electricity mix with the wider energy mix?",
     options: [
-      "Permanently prohibit all tourism without carrying out a diagnosis.",
-      "Increase promotion to attract even more visitors before addressing the effects.",
-      "Set a visitor capacity, improve sanitation and waste management, monitor effects and involve the local community in distributing benefits.",
-      "Transfer every environmental cost to residents without involving businesses.",
-      "Consider only immediate revenue because ecological effects do not affect the economy."
+      "The renewable share of electricity generation demonstrates by itself that every use of energy in transport, industry and homes has already been decarbonised.",
+      "Because wind and solar are renewable, expanding them requires no transmission planning, operational flexibility or assessment of projects' territorial effects.",
+      "The electricity mix concerns the sources used to generate electricity, whilst the energy mix also covers other energy uses; expanding renewables should be accompanied by grids, storage or other forms of flexibility, resilience and socio-environmental assessment.",
+      "The high renewable share makes source diversification unnecessary because every electricity source offers continuous availability and the same generation profile.",
+      "The electricity mix and energy mix are equivalent indicators; their only difference is the statistical unit used."
     ],
-    explanation: "Sustainable management combines capacity-based limits, infrastructure, monitoring and community participation, preserving the resource on which the activity depends."
+    explanation: "The electricity mix is a subset of the energy mix. A robust transition combines renewable expansion with transmission, flexibility, storage where appropriate, adaptation to extreme events, and assessment of social and environmental effects."
   },
   "bruno-massaranduba-2026-difficult-20": {
-    prompt: "Municipalities in the Vale do Itapocu share a river basin. Heavy rainfall upstream can cause effects downstream beyond municipal boundaries. Which strategy best addresses this type of risk?",
+    prompt: "After periods of heavy rainfall, municipalities in the same river basin record urban flooding, upstream erosion and a rapid rise in the river downstream. Which plan offers the most consistent public response for reducing risk without merely transferring it between places?",
     options: [
-      "Each municipality should conceal its data to preserve autonomy.",
-      "Act only after each disaster without reviewing land use.",
-      "Transfer all responsibility to residents in the affected areas.",
-      "Replace alerts with a single construction project regardless of basin studies.",
-      "Coordinate monitoring and alerts, share data, and integrate land use, drainage and civil defence at basin level."
+      "Prioritise straightening the channel in the downstream municipality, leaving land use and increased upstream flow to a separate phase.",
+      "Maintain separate municipal alerts with their own criteria so that hydrological data from different places are not combined.",
+      "Expand only urban local drainage, addressing erosion, flood areas and civil-defence preparedness in later programmes.",
+      "Suspend new planning permissions only for the weeks following each event and resume the previous approach when the river level returns to normal.",
+      "Share data and alert thresholds, map risk at basin level, and integrate land use, upstream conservation, drainage, technically assessed works and intermunicipal civil-defence plans."
     ],
-    explanation: "Hydrological risks cross administrative boundaries; basin-level management and intermunicipal co-operation enable coherent prevention and response."
+    explanation: "Integrated management considers how upstream interventions change flows and downstream effects. Shared monitoring, land-use planning, conservation, drainage, evidence-based works and co-ordinated civil defence form a complementary strategy."
   },
   "bruno-massaranduba-2026-difficult-21": {
     prompt: "After a new memory module is installed, a computer powers on, displays no video and emits a beep sequence that the manufacturer documents as a RAM fault. What is the most appropriate initial procedure?",
     options: [
-      "Format the disk immediately because the operating system controls the POST.",
-      "Disable the antivirus software and repeat the start-up.",
-      "Check the module's compatibility and seating, test a known-good module and consult the POST code before changing the storage.",
-      "Replace the monitor without testing the memory because beeps never indicate hardware faults.",
-      "Update office applications before switching off the device."
+      "Reset CMOS and update the motherboard firmware before physically checking the newly installed module.",
+      "Replace the graphics card first and leave the memory modules in their current configuration during the test.",
+      "Switch off and disconnect the device, apply electrostatic-discharge protection, reseat the modules, and test them individually or with a compatible known-good module.",
+      "Reinstall the operating system to exclude a driver fault before opening the case.",
+      "Replace the power supply on the basis of the missing video alone, without isolating the component identified by the beep code."
     ],
-    explanation: "The fault occurs during the POST, before the operating system loads. The beep code directs diagnosis towards the memory, seating or compatibility."
+    explanation: "The fault occurs during the POST, before the operating system loads. After removing power and controlling electrostatic discharge, reseating and testing the RAM in isolation checks the component identified by the beep code first."
   },
   "bruno-massaranduba-2026-difficult-22": {
     prompt: "A server uses RAID 1. A user accidentally deletes a folder, and the deletion is replicated to both disks. Which conclusion and measure are correct?",
@@ -244,11 +244,11 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
   "bruno-massaranduba-2026-difficult-23": {
     prompt: "A UPS is rated at 1,000 VA with an output power factor of 0.7, so it supports up to 700 W. The connected equipment consumes 760 W. Which assessment is correct?",
     options: [
-      "The load is safe because 760 is less than 1,000, regardless of the units.",
+      "The effective load is 532 W because the equipment's 760 W must be multiplied by 0.7, leaving 168 W of headroom.",
       "The load exceeds the watt capacity; the load must be reduced or a UPS with suitable active power and runtime must be specified.",
-      "The power factor automatically increases capacity to 1,700 W.",
-      "Runtime will be infinite because the load is expressed in watts.",
-      "Only the input voltage determines whether there is an overload."
+      "The excess is 60 VA and can be offset solely with higher-capacity batteries, without changing the UPS power rating.",
+      "The available active power is approximately 1,428 W, calculated as 1,000 ÷ 0.7, so there is ample headroom.",
+      "The load necessarily equals 760 VA and leaves 240 VA of headroom because watts and volt-amperes are interchangeable in this calculation."
     ],
     explanation: "The active power capacity is 1,000 × 0.7 = 700 W. A 760 W load exceeds this limit even though its number is lower than 1,000 VA."
   },
@@ -286,15 +286,15 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
     explanation: "Without resolving the gateway's MAC address through ARP, the workstation cannot deliver frames to it. Investigation should begin in the layer 2 domain and at the gateway interface."
   },
   "bruno-massaranduba-2026-difficult-27": {
-    prompt: "Two buildings 800 metres apart require a stable link in an environment with strong electromagnetic interference and an electrical potential difference between their earth connections. Which wired medium is most suitable?",
+    prompt: "A routing table contains 10.20.0.0/16 via gateway A, 10.20.30.0/24 via gateway B, and a default route via gateway C. Ignoring metrics between routes with the same prefix length, through which gateway will a packet for 10.20.30.45 be forwarded?",
     options: [
-      "A single 800-metre segment of twisted-pair copper.",
-      "Unshielded telephone cable because it is immune to interference.",
-      "Shared coaxial cable without repeaters.",
-      "Optical fibre compatible with the distance and transceivers, because it provides electrical isolation and immunity to electromagnetic interference.",
-      "Any metallic cable, provided that the IP address is changed."
+      "Through gateway A because the /16 route was presented before the /24 route.",
+      "Through gateway C because the default route is examined before specific routes.",
+      "Through gateways A and B with load balancing because both networks contain the destination.",
+      "Through gateway B because the /24 prefix is the most specific match for the destination.",
+      "Through no gateway because 10.20.30.45 is a host address and does not appear literally in the table."
     ],
-    explanation: "Fibre supports longer distances, carries no electrical current between the buildings and is immune to electromagnetic interference, provided that the optics and link budget are compatible."
+    explanation: "The /16 and /24 routes both match the address, but the router selects the longest-prefix match. Because /24 is more specific than /16, the packet follows gateway B; the default route would be used only if there were no more specific match."
   },
   "bruno-massaranduba-2026-difficult-28": {
     prompt: "A VoIP call is established by the signalling protocol, but there is no audio in either direction. In the SDP, each endpoint announces a private address that the other network cannot reach, and the firewall has no rule for the RTP range. Which action addresses the most likely cause?",
@@ -332,79 +332,79 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
   "bruno-massaranduba-2026-difficult-31": {
     prompt: "An IDS raises a scanning alert from an administration workstation during an authorised inventory window. Before classifying the event as an attack, which approach is most robust?",
     options: [
-      "Delete the alert so that it does not affect the metrics.",
-      "Permanently block the entire administration network on the basis of a single packet.",
+      "Close the alert as a false positive solely because its time matches the authorised window, without checking the asset or observed pattern.",
+      "Block the workstation permanently before checking the authorisation, retaining only the packet that generated the alert.",
       "Correlate the time, source asset, change authorisation, traffic pattern and other logs; document the decision and adjust the rule only if the evidence justifies doing so.",
-      "Disable the IDS because every alert concerning authorised activity is false.",
-      "Publish the workstation credentials to demonstrate transparency."
+      "Disable the scanning signature globally during every future window, regardless of the authorised networks and assets.",
+      "Increase the rule threshold on the basis of this event alone and retain the original classification without recording the rationale."
     ],
     explanation: "Contextual correlation distinguishes authorised activity from malicious behaviour and allows detection to be calibrated without removing evidence or coverage."
   },
   "bruno-massaranduba-2026-difficult-32": {
     prompt: "A workstation shows a suspicious process, connections to an unknown destination and lateral access attempts. Which initial sequence preserves the investigation and reduces risk?",
     options: [
-      "Leave the workstation freely connected to the network and wait several days for further symptoms.",
-      "Shut down every server and delete the central logs.",
+      "Restart the workstation to stop the process and only then collect memory, connections and other volatile evidence.",
+      "Immediately cut power in every situation without assessing whether volatile data must be preserved or following the incident-response procedure.",
       "Isolate the workstation from the network in a controlled manner, preserve evidence according to procedure, identify the extent, protect credentials from a trusted system, and only then eradicate and recover.",
-      "Send the suspicious file to every user for comparison.",
-      "Reinstall immediately without recording processes, connections or indicators."
+      "Change credentials from the suspicious workstation before isolating it so that service access is retained during analysis.",
+      "Immediately rebuild the workstation from a clean image and investigate the extent only if the behaviour reappears."
     ],
     explanation: "Containment limits lateral movement; preserving and analysing evidence supports the diagnosis before controlled eradication and recovery."
   },
   "bruno-massaranduba-2026-difficult-33": {
-    prompt: "A policy performs a full backup on Sunday and incremental backups on Monday, Tuesday and Wednesday. Which sets are required to restore the state at the end of Wednesday?",
+    prompt: "In Windows 10, a shared folder grants Full Control in its share permissions. In NTFS, the Support group has an Allow Modify entry, whilst the Temporary Staff group has an explicit Deny Write entry. A user belongs to both groups and accesses the folder over the network. What happens when the user attempts to write a file?",
     options: [
-      "Only Wednesday's incremental backup.",
-      "Sunday's full backup and only Wednesday's incremental backup.",
-      "The incremental backups from Monday to Wednesday, without the full backup.",
-      "Sunday's full backup and the Monday, Tuesday and Wednesday incremental backups, applied in the correct sequence.",
-      "Any differential backup from before Sunday."
+      "Writing is allowed because Full Control on the share overrides any restriction configured in NTFS.",
+      "Writing is allowed because Allow Modify from one group cancels the denial received from another group.",
+      "All access is denied, including read and execute, because Deny Write is equivalent to Deny Full Control.",
+      "Writing is denied: network access combines the limits of share and NTFS permissions, and the explicit Deny Write entry prevails over the conflicting allow entry.",
+      "The result depends on the order in which the groups were created because Windows applies only the last group entry."
     ],
-    explanation: "Each incremental contains the changes since the previous backup. Restoration requires the full base and the entire subsequent incremental chain in order."
+    explanation: "Full Control on the share cannot expand what NTFS permits. When group memberships are combined, the explicit denial of the write right prevails over the conflicting allow entry; other rights that are not denied must be assessed separately."
   },
   "bruno-massaranduba-2026-difficult-34": {
     prompt: "A transaction transfers a balance between two accounts by using two UPDATE commands. The first executes, but the second fails. Which design preserves atomicity?",
     options: [
-      "Commit each UPDATE before executing the next one.",
+      "Run each UPDATE in its own transaction and record a compensation for later processing if the second one fails.",
       "Execute both in the same transaction, apply COMMIT only after both succeed, and use ROLLBACK if either step fails.",
-      "Replace COMMIT with GRANT to confirm the values.",
-      "Use only SELECT because queries change balances automatically.",
-      "Delete the table when an error occurs to prevent inconsistency."
+      "Create a SAVEPOINT after the first UPDATE and commit the transaction even if the second fails, retaining the first result.",
+      "Use the SERIALIZABLE isolation level but leave autocommit enabled for each UPDATE.",
+      "Defer constraint checking until the end whilst keeping each UPDATE committed separately."
     ],
     explanation: "Atomicity requires the unit of work to be either fully committed or fully undone; COMMIT and ROLLBACK control these outcomes."
   },
   "bruno-massaranduba-2026-difficult-35": {
     prompt: "A team needs to query equipment names and states but must not see costs or alter records. Which solution best applies least privilege in a relational DBMS?",
     options: [
-      "Grant administrative privileges over the entire database.",
-      "Provide a complete copy of the database without access control.",
+      "Grant SELECT directly on the complete table and hide the cost column only in the application interface.",
+      "Create a routine that runs with administrative privileges and share its credentials with the query team.",
       "Create a view containing only the authorised columns and grant SELECT on that view, without unnecessary direct privileges on the base tables.",
-      "Grant DELETE on the tables and hide the button in the interface.",
-      "Store the administrator password in a shared spreadsheet."
+      "Grant SELECT and UPDATE on the base table, restricting changes through documented guidance to users.",
+      "Create a periodic copy of the table containing every column and grant unrestricted read access to that copy."
     ],
     explanation: "The view limits the projected data, and the restricted SELECT grant reduces access to the required operations and columns."
   },
   "bruno-massaranduba-2026-difficult-36": {
     prompt: "Every change to an equipment item's state must automatically create an audit record, even when the change comes from different applications. Which database object is most directly appropriate?",
     options: [
-      "A view with no source table.",
+      "A scheduled task that queries the table hourly and infers changes by comparing the latest state.",
       "A trigger associated with the table's UPDATE event and carefully defined to record the change.",
-      "A GRANT permission executed once a month.",
-      "An index used exclusively to delete old records.",
-      "A full backup started by every SELECT command."
+      "An update stored procedure, without preventing applications from continuing to issue UPDATE directly against the table.",
+      "A view with WITH CHECK OPTION that presents only equipment changed during the day.",
+      "A generated column that derives the current state without recording previous values."
     ],
     explanation: "Triggers execute automatically on defined events and can centralise the auditing of changes made by different clients."
   },
   "bruno-massaranduba-2026-difficult-37": {
-    prompt: "Classify the SQL commands CREATE TABLE, INSERT, GRANT and COMMIT by their primary function, in that order.",
+    prompt: "A database project requires, in this order: I. a reusable abstraction based on SELECT; II. a parameterised routine that can group commands; III. automatic execution when an UPDATE occurs on a table; IV. a reusable calculation that returns a value. Which objects meet requirements I, II, III and IV respectively?",
     options: [
-      "DDL, DML, DCL and TCL.",
-      "DML, DDL, DQL and DCL.",
-      "DCL, DQL, DDL and DML.",
-      "TCL, DCL, DML and DDL.",
-      "DQL, TCL, DCL and DDL."
+      "View, stored procedure, trigger and function.",
+      "Function, view, stored procedure and trigger.",
+      "Stored procedure, function, view and trigger.",
+      "View, trigger, function and stored procedure.",
+      "Trigger, stored procedure, function and view."
     ],
-    explanation: "CREATE TABLE defines structure (DDL), INSERT manipulates data (DML), GRANT controls privileges (DCL), and COMMIT controls transactions (TCL)."
+    explanation: "A view encapsulates a query; a stored procedure groups commands and can accept parameters; a trigger reacts automatically to an UPDATE; and a function encapsulates a calculation that returns a value."
   },
   "bruno-massaranduba-2026-difficult-38": {
     prompt: "Consider Setor(id, nome) and Equipamento(id, setor_id, status). Every department, including those with no active equipment, must be listed with its respective count. Which query correctly expresses this intention?",
@@ -431,11 +431,11 @@ Object.assign(EN_QUESTION_TRANSLATIONS, {
   "bruno-massaranduba-2026-difficult-40": {
     prompt: "A procurement requires each computer to drive two 4K monitors at 60 Hz simultaneously and run an application with hardware acceleration. Which technical specification best reduces the risk of incompatibility?",
     options: [
-      "Require only that the equipment be described as \"modern\".",
-      "Specify only disk capacity because video does not depend on interfaces.",
+      "Require two DisplayPort 1.2 outputs without verifying that the graphics controller can sustain 4K at 60 Hz on both ports simultaneously.",
+      "Specify only a minimum amount of video memory, leaving interfaces, bandwidth and driver support until installation.",
       "Define the number and version of outputs, supported simultaneous resolution and refresh rate, graphics capability, memory, compatible system and drivers, and require evidence before acceptance.",
-      "Accept any adaptor without checking bandwidth or controller support.",
-      "Choose solely by the colour of the case."
+      "Accept two physically compatible connectors as sufficient evidence even without a guarantee of simultaneous operation at the required resolution.",
+      "Approve any workstation with a dual USB-C adaptor, checking only the connector shape rather than alternate-mode support or bandwidth."
     ],
     explanation: "Measurable requirements for interfaces, bandwidth, controller, software and acceptance validation make compatibility with the real workload verifiable."
   }

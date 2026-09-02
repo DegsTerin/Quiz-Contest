@@ -126,12 +126,12 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Quatro técnicos configuram 72 estações em 6 horas, mantendo produtividade constante e igual entre si. Em outra unidade, cinco técnicos trabalharão por 4 horas, mas uma restrição operacional reduzirá a produtividade de cada um em 20%. Quantas estações serão configuradas?",
     [
       "36 estações.",
-      "40 estações.",
-      "45 estações.",
       "48 estações.",
+      "45 estações.",
+      "40 estações.",
       "60 estações."
     ],
-    3,
+    1,
     "A produtividade original é 72 ÷ (4 × 6) = 3 estações por técnico-hora. Assim, 5 × 4 × 3 × 0,8 = 48."
   ]),
   makeQuestion([
@@ -157,11 +157,11 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     [
       "6 servidores e 12 estações.",
       "7 servidores e 11 estações.",
-      "8 servidores e 10 estações.",
       "9 servidores e 9 estações.",
+      "8 servidores e 10 estações.",
       "10 servidores e 8 estações."
     ],
-    2,
+    3,
     "Do sistema x + y = 18 e 4x + 2y = 52, obtém-se 2x + y = 26; subtraindo a primeira equação, x = 8 e y = 10."
   ]),
   makeQuestion([
@@ -243,61 +243,61 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "bruno-massaranduba-2026-difficult-17",
     "Conhecimentos Gerais",
     "Difícil",
-    "Um município compara duas fontes de energia. A fonte X tem menor custo imediato, mas maiores emissões; a fonte Y emite menos durante a operação, porém é intermitente e exige investimento em armazenamento. Qual análise é mais compatível com o desenvolvimento sustentável?",
+    "Considere as afirmações sobre a formação histórica e econômica de Massaranduba: I. A presença indígena na região antecedeu a chegada dos grupos europeus. II. Imigrantes alemães, italianos, poloneses e luso-brasileiros estabeleceram-se na região por volta de 1870. III. O cultivo irrigado do arroz tornou-se uma referência municipal, ao lado de uma atividade industrial diversificada. De acordo com a história oficial do município, está correto o que se afirma em:",
     [
-      "Escolher X apenas pelo menor custo inicial, sem avaliar impactos futuros.",
-      "Escolher Y apenas pela emissão operacional, ignorando confiabilidade e ciclo de vida.",
-      "Rejeitar ambas porque toda produção de energia gera algum impacto.",
-      "Avaliar custos e emissões ao longo do ciclo de vida, segurança do abastecimento e medidas para gerir a intermitência antes da decisão.",
-      "Adiar indefinidamente a decisão, pois critérios ambientais e econômicos nunca podem ser comparados."
+      "I, apenas.",
+      "II, apenas.",
+      "I e II, apenas.",
+      "I, II e III.",
+      "II e III, apenas."
     ],
     3,
-    "Sustentabilidade exige integrar dimensões ambiental, econômica e social, além de confiabilidade e impactos ao longo do ciclo de vida."
+    "As três afirmações correspondem à história oficial: povos indígenas já ocupavam a região, os grupos de imigrantes citados chegaram por volta de 1870 e a economia passou a combinar o destaque do arroz irrigado com atividades industriais diversificadas."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-18",
     "Conhecimentos Gerais",
     "Difícil",
-    "Em um estudo hipotético de uma região, a população passou de 80 mil para 100 mil habitantes. A parcela urbana aumentou de 60% para 75%. Qual conclusão decorre necessariamente desses dados?",
+    "Analise as afirmações sobre a Bacia Hidrográfica do Rio Itapocu: I. Sua área aproximada é de 3.160 km² e ela integra a Região Hidrográfica RH06. II. O território de Massaranduba está parcialmente inserido nessa bacia. III. A nascente mais distante é a do Rio Vermelho, em São Bento do Sul, e a foz do Itapocu fica em Barra Velha. Está correto o que se afirma em:",
     [
-      "A população urbana aumentou 15 mil habitantes e a rural permaneceu estável.",
-      "A população urbana aumentou 27 mil habitantes, enquanto a rural diminuiu 7 mil.",
-      "A população rural aumentou 20 mil habitantes.",
-      "O crescimento total ocorreu exclusivamente na área rural.",
-      "As populações urbana e rural cresceram na mesma proporção."
+      "I, apenas.",
+      "I, II e III.",
+      "II e III, apenas.",
+      "I e III, apenas.",
+      "III, apenas."
     ],
     1,
-    "Inicialmente havia 48 mil habitantes urbanos e 32 mil rurais; depois, 75 mil urbanos e 25 mil rurais. As variações são +27 mil e -7 mil."
+    "As três afirmações estão corretas: a bacia possui cerca de 3.160 km², integra a RH06, abrange parte de Massaranduba e se estende da nascente mais distante do Rio Vermelho, em São Bento do Sul, até a foz em Barra Velha."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-19",
     "Conhecimentos Gerais",
     "Difícil",
-    "Uma rota turística começa a receber visitantes acima da capacidade da infraestrutura local, com aumento de resíduos e pressão sobre áreas naturais. Qual resposta pública concilia turismo, economia e proteção ambiental?",
+    "Um relatório destaca a elevada participação de fontes renováveis na matriz elétrica brasileira e propõe ampliar a geração eólica e solar. Qual avaliação interpreta corretamente esse cenário sem confundir matriz elétrica com matriz energética?",
     [
-      "Proibir permanentemente toda atividade turística sem diagnóstico.",
-      "Ampliar a divulgação para aumentar ainda mais o fluxo antes de tratar os impactos.",
-      "Definir capacidade de visitação, melhorar saneamento e gestão de resíduos, monitorar impactos e envolver a comunidade local na distribuição de benefícios.",
-      "Transferir todos os custos ambientais aos moradores, sem participação dos empreendimentos.",
-      "Considerar apenas a receita imediata, pois impactos ecológicos não afetam a economia."
+      "A participação renovável na geração de eletricidade demonstra, por si só, que todos os usos de energia em transportes, indústria e residências já foram descarbonizados.",
+      "Como eólica e solar são renováveis, sua expansão dispensa planejamento de transmissão, flexibilidade operativa e análise dos impactos territoriais dos projetos.",
+      "A matriz elétrica trata das fontes usadas para gerar eletricidade, enquanto a matriz energética abrange também outros usos de energia; ampliar renováveis deve vir acompanhado de rede, armazenamento ou outras formas de flexibilidade, resiliência e avaliação socioambiental.",
+      "A elevada participação renovável torna desnecessária a diversificação das fontes elétricas, pois todas oferecem disponibilidade contínua e o mesmo perfil de geração.",
+      "Matriz elétrica e matriz energética são indicadores equivalentes; a única diferença entre eles é a unidade estatística empregada."
     ],
     2,
-    "A gestão sustentável combina limites baseados em capacidade, infraestrutura, monitoramento e participação comunitária, preservando o recurso que sustenta a atividade."
+    "A matriz elétrica é um subconjunto da matriz energética. Uma transição robusta combina expansão renovável com transmissão, flexibilidade, armazenamento quando adequado, adaptação a eventos extremos e avaliação dos efeitos sociais e ambientais."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-20",
     "Conhecimentos Gerais",
     "Difícil",
-    "Municípios do Vale do Itapocu compartilham uma bacia hidrográfica. Chuvas intensas a montante podem produzir impactos a jusante, além das fronteiras municipais. Qual estratégia enfrenta melhor esse tipo de risco?",
+    "Após episódios de chuva intensa, municípios de uma mesma bacia registram alagamentos urbanos, erosão a montante e elevação rápida do rio a jusante. Qual plano oferece a resposta pública mais consistente para reduzir o risco sem apenas transferi-lo entre localidades?",
     [
-      "Cada município ocultar seus dados para preservar autonomia.",
-      "Atuar apenas depois de cada desastre, sem rever ocupação do solo.",
-      "Transferir integralmente a responsabilidade aos moradores das áreas atingidas.",
-      "Substituir alertas por uma única obra, independentemente de estudos da bacia.",
-      "Coordenar monitoramento e alertas, compartilhar dados e integrar uso do solo, drenagem e defesa civil na escala da bacia."
+      "Priorizar a retificação do canal no município a jusante, deixando a ocupação do solo e o aumento da vazão a montante para uma etapa independente.",
+      "Manter alertas municipais separados, com critérios próprios, para evitar que dados hidrológicos de localidades diferentes sejam combinados.",
+      "Ampliar exclusivamente a microdrenagem urbana, tratando erosão, áreas de inundação e preparação da defesa civil em programas posteriores.",
+      "Suspender novas licenças apenas nas semanas seguintes a cada evento e retomar o padrão anterior quando o nível do rio se normalizar.",
+      "Compartilhar dados e limiares de alerta, mapear riscos na escala da bacia e integrar uso do solo, conservação a montante, drenagem, obras avaliadas tecnicamente e planos intermunicipais de defesa civil."
     ],
     4,
-    "Riscos hidrológicos atravessam limites administrativos; a gestão por bacia e a cooperação intermunicipal permitem prevenção e resposta coerentes."
+    "A gestão integrada considera como intervenções a montante alteram vazões e impactos a jusante. Monitoramento comum, ordenamento territorial, conservação, drenagem, obras justificadas por estudos e defesa civil coordenada formam uma estratégia complementar."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-21",
@@ -305,14 +305,14 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Difícil",
     "Após a instalação de um novo módulo de memória, um computador liga, não exibe vídeo e emite uma sequência de bipes documentada pelo fabricante como falha de RAM. Qual procedimento inicial é tecnicamente mais adequado?",
     [
-      "Formatar imediatamente o disco, pois o sistema operacional controla o POST.",
-      "Desativar o antivírus e repetir a inicialização.",
-      "Verificar compatibilidade e encaixe do módulo, testar um módulo conhecido e consultar o código do POST antes de alterar o armazenamento.",
-      "Substituir o monitor sem testar a memória, pois bipes nunca indicam hardware.",
-      "Atualizar aplicativos de escritório antes de desligar o equipamento."
+      "Redefinir o CMOS e atualizar o firmware da placa-mãe antes de verificar fisicamente o módulo recém-instalado.",
+      "Substituir primeiro a placa de vídeo e manter os módulos de memória na configuração atual durante o teste.",
+      "Desligar e desconectar o equipamento, adotar proteção contra descarga eletrostática, reassentar os módulos e testá-los individualmente ou com um módulo compatível conhecido como bom.",
+      "Reinstalar o sistema operacional para excluir falha de driver antes de abrir o gabinete.",
+      "Substituir a fonte de alimentação com base apenas na ausência de vídeo, sem isolar o componente indicado pelos bipes."
     ],
     2,
-    "A falha ocorre no POST, antes do carregamento do sistema operacional. O código de bipes direciona o diagnóstico para memória, encaixe ou compatibilidade."
+    "A falha ocorre no POST, antes do carregamento do sistema operacional. Depois de remover a alimentação e controlar a descarga eletrostática, reassentar e testar a RAM de forma isolada verifica primeiro o componente indicado pelo código de bipes."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-22",
@@ -335,11 +335,11 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Difícil",
     "Um nobreak é especificado em 1.000 VA, com fator de potência de saída 0,7, portanto suporta até 700 W. Os equipamentos ligados consomem 760 W. Qual avaliação está correta?",
     [
-      "A carga é segura porque 760 é menor que 1.000, independentemente das unidades.",
+      "A carga efetiva é 532 W, pois se deve multiplicar os 760 W dos equipamentos por 0,7, restando margem de 168 W.",
       "A carga excede a capacidade em watts; deve-se reduzir a carga ou dimensionar nobreak com potência ativa e autonomia adequadas.",
-      "O fator de potência aumenta automaticamente a capacidade para 1.700 W.",
-      "A autonomia será infinita porque a carga está expressa em watts.",
-      "Apenas a tensão de entrada determina se há sobrecarga."
+      "O excedente é de 60 VA e pode ser compensado apenas com baterias de maior capacidade, sem alterar a potência do nobreak.",
+      "A potência ativa disponível é aproximadamente 1.428 W, obtida por 1.000 ÷ 0,7, portanto há ampla margem.",
+      "A carga corresponde necessariamente a 760 VA e deixa 240 VA de margem, pois watts e volt-amperes são intercambiáveis nesse cálculo."
     ],
     1,
     "A capacidade ativa é 1.000 × 0,7 = 700 W. Uma carga de 760 W excede esse limite, mesmo que o valor numérico seja inferior a 1.000 VA."
@@ -393,16 +393,16 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "bruno-massaranduba-2026-difficult-27",
     "Conhecimentos Específicos",
     "Difícil",
-    "Dois prédios separados por 800 metros precisam de um enlace estável em ambiente com forte interferência eletromagnética e diferença de potencial elétrico entre aterramentos. Qual meio cabeado é mais adequado?",
+    "A tabela de roteamento contém 10.20.0.0/16 via gateway A, 10.20.30.0/24 via gateway B e uma rota padrão via gateway C. Desconsiderando métricas entre rotas de mesmo prefixo, por qual gateway será encaminhado um pacote destinado a 10.20.30.45?",
     [
-      "Par trançado de cobre em um único segmento de 800 metros.",
-      "Cabo telefónico sem blindagem, por ser imune a interferência.",
-      "Cabo coaxial compartilhado sem repetidores.",
-      "Fibra óptica compatível com a distância e os transceptores, por oferecer isolamento elétrico e imunidade à interferência eletromagnética.",
-      "Qualquer cabo metálico, desde que o endereço IP seja alterado."
+      "Pelo gateway A, porque a rota /16 foi apresentada antes da rota /24.",
+      "Pelo gateway C, porque a rota padrão é examinada antes das rotas específicas.",
+      "Pelos gateways A e B em balanceamento, porque as duas redes incluem o destino.",
+      "Pelo gateway B, porque o prefixo /24 é a correspondência mais específica para o destino.",
+      "Por nenhum gateway, porque 10.20.30.45 é um endereço de host e não aparece literalmente na tabela."
     ],
     3,
-    "A fibra atende maiores distâncias, não conduz corrente entre os prédios e é imune à interferência eletromagnética, desde que ópticas e orçamento do enlace sejam compatíveis."
+    "As rotas /16 e /24 correspondem ao endereço, mas o roteador escolhe a correspondência de prefixo mais longo. Como /24 é mais específico que /16, o pacote segue pelo gateway B; a rota padrão só seria usada sem correspondência mais específica."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-28",
@@ -427,12 +427,12 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     [
       "Aumentar ainda mais a potência de todos os pontos de acesso.",
       "Desativar a autenticação para reduzir quadros de gestão.",
-      "Executar levantamento de espectro, planear canais não sobrepostos e potências, manter segurança adequada e validar cobertura e roaming.",
+      "Executar levantamento de espectro, planejar canais não sobrepostos e potências, manter segurança adequada e validar cobertura e roaming.",
       "Configurar SSIDs diferentes para cada usuário.",
       "Substituir os endereços IPv4 por nomes DNS sem medir o rádio."
     ],
     2,
-    "Sinal forte não elimina contenção e interferência co-canal. Planeamento de canais e potência, baseado em medições, reduz sobreposição e retransmissões."
+    "Sinal forte não elimina contenção e interferência co-canal. Planejamento de canais e potência, baseado em medições, reduz sobreposição e retransmissões."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-30",
@@ -440,7 +440,7 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Difícil",
     "Clientes de uma nova VLAN recebem endereços 169.254.x.x. O servidor DHCP funciona em outra VLAN, e as VLANs existentes recebem endereços normalmente. A nova interface de roteamento não possui relay DHCP. Qual correção atende ao diagnóstico?",
     [
-      "Criar um registo DNS para cada cliente antes de ligar o cabo.",
+      "Criar um registro DNS para cada cliente antes de ligar o cabo.",
       "Configurar relay DHCP na interface da nova VLAN e confirmar a existência de um escopo correspondente no servidor.",
       "Desativar o roteamento entre todas as VLANs.",
       "Fixar o endereço 169.254.x.x como gateway padrão.",
@@ -455,11 +455,11 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Difícil",
     "Um IDS gera alerta de varredura a partir de uma estação de administração durante uma janela de inventário autorizada. Antes de classificar o evento como ataque, qual abordagem é mais robusta?",
     [
-      "Apagar o alerta para que ele não afete as métricas.",
-      "Bloquear permanentemente toda a rede administrativa com base em um único pacote.",
+      "Encerrar o alerta como falso positivo somente porque o horário coincide com a janela autorizada, sem verificar o ativo ou o padrão observado.",
+      "Bloquear a estação de forma permanente antes de conferir a autorização, preservando apenas o pacote que originou o alerta.",
       "Correlacionar horário, ativo de origem, autorização da mudança, padrão de tráfego e outros logs; documentar a decisão e ajustar a regra apenas se a evidência justificar.",
-      "Desativar o IDS porque todo alerta autorizado é falso.",
-      "Publicar as credenciais da estação para demonstrar transparência."
+      "Desabilitar globalmente a assinatura de varredura durante todas as janelas futuras, independentemente das redes e dos ativos autorizados.",
+      "Aumentar o limiar da regra com base apenas neste evento e manter a classificação original sem registrar a justificativa."
     ],
     2,
     "A correlação contextual distingue atividade autorizada de comportamento malicioso e permite calibrar a detecção sem eliminar evidências ou cobertura."
@@ -470,11 +470,11 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Difícil",
     "Uma estação apresenta processo suspeito, conexões para destino desconhecido e tentativas de acesso lateral. Qual sequência inicial preserva investigação e reduz o risco?",
     [
-      "Manter a estação livre na rede e aguardar novos sintomas por vários dias.",
-      "Desligar todos os servidores e apagar os logs centrais.",
+      "Reiniciar a estação para interromper o processo e somente depois coletar memória, conexões e demais evidências voláteis.",
+      "Cortar imediatamente a alimentação em qualquer situação, sem avaliar a necessidade de preservar dados voláteis ou seguir o procedimento de resposta.",
       "Isolar a estação da rede de forma controlada, preservar evidências conforme o procedimento, identificar o alcance, proteger credenciais a partir de sistema confiável e só então erradicar e recuperar.",
-      "Enviar o arquivo suspeito a todos os usuários para comparação.",
-      "Reinstalar imediatamente sem registrar processos, conexões ou indicadores."
+      "Alterar as credenciais a partir da própria estação suspeita antes de isolá-la, para manter acesso aos serviços durante a análise.",
+      "Recriar imediatamente a estação a partir de uma imagem limpa e investigar o alcance somente se o comportamento reaparecer."
     ],
     2,
     "A contenção limita movimento lateral; a preservação e análise de evidências sustentam o diagnóstico antes da erradicação e recuperação controladas."
@@ -483,16 +483,16 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "bruno-massaranduba-2026-difficult-33",
     "Conhecimentos Específicos",
     "Difícil",
-    "Uma política realiza backup completo no domingo e backups incrementais na segunda, terça e quarta-feira. Para restaurar o estado ao final de quarta-feira, quais conjuntos são necessários?",
+    "No Windows 10, uma pasta compartilhada concede Controle Total nas permissões de compartilhamento. No NTFS, o grupo Suporte possui Permitir Modificar, enquanto o grupo Temporários possui uma entrada explícita Negar Gravação. Um usuário pertence aos dois grupos e acessa a pasta pela rede. Qual será o resultado para uma tentativa de gravar um arquivo?",
     [
-      "Apenas o incremental de quarta-feira.",
-      "O completo de domingo e apenas o incremental de quarta-feira.",
-      "Os incrementais de segunda a quarta, sem o completo.",
-      "O completo de domingo e os incrementais de segunda, terça e quarta, aplicados na sequência correta.",
-      "Qualquer backup diferencial anterior ao domingo."
+      "A gravação será permitida, pois Controle Total no compartilhamento substitui qualquer restrição configurada no NTFS.",
+      "A gravação será permitida, pois Permitir Modificar em um grupo cancela a negação recebida de outro grupo.",
+      "Todo acesso será negado, inclusive leitura e execução, porque uma negação de Gravação equivale a Negar Controle Total.",
+      "A gravação será negada: o acesso pela rede combina os limites do compartilhamento e do NTFS, e a negação explícita de Gravação prevalece sobre a permissão conflitante.",
+      "O resultado dependerá da ordem em que os grupos foram criados, pois o Windows aplica apenas a última entrada de grupo."
     ],
     3,
-    "Cada incremental contém alterações desde o backup anterior. A restauração exige a base completa e toda a cadeia incremental posterior, na ordem."
+    "Controle Total no compartilhamento não amplia o que o NTFS permite. Ao combinar as associações de grupo, a negação explícita do direito de gravação prevalece sobre a permissão conflitante; os demais direitos não negados devem ser avaliados separadamente."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-34",
@@ -500,11 +500,11 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Difícil",
     "Uma transação transfere saldo entre duas contas com dois comandos UPDATE. O primeiro é executado, mas o segundo falha. Qual desenho preserva a atomicidade?",
     [
-      "Confirmar cada UPDATE antes de executar o próximo.",
+      "Executar cada UPDATE em uma transação própria e registrar uma compensação para processamento posterior caso o segundo falhe.",
       "Executar ambos na mesma transação, aplicar COMMIT somente após os dois terem sucesso e ROLLBACK se qualquer etapa falhar.",
-      "Substituir COMMIT por GRANT para confirmar os valores.",
-      "Usar apenas SELECT, pois consultas alteram saldos automaticamente.",
-      "Apagar a tabela quando ocorrer erro para evitar inconsistência."
+      "Criar um SAVEPOINT após o primeiro UPDATE e confirmar a transação mesmo quando o segundo falhar, mantendo o primeiro resultado.",
+      "Usar nível de isolamento SERIALIZABLE, mas deixar o autocommit ativo para cada UPDATE executado.",
+      "Adiar a verificação das restrições até o final, mantendo cada UPDATE confirmado separadamente."
     ],
     1,
     "A atomicidade exige que a unidade de trabalho seja totalmente confirmada ou totalmente desfeita; COMMIT e ROLLBACK controlam esses resultados."
@@ -515,11 +515,11 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Difícil",
     "Uma equipe precisa consultar nome e situação de equipamentos, mas não pode ver custos nem alterar registros. Qual solução aplica melhor o menor privilégio em um SGBD relacional?",
     [
-      "Conceder privilégios administrativos sobre todo o banco.",
-      "Entregar uma cópia completa do banco sem controle de acesso.",
+      "Conceder SELECT diretamente na tabela completa e ocultar a coluna de custos somente na interface da aplicação.",
+      "Criar uma rotina executada com privilégios administrativos e compartilhar suas credenciais com a equipe de consulta.",
       "Criar uma visão apenas com as colunas autorizadas e conceder SELECT nessa visão, sem privilégios diretos desnecessários nas tabelas-base.",
-      "Conceder DELETE nas tabelas e ocultar o botão na interface.",
-      "Armazenar a senha do administrador em uma planilha compartilhada."
+      "Conceder SELECT e UPDATE na tabela-base, restringindo as alterações por uma orientação documentada aos usuários.",
+      "Criar uma cópia periódica da tabela com todas as colunas e conceder acesso de leitura irrestrito a essa cópia."
     ],
     2,
     "A visão limita a projeção dos dados, e a concessão restrita de SELECT reduz a superfície de acesso às operações e colunas necessárias."
@@ -530,11 +530,11 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Difícil",
     "Toda alteração de situação de um equipamento deve gerar automaticamente um registro de auditoria, mesmo quando a alteração vier de aplicações diferentes. Qual objeto do banco é mais diretamente apropriado?",
     [
-      "Uma visão sem qualquer tabela de origem.",
+      "Uma tarefa agendada que consulta a tabela a cada hora e infere alterações comparando o estado mais recente.",
       "Um trigger associado ao evento UPDATE da tabela, cuidadosamente definido para registrar a mudança.",
-      "Uma permissão GRANT executada uma vez por mês.",
-      "Um índice usado exclusivamente para apagar registros antigos.",
-      "Um backup completo iniciado por cada comando SELECT."
+      "Um procedimento armazenado de atualização, sem impedir que as aplicações continuem executando UPDATE diretamente na tabela.",
+      "Uma visão com WITH CHECK OPTION que apresente somente os equipamentos alterados no dia.",
+      "Uma coluna calculada que derive a situação atual, sem registrar os valores anteriores."
     ],
     1,
     "Triggers são executados automaticamente em eventos definidos e podem centralizar auditoria de alterações feitas por diferentes clientes."
@@ -543,16 +543,16 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "bruno-massaranduba-2026-difficult-37",
     "Conhecimentos Específicos",
     "Difícil",
-    "Classifique, pela função principal, os comandos SQL CREATE TABLE, INSERT, GRANT e COMMIT, nessa ordem.",
+    "Um projeto de banco de dados requer, nesta ordem: I. uma abstração reutilizável baseada em SELECT; II. uma rotina parametrizada capaz de agrupar comandos; III. execução automática quando ocorrer UPDATE em uma tabela; IV. um cálculo reutilizável que retorne um valor. Quais objetos atendem, respectivamente, aos requisitos I, II, III e IV?",
     [
-      "DDL, DML, DCL e TCL.",
-      "DML, DDL, DQL e DCL.",
-      "DCL, DQL, DDL e DML.",
-      "TCL, DCL, DML e DDL.",
-      "DQL, TCL, DCL e DDL."
+      "View, procedimento armazenado, trigger e função.",
+      "Função, view, procedimento armazenado e trigger.",
+      "Procedimento armazenado, função, view e trigger.",
+      "View, trigger, função e procedimento armazenado.",
+      "Trigger, procedimento armazenado, função e view."
     ],
     0,
-    "CREATE TABLE define estrutura (DDL), INSERT manipula dados (DML), GRANT controla privilégios (DCL) e COMMIT controla transações (TCL)."
+    "A view encapsula uma consulta; o procedimento armazenado agrupa comandos e pode receber parâmetros; o trigger reage automaticamente ao UPDATE; e a função encapsula um cálculo que retorna valor."
   ]),
   makeQuestion([
     "bruno-massaranduba-2026-difficult-38",
@@ -590,11 +590,11 @@ const MASSARANDUBA_BRUNO_DIFFICULT_QUESTIONS = [
     "Difícil",
     "Uma aquisição exige que cada computador opere simultaneamente dois monitores 4K a 60 Hz e um aplicativo com aceleração por hardware. Qual especificação técnica reduz melhor o risco de incompatibilidade?",
     [
-      "Exigir apenas que o equipamento seja descrito como \"moderno\".",
-      "Informar apenas a capacidade do disco, pois vídeo independe das interfaces.",
+      "Exigir duas saídas DisplayPort 1.2, sem verificar se o controlador gráfico mantém simultaneamente 4K a 60 Hz nas duas portas.",
+      "Definir apenas a memória de vídeo mínima, deixando interfaces, largura de banda e suporte dos drivers para a etapa de instalação.",
       "Definir quantidade e versão das saídas, resolução e frequência simultâneas suportadas, capacidade gráfica, memória, sistema e drivers compatíveis, e exigir comprovação antes da aceitação.",
-      "Aceitar qualquer adaptador sem verificar largura de banda ou suporte do controlador.",
-      "Escolher exclusivamente pela cor do gabinete."
+      "Aceitar dois conectores fisicamente compatíveis como prova suficiente, mesmo sem garantia de operação simultânea na resolução exigida.",
+      "Homologar qualquer estação com um adaptador USB-C duplo, verificando apenas o formato do conector e não o modo alternativo ou a largura de banda."
     ],
     2,
     "Requisitos mensuráveis de interfaces, largura de banda, controlador, software e validação de aceitação permitem verificar a compatibilidade com a carga real."

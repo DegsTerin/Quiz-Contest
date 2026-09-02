@@ -3,12 +3,10 @@ const ACTIVE_LANGUAGE_KEY = "static-quiz-system-active-language";
 const ACTIVE_THEME_KEY = "static-quiz-system-theme";
 const ACTIVE_DIFFICULTY_KEY_PREFIX = "static-quiz-system-active-difficulty";
 const STORAGE_KEY_PREFIX = "static-quiz-system-state";
-const LEGACY_BRUNO_MEDIUM_STORAGE_KEY = "static-quiz-system-state-v3-bruno";
 const LEGACY_MARIA_HARD_STORAGE_KEY = "static-quiz-system-state-v2-maria";
-const BRUNO_MEDIUM_MIGRATION_KEY = "static-quiz-system-migrated-v4-bruno-medium";
 const MARIA_HARD_MIGRATION_KEY = "static-quiz-system-migrated-v3-maria-hard";
 const PROFILE_STORAGE_VERSIONS = {
-  bruno: "v4",
+  bruno: "v5",
   maria: "v3"
 };
 const DEFAULT_PROFILE_ID = "bruno";
@@ -368,29 +366,11 @@ function loadState() {
   const currentState = parseSavedState(getStorageKey());
 
   if (currentState) {
-    if (activeProfileId === "bruno" && activeDifficultyId === "medium") {
-      localStorage.setItem(BRUNO_MEDIUM_MIGRATION_KEY, "1");
-    }
-
     if (activeProfileId === "maria" && activeDifficultyId === "hard") {
       localStorage.setItem(MARIA_HARD_MIGRATION_KEY, "1");
     }
 
     return currentState;
-  }
-
-  if (
-    activeProfileId === "bruno"
-    && activeDifficultyId === "medium"
-    && !localStorage.getItem(BRUNO_MEDIUM_MIGRATION_KEY)
-  ) {
-    const legacyState = parseSavedState(LEGACY_BRUNO_MEDIUM_STORAGE_KEY);
-
-    if (legacyState) {
-      localStorage.setItem(getStorageKey(), JSON.stringify(legacyState));
-      localStorage.setItem(BRUNO_MEDIUM_MIGRATION_KEY, "1");
-      return legacyState;
-    }
   }
 
   if (

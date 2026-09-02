@@ -74,7 +74,7 @@ This is a focused in-session learning loop rather than a time-based spaced-repet
 
 | Profile | Active bank | Main-session behaviour |
 | --- | --- | --- |
-| Bruno | Three 40-question, author-created and non-official practice banks aligned with Massaranduba Municipal Public Competition Notice 001/2026 for IT Technician | Easy, Medium or Hard; fixed written-exam order with stable alternatives and isolated progress |
+| Bruno | Three 40-question, original and non-official practice banks aligned with Massaranduba Municipal Public Competition Notice 001/2026 for IT Technician | Easy, Medium or Hard; fixed written-exam order with stable alternatives and isolated progress |
 | Maria | Three 40-question banks covering General Knowledge, Teaching Practice Methodology, AEE/Mixed and Libras Interpreting | Easy, Medium or Hard; randomised, streak-aware study order with isolated progress |
 
 ### Bruno written-exam sequence
@@ -87,9 +87,21 @@ This is a focused in-session learning loop rather than a time-based spaced-repet
 | 21–40 | Role-Specific Knowledge | 20 | 3 | 60 |
 | **Total** |  | **40** |  | **100** |
 
-Every question has five alternatives and one designated answer. Each Bruno difficulty follows the same 8/8/4/20 subject distribution and balances the displayed answer key across A–E. Bruno's questions and explanations are independent study material; they are not copied from an official test and do not constitute an official answer key.
+Every question has five alternatives and one designated answer. Each Bruno difficulty follows the same 8/8/4/20 subject distribution, balances the displayed answer key across A–E and avoids runs longer than two identical answer letters. Bruno's questions and explanations are independent study material; they are not copied from an official test and do not constitute an official answer key.
 
 The dashboard intentionally reports raw correct-answer counts and accuracy. It does not calculate the notice-weighted score or determine whether an official pass threshold has been met.
+
+### Bruno editorial method
+
+The 120-question corpus was reviewed with official evidence as the authority and preserved papers as secondary editorial references:
+
+- the [current Massaranduba notice and organiser page](https://portal.institutotupy.com.br/edital/ver/97) define the binding 8/8/4/20 matrix, programme, five-option format, scoring and subject order;
+- the [Massaranduba 2020 competition archive](https://concursos.furb.br/informacoes/52/) and a [preserved copy of its complete IT Technician paper](https://www.pciconcursos.com.br/provas/download/tecnico-em-informatica-prefeitura-massaranduba-sc-furb-2020) provide the closest municipal precedent for the same role;
+- the complete [Massaranduba 2015 IT Technician paper](https://www.pciconcursos.com.br/provas/download/tecnico-em-informatica-prefeitura-massaranduba-sc-nubes-2015) provides an older local precedent for municipal context and question forms, but its four-option 5/5/5/25 structure is not used as the 2026 matrix;
+- the Instituto Tupy archives for [Massaranduba 2023](https://portal.institutotupy.com.br/edital/ver/30), [São Bento do Sul 2026](https://portal.institutotupy.com.br/edital/ver/79), [Jaraguá do Sul City Council 2024](https://portal.institutotupy.com.br/edital/ver/34) and [ISSEM Jaraguá do Sul 2024](https://portal.institutotupy.com.br/edital/ver/37) were used to compare paper structures, final answer keys and recurring IT topics;
+- local-history and regional-geography statements were checked against the [official Massaranduba tourism history](https://turismo.massaranduba.sc.gov.br/pagina-185/), the municipality's [record of its first and restored administrations](https://servicos.massaranduba.sc.gov.br/pagina-7514/) and [AMVALI's Itapocu watershed overview](https://amvali.org.br/pagina-6747/).
+
+The [Instituto Tupy FAQ](https://portal.institutotupy.com.br/faq) explains that completed question booklets remain available to candidates for only a limited period. Where an official booklet had expired, preserved copies — including the complete [ISSEM 2024 IT Technician paper](https://www.pciconcursos.com.br/provas/download/tecnico-em-informatica-prefeitura-jaragua-do-sul-sc-issem-instituto-tupy-2024) and the [Massaranduba 2023 Administrative Assistant paper](https://www.passeidireto.com/arquivo/130514966/auxiliar-administrativo-massaranduba-banca-instituto-tupy-2023) — were consulted only to study editorial form, such as shared source texts, concise scenarios, statement sets, exceptions and technically adjacent distractors. Official notices, appeal decisions and final answer keys remained authoritative for structure and answer-quality checks. No source wording was copied, and the project has no affiliation with or endorsement from the organiser or the Municipality of Massaranduba.
 
 ### Maria mixed-profile sequence
 
@@ -130,9 +142,9 @@ The application stores only study state and interface preferences in the current
 
 | LocalStorage key | Purpose |
 | --- | --- |
-| <code>static-quiz-system-state-v4-bruno-easy</code> | Bruno's Easy totals and per-question progress |
-| <code>static-quiz-system-state-v4-bruno-medium</code> | Bruno's Medium totals and per-question progress |
-| <code>static-quiz-system-state-v4-bruno-hard</code> | Bruno's Hard totals and per-question progress |
+| <code>static-quiz-system-state-v5-bruno-easy</code> | Bruno's Easy totals and per-question progress |
+| <code>static-quiz-system-state-v5-bruno-medium</code> | Bruno's Medium totals and per-question progress |
+| <code>static-quiz-system-state-v5-bruno-hard</code> | Bruno's Hard totals and per-question progress |
 | <code>static-quiz-system-state-v3-maria-easy</code> | Maria's Easy totals and per-question progress |
 | <code>static-quiz-system-state-v3-maria-medium</code> | Maria's Medium totals and per-question progress |
 | <code>static-quiz-system-state-v3-maria-hard</code> | Maria's Hard totals and per-question progress |
@@ -146,7 +158,7 @@ Per-question state records correct and incorrect totals, the current streak, the
 
 <code>Reset Progress</code> removes only the active profile and difficulty's versioned progress record. Every other mode and the interface preferences remain available.
 
-Compatible Bruno v3 progress is copied once into Medium. Compatible records from Maria's former 60-question v2 bank are filtered to the selected Hard questions and copied once; migration markers prevent a later reset from importing legacy progress again.
+Bruno v5 deliberately starts with fresh progress because the evidence-led revision materially changes questions and alternatives; earlier Bruno records remain browser-local but are not imported into the revised banks. Compatible records from Maria's former 60-question v2 bank are filtered to the selected Hard questions and copied once; a migration marker prevents a later reset from importing that legacy progress again.
 
 LocalStorage is browser-local, unencrypted and removable through browser settings. The application does not request sensitive personal data, and progress should not be treated as a portable backup.
 
@@ -197,7 +209,7 @@ These implementation details are not a formal WCAG conformance claim.
 | <code>maria-easy-questions-en.js</code> | en-GB translations for Maria's Easy bank |
 | <code>maria-hard-questions-en.js</code> | Preserved translations for Maria's FURB source corpus |
 | <code>maria-mode-translations-en.js</code> | Runtime en-GB spelling normalisation for selected Maria questions |
-| <code>scripts/validate-question-banks.js</code> | Dependency-free regression checks for bank, translation, ordering and preservation invariants |
+| <code>scripts/validate-question-banks.js</code> | Dependency-free regression checks for bank, translation, ordering, answer-key and preservation invariants |
 | <code>docs/quiz-contest-dark-en-gb.gif</code> | Animated README demonstration |
 | <code>LICENSE</code> | MIT licence terms and copyright notice |
 
@@ -245,8 +257,8 @@ A safe content or engine change should also include:
 - JavaScript syntax checks for every script;
 - a browser smoke test in pt-BR and en-GB;
 - a full-session check for both profiles;
-- the checked-in bank validation, which covers all six modes, counts, order, answer balance, five-option shape, IDs, translation coverage and Maria source preservation;
-- a LocalStorage isolation and legacy-migration check across both profiles and all difficulties.
+- the checked-in bank validation, which covers all six modes, counts, order, answer balance and runs, five-option shape, IDs, translation coverage and Maria source preservation;
+- a LocalStorage version-isolation check across both profiles and Maria's compatible legacy migration.
 
 Running these checks through CI is the highest-priority engineering improvement.
 
