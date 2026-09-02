@@ -2,16 +2,16 @@
   <h1>Quiz Contest</h1>
   <p><strong>A dependency-free, bilingual browser application for Brazilian public-exam preparation, deterministic written-exam sessions and LocalStorage-backed mistake review.</strong></p>
   <p>
-    <a href="https://degsterin.github.io/quiz-contest/"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-GitHub%20Pages-2ea44f?style=flat-square&logo=github"></a>
+    <a href="https://degsterin.github.io/Quiz-Contest/"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-GitHub%20Pages-2ea44f?style=flat-square&logo=github"></a>
     <img alt="Vanilla JavaScript" src="https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?style=flat-square&logo=javascript&logoColor=111111">
     <img alt="LocalStorage persistence" src="https://img.shields.io/badge/persistence-LocalStorage-1d6f5f?style=flat-square">
     <img alt="Portuguese and British English" src="https://img.shields.io/badge/i18n-pt--BR%20%7C%20en--GB-2b2f31?style=flat-square">
-    <a href="LICENSE"><img alt="MIT licence" src="https://img.shields.io/github/license/DegsTerin/quiz-contest?style=flat-square"></a>
+    <a href="LICENSE"><img alt="MIT licence" src="https://img.shields.io/github/license/DegsTerin/Quiz-Contest?style=flat-square"></a>
   </p>
   <p>
-    <a href="https://degsterin.github.io/quiz-contest/">Open the live application</a>
+    <a href="https://degsterin.github.io/Quiz-Contest/">Open the live application</a>
     ·
-    <a href="https://github.com/DegsTerin/quiz-contest">Browse the source</a>
+    <a href="https://github.com/DegsTerin/Quiz-Contest">Browse the source</a>
   </p>
 </div>
 
@@ -234,8 +234,8 @@ These implementation details are not a formal WCAG conformance claim.
 No dependency installation is required.
 
 ~~~bash
-git clone https://github.com/DegsTerin/quiz-contest.git
-cd quiz-contest
+git clone https://github.com/DegsTerin/Quiz-Contest.git
+cd Quiz-Contest
 python -m http.server 8000
 ~~~
 
@@ -245,7 +245,7 @@ Opening <code>index.html</code> directly is also supported by the current archit
 
 ## Deployment
 
-The live application is available at [degsterin.github.io/quiz-contest](https://degsterin.github.io/quiz-contest/).
+The live application is available at [degsterin.github.io/Quiz-Contest](https://degsterin.github.io/Quiz-Contest/).
 
 The repository keeps <code>index.html</code> and all runtime assets at the root, so the same files can be served by GitHub Pages or another static host. There is no compilation step or generated distribution directory.
 
