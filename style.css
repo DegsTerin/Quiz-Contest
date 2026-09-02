@@ -181,12 +181,14 @@ html[data-theme="dark"] body {
 .language-icon {
   width: 21px;
   height: 21px;
+  transform: translate(-2px, -2px);
+  transition: color 0.18s ease;
 }
 
 .language-code {
   position: absolute;
-  right: 4px;
-  bottom: 3px;
+  right: 6px;
+  bottom: 6px;
   font-size: 0.52rem;
   font-weight: 800;
   line-height: 1;
@@ -208,6 +210,10 @@ html[data-theme="dark"] body {
 
 .language-toggle-btn[data-language="en"] .language-code-en {
   display: block;
+}
+
+.language-toggle-btn[data-language="en"] .language-icon {
+  color: var(--accent);
 }
 
 .difficulty-icon {

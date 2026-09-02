@@ -308,10 +308,10 @@ for (const source of scriptSources) {
   }
 }
 const appScriptSource = scriptSources.find((source) => source.startsWith("app.js?"));
-const expectedAppRevisionToken = "app.js?v=20260902-icon-controls7";
+const expectedAppRevisionToken = "app.js?v=20260902-icon-controls8";
 check(appScriptSource === expectedAppRevisionToken, `index.html: app.js must use the ${expectedAppRevisionToken.split("?")[1]} cache token`);
 const stylesheetSource = indexSource.match(/<link rel="stylesheet" href="([^"]+)">/)?.[1];
-const expectedStylesheetRevisionToken = "style.css?v=20260902-icon-controls7";
+const expectedStylesheetRevisionToken = "style.css?v=20260902-icon-controls8";
 check(stylesheetSource === expectedStylesheetRevisionToken, `index.html: style.css must use the ${expectedStylesheetRevisionToken.split("?")[1]} cache token`);
 check(
   scriptSources.filter((source) => revisedAssetNames.has(source.split("?")[0])).length === revisedAssetNames.size,
