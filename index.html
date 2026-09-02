@@ -8,7 +8,7 @@
     const savedTheme = localStorage.getItem("static-quiz-system-theme");
     document.documentElement.dataset.theme = savedTheme || "dark";
   </script>
-  <link rel="stylesheet" href="style.css?v=20260902-theme-row1">
+  <link rel="stylesheet" href="style.css?v=20260902-icon-controls2">
 </head>
 <body>
   <main class="app-shell">
@@ -17,22 +17,40 @@
         <p class="eyebrow" data-i18n="eyebrow">Treinador de estudos no navegador</p>
         <div class="switch-row">
           <div class="profile-switch" role="group" aria-label="Selecionar perfil do quiz" data-i18n-aria-label="profileSwitchLabel">
-            <button class="profile-btn active" type="button" data-profile="bruno" aria-pressed="true">Bruno</button>
-            <button class="profile-btn" type="button" data-profile="maria" aria-pressed="false">Maria</button>
+            <button class="profile-btn active" type="button" data-profile="bruno" aria-label="Bruno" title="Bruno" aria-pressed="true">
+              <span class="profile-icon" aria-hidden="true">B</span>
+            </button>
+            <button class="profile-btn" type="button" data-profile="maria" aria-label="Maria" title="Maria" aria-pressed="false">
+              <span class="profile-icon" aria-hidden="true">M</span>
+            </button>
           </div>
           <div class="language-switch" role="group" aria-label="Selecionar idioma" data-i18n-aria-label="languageSwitchLabel">
-            <button class="language-btn active" type="button" data-language="pt" aria-pressed="true">PT</button>
-            <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
+            <button class="language-btn active" type="button" data-language="pt" aria-label="Português (Brasil)" title="Português (Brasil)" aria-pressed="true">
+              <span class="language-icon" aria-hidden="true">pt</span>
+            </button>
+            <button class="language-btn" type="button" data-language="en" aria-label="English (United Kingdom)" title="English (United Kingdom)" aria-pressed="false">
+              <span class="language-icon" aria-hidden="true">en</span>
+            </button>
           </div>
           <div class="mode-controls">
-            <button id="difficulty-toggle-btn" class="difficulty-toggle-btn" type="button" aria-label="Dificuldade atual: Fácil. Ativar Médio.">
-              <span data-i18n="difficultyToggleLabel">Dificuldade:</span>
-              <strong id="difficulty-toggle-value">Fácil</strong>
-              <span class="difficulty-toggle-chevron" aria-hidden="true">›</span>
+            <button id="difficulty-toggle-btn" class="difficulty-toggle-btn" type="button" data-difficulty="easy" aria-label="Dificuldade atual: Fácil. Ativar Médio.">
+              <span class="difficulty-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+              <span class="visually-hidden" data-i18n="difficultyToggleLabel">Dificuldade:</span>
+              <strong id="difficulty-toggle-value" class="visually-hidden">Fácil</strong>
             </button>
-            <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-pressed="false" data-i18n-aria-label="themeToggleLabel">
-              <span class="theme-toggle-icon" aria-hidden="true"></span>
-              <span class="theme-toggle-label" data-i18n="themeToggle">Tema escuro</span>
+            <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-pressed="false" data-i18n-aria-label="themeToggleLabel" data-i18n-title="themeToggleLabel" title="Alternar modo escuro">
+              <svg class="control-icon theme-state-icon theme-sun-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+              </svg>
+              <svg class="control-icon theme-state-icon theme-moon-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M20.5 14.4A8.5 8.5 0 0 1 9.6 3.5 8.5 8.5 0 1 0 20.5 14.4z"></path>
+              </svg>
+              <span class="theme-toggle-label visually-hidden" data-i18n="themeToggle">Tema escuro</span>
             </button>
           </div>
         </div>
@@ -130,6 +148,6 @@
   <script src="maria-hard-questions-en.js?v=20260902-difficulty2"></script>
   <script src="maria-easy-questions-en.js?v=20260902-difficulty2"></script>
   <script src="maria-mode-translations-en.js?v=20260902-difficulty2"></script>
-  <script src="app.js?v=20260902-evidence2"></script>
+  <script src="app.js?v=20260902-icon-controls2"></script>
 </body>
 </html>

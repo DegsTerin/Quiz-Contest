@@ -177,6 +177,7 @@ const elements = {
   themeToggleBtn: document.getElementById("theme-toggle-btn"),
   translatedText: document.querySelectorAll("[data-i18n]"),
   translatedAriaLabels: document.querySelectorAll("[data-i18n-aria-label]"),
+  translatedTitles: document.querySelectorAll("[data-i18n-title]"),
   startAllBtn: document.getElementById("start-all-btn"),
   reviewModeBtn: document.getElementById("review-mode-btn"),
   resetProgressBtn: document.getElementById("reset-progress-btn"),
@@ -964,6 +965,10 @@ function applyStaticTranslations() {
   elements.translatedAriaLabels.forEach((element) => {
     element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
   });
+
+  elements.translatedTitles.forEach((element) => {
+    element.setAttribute("title", t(element.dataset.i18nTitle));
+  });
 }
 
 function getDifficultyModeLabel(difficultyId) {
@@ -985,11 +990,15 @@ function updateDifficultyUi() {
   const currentLabel = getDifficultyModeLabel(activeDifficultyId);
   const nextLabel = getDifficultyModeLabel(nextDifficultyId);
 
-  elements.difficultyToggleValue.textContent = currentLabel;
-  elements.difficultyToggleBtn.setAttribute("aria-label", t("difficultyToggleAriaLabel", {
+  const accessibleLabel = t("difficultyToggleAriaLabel", {
     current: currentLabel,
     next: nextLabel
-  }));
+  });
+
+  elements.difficultyToggleValue.textContent = currentLabel;
+  elements.difficultyToggleBtn.dataset.difficulty = activeDifficultyId;
+  elements.difficultyToggleBtn.setAttribute("aria-label", accessibleLabel);
+  elements.difficultyToggleBtn.setAttribute("title", accessibleLabel);
 }
 
 function updateProfileUi() {

@@ -295,8 +295,7 @@ const revisedAssetNames = new Set([
   "bruno-difficult-questions.js",
   "bruno-hard-questions-en.js",
   "bruno-easy-questions-en.js",
-  "bruno-difficult-questions-en.js",
-  "app.js"
+  "bruno-difficult-questions-en.js"
 ]);
 const expectedRevisionToken = "v=20260902-evidence2";
 for (const source of scriptSources) {
@@ -305,6 +304,9 @@ for (const source of scriptSources) {
     check(query === expectedRevisionToken, `index.html: ${assetName} must use the ${expectedRevisionToken} cache token`);
   }
 }
+const appScriptSource = scriptSources.find((source) => source.startsWith("app.js?"));
+const expectedAppRevisionToken = "app.js?v=20260902-icon-controls2";
+check(appScriptSource === expectedAppRevisionToken, `index.html: app.js must use the ${expectedAppRevisionToken.split("?")[1]} cache token`);
 check(
   scriptSources.filter((source) => revisedAssetNames.has(source.split("?")[0])).length === revisedAssetNames.size,
   "index.html: one or more revised Bruno assets are missing"
