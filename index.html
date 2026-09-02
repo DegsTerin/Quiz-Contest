@@ -8,7 +8,7 @@
     const savedTheme = localStorage.getItem("static-quiz-system-theme");
     document.documentElement.dataset.theme = savedTheme || "dark";
   </script>
-  <link rel="stylesheet" href="style.css?v=20260902-icon-controls2">
+  <link rel="stylesheet" href="style.css?v=20260902-icon-controls7">
 </head>
 <body>
   <main class="app-shell">
@@ -18,20 +18,20 @@
         <div class="switch-row">
           <div class="profile-switch" role="group" aria-label="Selecionar perfil do quiz" data-i18n-aria-label="profileSwitchLabel">
             <button class="profile-btn active" type="button" data-profile="bruno" aria-label="Bruno" title="Bruno" aria-pressed="true">
-              <span class="profile-icon" aria-hidden="true">B</span>
+              Bruno
             </button>
             <button class="profile-btn" type="button" data-profile="maria" aria-label="Maria" title="Maria" aria-pressed="false">
-              <span class="profile-icon" aria-hidden="true">M</span>
+              Maria
             </button>
           </div>
-          <div class="language-switch" role="group" aria-label="Selecionar idioma" data-i18n-aria-label="languageSwitchLabel">
-            <button class="language-btn active" type="button" data-language="pt" aria-label="Português (Brasil)" title="Português (Brasil)" aria-pressed="true">
-              <span class="language-icon" aria-hidden="true">pt</span>
-            </button>
-            <button class="language-btn" type="button" data-language="en" aria-label="English (United Kingdom)" title="English (United Kingdom)" aria-pressed="false">
-              <span class="language-icon" aria-hidden="true">en</span>
-            </button>
-          </div>
+          <button id="language-toggle-btn" class="language-toggle-btn" type="button" data-language="pt" aria-label="Idioma atual: Português (Brasil). Ativar Inglês (Reino Unido)." title="Idioma atual: Português (Brasil). Ativar Inglês (Reino Unido).">
+            <svg class="control-icon language-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+            </svg>
+            <span class="language-code language-code-pt" aria-hidden="true">pt</span>
+            <span class="language-code language-code-en" aria-hidden="true">en</span>
+          </button>
           <div class="mode-controls">
             <button id="difficulty-toggle-btn" class="difficulty-toggle-btn" type="button" data-difficulty="easy" aria-label="Dificuldade atual: Fácil. Ativar Médio.">
               <span class="difficulty-icon" aria-hidden="true">
@@ -148,6 +148,6 @@
   <script src="maria-hard-questions-en.js?v=20260902-difficulty2"></script>
   <script src="maria-easy-questions-en.js?v=20260902-difficulty2"></script>
   <script src="maria-mode-translations-en.js?v=20260902-difficulty2"></script>
-  <script src="app.js?v=20260902-icon-controls2"></script>
+  <script src="app.js?v=20260902-icon-controls7"></script>
 </body>
 </html>

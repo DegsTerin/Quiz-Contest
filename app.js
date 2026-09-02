@@ -23,6 +23,11 @@ const I18N = {
     eyebrow: "Treinador de estudos no navegador",
     profileSwitchLabel: "Selecionar perfil do quiz",
     languageSwitchLabel: "Selecionar idioma",
+    languageToggleAriaLabel: "Idioma atual: {current}. Ativar {next}.",
+    languageNames: {
+      pt: "Português (Brasil)",
+      en: "Inglês (Reino Unido)"
+    },
     difficultyToggleLabel: "Dificuldade:",
     difficultyToggleAriaLabel: "Dificuldade atual: {current}. Ativar {next}.",
     difficultySelectedMessage: "Dificuldade alterada para {difficulty}. Clique em “Iniciar Quiz Completo” para começar.",
@@ -97,6 +102,11 @@ const I18N = {
     eyebrow: "Browser-based study trainer",
     profileSwitchLabel: "Select quiz profile",
     languageSwitchLabel: "Select language",
+    languageToggleAriaLabel: "Current language: {current}. Switch to {next}.",
+    languageNames: {
+      pt: "Portuguese (Brazil)",
+      en: "English (United Kingdom)"
+    },
     difficultyToggleLabel: "Difficulty:",
     difficultyToggleAriaLabel: "Current difficulty: {current}. Switch to {next}.",
     difficultySelectedMessage: "Difficulty changed to {difficulty}. Click “Start Full Quiz” to begin.",
@@ -171,7 +181,7 @@ const elements = {
   appTitle: document.getElementById("app-title"),
   appSubtitle: document.getElementById("app-subtitle"),
   profileButtons: document.querySelectorAll("[data-profile]"),
-  languageButtons: document.querySelectorAll("[data-language]"),
+  languageToggleBtn: document.getElementById("language-toggle-btn"),
   difficultyToggleBtn: document.getElementById("difficulty-toggle-btn"),
   difficultyToggleValue: document.getElementById("difficulty-toggle-value"),
   themeToggleBtn: document.getElementById("theme-toggle-btn"),
@@ -1001,6 +1011,10 @@ function updateDifficultyUi() {
   elements.difficultyToggleBtn.setAttribute("title", accessibleLabel);
 }
 
+function toggleLanguage() {
+  switchLanguage(activeLanguageId === "pt" ? "en" : "pt");
+}
+
 function updateProfileUi() {
   const profileCopy = I18N[activeLanguageId].profiles[activeProfileId];
   elements.appTitle.textContent = profileCopy.title;
@@ -1014,11 +1028,16 @@ function updateProfileUi() {
 }
 
 function updateLanguageUi() {
-  elements.languageButtons.forEach((button) => {
-    const isActive = button.dataset.language === activeLanguageId;
-    button.classList.toggle("active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
+  const nextLanguageId = activeLanguageId === "pt" ? "en" : "pt";
+  const languageNames = I18N[activeLanguageId].languageNames;
+  const accessibleLabel = t("languageToggleAriaLabel", {
+    current: languageNames[activeLanguageId],
+    next: languageNames[nextLanguageId]
   });
+
+  elements.languageToggleBtn.dataset.language = activeLanguageId;
+  elements.languageToggleBtn.setAttribute("aria-label", accessibleLabel);
+  elements.languageToggleBtn.setAttribute("title", accessibleLabel);
 }
 
 function updateThemeUi() {
@@ -1050,9 +1069,7 @@ elements.themeToggleBtn.addEventListener("click", switchTheme);
 elements.profileButtons.forEach((button) => {
   button.addEventListener("click", () => switchProfile(button.dataset.profile));
 });
-elements.languageButtons.forEach((button) => {
-  button.addEventListener("click", () => switchLanguage(button.dataset.language));
-});
+elements.languageToggleBtn.addEventListener("click", toggleLanguage);
 
 applyLanguage();
 showIdleState(t("readyMessage"));

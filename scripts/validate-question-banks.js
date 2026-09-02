@@ -286,6 +286,9 @@ check(!appSource.includes("static-quiz-system-state-v5-bruno"), "Incompatible Br
 check(appSource.includes("static-quiz-system-state-v2-maria"), "Compatible Maria v2 progress is not migrated to Hard");
 check(appSource.includes('htmlLang: "en-GB"'), "The British English document language is not en-GB");
 check(indexSource.match(/id="difficulty-toggle-btn"/g)?.length === 1, "The page must expose exactly one difficulty button");
+check(indexSource.match(/id="language-toggle-btn"/g)?.length === 1, "The page must expose exactly one language button");
+check(!indexSource.includes('class="language-btn'), "The legacy two-button language switch must not be rendered");
+check(appSource.includes('elements.languageToggleBtn.addEventListener("click", toggleLanguage)'), "The language button is not wired to toggle languages");
 const scriptSources = Array.from(indexSource.matchAll(/<script src="([^"]+)"><\/script>/g), (match) => match[1]);
 const loadedScripts = scriptSources.map((source) => source.split("?")[0]);
 check(JSON.stringify(loadedScripts) === JSON.stringify([...scripts, "app.js"]), `index.html: script order changed (${loadedScripts.join(", ")})`);
@@ -305,8 +308,11 @@ for (const source of scriptSources) {
   }
 }
 const appScriptSource = scriptSources.find((source) => source.startsWith("app.js?"));
-const expectedAppRevisionToken = "app.js?v=20260902-icon-controls2";
+const expectedAppRevisionToken = "app.js?v=20260902-icon-controls7";
 check(appScriptSource === expectedAppRevisionToken, `index.html: app.js must use the ${expectedAppRevisionToken.split("?")[1]} cache token`);
+const stylesheetSource = indexSource.match(/<link rel="stylesheet" href="([^"]+)">/)?.[1];
+const expectedStylesheetRevisionToken = "style.css?v=20260902-icon-controls7";
+check(stylesheetSource === expectedStylesheetRevisionToken, `index.html: style.css must use the ${expectedStylesheetRevisionToken.split("?")[1]} cache token`);
 check(
   scriptSources.filter((source) => revisedAssetNames.has(source.split("?")[0])).length === revisedAssetNames.size,
   "index.html: one or more revised Bruno assets are missing"

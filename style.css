@@ -108,11 +108,10 @@ html[data-theme="dark"] body {
   min-width: 0;
 }
 
-.profile-switch,
-.language-switch {
+.profile-switch {
   display: grid;
-  grid-template-columns: repeat(2, 44px);
-  gap: 0;
+  grid-template-columns: repeat(2, 64px);
+  gap: 4px;
   height: 46px;
   padding: 0;
   border: 1px solid color-mix(in srgb, var(--line) 90%, transparent);
@@ -121,7 +120,7 @@ html[data-theme="dark"] body {
 }
 
 .profile-btn,
-.language-btn,
+.language-toggle-btn,
 .difficulty-toggle-btn,
 .theme-toggle-btn {
   width: 44px;
@@ -136,11 +135,22 @@ html[data-theme="dark"] body {
 }
 
 .profile-btn,
-.language-btn {
+.language-toggle-btn {
   display: grid;
   place-items: center;
 }
 
+.language-toggle-btn {
+  position: relative;
+}
+
+.profile-btn {
+  width: 64px;
+  min-width: 64px;
+  font-size: 0.82rem;
+}
+
+.language-toggle-btn,
 .difficulty-toggle-btn,
 .theme-toggle-btn {
   display: inline-flex;
@@ -168,20 +178,36 @@ html[data-theme="dark"] body {
   stroke-linejoin: round;
 }
 
-.profile-icon,
 .language-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.language-code {
+  position: absolute;
+  right: 4px;
+  bottom: 3px;
+  font-size: 0.52rem;
+  font-weight: 800;
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 
-.profile-icon {
-  font-size: 1rem;
-  font-weight: 800;
+.language-code-pt {
+  color: color-mix(in srgb, var(--muted) 85%, var(--ink));
 }
 
-.language-icon {
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
+.language-code-en {
+  display: none;
+  color: var(--accent);
+}
+
+.language-toggle-btn[data-language="en"] .language-code-pt {
+  display: none;
+}
+
+.language-toggle-btn[data-language="en"] .language-code-en {
+  display: block;
 }
 
 .difficulty-icon {
@@ -189,6 +215,7 @@ html[data-theme="dark"] body {
   align-items: flex-end;
   gap: 3px;
   height: 20px;
+  color: var(--accent);
 }
 
 .difficulty-icon span {
@@ -237,6 +264,7 @@ html[data-theme="dark"] body {
 .theme-state-icon {
   width: 22px;
   height: 22px;
+  color: var(--accent);
 }
 
 .theme-moon-icon {
@@ -251,8 +279,7 @@ html[data-theme="dark"] .theme-moon-icon {
   display: block;
 }
 
-.profile-btn.active,
-.language-btn.active {
+.profile-btn.active {
   background: var(--accent-strong, var(--accent));
   color: #fff;
   box-shadow: 0 8px 18px rgba(29, 111, 95, 0.18);
@@ -555,11 +582,11 @@ button:disabled {
 @media (max-width: 480px) {
   .switch-row {
     justify-content: center;
-    gap: 1px;
+    gap: 4px;
   }
 
   .mode-controls {
-    gap: 1px;
+    gap: 4px;
   }
 }
 
