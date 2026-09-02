@@ -135,13 +135,34 @@ html[data-theme="dark"] body {
 }
 
 .difficulty-toggle-btn {
+  min-height: 44px;
+  padding: 6px 8px 6px 14px;
   border-color: color-mix(in srgb, var(--accent) 48%, var(--line));
   background: color-mix(in srgb, var(--accent-soft) 68%, var(--panel-strong));
   color: var(--ink);
+  white-space: nowrap;
 }
 
 .difficulty-toggle-btn strong {
-  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-strong, var(--accent));
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(29, 111, 95, 0.16);
+}
+
+.difficulty-toggle-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 .difficulty-toggle-btn[hidden] {
