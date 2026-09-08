@@ -35,6 +35,8 @@ const I18N = {
     themeToggle: "Tema escuro",
     startAll: "Iniciar Quiz Completo",
     reviewWrong: "Revisar Erros",
+    exportProgress: "Exportar Progresso",
+    importProgress: "Importar Progresso",
     resetProgress: "Zerar Progresso",
     modeLabel: "Modo",
     progressLabel: "Progresso",
@@ -59,7 +61,9 @@ const I18N = {
     completedCategory: "Concluído",
     completedPosition: "Sessão finalizada",
     completedReviewMessage: "Revisão concluída. Inicie outra revisão ou refaça o quiz completo.",
-    completedAllMessage: "Quiz completo concluído. As respostas erradas foram revisadas pela fila de repetição.",
+    completedAllMessage: "Quiz completo concluído. Confira sua pontuação abaixo antes de revisar as respostas erradas.",
+    startReview: "Iniciar Revisão das Respostas Erradas",
+    examScoreMessage: "Pontuação do simulado: {score} de {maximum} pontos ({accuracy}%). Você acertou {correct} de {answered} questões. Clique abaixo para revisar as respostas erradas.",
     sessionAccuracyMessage: "Aproveitamento da sessão: {accuracy}%. Questões respondidas: {answered}. Acertos: {correct}.",
     scoreValue: "{correct}",
     resetMessage: "Progresso zerado. Clique em “Iniciar Quiz Completo” para recomeçar.",
@@ -114,6 +118,8 @@ const I18N = {
     themeToggle: "Dark theme",
     startAll: "Start Full Quiz",
     reviewWrong: "Review Mistakes",
+    exportProgress: "Export Progress",
+    importProgress: "Import Progress",
     resetProgress: "Reset Progress",
     modeLabel: "Mode",
     progressLabel: "Progress",
@@ -138,7 +144,9 @@ const I18N = {
     completedCategory: "Completed",
     completedPosition: "Session finished",
     completedReviewMessage: "Review finished. Start another review or retake the full quiz.",
-    completedAllMessage: "Full quiz finished. Wrong answers were reviewed through the repetition queue.",
+    completedAllMessage: "Full quiz finished. Check your score below before reviewing the wrong answers.",
+    startReview: "Start Wrong-answer Review",
+    examScoreMessage: "Exam score: {score} out of {maximum} points ({accuracy}%). You got {correct} of {answered} questions right. Use the button below to review wrong answers.",
     sessionAccuracyMessage: "Session accuracy: {accuracy}%. Questions answered: {answered}. Correct answers: {correct}.",
     scoreValue: "{correct}",
     resetMessage: "Progress reset. Click “Start Full Quiz” to begin again.",
@@ -190,6 +198,9 @@ const elements = {
   translatedTitles: document.querySelectorAll("[data-i18n-title]"),
   startAllBtn: document.getElementById("start-all-btn"),
   reviewModeBtn: document.getElementById("review-mode-btn"),
+  exportProgressBtn: document.getElementById("export-progress-btn"),
+  importProgressBtn: document.getElementById("import-progress-btn"),
+  importProgressInput: document.getElementById("import-progress-input"),
   resetProgressBtn: document.getElementById("reset-progress-btn"),
   modeLabel: document.getElementById("mode-label"),
   progressLabel: document.getElementById("progress-label"),
@@ -313,7 +324,10 @@ function createEmptySession() {
     sessionCorrect: 0,
     sessionAnswered: 0,
     reviewStep: 0,
-    isComplete: true
+    isComplete: true,
+    awaitingReview: false,
+    sessionWeightedScore: 0,
+    sessionMaximumScore: 0
   };
 }
 
@@ -404,6 +418,125 @@ function loadState() {
 
 function saveState() {
   localStorage.setItem(getStorageKey(), JSON.stringify(appState));
+}
+
+function showStatusNotice(message, tone = "success") {
+  elements.feedbackBox.classList.remove("hidden", "success", "error");
+  elements.feedbackBox.classList.add(tone);
+  elements.feedbackBox.textContent = message;
+}
+
+function getPersistedStorageSnapshot() {
+  const entries = {};
+  const allowedKeys = new Set([
+    ACTIVE_PROFILE_KEY,
+    ACTIVE_LANGUAGE_KEY,
+    ACTIVE_THEME_KEY,
+    MARIA_HARD_MIGRATION_KEY,
+    LEGACY_MARIA_HARD_STORAGE_KEY
+  ]);
+
+  for (let index = 0; index < localStorage.length; index += 1) {
+    const key = localStorage.key(index);
+    if (!key) {
+      continue;
+    }
+
+    if (
+      key.startsWith(STORAGE_KEY_PREFIX)
+      || key.startsWith(ACTIVE_DIFFICULTY_KEY_PREFIX)
+      || allowedKeys.has(key)
+    ) {
+      entries[key] = localStorage.getItem(key);
+    }
+  }
+
+  return entries;
+}
+
+function exportProgress() {
+  const snapshot = {
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    state: getPersistedStorageSnapshot()
+  };
+
+  const blob = new Blob([JSON.stringify(snapshot, null, 2)], { type: "application/json" });
+  const fileUrl = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  const fileName = `quiz-contest-progress-${new Date().toISOString().slice(0, 10)}.json`;
+
+  link.href = fileUrl;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(fileUrl);
+
+  const statusMessage = activeLanguageId === "pt"
+    ? "Progresso exportado com sucesso."
+    : "Progress exported successfully.";
+  showStatusNotice(statusMessage, "success");
+}
+
+function importProgressFromFile(file) {
+  if (!file) {
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    try {
+      const payload = JSON.parse(String(reader.result || "{}"));
+      const importedState = payload && payload.state && typeof payload.state === "object"
+        ? payload.state
+        : payload;
+
+      if (!importedState || typeof importedState !== "object") {
+        throw new Error("Invalid snapshot");
+      }
+
+      Object.entries(importedState).forEach(([key, value]) => {
+        if (typeof value === "string") {
+          localStorage.setItem(key, value);
+          return;
+        }
+
+        localStorage.setItem(key, JSON.stringify(value));
+      });
+
+      activeLanguageId = getInitialLanguageId();
+      activeProfileId = getInitialProfileId();
+      activeDifficultyId = getInitialDifficultyId(activeProfileId);
+      activeThemeId = getInitialThemeId();
+      activeQuestionSet = QUESTION_SETS[activeProfileId];
+      questions = getQuestionsForSelection();
+      questionMap = createQuestionMap();
+      appState = loadState();
+      session = createEmptySession();
+      applyLanguage();
+      updateDashboard();
+      showIdleState(t("readyMessage"));
+
+      const statusMessage = activeLanguageId === "pt"
+        ? "Progresso importado com sucesso."
+        : "Progress imported successfully.";
+      showStatusNotice(statusMessage, "success");
+    } catch (error) {
+      const statusMessage = activeLanguageId === "pt"
+        ? "Arquivo de progresso inválido."
+        : "Invalid progress file.";
+      showStatusNotice(statusMessage, "error");
+    }
+  };
+
+  reader.readAsText(file);
+}
+
+function triggerImportProgress() {
+  elements.importProgressInput.value = "";
+  elements.importProgressInput.click();
 }
 
 function getQuestionStat(questionId) {
@@ -508,6 +641,40 @@ function buildReviewModeQueue() {
   return shuffleArray(weightedQueue);
 }
 
+function getQuestionWeight(question) {
+  if (activeProfileId !== "bruno") {
+    return 1;
+  }
+
+  return question.category === "Conhecimentos Específicos" ? 3 : 2;
+}
+
+function formatScore(value) {
+  return activeProfileId === "bruno" ? value.toFixed(2).replace(".", ",") : String(value);
+}
+
+function startPendingReview() {
+  const reviewItems = session.reviewQueue.map((entry) => entry.id);
+
+  session.mode = "review";
+  session.queue = shuffleArray(reviewItems);
+  session.reviewQueue = [];
+  session.totalPlanned = session.queue.length;
+  session.reviewPlanned = 0;
+  session.currentIndex = 0;
+  session.currentQueueSource = "review";
+  session.awaitingReview = false;
+  session.isComplete = session.queue.length === 0;
+
+  if (session.queue.length === 0) {
+    finishSession();
+    return;
+  }
+
+  showNextQuestion();
+  updateDashboard();
+}
+
 function startSession(mode) {
   const queue = mode === "review" ? buildReviewModeQueue() : createInitialQueue();
 
@@ -542,11 +709,22 @@ function showIdleState(message) {
   renderReadableText(elements.questionText, message);
   elements.answerButtons.innerHTML = "";
   elements.nextBtn.disabled = true;
+  elements.nextBtn.textContent = t("nextQuestion");
   hideFeedback();
 }
 
 function showNextQuestion() {
+  if (session.awaitingReview) {
+    startPendingReview();
+    return;
+  }
+
   if (session.queue.length === 0) {
+    if (session.mode === "all" && session.currentQueueSource === "main" && session.reviewQueue.length > 0) {
+      showExamScoreBeforeReview();
+      return;
+    }
+
     let dueReviewItems = extractDueReviewItems();
 
     // Se nada venceu ainda, avançamos até a próxima revisão agendada.
@@ -742,6 +920,13 @@ function handleAnswer(selectedAnswer) {
 
   appState.totalAnswered += 1;
 
+  if (session.mode === "all" && session.currentQueueSource === "main") {
+    session.sessionMaximumScore += getQuestionWeight(sourceQuestion);
+    if (isCorrect) {
+      session.sessionWeightedScore += getQuestionWeight(sourceQuestion);
+    }
+  }
+
   if (isCorrect) {
     appState.totalCorrect += 1;
     session.sessionCorrect += 1;
@@ -830,6 +1015,7 @@ function finishSession() {
   session.currentQuestionId = null;
   elements.answerButtons.innerHTML = "";
   elements.nextBtn.disabled = true;
+  elements.nextBtn.textContent = t("nextQuestion");
 
   const accuracy = session.sessionAnswered === 0
     ? 0
@@ -845,6 +1031,36 @@ function finishSession() {
   elements.feedbackBox.classList.remove("hidden", "success", "error");
   elements.feedbackBox.classList.add("success");
   elements.feedbackBox.textContent = t("sessionAccuracyMessage", {
+    accuracy,
+    answered: session.sessionAnswered,
+    correct: session.sessionCorrect
+  });
+
+  updateDashboard();
+  elements.questionText.focus({ preventScroll: true });
+}
+
+function showExamScoreBeforeReview() {
+  session.awaitingReview = true;
+  session.isComplete = true;
+  session.currentQuestionId = null;
+  elements.answerButtons.innerHTML = "";
+  elements.nextBtn.disabled = false;
+  elements.nextBtn.textContent = t("startReview");
+  elements.modeLabel.textContent = t("allMode");
+  elements.questionCategory.textContent = t("completedCategory");
+  elements.questionPosition.textContent = t("completedPosition");
+
+  const accuracy = session.sessionMaximumScore === 0
+    ? 0
+    : Math.round((session.sessionWeightedScore / session.sessionMaximumScore) * 100);
+
+  renderReadableText(elements.questionText, t("completedAllMessage"));
+  elements.feedbackBox.classList.remove("hidden", "success", "error");
+  elements.feedbackBox.classList.add("success");
+  elements.feedbackBox.textContent = t("examScoreMessage", {
+    score: formatScore(session.sessionWeightedScore),
+    maximum: formatScore(session.sessionMaximumScore),
     accuracy,
     answered: session.sessionAnswered,
     correct: session.sessionCorrect
@@ -1058,10 +1274,18 @@ function applyLanguage() {
   updateLanguageUi();
   updateDifficultyUi();
   updateThemeUi();
+  elements.nextBtn.textContent = session.awaitingReview ? t("startReview") : t("nextQuestion");
 }
 
 elements.startAllBtn.addEventListener("click", () => startSession("all"));
 elements.reviewModeBtn.addEventListener("click", () => startSession("review"));
+elements.exportProgressBtn.addEventListener("click", exportProgress);
+elements.importProgressBtn.addEventListener("click", triggerImportProgress);
+elements.importProgressInput.addEventListener("change", (event) => {
+  const [file] = event.target.files || [];
+  importProgressFromFile(file);
+  event.target.value = "";
+});
 elements.resetProgressBtn.addEventListener("click", resetProgress);
 elements.nextBtn.addEventListener("click", showNextQuestion);
 elements.difficultyToggleBtn.addEventListener("click", switchDifficulty);

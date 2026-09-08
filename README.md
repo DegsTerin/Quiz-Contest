@@ -91,7 +91,7 @@ Every question has five alternatives and one designated answer. Each Bruno diffi
 
 The 1–8, 9–16, 17–20 and 21–40 sequence is an editorial simulation based on the order of subjects in Notice Table 06 and the requested conventional written-exam flow. The notice defines the composition, quantities and weights, but does not guarantee the physical order of questions in the official booklet.
 
-The dashboard intentionally reports raw correct-answer counts and accuracy. It does not calculate the notice-weighted score or determine whether an official pass threshold has been met.
+When Bruno completes the 40-question main session, the app shows the notice-weighted score (16 points for Portuguese, 16 for Mathematics and Logical Reasoning, 8 for General Knowledge and 60 for Role-Specific Knowledge) before offering the mistake-review queue. This is a study indicator only; it does not determine whether an official pass threshold has been met.
 
 ### Bruno editorial method
 
@@ -281,8 +281,6 @@ Running these checks through CI is the highest-priority engineering improvement.
 ## Roadmap
 
 - Run the regression suite through GitHub Actions.
-- Add progress export and import.
-- Add notice-weighted score calculation as a clearly separate result.
 - Add subject-level filters, analytics and keyboard shortcuts.
 
 ## Licence
