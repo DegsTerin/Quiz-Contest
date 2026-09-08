@@ -308,7 +308,7 @@ for (const source of scriptSources) {
   }
 }
 const appScriptSource = scriptSources.find((source) => source.startsWith("app.js?"));
-const expectedAppRevisionToken = "app.js?v=20260902-icon-controls8";
+const expectedAppRevisionToken = "app.js?v=20260908-quiz-flow2";
 check(appScriptSource === expectedAppRevisionToken, `index.html: app.js must use the ${expectedAppRevisionToken.split("?")[1]} cache token`);
 const stylesheetSource = indexSource.match(/<link rel="stylesheet" href="([^"]+)">/)?.[1];
 const expectedStylesheetRevisionToken = "style.css?v=20260902-icon-controls8";
