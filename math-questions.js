@@ -543,5 +543,8 @@ const MATH_QUESTION_DATA = [
 
 const MATH_QUESTIONS = MATH_QUESTION_DATA.map((question) => makeQuestion(question));
 
-QUESTION_SETS.math.questions = MATH_QUESTIONS;
-QUESTION_SETS.math.sources = "Original practice questions informed by the local mathematics exercise material.";
+delete QUESTION_SETS.maria.defaultDifficulty;
+delete QUESTION_SETS.maria.difficultySequence;
+delete QUESTION_SETS.maria.questionsByDifficulty;
+QUESTION_SETS.maria.questions = MATH_QUESTIONS;
+QUESTION_SETS.maria.sources = "Original practice questions informed by the local mathematics exercise material.";

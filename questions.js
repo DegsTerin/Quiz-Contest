@@ -131,17 +131,8 @@ const QUESTION_SETS = {
     questions: BRUNO_QUESTIONS
   },
   maria: {
-    owner: "Maria",
-    title: "Quiz Professora AEE/Misto e Libras",
-    description: "Simulado para Professora AEE/Misto e Intérprete da Libras, com 40 questões nos níveis fácil, médio e difícil e progresso independente por modo.",
-    defaultDifficulty: "easy",
-    difficultySequence: ["easy", "medium", "hard"],
-    questionsByDifficulty: {},
-    questions: MARIA_QUESTIONS
-  },
-  math: {
-    owner: "Mathematics",
-    title: "Modo Matemática",
+    owner: "Maths",
+    title: "Modo Maths",
     description: "Banco de exercícios autorais de matemática inspirado no material de estudo local.",
     questions: []
   }

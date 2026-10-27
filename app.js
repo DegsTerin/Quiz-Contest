@@ -7,8 +7,7 @@ const LEGACY_MARIA_HARD_STORAGE_KEY = "static-quiz-system-state-v2-maria";
 const MARIA_HARD_MIGRATION_KEY = "static-quiz-system-migrated-v3-maria-hard";
 const PROFILE_STORAGE_VERSIONS = {
   bruno: "v6",
-  maria: "v3",
-  math: "v1"
+  maria: "v4"
 };
 const DEFAULT_PROFILE_ID = "bruno";
 const DEFAULT_LANGUAGE_ID = "pt";
@@ -73,11 +72,7 @@ const I18N = {
         description: "Simulado autoral e não oficial para Técnico em Informática, com 40 questões em cada nível — fácil, médio e difícil — adaptadas ao conteúdo e à distribuição por disciplina do Edital de Concurso Público 001/2026 do Município de Massaranduba."
       },
       maria: {
-        title: "Quiz Professora AEE/Misto e Libras",
-        description: "Simulado para Professora AEE/Misto e Intérprete da Libras, com 40 questões em cada nível — fácil, médio e difícil — e progresso independente por dificuldade."
-      },
-      math: {
-        title: "Modo Matemática",
+        title: "Modo Maths",
         description: "Banco de exercícios autorais de matemática, inspirado no material de estudo local, com conjuntos, equações, proporções, geometria, trigonometria e raciocínio matemático."
       }
     },
@@ -164,11 +159,7 @@ const I18N = {
         description: "An author-created, non-official IT Technician practice set with 40 questions at each difficulty — easy, medium and hard — aligned with the syllabus and subject distribution of Massaranduba Municipal Public Competition Notice 001/2026."
       },
       maria: {
-        title: "AEE/Mixed and Libras Teacher Quiz",
-        description: "A practice quiz for AEE/Mixed and Libras Interpreter teaching roles, with 40 questions at each difficulty — easy, medium and hard — and separate progress for each mode."
-      },
-      math: {
-        title: "Mathematics Mode",
+        title: "Maths Mode",
         description: "An original mathematics exercise bank informed by the local study material, covering sets, equations, proportions, geometry, trigonometry and mathematical reasoning."
       }
     },
