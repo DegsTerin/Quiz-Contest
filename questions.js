@@ -138,5 +138,11 @@ const QUESTION_SETS = {
     difficultySequence: ["easy", "medium", "hard"],
     questionsByDifficulty: {},
     questions: MARIA_QUESTIONS
+  },
+  math: {
+    owner: "Mathematics",
+    title: "Modo Matemática",
+    description: "Banco de exercícios autorais de matemática inspirado no material de estudo local.",
+    questions: []
   }
 };

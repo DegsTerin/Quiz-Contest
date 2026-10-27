@@ -7,7 +7,8 @@ const LEGACY_MARIA_HARD_STORAGE_KEY = "static-quiz-system-state-v2-maria";
 const MARIA_HARD_MIGRATION_KEY = "static-quiz-system-migrated-v3-maria-hard";
 const PROFILE_STORAGE_VERSIONS = {
   bruno: "v6",
-  maria: "v3"
+  maria: "v3",
+  math: "v1"
 };
 const DEFAULT_PROFILE_ID = "bruno";
 const DEFAULT_LANGUAGE_ID = "pt";
@@ -74,6 +75,10 @@ const I18N = {
       maria: {
         title: "Quiz Professora AEE/Misto e Libras",
         description: "Simulado para Professora AEE/Misto e Intérprete da Libras, com 40 questões em cada nível — fácil, médio e difícil — e progresso independente por dificuldade."
+      },
+      math: {
+        title: "Modo Matemática",
+        description: "Banco de exercícios autorais de matemática, inspirado no material de estudo local, com conjuntos, equações, proporções, geometria, trigonometria e raciocínio matemático."
       }
     },
     categories: {
@@ -84,7 +89,13 @@ const I18N = {
       "Conhecimentos Específicos": "Conhecimentos Específicos",
       "Metodologia da Prática Docente": "Metodologia da Prática Docente",
       "Específicos - AEE/Misto": "Específicos - AEE/Misto",
-      "Específicos - Intérprete da Libras": "Específicos - Intérprete da Libras"
+      "Específicos - Intérprete da Libras": "Específicos - Intérprete da Libras",
+      "Teoria dos Conjuntos": "Teoria dos Conjuntos",
+      "Equações e Funções": "Equações e Funções",
+      "Razão, Proporção e Porcentagem": "Razão, Proporção e Porcentagem",
+      "Geometria": "Geometria",
+      "Trigonometria": "Trigonometria",
+      "Raciocínio Matemático": "Raciocínio Matemático"
     },
     difficulties: {
       "Fácil": "Fácil",
@@ -155,6 +166,10 @@ const I18N = {
       maria: {
         title: "AEE/Mixed and Libras Teacher Quiz",
         description: "A practice quiz for AEE/Mixed and Libras Interpreter teaching roles, with 40 questions at each difficulty — easy, medium and hard — and separate progress for each mode."
+      },
+      math: {
+        title: "Mathematics Mode",
+        description: "An original mathematics exercise bank informed by the local study material, covering sets, equations, proportions, geometry, trigonometry and mathematical reasoning."
       }
     },
     categories: {
@@ -165,7 +180,13 @@ const I18N = {
       "Conhecimentos Específicos": "Role-Specific Knowledge",
       "Metodologia da Prática Docente": "Teaching Practice Methodology",
       "Específicos - AEE/Misto": "Specific Topics - AEE/Mixed",
-      "Específicos - Intérprete da Libras": "Specific Topics - Libras Interpreter"
+      "Específicos - Intérprete da Libras": "Specific Topics - Libras Interpreter",
+      "Teoria dos Conjuntos": "Set Theory",
+      "Equações e Funções": "Equations and Functions",
+      "Razão, Proporção e Porcentagem": "Ratio, Proportion and Percentages",
+      "Geometria": "Geometry",
+      "Trigonometria": "Trigonometry",
+      "Raciocínio Matemático": "Mathematical Reasoning"
     },
     difficulties: {
       "Fácil": "Easy",

@@ -110,7 +110,7 @@ html[data-theme="dark"] body {
 
 .profile-switch {
   display: grid;
-  grid-template-columns: repeat(2, 64px);
+  grid-template-columns: repeat(3, 64px);
   gap: 4px;
   height: 46px;
   padding: 0;
